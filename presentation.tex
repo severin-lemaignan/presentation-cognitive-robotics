@@ -1,6 +1,5 @@
-%!TEX program = xelatex
-
 \documentclass[compress]{beamer}
+
 %--------------------------------------------------------------------------
 % Common packages
 %--------------------------------------------------------------------------
@@ -13,16 +12,13 @@
 \usepackage{tabularx,ragged2e}
 \usepackage{booktabs}
 
-\usepackage{setspace}
-
 %--------------------------------------------------------------------------
 % Load theme
 %--------------------------------------------------------------------------
 \usetheme{hri}
 
-\usepackage{dtklogos} % must be loaded after theme
 \usepackage{tikz}
-\usetikzlibrary{mindmap,backgrounds,positioning,svg.path}
+\usetikzlibrary{calc,mindmap,backgrounds,positioning,svg.path}
 
 \graphicspath{{figs/}}
 
@@ -95,12 +91,13 @@ align=center, inner sep=5pt, fill=none}]
 %--------------------------------------------------------------------------
 % General presentation settings
 %--------------------------------------------------------------------------
-\title{More Cognition into my Interaction!}
-\subtitle{@Centre for Robotics and Neural Systems, Plymouth}
+\title{More Cognition into my Interaction}
+\subtitle{Past and Present of Cognitive Robotics for Social Human-Robot
+Interaction}
 \date{\today}
 \author{Séverin Lemaignan}
-\institute{Computer-Human Interaction\\for Learning and Instruction {\Medium
-EPFL}}
+\institute{Centre for Robotics and Neural Systems\\{\Medium
+Plymouth University}}
 
 %--------------------------------------------------------------------------
 % Notes settings
@@ -119,7 +116,6 @@ EPFL}}
 
 \begin{frame}[plain]{}
 
-        \setstretch{1.5}
         \LARGE
 
         ``Cognition is a group of mental processes that includes {\Medium
@@ -296,16 +292,16 @@ EPFL}}
 \imageframe{pr2-baby-2.jpg}
 \imageframe{pr2-baby-3.jpg}
 \imageframe{pr2-baby-4.jpg}
-\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
-        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-        %Non-monotonic topology\\
-        %Represent continuous/discrete fields\\
-        Account for uncertainties\\ \vspace*{1em}
-        %Imagine entities\\
-        Remember the past, imagine the future\\
-        %Temporal template matching, chronicles\\
- ]{pr2-baby-4.jpg}
+%\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
+%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
+%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
+%        %Non-monotonic topology\\
+%        %Represent continuous/discrete fields\\
+%        Account for uncertainties\\ \vspace*{1em}
+%        %Imagine entities\\
+%        Remember the past, imagine the future\\
+%        %Temporal template matching, chronicles\\
+% ]{pr2-baby-4.jpg}
 
 
 \begin{frame}{Representation}
@@ -1253,32 +1249,33 @@ EPFL}}
 
 \section{What next?}
 
-\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
-        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-        %Non-monotonic topology\\
-        %Represent continuous/discrete fields\\
-        Account for uncertainties\\ \vspace*{1em}
-        Remember the past, imagine the future\\ \vspace*{1em}
-        %Imagine entities\\
-        %Temporal template matching, chronicles\\
- ]{pr2-baby-4.jpg}
-
-\imageframe[\scriptsize Mix of geometry, time, semantics\\ \vspace*{1em}
-        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-        %Non-monotonic topology\\
-        %Represent continuous/discrete fields\\
-        Account for uncertainties\\ \vspace*{1em}
-        Remember the past, imagine the future\\ \vspace*{1em}
-        {\Medium
-        Imagine entities {\Light (pre-supposition accomodation)}\\ \vspace*{1em}
-        The world is non-monotonic\\ \vspace*{1em}
-        ...and full of exceptions {\Light (damn pinguins!)}\\ \vspace*{1em}
-        ...
-        }
-        %Temporal template matching, chronicles\\
- ]{pr2-baby-4.jpg}
+\imageframe{pr2-baby-4.jpg}
+%\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
+%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
+%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
+%        %Non-monotonic topology\\
+%        %Represent continuous/discrete fields\\
+%        Account for uncertainties\\ \vspace*{1em}
+%        Remember the past, imagine the future\\ \vspace*{1em}
+%        %Imagine entities\\
+%        %Temporal template matching, chronicles\\
+% ]{pr2-baby-4.jpg}
+%
+%\imageframe[\scriptsize Mix of geometry, time, semantics\\ \vspace*{1em}
+%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
+%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
+%        %Non-monotonic topology\\
+%        %Represent continuous/discrete fields\\
+%        Account for uncertainties\\ \vspace*{1em}
+%        Remember the past, imagine the future\\ \vspace*{1em}
+%        {\Medium
+%        Imagine entities {\Light (pre-supposition accomodation)}\\ \vspace*{1em}
+%        The world is non-monotonic\\ \vspace*{1em}
+%        ...and full of exceptions {\Light (damn pinguins!)}\\ \vspace*{1em}
+%        ...
+%        }
+%        %Temporal template matching, chronicles\\
+% ]{pr2-baby-4.jpg}
 
 
 {
