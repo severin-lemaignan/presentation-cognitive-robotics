@@ -14,7 +14,7 @@
    height="147.69318"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48+devel r"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="spark.svg">
   <defs
      id="defs4">
@@ -2673,15 +2673,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="437.05244"
+     inkscape:cx="257.75036"
      inkscape:cy="64.423812"
      inkscape:document-units="px"
      inkscape:current-layer="g5920"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="838"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="867"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -3544,7 +3544,7 @@
              transform="matrix(1.8341429,0,0,-1.8341429,15.100738,746.28393)">
             <path
                transform="matrix(0.7681304,0,0,-0.7681304,-36.494188,532.79225)"
-               d="m 424.28571,472.36218 c 0,84.02618 -68.11668,152.14286 -152.14286,152.14286 C 188.11668,624.50504 120,556.38836 120,472.36218 c 0,-84.02617 68.11668,-152.14285 152.14285,-152.14285 84.02618,0 152.14286,68.11668 152.14286,152.14285 z"
+               d="M 424.28571,472.36218 A 152.14285,152.14285 0 0 1 272.14285,624.50504 152.14285,152.14285 0 0 1 120,472.36218 152.14285,152.14285 0 0 1 272.14285,320.21933 152.14285,152.14285 0 0 1 424.28571,472.36218 Z"
                sodipodi:ry="152.14285"
                sodipodi:rx="152.14285"
                sodipodi:cy="472.36218"
@@ -3572,7 +3572,7 @@
              sodipodi:cy="472.36218"
              sodipodi:rx="152.14285"
              sodipodi:ry="152.14285"
-             d="m 424.28571,472.36218 c 0,84.02618 -68.11668,152.14286 -152.14286,152.14286 C 188.11668,624.50504 120,556.38836 120,472.36218 c 0,-84.02617 68.11668,-152.14285 152.14285,-152.14285 84.02618,0 152.14286,68.11668 152.14286,152.14285 z"
+             d="M 424.28571,472.36218 A 152.14285,152.14285 0 0 1 272.14285,624.50504 152.14285,152.14285 0 0 1 120,472.36218 152.14285,152.14285 0 0 1 272.14285,320.21933 152.14285,152.14285 0 0 1 424.28571,472.36218 Z"
              transform="matrix(0.7681304,0,0,-0.7681304,-36.494188,532.79225)" />
           <path
              inkscape:connector-curvature="0"
@@ -3786,27 +3786,27 @@
         </g>
       </g>
       <image
-         sodipodi:absref="/home/lemaigna/publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/looks.jpg"
-         xlink:href="file:///home/lemaigna/publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/looks.jpg"
-         inkscape:export-ydpi="150"
-         inkscape:export-xdpi="150"
-         inkscape:export-filename="/home/slemaign/work/presentations/hri-pioneer-mar2011/images/spark_overview.png"
-         y="422.57327"
-         x="422.55081"
-         id="image4414"
+         sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/../../../publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/looks.jpg"
+         xlink:href="../../../publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/looks.jpg"
+         width="188.9519"
          height="111.0695"
-         width="188.9519" />
-      <image
-         sodipodi:absref="/home/lemaigna/publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/reach.jpg"
-         xlink:href="file:///home/lemaigna/publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/reach.jpg"
-         inkscape:export-ydpi="150"
-         inkscape:export-xdpi="150"
+         id="image4414"
+         x="422.55081"
+         y="422.57327"
          inkscape:export-filename="/home/slemaign/work/presentations/hri-pioneer-mar2011/images/spark_overview.png"
-         y="414.78345"
-         x="642.05469"
-         id="image4428"
+         inkscape:export-xdpi="150"
+         inkscape:export-ydpi="150" />
+      <image
+         sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/../../../publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/reach.jpg"
+         xlink:href="../../../publications/ai-journal-2013/figs/../../knowledge-lessons-learned/figs/reach.jpg"
+         width="164.66707"
          height="126.64904"
-         width="164.66707" />
+         id="image4428"
+         x="642.05469"
+         y="414.78345"
+         inkscape:export-filename="/home/slemaign/work/presentations/hri-pioneer-mar2011/images/spark_overview.png"
+         inkscape:export-xdpi="150"
+         inkscape:export-ydpi="150" />
     </g>
   </g>
 </svg>

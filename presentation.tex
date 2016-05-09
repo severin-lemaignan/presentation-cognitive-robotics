@@ -656,7 +656,7 @@ Plymouth University}}
 \videoframe[0.56]{videos/this_box.webm?autostart&start=1}
 
 {
-    \paper{Lemaignan et al., {\Medium Grounding the Interaction: Anchoring Situated Discourse in Everyday HRI}, IJSR, 2011}
+    \paper{Lemaignan et al. {\Medium Grounding the Interaction: Anchoring Situated Discourse in Everyday HRI}, Intl. J. of Social Robotics 2011}
     \begin{frame}{}
         \centering
         I keep the natural language processing part for the questions, but:\\
@@ -685,7 +685,7 @@ Plymouth University}}
 
 
 {
-\paper{Ros et al., {\Medium Which One? Grounding the Referent Based on Efficient HRI}, ROMAN 2010}
+\paper{Ros, Lemaignan et al., {\Medium Which One? Grounding the Referent Based on Efficient HRI}, ROMAN 2010}
 \begin{frame}{Multiple Symbolic Models}
         \begin{multicols}{2}
             \begin{figure}
@@ -768,6 +768,8 @@ Plymouth University}}
     \end{frame}
 }
 
+{
+\paper{Dillenbourg, Lemaignan et al., {\Medium The Symmetry of Partner Modelling}, Intl. J. of Computer Supported Collaboratibe Learning 2016}
 \begin{frame}{The False-Belief Experiment, reloaded}
     \centering
     \only<1>{
@@ -876,16 +878,20 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CoWriter}
 
+{
+    \paper{Lemaignan et al. {\Medium Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{CoWriter: cognitive engagement and meta-cognition}
     \video{0.55\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
 
     \begin{flushright}
-        \includegraphics[width=0.55\textwidth]{diego-writing}
+        \includegraphics[width=0.5\textwidth]{diego-writing}
     \end{flushright}
 
 \end{frame}
+}
 
-
+{
+    \paper{Lemaignan et al. {\Medium Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{}
     \begin{center}
         \includegraphics[width=0.45\linewidth]{lettre-base}
@@ -894,156 +900,161 @@ Plymouth University}}
     }
     \end{center}
 \end{frame}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Act}
 
-%\subsection{The Challenge of the Real-World\texttrademark}
-%\begin{frame}{Cope with the real-world}
-%    \begin{enumerate}
-%        \item long interaction...
-%        \item ...in a human-world...
-%        \item ...with humans...
-%   \end{enumerate}
+\begin{frame}{Planning for the Human}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{cleantable.jpg}\\
+
+        \vspace*{1em}
+
+        \resizebox{0.7\paperwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                    robot/.style={fill=hriSec1CompDark!50},
+                    every edge/.style={<-, draw, ultra thick},
+                    every node/.style={ draw, 
+                        thick,  
+                        circle, 
+                        font=\sf,
+                        align=center,
+                        node distance=2cm,
+                        fill=hriSec3CompDark!50, 
+                        minimum size=2cm, 
+                inner sep=0.1cm}]
+
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+
+                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
+                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
+
+                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
+                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
+                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
+                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
+                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
+                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
+
+                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
+                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+
+            \end{tikzpicture}
+        }
+
+    \end{figure}
+
+\end{frame}
+
+
+\videoframe{videos/clean-table.webm?autostart}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Bind Them All}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands1}
+\imageframe[color=white]{islands2}
+\imageframe[color=white]{islands3}
+\imageframe[color=white]{islands4}
+
+{
+\paper{Baxter, Lemaignan, Trafton {\Medium Cognitive Architectures for Social Human-Robot Interaction} -- HRI 2016}
+\begin{frame}{Cognitive Architectures}
+
+    \begin{multicols}{2}
+        \resizebox{0.7\columnwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=hriSec1,text=white]
+            node[concept] {Cognitive Architectures}
+                [clockwise from=60]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{1. Model} }
+                child[concept color=hriSec2Dark,text=white] { node[concept]{2. Integration} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {3. Methodology}};
+
+
+        \end{tikzpicture}
+    }
+    \vfill
+    \columnbreak
+
+    {\Medium 1. Models of Human Cognition}
+
+    {\scriptsize -- Modelling (aspects of) human cognition \\-- Subsequent application to robots}
+
+    {\Medium 2. Technical Integration}
+
+    {\scriptsize -- Define required functionality of robots \\-- Implement algorithms (etc) necessary}
+
+    {\Medium 3. A Methodology}
+
+    {\scriptsize -- Formalising assumptions \\-- Integrating knowledge from multiple disciplines \\-- Iteratively updating architecture}
+
+    %\refToContrib{Someone here...}
+
+    \end{multicols}
+\end{frame}
+}
+
+
+%\imageframe{pr2-baby-4.jpg}
+%\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
+%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
+%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
+%        %Non-monotonic topology\\
+%        %Represent continuous/discrete fields\\
+%        Account for uncertainties\\ \vspace*{1em}
+%        Remember the past, imagine the future\\ \vspace*{1em}
+%        %Imagine entities\\
+%        %Temporal template matching, chronicles\\
+% ]{pr2-baby-4.jpg}
+%
+%\imageframe[\scriptsize Mix of geometry, time, semantics\\ \vspace*{1em}
+%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
+%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
+%        %Non-monotonic topology\\
+%        %Represent continuous/discrete fields\\
+%        Account for uncertainties\\ \vspace*{1em}
+%        Remember the past, imagine the future\\ \vspace*{1em}
+%        {\Medium
+%        Imagine entities {\Light (pre-supposition accomodation)}\\ \vspace*{1em}
+%        The world is non-monotonic\\ \vspace*{1em}
+%        ...and full of exceptions {\Light (damn pinguins!)}\\ \vspace*{1em}
+%        ...
+%        }
+%        %Temporal template matching, chronicles\\
+% ]{pr2-baby-4.jpg}
+
+
+{
+%\fullbackground{background.pdf}
+%\begin{frame}[plain]
+%
+%    Mutual Modelling: from visual perspective taking
+%    to...
 %\end{frame}
-
-\videoframe[0.56]{videos/variations-splitscreen.mpg}
-
-\videoframe{videos/roboscopie.webm?start=93}
-
-{
-\paper{Lemaignan, Gharbi, Mainprice, Herrb, Alami {\Medium Roboscopie: A Theatre Performance for a Human and a Robot} -- HRI 2012}
-\begin{frame}{}
-    \begin{multicols}{4}
-\scriptsize
-
-{\tt amit\_give} \\
-{\tt arms\_against\_torso} \\
-{\tt attachobject} \\
-{\tt basicgive} \\
-{\tt basicgrab} \\
-{\tt basictake} \\
-{\tt basket} \\
-{\tt cancel\_follow} \\
-{\tt cancel\_track} \\
-{\tt cancel} \\
-{\tt carry} \\
-{\tt close\_gripper} \\
-{\tt configure\_grippers} \\
-{\tt detect\_and\_grab} \\
-{\tt detect} \\
-{\tt disabledevileye} \\
-{\tt display} \\
-{\tt dock} \\
-{\tt enabledevileye} \\
-{\tt extractpose} \\
-{\tt follow} \\
-{\tt glance\_to} \\
-{\tt goto} \\
-{\tt grab\_gripper} \\
-{\tt grab} \\
-{\tt gym} \\
-{\tt handover} \\
-{\tt handsup\_folded} \\
-{\tt handsup\_folded2} \\
-{\tt handsup\_folded3} \\
-{\tt handsup} \\
-{\tt hide} \\
-{\tt idle} \\
-{\tt init} \\
-{\tt larm\_swinging} \\
-{\tt lock\_object} \\
-{\tt look\_at\_ros} \\
-{\tt look\_at\_xyz} \\
-{\tt look\_at} \\
-{\tt looksat} \\
-{\tt manipose} \\
-{\tt move\_head} \\
-{\tt movearm} \\
-{\tt moveclose} \\
-{\tt open\_gripper} \\
-{\tt pick} \\
-{\tt place\_agent} \\
-{\tt place\_object} \\
-{\tt pointsat} \\
-{\tt put\_accessible} \\
-{\tt put} \\
-{\tt rarm\_swinging} \\
-{\tt release\_gripper} \\
-{\tt release} \\
-{\tt restpose} \\
-{\tt rotate} \\
-{\tt satisfied} \\
-{\tt say} \\
-{\tt setpose} \\
-{\tt settorso} \\
-{\tt setup\_scenario} \\
-{\tt show} \\
-{\tt slow\_arms\_swinging} \\
-{\tt sorry} \\
-{\tt speed\_arms\_swinging} \\
-{\tt sweep\_look} \\
-{\tt sweep} \\
-{\tt switch\_cameras} \\
-{\tt take} \\
-{\tt track\_human} \\
-{\tt track} \\
-{\tt translate} \\
-{\tt tuckedpose} \\
-{\tt unlock\_object} \\
-{\tt wait} \\
-{\tt waypoints} \\
-    \end{multicols}
-\end{frame}
-}
-
-\imageframe{croquignole.jpg}
-
-{
-\paper{Lemaignan, Hosseini, Dillenbourg {\Medium pyRobots: a Toolset for Robot Executive Control} -- IROS 2015}
-\begin{frame}{}
-    \centering
-    \includegraphics[width=0.8\textwidth]{actions-croquignole.pdf}
-
-    \begin{multicols}{3}
-\scriptsize
-{\tt lightbar} \\
-{\tt on\_toy\_added} \\
-{\tt move} \\
-{\tt background\_blink} \\
-{\tt undock} \\
-{\tt pulse\_row} \\
-{\tt blink} \\
-{\tt on\_lolette} \\
-{\tt placeeyes} \\
-{\tt on\_bumped} \\
-{\tt up\_down\_row} \\
-{\tt wakeup} \\
-{\tt look\_at\_caresses} \\
-{\tt on\_toy\_removed} \\
-{\tt sneak\_in} \\
-{\tt on\_lolette\_removed} \\
-{\tt fall\_asleep} \\
-{\tt look\_at\_lolette} \\
-{\tt active\_wait} \\
-{\tt closeeyes} \\
-{\tt lightpattern} \\
-{\tt turn} \\
-{\tt idle} \\
-{\tt playsound} \\
-{\tt blush}
-
-    \end{multicols}
-\end{frame}
-}
+%}
 
 \subsection{A Cognitive Architecture}
 {
     \paper{Lemaignan et al., {\Medium Human-Robot Interaction: Tackling AI challenges}, Artifical Intelligence, (hopefully) 2016}
-\begin{frame}{One Architecture Instantiation}
+\begin{frame}{From ``Technical Integration''...}
     \begin{figure}
         \centering
 
@@ -1136,84 +1147,91 @@ Plymouth University}}
 \end{frame}
 }
 
-\begin{frame}{Planning for the Human}
 
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.6\textwidth]{cleantable.jpg}\\
+{
 
-        \vspace*{1em}
+    \paper{Devin et al. {\Medium Some essential skills and their combination in an architecture for a cognitive and interactive robot} -- HRI 2016}
+\begin{frame}{...to ``Modeling of human cognition''...}
 
-        \resizebox{0.7\paperwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                    robot/.style={fill=hriSec1CompDark!50},
-                    every edge/.style={<-, draw, ultra thick},
-                    every node/.style={ draw, 
-                        thick,  
-                        circle, 
-                        font=\sf,
-                        align=center,
-                        node distance=2cm,
-                        fill=hriSec3CompDark!50, 
-                        minimum size=2cm, 
-                inner sep=0.1cm}]
+\resizebox{!}{0.7\paperheight}{%
+\tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
+\begin{tikzpicture}[
+    >=latex,
+    node distance=1.5,
+    every edge/.style={draw, very thick},
+    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+    stmt/.style={align=center, font=\Medium},
+    label/.style={midway, align=center, font=\scriptsize, fill=white}]
 
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+    \node at (0,0)[skill, fill=hriSec2!50] (a1) {Shared Plan Elaboration};
 
-                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
-                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
+    \node [skill, fill=hriSec2!50,above=of a1] (a2) {Intention Prediction};
+    \node [skill, fill=hriSec2!50,left=of a1] (a3) {Mental State Management};
+    \node [skill, fill=hriSec2!50,right=of a1] (a4) {Communication for\\Joint Action};
+    \node [skill, fill=hriSec2!50,below=of a1] (a5) {Shared Plan Achievement};
+    \node [skill, fill=hriSec2!50,left=of a5] (a6) {Situation Assessment};
 
-                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
-                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
-                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
-                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
-                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
-                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
 
-                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
-                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+    \node [skill, fill=hriSec3!50,below left=of a5,anchor=north] (a7) {Action Achievement};
+    \node [skill, fill=hriSec3!50,below right=of a5,anchor=north] (a8) {Human Action Monitoring};
+  
+    \node[below=3.7 of a5] (a14) {Human-aware geometric and task planners, real-time controllers, sensors...};
 
-            \end{tikzpicture}
-        }
+  \coordinate[below=3 of a6] (a9);
 
-    \end{figure}
+  \node[rotate=90,left=0.7 of a3.west] (distal) {\Medium\large DISTAL};
+  \node[rotate=90] at (distal |- a7.south) {\Medium\large PROXIMAL};
+  \node[rotate=90] at (distal |- a14) {\Medium\large MOTOR};
+
+  \coordinate (a11) at (a9 -| distal.north);
+  \coordinate (a12) at (a9 -| a4.east);
+  \draw[dotted, thick] (a11) -- (a12);
+
+
+  \coordinate (a13) at ($(a5)!0.5!(a7)$);
+  \draw[dotted, thick] (a13 -| distal.north) -- (a13 -| a4.east);
+
+
+  %%% Relations between components
+  \path (a2) edge [->] node[label] {goal to execute} (a1);
+  \path (a1) edge [->] node[label] {plan} (a5);
+  \path (a2) edge [<-] node[label] {goal (order)} (a4);
+
+  \path (a3) edge [<->, bend left=40, looseness=1.2] node[label,pos=0.1] {mental state information} (a4);
+  \path (a3) edge [<->] (a2);
+  \path (a3) edge [<->] (a1);
+  \path (a3) edge [<->] (a5);
+
+  \path (a6) edge [->] node[label] {conceptual\\world state} (a3);
+
+  \path (a5) edge [<->] node[label] {coordination} (a4);
+
+  \path (a5) edge [<->] node[label,right=0.5] {anchoring of actions} (a7);
+  \path (a5) edge [<->] (a8);
+
+  \path (a9) edge [->] node[label] {sensors} (a6);
+
+  \coordinate (a10) at (a9 -| a7);
+  \path (a10) edge [<->] node[label] {planning and control} (a7);
+
+  \coordinate (a10) at (a9 -| a8);
+  \path (a10) edge [<->] node[label] {sensors} (a8);
+
+  \path (a7) edge [<->] node[label] {coordination} (a8);
+ 
+\end{tikzpicture}
+}
 
 \end{frame}
-
-
-\videoframe{videos/clean-table.webm?autostart}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Adapt}
 
+\section{Are you still with me?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Life-long Adaptation?}
-\begin{frame}{Life-long adaptation?}
-    \centering
-    CoWriter: Learning by Teaching\\
-
-    \only<1>{
-    \video{0.8\textwidth}{videos/nao-tablet-demo.mp4}
-    }
-
-    \only<2>{
-        \includegraphics[width=0.8\textwidth]{cowriter-g.png}
-    }
-
-
-    \only<3>{
-    \video{0.8\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
-    }
-
-\end{frame}
-
-\imageframe{cowriter-fsm.png}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamics of Interaction}
@@ -1350,271 +1368,21 @@ Plymouth University}}
 \end{frame}
 }
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Bind Them All}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\imageframe[color=white]{islands1}
-\imageframe[color=white]{islands2}
-\imageframe[color=white]{islands3}
-\imageframe[color=white]{islands4}
+\subsection{Cognitive Context and Anthropomorphism}
 
 {
-\paper{Baxter, Lemaignan, Trafton {\Medium Cognitive Architectures for Social Human-Robot Interaction} -- HRI 2016}
-\begin{frame}{Cognitive Architectures}
-
-    \begin{multicols}{2}
-        \resizebox{0.7\columnwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/6}, 
-                level 2 concept/.append style={sibling angle=60}, 
-            concept color=hriSec1,text=white]
-            node[concept] {Cognitive Architectures}
-                [clockwise from=60]
-                child[concept color=hriSec3Dark,text=white] { node[concept]{1. Model} }
-                child[concept color=hriSec2Dark,text=white] { node[concept]{2. Integration} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {3. Methodology}};
-
-
-        \end{tikzpicture}
-    }
-    \vfill
-    \columnbreak
-
-    {\Medium 1. Models of Human Cognition}
-
-    {\scriptsize -- Modelling (aspects of) human cognition \\-- Subsequent application to robots}
-
-    {\Medium 2. Technical Integration}
-
-    {\scriptsize -- Define required functionality of robots \\-- Implement algorithms (etc) necessary}
-
-    {\Medium 3. A Methodology}
-
-    {\scriptsize -- Formalising assumptions \\-- Integrating knowledge from multiple disciplines \\-- Iteratively updating architecture}
-
-    %\refToContrib{Someone here...}
-
-    \end{multicols}
-\end{frame}
-}
-
-
-%\imageframe{pr2-baby-4.jpg}
-%\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
-%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-%        %Non-monotonic topology\\
-%        %Represent continuous/discrete fields\\
-%        Account for uncertainties\\ \vspace*{1em}
-%        Remember the past, imagine the future\\ \vspace*{1em}
-%        %Imagine entities\\
-%        %Temporal template matching, chronicles\\
-% ]{pr2-baby-4.jpg}
-%
-%\imageframe[\scriptsize Mix of geometry, time, semantics\\ \vspace*{1em}
-%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-%        %Non-monotonic topology\\
-%        %Represent continuous/discrete fields\\
-%        Account for uncertainties\\ \vspace*{1em}
-%        Remember the past, imagine the future\\ \vspace*{1em}
-%        {\Medium
-%        Imagine entities {\Light (pre-supposition accomodation)}\\ \vspace*{1em}
-%        The world is non-monotonic\\ \vspace*{1em}
-%        ...and full of exceptions {\Light (damn pinguins!)}\\ \vspace*{1em}
-%        ...
-%        }
-%        %Temporal template matching, chronicles\\
-% ]{pr2-baby-4.jpg}
-
-
-{
-%\fullbackground{background.pdf}
-%\begin{frame}[plain]
-%
-%    Mutual Modelling: from visual perspective taking
-%    to...
-%\end{frame}
-%}
-
-{
-\paper{Lemaignan et al., {\Medium Human-Robot Interaction: Tackling AI challenges}, Artifical Intelligence, (hopefully) 2016}
-\begin{frame}{From ``Technical Integration''...}
-    \begin{figure}
-        \centering
-
-        \resizebox{0.9\paperwidth}{!}{%
-
-            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
-
-            \begin{tikzpicture}[
-                    >=latex,
-                    every edge/.style={draw, very thick},
-                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-                label/.style={midway, align=center, font=\scriptsize, fill=white}]
-
-                %%% Separation between deliberative layer and sensori-motor layer
-                \draw[dotted, thick] (-8,-5) -- (12, -5);
-
-                %%% SPARK
-                \node at (4,-3.5)[skill, fill=hriSec3!50] (spark) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
-                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
-                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
-                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
-                    \end{tikzpicture}
-                };
-
-                %%% LOWLEVEL
-                \node [skill, below=0.7 of spark] (lowlevel) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (sensori) {Sensorimotor layer};
-                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
-                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
-                    \end{tikzpicture}
-                };
-
-                \path (lowlevel) edge [->] (spark);
-
-                %%% ORO
-                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
-                {Symbolic facts \\ and beliefs management -- {\tt oro}};
-                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
-                %%% HATP
-                \node at (-6, 2.5)[skill, fill=hriSec1!50] (hatp) {Human-aware
-                symbolic \\task planning -- {\tt hatp}};
-                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
-
-                %%% DIALOGS
-                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
-                {Dialogue processing\\{\tt dialogs}};
-                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
-
-                %%% SHARY
-                \node at (4,4.5)[skill, fill=hriSec1Comp!50] (shary) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
-                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
-                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
-                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
-                    \end{tikzpicture}
-                };
-                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
-                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
-                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
-                %%% MHP
-                \node at (9,0)[skill, fill=hriSec3CompDark!50] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
-                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
-                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
-                \path (lowlevel.east) edge [<-, bend right=60, looseness=1.3] node[label] {atomic\\actions} (mhp.south east);
-
-
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-\end{frame}
-}
-
-
-
-{
-
-    \paper{Devin et al. {\Medium Some essential skills and their combination in an architecture for a cognitive and interactive robot} -- HRI 2016}
-\begin{frame}{...to ``Modeling of human cognition''...}
-
-\resizebox{!}{0.7\paperheight}{%
-\tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
-\begin{tikzpicture}[
-    >=latex,
-    node distance=1.5,
-    every edge/.style={draw, very thick},
-    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-    stmt/.style={align=center, font=\Medium},
-    label/.style={midway, align=center, font=\scriptsize, fill=white}]
-
-    \node at (0,0)[skill, fill=hriSec2!50] (a1) {Shared Plan Elaboration};
-
-    \node [skill, fill=hriSec2!50,above=of a1] (a2) {Intention Prediction};
-    \node [skill, fill=hriSec2!50,left=of a1] (a3) {Mental State Management};
-    \node [skill, fill=hriSec2!50,right=of a1] (a4) {Communication for\\Joint Action};
-    \node [skill, fill=hriSec2!50,below=of a1] (a5) {Shared Plan Achievement};
-    \node [skill, fill=hriSec2!50,left=of a5] (a6) {Situation Assessment};
-
-
-    \node [skill, fill=hriSec3!50,below left=of a5,anchor=north] (a7) {Action Achievement};
-    \node [skill, fill=hriSec3!50,below right=of a5,anchor=north] (a8) {Human Action Monitoring};
-  
-    \node[below=3.7 of a5] (a14) {Human-aware geometric and task planners, real-time controllers, sensors...};
-
-  \coordinate[below=3 of a6] (a9);
-
-  \node[rotate=90,left=0.7 of a3.west] (distal) {\Medium\large DISTAL};
-  \node[rotate=90] at (distal |- a7.south) {\Medium\large PROXIMAL};
-  \node[rotate=90] at (distal |- a14) {\Medium\large MOTOR};
-
-  \coordinate (a11) at (a9 -| distal.north);
-  \coordinate (a12) at (a9 -| a4.east);
-  \draw[dotted, thick] (a11) -- (a12);
-
-
-  \coordinate (a13) at ($(a5)!0.5!(a7)$);
-  \draw[dotted, thick] (a13 -| distal.north) -- (a13 -| a4.east);
-
-
-  %%% Relations between components
-  \path (a2) edge [->] node[label] {goal to execute} (a1);
-  \path (a1) edge [->] node[label] {plan} (a5);
-  \path (a2) edge [<-] node[label] {goal (order)} (a4);
-
-  \path (a3) edge [<->, bend left=40, looseness=1.2] node[label,pos=0.1] {mental state information} (a4);
-  \path (a3) edge [<->] (a2);
-  \path (a3) edge [<->] (a1);
-  \path (a3) edge [<->] (a5);
-
-  \path (a6) edge [->] node[label] {conceptual\\world state} (a3);
-
-  \path (a5) edge [<->] node[label] {coordination} (a4);
-
-  \path (a5) edge [<->] node[label,right=0.5] {anchoring of actions} (a7);
-  \path (a5) edge [<->] (a8);
-
-  \path (a9) edge [->] node[label] {sensors} (a6);
-
-  \coordinate (a10) at (a9 -| a7);
-  \path (a10) edge [<->] node[label] {planning and control} (a7);
-
-  \coordinate (a10) at (a9 -| a8);
-  \path (a10) edge [<->] node[label] {sensors} (a8);
-
-  \path (a7) edge [<->] node[label] {coordination} (a8);
- 
-\end{tikzpicture}
-}
-
+\paper{Lemaignan, Sharma, Dillenbourg {\Medium Shaping the Perception of a Robot by Cognitive Priming} -- under review}
+\begin{frame}{Cognitive Context and Anthropomorphism}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{stimulus-toys}
+        \includegraphics[width=0.5\linewidth]{cognitive-priming}
+    \end{center}
 \end{frame}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Are you still with me?}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{With-me-ness}
 
 
 \imageframe[color=black]{realSetup}
@@ -1661,7 +1429,7 @@ Plymouth University}}
 
         \includegraphics[width=\columnwidth]{croquignole-single}
 
-        \includegraphics[width=\columnwidth]{ranger-background}
+        \includegraphics[width=\columnwidth]{stimulus-toys}
 
         \includegraphics[width=\columnwidth]{ranger-background}
 
@@ -1921,5 +1689,175 @@ Plymouth University}}
     \end{figure}
 \end{frame}
 
+
+%\subsection{CoWriter}
+
+\begin{frame}{CoWriter details}
+    \centering
+    CoWriter: Learning by Teaching\\
+
+    \only<1>{
+    \video{0.8\textwidth}{videos/nao-tablet-demo.mp4}
+    }
+
+    \only<2>{
+        \includegraphics[width=0.8\textwidth]{cowriter-g.png}
+    }
+
+
+    \only<3>{
+    \video{0.8\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
+    }
+
+\end{frame}
+
+\imageframe{cowriter-fsm.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Act}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{The Challenge of the Real-World\texttrademark}
+%\begin{frame}{Cope with the real-world}
+%    \begin{enumerate}
+%        \item long interaction...
+%        \item ...in a human-world...
+%        \item ...with humans...
+%   \end{enumerate}
+%\end{frame}
+
+\videoframe[0.56]{videos/variations-splitscreen.mpg}
+
+\videoframe{videos/roboscopie.webm?start=93}
+
+{
+\paper{Lemaignan, Gharbi, Mainprice, Herrb, Alami {\Medium Roboscopie: A Theatre Performance for a Human and a Robot} -- HRI 2012}
+\begin{frame}{}
+    \begin{multicols}{4}
+\scriptsize
+
+{\tt amit\_give} \\
+{\tt arms\_against\_torso} \\
+{\tt attachobject} \\
+{\tt basicgive} \\
+{\tt basicgrab} \\
+{\tt basictake} \\
+{\tt basket} \\
+{\tt cancel\_follow} \\
+{\tt cancel\_track} \\
+{\tt cancel} \\
+{\tt carry} \\
+{\tt close\_gripper} \\
+{\tt configure\_grippers} \\
+{\tt detect\_and\_grab} \\
+{\tt detect} \\
+{\tt disabledevileye} \\
+{\tt display} \\
+{\tt dock} \\
+{\tt enabledevileye} \\
+{\tt extractpose} \\
+{\tt follow} \\
+{\tt glance\_to} \\
+{\tt goto} \\
+{\tt grab\_gripper} \\
+{\tt grab} \\
+{\tt gym} \\
+{\tt handover} \\
+{\tt handsup\_folded} \\
+{\tt handsup\_folded2} \\
+{\tt handsup\_folded3} \\
+{\tt handsup} \\
+{\tt hide} \\
+{\tt idle} \\
+{\tt init} \\
+{\tt larm\_swinging} \\
+{\tt lock\_object} \\
+{\tt look\_at\_ros} \\
+{\tt look\_at\_xyz} \\
+{\tt look\_at} \\
+{\tt looksat} \\
+{\tt manipose} \\
+{\tt move\_head} \\
+{\tt movearm} \\
+{\tt moveclose} \\
+{\tt open\_gripper} \\
+{\tt pick} \\
+{\tt place\_agent} \\
+{\tt place\_object} \\
+{\tt pointsat} \\
+{\tt put\_accessible} \\
+{\tt put} \\
+{\tt rarm\_swinging} \\
+{\tt release\_gripper} \\
+{\tt release} \\
+{\tt restpose} \\
+{\tt rotate} \\
+{\tt satisfied} \\
+{\tt say} \\
+{\tt setpose} \\
+{\tt settorso} \\
+{\tt setup\_scenario} \\
+{\tt show} \\
+{\tt slow\_arms\_swinging} \\
+{\tt sorry} \\
+{\tt speed\_arms\_swinging} \\
+{\tt sweep\_look} \\
+{\tt sweep} \\
+{\tt switch\_cameras} \\
+{\tt take} \\
+{\tt track\_human} \\
+{\tt track} \\
+{\tt translate} \\
+{\tt tuckedpose} \\
+{\tt unlock\_object} \\
+{\tt wait} \\
+{\tt waypoints} \\
+    \end{multicols}
+\end{frame}
+}
+
+\imageframe{croquignole.jpg}
+
+{
+\paper{Lemaignan, Hosseini, Dillenbourg {\Medium pyRobots: a Toolset for Robot Executive Control} -- IROS 2015}
+\begin{frame}{}
+    \centering
+    \includegraphics[width=0.8\textwidth]{actions-croquignole.pdf}
+
+    \begin{multicols}{3}
+\scriptsize
+{\tt lightbar} \\
+{\tt on\_toy\_added} \\
+{\tt move} \\
+{\tt background\_blink} \\
+{\tt undock} \\
+{\tt pulse\_row} \\
+{\tt blink} \\
+{\tt on\_lolette} \\
+{\tt placeeyes} \\
+{\tt on\_bumped} \\
+{\tt up\_down\_row} \\
+{\tt wakeup} \\
+{\tt look\_at\_caresses} \\
+{\tt on\_toy\_removed} \\
+{\tt sneak\_in} \\
+{\tt on\_lolette\_removed} \\
+{\tt fall\_asleep} \\
+{\tt look\_at\_lolette} \\
+{\tt active\_wait} \\
+{\tt closeeyes} \\
+{\tt lightpattern} \\
+{\tt turn} \\
+{\tt idle} \\
+{\tt playsound} \\
+{\tt blush}
+
+    \end{multicols}
+\end{frame}
+}
 
 \end{document}
