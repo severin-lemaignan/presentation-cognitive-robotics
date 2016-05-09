@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{multicol}
+\usepackage[normalem]{ulem}
 
 \usepackage{tabularx,ragged2e}
 \usepackage{booktabs}
@@ -18,7 +19,7 @@
 \usetheme{hri}
 
 \usepackage{tikz}
-\usetikzlibrary{calc,mindmap,backgrounds,positioning,svg.path}
+\usetikzlibrary{fpu,fit,calc,mindmap,backgrounds,positioning,svg.path}
 
 \graphicspath{{figs/}}
 
@@ -92,8 +93,7 @@ align=center, inner sep=5pt, fill=none}]
 % General presentation settings
 %--------------------------------------------------------------------------
 \title{More Cognition into my Interaction}
-\subtitle{Past and Present of Cognitive Robotics for Social Human-Robot
-Interaction}
+\subtitle{A Practical Look on Cognition for Social HRI}
 \date{\today}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\Medium
@@ -124,6 +124,11 @@ Plymouth University}}
         solving}, and {\Medium decision making}.''
 
 \end{frame}
+
+\imageframe[color=white]{islands1}
+\imageframe[color=white]{islands2}
+
+
 
 \begin{frame}[plain]{}
 
@@ -1247,9 +1252,63 @@ Plymouth University}}
 }
 
 
-\section{What next?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\imageframe{pr2-baby-4.jpg}
+
+\section{Bind Them All}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands1}
+\imageframe[color=white]{islands2}
+\imageframe[color=white]{islands3}
+\imageframe[color=white]{islands4}
+
+\begin{frame}{Cognitive Architectures}
+
+    \begin{multicols}{2}
+        \resizebox{0.7\columnwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=hriSec1,text=white]
+            node[concept] {Cognitive Architectures}
+                [clockwise from=60]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{1. Model} }
+                child[concept color=hriSec2Dark,text=white] { node[concept]{2. Integration} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {3. Methodology}};
+
+
+        \end{tikzpicture}
+    }
+    \vfill
+    \columnbreak
+
+    {\Medium 1. Models of Human Cognition}
+
+    {\scriptsize -- Modelling (aspects of) human cognition \\-- Subsequent application to robots}
+
+    {\Medium 2. Technical Integration}
+
+    {\scriptsize -- Define required functionality of robots \\-- Implement algorithms (etc) necessary}
+
+    {\Medium 3. A Methodology}
+
+    {\scriptsize -- Formalising assumptions \\-- Integrating knowledge from multiple disciplines \\-- Iteratively updating architecture}
+
+    %\refToContrib{Someone here...}
+
+    \end{multicols}
+\end{frame}
+
+
+
+%\imageframe{pr2-baby-4.jpg}
 %\imageframe[\scriptsize \Medium Mix of geometry, time, semantics\\ \vspace*{1em}
 %        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
 %        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
@@ -1279,15 +1338,273 @@ Plymouth University}}
 
 
 {
-\fullbackground{background.pdf}
-\begin{frame}[plain]
+%\fullbackground{background.pdf}
+%\begin{frame}[plain]
+%
+%    Mutual Modelling: from visual perspective taking
+%    to...
+%\end{frame}
+%}
 
-    Mutual Modelling: from visual perspective taking
-    to...
+{
+\paper{Lemaignan et al., {\Medium Human-Robot Interaction: Tackling AI challenges}, Artifical Intelligence, (hopefully) 2016}
+\begin{frame}{From ``Technical Integration''...}
+    \begin{figure}
+        \centering
+
+        \resizebox{\paperwidth}{!}{%
+
+            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
+
+            \begin{tikzpicture}[
+                    >=latex,
+                    every edge/.style={draw, very thick},
+                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+                label/.style={midway, align=center, font=\scriptsize, fill=white}]
+
+                %%% SPARK
+                \node at (4,-3.5)[skill, fill=hriSec3!50] (spark) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
+                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
+                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
+                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
+                    \end{tikzpicture}
+                };
+
+                %%% LOWLEVEL
+                \node [skill, below=0.7 of spark] (lowlevel) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (sensori) {Sensorimotor layer};
+                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
+                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
+                    \end{tikzpicture}
+                };
+
+                \path (lowlevel) edge [->] (spark);
+
+                %%% ORO
+                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
+                {Symbolic facts \\ and beliefs management -- {\tt oro}};
+                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
+                %%% HATP
+                \node at (-6, 2.5)[skill, fill=hriSec1!50] (hatp) {Human-aware
+                symbolic \\task planning -- {\tt hatp}};
+                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
+
+                %%% DIALOGS
+                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
+                {Dialogue processing\\{\tt dialogs}};
+                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
+
+                %%% SHARY
+                \node at (4,4.5)[skill, fill=hriSec1Comp!50] (shary) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
+                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
+                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
+                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
+                    \end{tikzpicture}
+                };
+                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
+                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
+                \path (lowlevel.east) edge [<-, bend right=80, looseness=1.5] node[label] {atomic\\actions} (shary.east);
+                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
+                %%% MHP
+                \node at (9,0)[skill, fill=hriSec3CompDark!50] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
+                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
+                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
+
+
+                %%% Separation between deliberative layer and sensori-motor layer
+                \draw[dotted, thick] (-8,-5) -- (12, -5);
+
+            \end{tikzpicture}
+        }
+    \end{figure}
+
 \end{frame}
 }
 
 
+
+{
+
+\paper{Sandra's contribution)}
+\begin{frame}{...to ``Modeling of human cognition''...}
+
+\resizebox{!}{0.7\paperheight}{%
+\tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
+\begin{tikzpicture}[
+    >=latex,
+    node distance=1.5,
+    every edge/.style={draw, very thick},
+    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+    stmt/.style={align=center, font=\Medium},
+    label/.style={midway, align=center, font=\scriptsize, fill=white}]
+
+    \node at (0,0)[skill, fill=hriSec2!50] (a1) {Shared Plan Elaboration};
+
+    \node [skill, fill=hriSec2!50,above=of a1] (a2) {Intention Prediction};
+    \node [skill, fill=hriSec2!50,left=of a1] (a3) {Mental State Management};
+    \node [skill, fill=hriSec2!50,right=of a1] (a4) {Communication for\\Joint Action};
+    \node [skill, fill=hriSec2!50,below=of a1] (a5) {Shared Plan Achievement};
+    \node [skill, fill=hriSec2!50,left=of a5] (a6) {Situation Assessment};
+
+
+    \node [skill, fill=hriSec3!50,below left=of a5,anchor=north] (a7) {Action Achievement};
+    \node [skill, fill=hriSec3!50,below right=of a5,anchor=north] (a8) {Human Action Monitoring};
+  
+    \node[below=3.7 of a5] (a14) {Human-aware geometric and task planners, real-time controllers, sensors...};
+
+  \coordinate[below=3 of a6] (a9);
+
+  \node[rotate=90,left=0.7 of a3.west] (distal) {\Medium\large DISTAL};
+  \node[rotate=90] at (distal |- a7.south) {\Medium\large PROXIMAL};
+  \node[rotate=90] at (distal |- a14) {\Medium\large MOTOR};
+
+  \coordinate (a11) at (a9 -| distal.north);
+  \coordinate (a12) at (a9 -| a4.east);
+  \draw[dotted, thick] (a11) -- (a12);
+
+
+  \coordinate (a13) at ($(a5)!0.5!(a7)$);
+  \draw[dotted, thick] (a13 -| distal.north) -- (a13 -| a4.east);
+
+
+  %%% Relations between components
+  \path (a2) edge [->] node[label] {goal to execute} (a1);
+  \path (a1) edge [->] node[label] {plan} (a5);
+  \path (a2) edge [<-] node[label] {goal (order)} (a4);
+
+  \path (a3) edge [<->, bend left=40, looseness=1.2] node[label,pos=0.1] {mental state information} (a4);
+  \path (a3) edge [<->] (a2);
+  \path (a3) edge [<->] (a1);
+  \path (a3) edge [<->] (a5);
+
+  \path (a6) edge [->] node[label] {conceptual\\world state} (a3);
+
+  \path (a5) edge [<->] node[label] {coordination} (a4);
+
+  \path (a5) edge [<->] node[label,right=0.5] {anchoring of actions} (a7);
+  \path (a5) edge [<->] (a8);
+
+  \path (a9) edge [->] node[label] {sensors} (a6);
+
+  \coordinate (a10) at (a9 -| a7);
+  \path (a10) edge [<->] node[label] {planning and control} (a7);
+
+  \coordinate (a10) at (a9 -| a8);
+  \path (a10) edge [<->] node[label] {sensors} (a8);
+
+  \path (a7) edge [<->] node[label] {coordination} (a8);
+ 
+\end{tikzpicture}
+}
+
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{What Next?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\paper{Mnih et al., Human-level control through deep reinforcement learning, Nature 2015}
+\begin{frame}{Learning Complex Behaviours}
+
+    \begin{center}
+        \includegraphics[width=\linewidth]{breakout}
+    \end{center}
+
+
+        \begin{itemize}
+            \item Inputs: raw screen image + score
+            \item from the outside, looks like planning
+            \item<2-> \sout{1.000.000} {\Medium 500} games to play a good human-level
+        \end{itemize}
+
+    \uncover<3> {
+        \begin{center}
+            {\Medium Could we also learn social dynamics?}
+        \end{center}
+    }
+\end{frame}
+}
+
+
+\begin{frame}{Attention, Alignment, Awareness}
+
+    \begin{center}
+        \includegraphics<1>[height=0.7\pageheight]{playing_together}
+        \includegraphics<2>[height=0.7\pageheight]{playing_together_gaze}
+        \includegraphics<3>[height=0.7\pageheight]{playing_together_awareness}
+        \includegraphics<4>[height=0.7\pageheight]{playing_together_mutual_awareness}
+    \end{center}
+\end{frame}
+
+
+{
+\paper{Baxter et al., Cognitive Architecture for HRI: Towards Behavioural
+    Alignment, 2013}
+\begin{frame}{Associative Memory}
+
+    \centering
+        \resizebox{0.8\linewidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={draw, very thick},
+                every node/.style={font=\Medium,align=center},
+                input/.style={draw,circle, inner sep=0pt,minimum size=0.6cm}
+            ]
+
+            % draw the units
+                \foreach \x [count=\xi] in {0, 120, 240}
+                \foreach \y [count=\yi] in {-.6, 0, .6}
+                %\node[input, ball color=orange!\x!blue] at ($(\x:3)!\y!90:(0,0)$) (i\xi\yi) {};
+                    \node[input, fill=hriSec3Comp!\x!hriSec1Comp] at ($(\x:3)!\y!90:(0,0)$) (i\xi\yi) {};
+
+                \node[draw,rounded corners, fit=(i11)(i12)(i13)] (modA) {};
+                \node[draw,rounded corners, rotate fit=120,fit=(i21)(i22)(i23)] (modB) {};
+                \node[draw,rounded corners, rotate fit=60,fit=(i31)(i32)(i33)] (modC) {};
+
+                \uncover<1>{
+                    \node at (180:5.5) {Modalities} edge[->] (modB) edge[->] (modC);
+                \node at (-40:6) {Input\\units} edge[->] (i13) edge[->] (i31);
+                \node at (1,1) {Associative\\links};
+            }
+
+                \uncover<2>{
+                    \node[above=0.3 of i21]{Bert};
+                \node[above=0.3 of i22]{Tony};
+                \node[above=0.3 of i23]{Chris};
+
+                \node[right=0.3 of i11]{Green cube in focus};
+                \node[right=0.3 of i12]{Red cube in focus};
+                \node[right=0.3 of i13]{Board in focus};
+            }
+
+                \path[draw,dashed, hriSec3Dark, thick]  (i23) -- (i11) -- (i31) -- (i23);
+                \path[draw,dotted, hriSec3Dark, thick] (i23) -- (i12) -- (i32) -- (i23);
+                \path[draw, hriSec3Dark] (i21) -- (i13) -- (i33) -- (i21);
+
+            \end{tikzpicture}
+    }
+
+
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                          THE END                                        %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
 \fullbackground{background.pdf}
