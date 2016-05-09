@@ -125,11 +125,6 @@ Plymouth University}}
 
 \end{frame}
 
-\imageframe[color=white]{islands1}
-\imageframe[color=white]{islands2}
-
-
-
 \begin{frame}[plain]{}
 
     \begin{multicols}{2}
@@ -250,15 +245,6 @@ Plymouth University}}
                 child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} } 
             };
 
-            \uncover<2>{
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (adapt.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (plans.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (krr.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (perception.center) {};
-
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
-            }
         \end{tikzpicture}
     }
 
@@ -271,6 +257,156 @@ Plymouth University}}
     \end{multicols}
 
 \end{frame}
+
+
+\begin{frame}[plain]{}
+\centering
+        \resizebox{!}{0.7\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/5}, 
+                level 2 concept/.append style={sibling angle=120}, 
+            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+            node[concept] {Cognition}
+            [clockwise from=-30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
+                [clockwise from=40]
+                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
+            }
+            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Representation} 
+                [clockwise from=-30]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (memory) {Memory} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind} }
+            }
+            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
+                [counterclockwise from=110]
+                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication} }
+            }
+            child[concept color=hriSec3Comp,text=white] { node[concept] (learning) {Learning} 
+                [counterclockwise from=130]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
+            }
+            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
+                [clockwise from=110]
+                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making} } 
+            };
+
+        \path (decision) edge[->, bend left] (action);
+        \path (percept) edge[->, bend left] (action);
+        \path (krr) edge[<->, bend right] (reason);
+        \path (plan) edge[<->] (reason);
+        \path (percept) edge[->, bend left] (krr);
+        \path (krr) edge[->, bend left] (plan);
+        \path (learning) edge[->, bend left] (reason);
+        \path (learning) edge[->, bend left] (krr);
+        \path (percept) edge[<->, bend left] (learning);
+        \path (dialog) edge[->, bend left] (tom);
+        \path (tom) edge[->, bend left] (comm);
+        \path (percept) edge[<->, bend left] (memory);
+
+
+        \end{tikzpicture}
+    }
+\end{frame}
+
+
+\begin{frame}[plain]{}
+    \centering
+        \resizebox{!}{0.7\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
+         \onslide<1>{
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/5}, 
+                level 2 concept/.append style={sibling angle=120}, 
+            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+            node[concept color=white] {}
+            [clockwise from=-30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
+                [clockwise from=40]
+                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention}; }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} ;};
+            }
+            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Representation} 
+                [clockwise from=-30]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (memory) {Memory}; }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind}; };
+            }
+            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
+                [counterclockwise from=110]
+                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning}; }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication}; };
+            }
+            child[concept color=hriSec3Comp,text=white] { node[concept] (learning) {Learning} 
+                [counterclockwise from=130]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation}; };
+            }
+            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
+                [clockwise from=110]
+                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving};}
+                child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making}; } ;
+            };
+        }
+         \onslide<2>{
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/5}, 
+                level 2 concept/.append style={sibling angle=120}, 
+            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+            node[concept color=white] {}
+            [clockwise from=-30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
+                [clockwise from=40]
+                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention}; }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} ;};
+            }
+            child[concept color=white,text=gray] { node[concept] (krr) {Knowledge Representation} 
+                [clockwise from=-30]
+                child[concept color=white,text=gray] { node[concept] (memory) {Memory}; }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind}; };
+            }
+            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
+                [counterclockwise from=110]
+                child[concept color=white,text=gray] { node[concept] (plan) {Task Planning}; }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication}; };
+            }
+            child[concept color=white,text=gray] { node[concept] (learning) {Learning} 
+                [counterclockwise from=130]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation}; };
+            }
+            child[concept color=white,text=gray] { node[concept] (reason) {Reasoning} 
+                [clockwise from=110]
+                child[concept color=white,text=gray] { node[concept] {Problem solving};}
+                child[concept color=white,text=gray] { node[concept] (decision) {Decision making}; } ;
+            };
+        }
+
+            \uncover<2>{
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (adapt.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (plans.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (krr.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (perception.center) {};
+
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
+            }
+
+        \end{tikzpicture}
+    }
+
+
+\end{frame}
+
+\imageframe[color=white]{islands1}
+\imageframe[color=white]{islands2}
 
 
 
@@ -496,7 +632,7 @@ Plymouth University}}
 
 \subsection{Modeling the Human}
 
-\imageframe{humans-pt.jpg}
+\imageframe{humans-pt}
 
 \begin{frame}{Perspective taking}
         \centering
