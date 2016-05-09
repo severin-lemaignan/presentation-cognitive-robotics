@@ -93,8 +93,8 @@ align=center, inner sep=5pt, fill=none}]
 % General presentation settings
 %--------------------------------------------------------------------------
 \title{Of Cognition and Social Robots}
-\subtitle{A Practical Look on Cognition for Social HRI}
-\date{{\Medium \today} Bristol Robotics Lab}
+\subtitle{Is ``Social Cognition'' in HRI just a buzz word?}
+\date{Bristol Robotics Lab -- {\Medium \today}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\Medium
 Plymouth University}}
@@ -316,140 +316,71 @@ Plymouth University}}
     }
 \end{frame}
 
-
-\begin{frame}[plain]{}
-    \centering
+{
+\paper{Baxter, Lemaignan, Trafton {\Medium Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
+\begin{frame}{Functions for Social Cognition}
+\centering
         \resizebox{!}{0.7\paperheight}{%
             \begin{tikzpicture}[
                     >=latex,
                 every edge/.style={<-, draw, very thick}]
         
-         \onslide<1>{
+
             \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept color=white] {}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
-                [clockwise from=40]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} ;};
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=white,text=hriWarmGreyDark]
+            node[concept] {\Medium Social\\Cognition in HRI}
+            [clockwise from=30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
+                [clockwise from=120]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
+                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept]
+                {Inference of mental models} };
             }
-            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Representation} 
-                [clockwise from=-30]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (memory) {Memory}; }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind}; };
+            child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
+                [counterclockwise from=-120]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] {Social context} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept]
+                {Common-sense} };
             }
-            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication}; };
+            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
+                [counterclockwise from=180]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept]
+                {Non-verbal} };
             }
-            child[concept color=hriSec3Comp,text=white] { node[concept] (learning) {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation}; };
+            child[concept color=hriSec3,text=white,grow=180] { node[concept] (dynamics) {Interaction Dynamics} 
+                [clockwise from=180]
+                child[concept color=hriSec2Dark,text=white] { node[concept]
+                {Long-term interaction} };
             }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
-                [clockwise from=110]
-                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving};}
-                child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making}; } ;
-            };
-        }
-         \onslide<2>{
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept color=white] {}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
-                [clockwise from=40]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} ;};
-            }
-            child[concept color=white,text=gray] { node[concept] (krr) {Knowledge Representation} 
-                [clockwise from=-30]
-                child[concept color=white,text=gray] { node[concept] (memory) {Memory}; }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind}; };
-            }
-            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=white,text=gray] { node[concept] (plan) {Task Planning}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication}; };
-            }
-            child[concept color=white,text=gray] { node[concept] (learning) {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation}; };
-            }
-            child[concept color=white,text=gray] { node[concept] (reason) {Reasoning} 
-                [clockwise from=110]
-                child[concept color=white,text=gray] { node[concept] {Problem solving};}
-                child[concept color=white,text=gray] { node[concept] (decision) {Decision making}; } ;
-            };
-        }
-        \end{tikzpicture}
-    }
-
-
-\end{frame}
-
-\imageframe[color=white]{islands1}
-\imageframe[color=white]{islands2}
-
-
-\begin{frame}[plain]{}
-    \centering
-        \resizebox{!}{0.7\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept color=white] {}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
-                [clockwise from=40]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} ;};
-            }
-            child[concept color=white,text=gray] { node[concept] (krr) {Knowledge Representation} 
-                [clockwise from=-30]
-                child[concept color=white,text=gray] { node[concept] (memory) {Memory}; }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind}; };
-            }
-            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=white,text=gray] { node[concept] (plan) {Task Planning}; }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication}; };
-            }
-            child[concept color=white,text=gray] { node[concept] (learning) {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation}; };
-            }
-            child[concept color=white,text=gray] { node[concept] (reason) {Reasoning} 
-                [clockwise from=110]
-                child[concept color=white,text=gray] { node[concept] {Problem solving};}
-                child[concept color=white,text=gray] { node[concept] (decision) {Decision making}; } ;
+            child[concept color=hriSec2,text=black, grow=120] { node[concept]
+                (action) {Performing with humans} 
+                [counterclockwise from=80]
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec3,text=white] { node[concept] {Joint
+                actions} };
             };
 
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (adapt.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (plans.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (krr.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (perception.center) {};
-
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
+%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
+%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (adapt.center) {};
+%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (plans.center) {};
+%                \node[circle, draw=red, very thick, minimum size=2cm] at (krr.center) {};
+%                \node[circle, draw=red, very thick, minimum size=2cm] at (perception.center) {};
+%
+%                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
+%
 
         \end{tikzpicture}
     }
-
-
+%    \\
+%    Learn -- Memorize -- Reason -- Represent -- Assess Situation
 \end{frame}
-
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -656,7 +587,7 @@ Plymouth University}}
 \videoframe[0.56]{videos/this_box.webm?autostart&start=1}
 
 {
-    \paper{Lemaignan et al. {\Medium Grounding the Interaction: Anchoring Situated Discourse in Everyday HRI}, Intl. J. of Social Robotics 2011}
+    \paper{Lemaignan et al. {\Medium Grounding the Interaction: Anchoring Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
     \begin{frame}{}
         \centering
         I keep the natural language processing part for the questions, but:\\
@@ -669,13 +600,22 @@ Plymouth University}}
 }
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Modeling the Human}
+\section{Modelling the Other}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Perspective Taking and Symbolic Modelling}
 
 \imageframe{humans-pt}
 
-\begin{frame}{Perspective taking}
+\begin{frame}{Visual Perspective taking}
         \centering
         \includegraphics[width=0.9\textwidth]{spark.pdf}
         \vspace*{1em}
@@ -703,20 +643,41 @@ Plymouth University}}
 }
 
 
+\videoframe[0.56]{videos/dialogs.webm?autostart&stop=28}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+    \paper{Lemaignan, Alami {\Medium Talking to my Robot: from Knowledge Grounding to Dialogue Processing} -- HRI 2013}
+    \begin{frame}{}
+        \centering
 
-\section{Modeling the Other}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \vspace*{2em}
+        ``Give me the can!''\\
+        $\downarrow$\\
+        find({\tt\scriptsize ?obj type Can, model='severin'})
+    \end{frame}
+}
 
 
 \subsection{Theory of Mind?}
 
+\begin{frame}{The False-Belief Experiment}
+    \centering
+    \includegraphics[width=0.7\textwidth]{sally_ann.pdf}
+
+\end{frame}
+
 {
-\paper{Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
+    \paper{Warnier et al., {\Medium When the Robot Puts Itself in Your Shoes}, ROMAN 2012}
+    \begin{frame}{The False-Belief Experiment}
+        \centering
+        \video{0.9\textwidth}{videos/falsebeliefs.webm?autostart}
+
+    \end{frame}
+}
+
+{
+    \paper{Frith and Happé {\Medium Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
+           [Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
 \begin{frame}{Shopping list for HRI?}
     \centering
     \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
@@ -735,8 +696,8 @@ Plymouth University}}
 
 
 {
-\paper{Frith and Happé {\Medium Autism: Beyond "theory of
-    mind"} -- Cognition, 1994}
+    \paper{Frith and Happé {\Medium Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
+           [Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
 \begin{frame}{Autistic assets and deficits observed in real life}
     \centering
     \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
@@ -753,131 +714,16 @@ Plymouth University}}
 \end{frame}
 }
 
-\begin{frame}{The False-Belief Experiment}
-    \centering
-    \includegraphics[width=0.7\textwidth]{sally_ann.pdf}
-
-\end{frame}
-
-{
-    \paper{Warnier et al., {\Medium When the Robot Puts Itself in Your Shoes}, ROMAN 2012}
-    \begin{frame}{The False-Belief Experiment}
-        \centering
-        \video{0.9\textwidth}{videos/falsebeliefs.webm?autostart}
-
-    \end{frame}
-}
-
-{
-\paper{Dillenbourg, Lemaignan et al., {\Medium The Symmetry of Partner Modelling}, Intl. J. of Computer Supported Collaboratibe Learning 2016}
-\begin{frame}{The False-Belief Experiment, reloaded}
-    \centering
-    \only<1>{
-        \includegraphics[width=0.7\textwidth]{triadic_false_beliefs.pdf}
-
-    }
-
-    \only<2>{
-        \begin{multicols}{2}
-
-            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
-
-            \columnbreak
-
-            \mbox{}\vfill
-
-            \begin{itemize}
-                \item \model{A}{B}{X}
-                \item \Model{A}{B}{X}
-            \end{itemize}
-
-            \scriptsize
-            e.g. {\color{hriSec1} \model{\text{robot}}{\text{Sally}}{plans}}
-
-            \vfill\mbox{}
-
-        \end{multicols}
-    }
-
-    \only<3>{
-        \begin{itemize}
-            \item {\Medium Robot is the observer}\\
-                \Model{R}{\text{Sally}|\text{Ann}}{plans}? can the human
-                verbalise it? i.e. \model{H}{R}{\Mmodel{R}{H}{plans}}?
-
-            \item {\Medium Robot is an active participant}\\
-                \model{H}{R}{knowledge|plans|goals}? i.e. How Ann interprets the
-                behaviour of a robot who moves the ball from the beige box to
-                the blue box while Sally is away?
-
-        \end{itemize}
-    }
-    \only<4>{
-        \begin{multicols}{2}
-            \vspace*{0.4cm}
-            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
-
-
-
-            \begin{tikzpicture}[
-                    >=latex,
-                scale=0.5]
-
-                \draw(0,2) node (A) {\scriptsize Sally};
-                \draw(0,-2) node (B) {\scriptsize Ann};
-                \draw(10,0) node (C) {\scriptsize robot};
-
-                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
-                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
-                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
-                \draw[->,very thick] (A) to (C);
-                \draw[->,very thick] (B) to (C);
-
-            \end{tikzpicture}
-
-            \vspace*{1cm}
-
-            \begin{tikzpicture}[
-                    >=latex,
-                scale=0.5]
-
-                \draw(0,2) node (A) {\scriptsize Sally};
-                \draw(0,-2) node (B) {\scriptsize Ann};
-                \draw(10,0) node (C) {\scriptsize robot};
-
-                \draw(5,2) node {\scriptsize \Model{R}{ Sally}{ X}};
-                \draw(5,-2) node {\scriptsize \Model{R}{ Ann}{ X}};
-                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above]
-                {$\Delta_3$};
-                \draw[<-,very thick] (A) to (C);
-                \draw[<-,very thick] (B) to (C);
-
-            \end{tikzpicture}
-        \end{multicols}
-    }
-    \only<5>{
-        Do Sally and Ann have the same accuracy when modelling the robot?
-
-        {\centering
-            \(\Delta_2 = \Delta(\Mmodel{\text{Sally}}{R}{X}, \Mmodel{\text{Ann}}{R}{X})\)
-
-        }
-
-        \vspace*{1em}
-        Conversely, what may lead the robot to model more accurately
-        Sally or Ann?
-
-        {\centering
-            \(\Delta_3= \Delta(\Mmodel{R}{\text{Sally}}{X}, \Mmodel{R}{\text{Ann}}{X})\)
-
-        }
-
-    }
-\end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CoWriter}
 
+\begin{frame}[plain]{}
+    \centering
+    Mind modelling is {\Medium mutual}
+    
+    We can take advantage of it in HRI at fundamental levels
+
+\end{frame}
 {
     \paper{Lemaignan et al. {\Medium Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{CoWriter: cognitive engagement and meta-cognition}
@@ -903,55 +749,189 @@ Plymouth University}}
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Planning for the Human}
 
+\section{Are you still with me?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dynamics of Interaction}
+
+{
+\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\Medium The Cognitive Correlates of Anthropomorphism}, HRI 2014}
+\begin{frame}{How do we perceive robot over time?}
     \begin{figure}
         \centering
-        \includegraphics[width=0.6\textwidth]{cleantable.jpg}\\
 
-        \vspace*{1em}
+        \resizebox{0.9\paperwidth}{!}{
 
-        \resizebox{0.7\paperwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                    robot/.style={fill=hriSec1CompDark!50},
-                    every edge/.style={<-, draw, ultra thick},
-                    every node/.style={ draw, 
-                        thick,  
-                        circle, 
-                        font=\sf,
-                        align=center,
-                        node distance=2cm,
-                        fill=hriSec3CompDark!50, 
-                        minimum size=2cm, 
-                inner sep=0.1cm}]
+            \begin{tikzpicture}
 
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+                % background shading
+                \path[fill=hriSec2!50] (0,0) rectangle (0.6,5.5);
+                \path[fill=hriSec1Comp!50] (0.6,0) rectangle (5.2,5.5);
+                \path[fill=hriSec3Comp!50] (5.2,0) rectangle (9.8,5.5);
+                \draw(0,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Initialization};
+                \draw(2.5,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Familiarization};
+                \draw(6.5,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Stabilization};
+                % horizontal axis
+                \draw[->] (0,0) -- (10,0) node[anchor=north] {$t$};
+                \draw(5,-0.1) node[anchor=north] {\scriptsize Duration of interaction};
 
-                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
-                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
 
-                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
-                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
-                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
-                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
-                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
-                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
+                % vertical axis
+                \draw[->] (0,0) -- (0,6) node[anchor=east] {};
+                \draw(-0.8,3) node[rotate=90,anchor=south] {\scriptsize Anthropomorphic effects};
 
-                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
-                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+                \draw (-0.05, 3) -- (0.05, 3) node[anchor=east] {\ICA};
+                \draw (-0.05, 5) -- (0.05, 5) node[anchor=east] {\AntMax};
+
+                % vertical axis - end
+                \draw[->] (9.8,0) -- (9.8,2) node[anchor=east] {};
+                \draw (9.8, 0.8) node[anchor=west] {\SLA};
+
+
+                \draw[<-] (0.65,5) -- (0.8,5.2) node[anchor=east] {};
+                \draw (0.9,5.3) node[anchor=west] {\tiny \it novelty peak};
+
+                \draw[dashed] (0.6, 0) -- (0.6,5.1);
+                \draw (0.6,0) node[anchor=north] {$t_{max}$};
+
+                \draw[dotted] (0, 5) -- (6.2,5);
+                \draw[dotted] (0, 3) -- (6.2,3);
+                \draw[<->] (6.1,3) -- (6.1,5) node[sloped, above, midway] {$\Delta_{a}$};
+
+                \draw[<-] (1.7,4.4) -- (3.2,4.1) node[anchor=east] {};
+                \draw[<-] (2.85,2.6) -- (3.2,4.1) node[anchor=east] {};
+                \draw (3.2,4.1) node[anchor=west, align=center] {\tiny \it disruptive\\ \tiny
+                \it behaviors};
+                %%%%%
+                %% CURVES
+                %%%%
+                \begin{scope}[yscale=-1,shift={(-0.125,-0.4)}]
+
+                    \draw[ultra thick] svg[scale=1cm] "M 0.125,-2.5619582 c 0.0200733,-1.1573591
+                    0.33954391,-1.9982333 0.57940683,-2.0013597 0.13691605,0 0.25550329,0.052908
+                    0.37497897,0.1661788 0.119476,0.1130305 0.2396954,0.2786079
+                    0.37944,0.4790565 0.069872,0.099803 0.1021612,-0.2231749
+                    0.1792538,-0.2238964 0.099707,0 0.013454,0.4985362 0.3173383,0.9139831
+                    0.1911917,0.2612926 0.3444354,0.2578391 0.6711932,0.4894291
+                    0.2058265,0.1458798 0.1571532,0.9762306 0.2615031,0.9702183 0.097182,0
+                    0.083295,-0.3336208 0.4330446,-0.1199242 0.4306401,0.2631203
+                    0.216699,0.1355642 0.4296663,0.2647074 2.0858202,1.13836043
+                    4.34683,1.41300027 6.3741749,1.43753027";
+
+                    \draw[dashed] svg[scale=1cm] "M 0.125,-0.1952939 c 0.0553601,-3.1917862
+                    0.33954391,-4.3648976 0.57940683,-4.368024 0.13691605,0 0.25550329,0.052908
+                    0.37497897,0.1661788 m 2.6714393,2.7735737 C 4.7653984,-0.85050947
+                    6.5955093,0.35382293 10.125,0.4062498";
+
+                    \draw[dashed] svg[scale=1cm] "M 0.125,-3.6923825 C 0.1102888,-4.0297903
+                    0.46454391,-4.5601915 0.70440683,-4.5633179 M 3.7508251,-1.6235654 C
+                    4.9579368,-0.95548345 8.1358175,-0.82609971 10.125,-0.79459549";
+
+
+
+                \end{scope}
 
             \end{tikzpicture}
         }
-
     \end{figure}
 
 \end{frame}
+}
+
+{
+\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\Medium The Cognitive Correlates of Anthropomorphism}, HRI 2014}
+\begin{frame}{Cognitive Interpretation?}
+
+    \begin{figure}
+        \centering
+        \resizebox{0.9\paperwidth}{!}{
+            \begin{tikzpicture}
+                \baselineskip=8pt
+
+                \path[fill=hriSec1Comp!50] (0,0) rectangle (10.5,2);
+                \path[fill=hriSec1!50] (0,2) rectangle (10.5,4);
+                \path[fill=hriSec3Comp!50] (0,4) rectangle (10.5,6);
+
+                \draw (-0.3,1) node[rotate=90] {Stage 1}
+                (-0.3,3) node[rotate=90] {Stage 2}
+                (-0.3,5) node[rotate=90] {Stage 3};
+
+                \draw[->] (0,0) -- (11,0) node[anchor=north] {$t$};
+                \draw[-|] (0,0) -- (0,6.5) node[anchor=east] {};
+                % Us
+                \draw[ultra thick, ->] (0,0) -- (1,2) -- (3,2) -- (4,4) -- (6,4) -- (7,6) --
+                (9.5,6);
+                \draw[ultra thick, dashed, ->] (3,2) -- (9.5,2);
+                \draw[ultra thick, dashed, ->] (6,4) -- (9.5,4);
+
+                \draw (11,1) node[align=left, anchor=west]{\scriptsize pre-cognitive\\\scriptsize anthropomorphism}; %label
+
+                \draw (11,3) node[align=left, anchor=west] {\scriptsize{projection of existing}\\\scriptsize{mental models}\\\scriptsize{\it (familiarity)}}; %label
+
+                \draw (11,5) node[align=left, anchor=west] {\scriptsize{adapted mental
+                model} \\ $\to$ \scriptsize{adapted interaction}\\\scriptsize{\it (anthropomorphic or not)}}; %label
 
 
-\videoframe{videos/clean-table.webm?autostart}
+                \draw[dashed,->] (1,0.1) to[bend right] (2,1.9)  node at (4.5,1) {\tiny{\it observation (shape, motion, sound)}}; %label
+
+                \draw[dashed,->] (4,2.1) to[bend right] (5,3.9)  node[align=left] at (7.5,3) {\tiny \it observation (interactive behavior) \\ \tiny \it or short interaction}; %label
+
+                \draw[dashed,->] (7,4.1) to[bend right] (8,5.9)  node[align=left] at (9,5)
+                {\tiny \it contextualized\\ \tiny \it interaction}; %label
+
+            \end{tikzpicture}
+        }
+    \end{figure}
+
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cognitive Context and Anthropomorphism}
+
+{
+\paper{Lemaignan, Sharma, Dillenbourg {\Medium Shaping the Perception of a Robot by Cognitive Priming} -- under review}
+\begin{frame}{Cognitive Context and Anthropomorphism}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{stimulus-toys}
+        \includegraphics[width=0.5\linewidth]{cognitive-priming}
+    \end{center}
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{With-me-ness}
+
+
+\imageframe[color=black]{realSetup}
+\imageframe{experimental_setup}
+\imageframe[color=black]{head_pose_real_world}
+
+{
+\paper{Lemaignan et al. {\Medium From Real-time Attention Assessment to “With-me-ness” in Human-Robot Interaction} -- HRI 2016}
+\fullbackground[scale=0.95]{with-me-ness-robot}
+
+\begin{frame}{With-me-ness}
+\end{frame}
+}
+
+{
+\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
+\fullbackground{ranger-background}
+\begin{frame}{Anthropomorphism != Engagement}
+
+\begin{figure}
+    \hspace*{5cm}\includegraphics[width=0.6\textwidth]{ranger-interactions-vs-qualitative-score}
+\end{figure}
+\end{frame}
+}
+
 
 
 
@@ -969,8 +949,8 @@ Plymouth University}}
 \imageframe[color=white]{islands4}
 
 {
-\paper{Baxter, Lemaignan, Trafton {\Medium Cognitive Architectures for Social Human-Robot Interaction} -- HRI 2016}
-\begin{frame}{Cognitive Architectures}
+\paper{Baxter, Lemaignan, Trafton {\Medium Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
+\begin{frame}{Cognitive Architectures for social HRI}
 
     \begin{multicols}{2}
         \resizebox{0.7\columnwidth}{!}{%
@@ -1224,190 +1204,6 @@ Plymouth University}}
 
 \end{frame}
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Are you still with me?}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Dynamics of Interaction}
-
-{
-\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\Medium The Cognitive Correlates of Anthropomorphism}, HRI 2014}
-\begin{frame}{How do we perceive robot over time?}
-    \begin{figure}
-        \centering
-
-        \resizebox{0.9\paperwidth}{!}{
-
-            \begin{tikzpicture}
-
-                % background shading
-                \path[fill=hriSec2!50] (0,0) rectangle (0.6,5.5);
-                \path[fill=hriSec1Comp!50] (0.6,0) rectangle (5.2,5.5);
-                \path[fill=hriSec3Comp!50] (5.2,0) rectangle (9.8,5.5);
-                \draw(0,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Initialization};
-                \draw(2.5,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Familiarization};
-                \draw(6.5,5.5) node[anchor=south west, rotate=10] {\scriptsize \sc Stabilization};
-                % horizontal axis
-                \draw[->] (0,0) -- (10,0) node[anchor=north] {$t$};
-                \draw(5,-0.1) node[anchor=north] {\scriptsize Duration of interaction};
-
-
-                % vertical axis
-                \draw[->] (0,0) -- (0,6) node[anchor=east] {};
-                \draw(-0.8,3) node[rotate=90,anchor=south] {\scriptsize Anthropomorphic effects};
-
-                \draw (-0.05, 3) -- (0.05, 3) node[anchor=east] {\ICA};
-                \draw (-0.05, 5) -- (0.05, 5) node[anchor=east] {\AntMax};
-
-                % vertical axis - end
-                \draw[->] (9.8,0) -- (9.8,2) node[anchor=east] {};
-                \draw (9.8, 0.8) node[anchor=west] {\SLA};
-
-
-                \draw[<-] (0.65,5) -- (0.8,5.2) node[anchor=east] {};
-                \draw (0.9,5.3) node[anchor=west] {\tiny \it novelty peak};
-
-                \draw[dashed] (0.6, 0) -- (0.6,5.1);
-                \draw (0.6,0) node[anchor=north] {$t_{max}$};
-
-                \draw[dotted] (0, 5) -- (6.2,5);
-                \draw[dotted] (0, 3) -- (6.2,3);
-                \draw[<->] (6.1,3) -- (6.1,5) node[sloped, above, midway] {$\Delta_{a}$};
-
-                \draw[<-] (1.7,4.4) -- (3.2,4.1) node[anchor=east] {};
-                \draw[<-] (2.85,2.6) -- (3.2,4.1) node[anchor=east] {};
-                \draw (3.2,4.1) node[anchor=west, align=center] {\tiny \it disruptive\\ \tiny
-                \it behaviors};
-                %%%%%
-                %% CURVES
-                %%%%
-                \begin{scope}[yscale=-1,shift={(-0.125,-0.4)}]
-
-                    \draw[ultra thick] svg[scale=1cm] "M 0.125,-2.5619582 c 0.0200733,-1.1573591
-                    0.33954391,-1.9982333 0.57940683,-2.0013597 0.13691605,0 0.25550329,0.052908
-                    0.37497897,0.1661788 0.119476,0.1130305 0.2396954,0.2786079
-                    0.37944,0.4790565 0.069872,0.099803 0.1021612,-0.2231749
-                    0.1792538,-0.2238964 0.099707,0 0.013454,0.4985362 0.3173383,0.9139831
-                    0.1911917,0.2612926 0.3444354,0.2578391 0.6711932,0.4894291
-                    0.2058265,0.1458798 0.1571532,0.9762306 0.2615031,0.9702183 0.097182,0
-                    0.083295,-0.3336208 0.4330446,-0.1199242 0.4306401,0.2631203
-                    0.216699,0.1355642 0.4296663,0.2647074 2.0858202,1.13836043
-                    4.34683,1.41300027 6.3741749,1.43753027";
-
-                    \draw[dashed] svg[scale=1cm] "M 0.125,-0.1952939 c 0.0553601,-3.1917862
-                    0.33954391,-4.3648976 0.57940683,-4.368024 0.13691605,0 0.25550329,0.052908
-                    0.37497897,0.1661788 m 2.6714393,2.7735737 C 4.7653984,-0.85050947
-                    6.5955093,0.35382293 10.125,0.4062498";
-
-                    \draw[dashed] svg[scale=1cm] "M 0.125,-3.6923825 C 0.1102888,-4.0297903
-                    0.46454391,-4.5601915 0.70440683,-4.5633179 M 3.7508251,-1.6235654 C
-                    4.9579368,-0.95548345 8.1358175,-0.82609971 10.125,-0.79459549";
-
-
-
-                \end{scope}
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-\end{frame}
-}
-
-{
-\paper{Lemaignan, Fink, Dillenbourg, Braboszcz {\Medium The Cognitive Correlates of Anthropomorphism}, HRI 2014}
-\begin{frame}{Cognitive Interpretation?}
-
-    \begin{figure}
-        \centering
-        \resizebox{0.9\paperwidth}{!}{
-            \begin{tikzpicture}
-                \baselineskip=8pt
-
-                \path[fill=hriSec1Comp!50] (0,0) rectangle (10.5,2);
-                \path[fill=hriSec1!50] (0,2) rectangle (10.5,4);
-                \path[fill=hriSec3Comp!50] (0,4) rectangle (10.5,6);
-
-                \draw (-0.3,1) node[rotate=90] {Stage 1}
-                (-0.3,3) node[rotate=90] {Stage 2}
-                (-0.3,5) node[rotate=90] {Stage 3};
-
-                \draw[->] (0,0) -- (11,0) node[anchor=north] {$t$};
-                \draw[-|] (0,0) -- (0,6.5) node[anchor=east] {};
-                % Us
-                \draw[ultra thick, ->] (0,0) -- (1,2) -- (3,2) -- (4,4) -- (6,4) -- (7,6) --
-                (9.5,6);
-                \draw[ultra thick, dashed, ->] (3,2) -- (9.5,2);
-                \draw[ultra thick, dashed, ->] (6,4) -- (9.5,4);
-
-                \draw (11,1) node[align=left, anchor=west]{\scriptsize pre-cognitive\\\scriptsize anthropomorphism}; %label
-
-                \draw (11,3) node[align=left, anchor=west] {\scriptsize{projection of existing}\\\scriptsize{mental models}\\\scriptsize{\it (familiarity)}}; %label
-
-                \draw (11,5) node[align=left, anchor=west] {\scriptsize{adapted mental
-                model} \\ $\to$ \scriptsize{adapted interaction}\\\scriptsize{\it (anthropomorphic or not)}}; %label
-
-
-                \draw[dashed,->] (1,0.1) to[bend right] (2,1.9)  node at (4.5,1) {\tiny{\it observation (shape, motion, sound)}}; %label
-
-                \draw[dashed,->] (4,2.1) to[bend right] (5,3.9)  node[align=left] at (7.5,3) {\tiny \it observation (interactive behavior) \\ \tiny \it or short interaction}; %label
-
-                \draw[dashed,->] (7,4.1) to[bend right] (8,5.9)  node[align=left] at (9,5)
-                {\tiny \it contextualized\\ \tiny \it interaction}; %label
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Cognitive Context and Anthropomorphism}
-
-{
-\paper{Lemaignan, Sharma, Dillenbourg {\Medium Shaping the Perception of a Robot by Cognitive Priming} -- under review}
-\begin{frame}{Cognitive Context and Anthropomorphism}
-    \begin{center}
-        \includegraphics[width=0.5\linewidth]{stimulus-toys}
-        \includegraphics[width=0.5\linewidth]{cognitive-priming}
-    \end{center}
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{With-me-ness}
-
-
-\imageframe[color=black]{realSetup}
-\imageframe{experimental_setup}
-\imageframe[color=black]{head_pose_real_world}
-
-{
-\paper{Lemaignan et al. {\Medium From Real-time Attention Assessment to “With-me-ness” in Human-Robot Interaction} -- HRI 2016}
-\fullbackground[scale=0.95]{with-me-ness-robot}
-
-\begin{frame}{With-me-ness}
-\end{frame}
-}
-
-{
-\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
-\fullbackground{ranger-background}
-\begin{frame}{Anthropomorphism != Engagement}
-
-\begin{figure}
-    \hspace*{5cm}\includegraphics[width=0.6\textwidth]{ranger-interactions-vs-qualitative-score}
-\end{figure}
-\end{frame}
-}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1536,46 +1332,61 @@ Plymouth University}}
 
 {
 \fullbackground{collage}
-\begin{frame}[plain]
-    Thank you!\\
-    \scriptsize
-    {\tt severin.lemaignan@plymouth.ac.uk}
+\begin{frame}[plain]{}
+
+    {\Medium Thank you!}
+
+    {\Medium\tt\scriptsize severin.lemaignan@plymouth.ac.uk}
+
     \vfill
-    \resizebox{0.4\paperwidth}{!}{%
-        \begin{tikzpicture}
+        \resizebox{!}{0.6\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
 
             \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (perception) {Perception}
-                [clockwise from=40]
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=white,text=hriWarmGreyDark]
+            node[concept] {\Medium Social\\Cognition in HRI}
+            [clockwise from=30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
+                [clockwise from=120]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
                 child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept]
+                {Inference of mental models} };
             }
-            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Management} 
-                [clockwise from=-30]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (mmodel) {Mutual Modelling} }
+            child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
+                [counterclockwise from=-120]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] {Social context} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept]
+                {Common-sense} };
             }
-            child[concept color=hriSec2,text=white] { node[concept] {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=hriSec3,text=white] { node[concept] (plans) {Task Planning} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Communication} }
+            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
+                [counterclockwise from=180]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept]
+                {Non-verbal} };
             }
-            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
+            child[concept color=hriSec3,text=white,grow=180] { node[concept] (dynamics) {Interaction Dynamics} 
+                [clockwise from=180]
+                child[concept color=hriSec2Dark,text=white] { node[concept]
+                {Long-term interaction} };
             }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} 
-                [clockwise from=110]
-                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} } 
+            child[concept color=hriSec2,text=black, grow=120] { node[concept]
+                (action) {Performing with humans} 
+                [counterclockwise from=80]
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec3,text=white] { node[concept] {Joint
+                actions} };
             };
 
         \end{tikzpicture}
+
     }
 
 \end{frame}
@@ -1608,6 +1419,43 @@ Plymouth University}}
     \video{0.4\paperwidth}{videos/ranger-disobey.m4v}
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{CoWriter}
+
+\begin{frame}{CoWriter details}
+    \centering
+    CoWriter: Learning by Teaching\\
+
+    \only<1>{
+    \video{0.8\textwidth}{videos/nao-tablet-demo.mp4}
+    }
+
+    \only<2>{
+        \includegraphics[width=0.8\textwidth]{cowriter-g.png}
+    }
+
+
+    \only<3>{
+    \video{0.8\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
+    }
+
+\end{frame}
+
+\imageframe{cowriter-fsm.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Act}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Planning}
+
 
 \begin{frame}{Planning for the Human}
 
@@ -1689,37 +1537,55 @@ Plymouth University}}
     \end{figure}
 \end{frame}
 
+\begin{frame}{Planning for the Human}
 
-%\subsection{CoWriter}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{cleantable.jpg}\\
 
-\begin{frame}{CoWriter details}
-    \centering
-    CoWriter: Learning by Teaching\\
+        \vspace*{1em}
 
-    \only<1>{
-    \video{0.8\textwidth}{videos/nao-tablet-demo.mp4}
-    }
+        \resizebox{0.7\paperwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                    robot/.style={fill=hriSec1CompDark!50},
+                    every edge/.style={<-, draw, ultra thick},
+                    every node/.style={ draw, 
+                        thick,  
+                        circle, 
+                        font=\sf,
+                        align=center,
+                        node distance=2cm,
+                        fill=hriSec3CompDark!50, 
+                        minimum size=2cm, 
+                inner sep=0.1cm}]
 
-    \only<2>{
-        \includegraphics[width=0.8\textwidth]{cowriter-g.png}
-    }
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
 
+                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
+                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
 
-    \only<3>{
-    \video{0.8\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
-    }
+                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
+                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
+                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
+                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
+                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
+                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
+
+                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
+                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+
+            \end{tikzpicture}
+        }
+
+    \end{figure}
 
 \end{frame}
 
-\imageframe{cowriter-fsm.png}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\videoframe{videos/clean-table.webm?autostart}
 
-%\section{Act}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\subsection{The Challenge of the Real-World\texttrademark}
 %\begin{frame}{Cope with the real-world}
@@ -1859,5 +1725,117 @@ Plymouth University}}
     \end{multicols}
 \end{frame}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Mutual Modelling}
+
+
+{
+\paper{Dillenbourg, Lemaignan et al., {\Medium The Symmetry of Partner Modelling}, Intl. J. of Computer Supported Collaboratibe Learning 2016}
+\begin{frame}{The False-Belief Experiment, reloaded}
+    \centering
+    \only<1>{
+        \includegraphics[width=0.7\textwidth]{triadic_false_beliefs.pdf}
+
+    }
+
+    \only<2>{
+        \begin{multicols}{2}
+
+            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
+
+            \columnbreak
+
+            \mbox{}\vfill
+
+            \begin{itemize}
+                \item \model{A}{B}{X}
+                \item \Model{A}{B}{X}
+            \end{itemize}
+
+            \scriptsize
+            e.g. {\color{hriSec1} \model{\text{robot}}{\text{Sally}}{plans}}
+
+            \vfill\mbox{}
+
+        \end{multicols}
+    }
+
+    \only<3>{
+        \begin{itemize}
+            \item {\Medium Robot is the observer}\\
+                \Model{R}{\text{Sally}|\text{Ann}}{plans}? can the human
+                verbalise it? i.e. \model{H}{R}{\Mmodel{R}{H}{plans}}?
+
+            \item {\Medium Robot is an active participant}\\
+                \model{H}{R}{knowledge|plans|goals}? i.e. How Ann interprets the
+                behaviour of a robot who moves the ball from the beige box to
+                the blue box while Sally is away?
+
+        \end{itemize}
+    }
+    \only<4>{
+        \begin{multicols}{2}
+            \vspace*{0.4cm}
+            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
+
+
+
+            \begin{tikzpicture}[
+                    >=latex,
+                scale=0.5]
+
+                \draw(0,2) node (A) {\scriptsize Sally};
+                \draw(0,-2) node (B) {\scriptsize Ann};
+                \draw(10,0) node (C) {\scriptsize robot};
+
+                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
+                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
+                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
+                \draw[->,very thick] (A) to (C);
+                \draw[->,very thick] (B) to (C);
+
+            \end{tikzpicture}
+
+            \vspace*{1cm}
+
+            \begin{tikzpicture}[
+                    >=latex,
+                scale=0.5]
+
+                \draw(0,2) node (A) {\scriptsize Sally};
+                \draw(0,-2) node (B) {\scriptsize Ann};
+                \draw(10,0) node (C) {\scriptsize robot};
+
+                \draw(5,2) node {\scriptsize \Model{R}{ Sally}{ X}};
+                \draw(5,-2) node {\scriptsize \Model{R}{ Ann}{ X}};
+                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above]
+                {$\Delta_3$};
+                \draw[<-,very thick] (A) to (C);
+                \draw[<-,very thick] (B) to (C);
+
+            \end{tikzpicture}
+        \end{multicols}
+    }
+    \only<5>{
+        Do Sally and Ann have the same accuracy when modelling the robot?
+
+        {\centering
+            \(\Delta_2 = \Delta(\Mmodel{\text{Sally}}{R}{X}, \Mmodel{\text{Ann}}{R}{X})\)
+
+        }
+
+        \vspace*{1em}
+        Conversely, what may lead the robot to model more accurately
+        Sally or Ann?
+
+        {\centering
+            \(\Delta_3= \Delta(\Mmodel{R}{\text{Sally}}{X}, \Mmodel{R}{\text{Ann}}{X})\)
+
+        }
+
+    }
+\end{frame}
 
 \end{document}
