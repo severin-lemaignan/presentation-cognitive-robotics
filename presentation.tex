@@ -92,9 +92,9 @@ align=center, inner sep=5pt, fill=none}]
 %--------------------------------------------------------------------------
 % General presentation settings
 %--------------------------------------------------------------------------
-\title{More Cognition into my Interaction}
+\title{Of Cognition and Social Robots}
 \subtitle{A Practical Look on Cognition for Social HRI}
-\date{\today}
+\date{{\Medium \today} Bristol Robotics Lab}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\Medium
 Plymouth University}}
@@ -705,10 +705,53 @@ Plymouth University}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Modeling the Other}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\subsection{Theory of Mind?}
 
-\subsection{Towards Mutual Modelling}
+{
+\paper{Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
+\begin{frame}{Shopping list for HRI?}
+    \centering
+    \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+        \toprule
+        {\Medium Already in the HRI fridge} & {\Medium To buy...} \\
+        \midrule
+        Instrumental gestures & Expressive gestures \\
+        Using person as tool & Using person as receiver of information \\
+        Talking about desires and emotions & Talking about beliefs and ideas \\
+        Showing "active" sociability & Showing "interactive" sociability \\
+        Elicited structured play & Spontaneous pretend play \\
+        \bottomrule
+    \end{tabular}
+\end{frame}
+}
+
+
+{
+\paper{Frith and Happé {\Medium Autism: Beyond "theory of
+    mind"} -- Cognition, 1994}
+\begin{frame}{Autistic assets and deficits observed in real life}
+    \centering
+    \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+        \toprule
+        {\Medium Assets} & {\Medium Deficits} \\
+        \midrule
+        Instrumental gestures & Expressive gestures \\
+        Using person as tool & Using person as receiver of information \\
+        Talking about desires and emotions & Talking about beliefs and ideas \\
+        Showing "active" sociability & Showing "interactive" sociability \\
+        Elicited structured play & Spontaneous pretend play \\
+        \bottomrule
+    \end{tabular}
+\end{frame}
+}
 
 \begin{frame}{The False-Belief Experiment}
     \centering
@@ -830,85 +873,26 @@ Plymouth University}}
     }
 \end{frame}
 
-\subsection{Modelling Human Plans}
-\begin{frame}{Planning for the Human}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CoWriter}
 
-    \begin{figure}
-        \centering
+\begin{frame}{CoWriter: cognitive engagement and meta-cognition}
+    \video{0.55\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
 
-        \resizebox{0.7\paperwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                    robot/.style={fill=hriSec1CompDark!50},
-                    every edge/.style={<-, draw, ultra thick},
-                    every node/.style={ draw, 
-                        thick,  
-                        circle, 
-                        font=\sf,
-                        align=center,
-                        node distance=2cm,
-                        fill=hriSec3CompDark!50, 
-                        minimum size=2cm, 
-                inner sep=0.1cm}]
+    \begin{flushright}
+        \includegraphics[width=0.55\textwidth]{diego-writing}
+    \end{flushright}
 
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
-
-                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
-                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
-
-                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
-                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
-                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
-                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
-                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
-                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
-
-                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
-                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
-
-            \end{tikzpicture}
-        }
-
-        \vspace*{1cm}
-
-        \onslide<2>
-        \resizebox{0.7\paperwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                    robot/.style={fill=hriSec1CompDark!50},
-                    every edge/.style={<-, draw, ultra thick},
-                    every node/.style={ draw, 
-                        thick,  
-                        circle, 
-                        font=\sf,
-                        align=center,
-                        node distance=2cm,
-                        fill=hriSec3CompDark!50, 
-                        minimum size=2cm, 
-                inner sep=0.1cm}]
-
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
-                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+\end{frame}
 
 
-                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
-                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
-
-                \node[robot, below=1.5 of h1] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }};
-                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
-                \node[robot, right=of r4] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }} edge (r4);
-                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
-                \node[robot, right=of r2] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r2);
-                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
-
-                \node[right=of h2] (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
-                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
-
-            \end{tikzpicture}
-        }
-
-    \end{figure}
+\begin{frame}{}
+    \begin{center}
+        \includegraphics[width=0.45\linewidth]{lettre-base}
+        \uncover<2>{
+        \includegraphics[width=0.45\linewidth]{lettre-final}
+    }
+    \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1366,16 +1350,6 @@ Plymouth University}}
 \end{frame}
 }
 
-{
-\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
-\fullbackground{ranger-background.jpg}
-\begin{frame}{Anthropomorphism != Engagement}
-
-\begin{figure}
-    \hspace*{5cm}\includegraphics[width=0.6\textwidth]{ranger-interactions-vs-qualitative-score}
-\end{figure}
-\end{frame}
-}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1655,14 +1629,50 @@ Plymouth University}}
 \end{frame}
 }
 
+{
+\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
+\fullbackground{ranger-background}
+\begin{frame}{Anthropomorphism != Engagement}
+
+\begin{figure}
+    \hspace*{5cm}\includegraphics[width=0.6\textwidth]{ranger-interactions-vs-qualitative-score}
+\end{figure}
+\end{frame}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{What Next?}
+\section{A Summary and Some Ideas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The Experimental Summary}
+
+    \begin{multicols}{4}
+        \includegraphics[width=\columnwidth]{diego-writing}
+
+        \includegraphics[width=\columnwidth]{realSetup}
+
+        \includegraphics[width=\columnwidth]{ranger-background}
+
+        \includegraphics[width=\columnwidth]{cleantable}
+
+        \includegraphics[width=\columnwidth]{croquignole-single}
+
+        \includegraphics[width=\columnwidth]{ranger-background}
+
+        \includegraphics[width=\columnwidth]{ranger-background}
+
+        \includegraphics[width=\columnwidth]{ranger-background}
+
+        \includegraphics[width=\columnwidth]{ranger-background}
+    \end{multicols}
+
+
+\end{frame}
+
 {
     \paper{Mnih et al. {\Medium Human-level control through deep reinforcement learning} -- Nature 2015}
 \begin{frame}{Learning Complex Behaviours}
@@ -1757,11 +1767,11 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
-\fullbackground{background.pdf}
+\fullbackground{collage}
 \begin{frame}[plain]
     Thank you!\\
     \scriptsize
-    {\tt severin.lemaignan@epfl.ch}
+    {\tt severin.lemaignan@plymouth.ac.uk}
     \vfill
     \resizebox{0.4\paperwidth}{!}{%
         \begin{tikzpicture}
@@ -1815,6 +1825,7 @@ Plymouth University}}
 
 
 
+\imageframe[caption="Theory of Mind tasks"]{zoo}
 
 \begin{frame}{Unexpected behaviours}
 
@@ -1828,6 +1839,86 @@ Plymouth University}}
     \video{0.4\paperwidth}{videos/ranger-correct.m4v}
     \video{0.4\paperwidth}{videos/ranger-disobey.m4v}
 
+\end{frame}
+
+\begin{frame}{Planning for the Human}
+
+    \begin{figure}
+        \centering
+
+        \resizebox{0.7\paperwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                    robot/.style={fill=hriSec1CompDark!50},
+                    every edge/.style={<-, draw, ultra thick},
+                    every node/.style={ draw, 
+                        thick,  
+                        circle, 
+                        font=\sf,
+                        align=center,
+                        node distance=2cm,
+                        fill=hriSec3CompDark!50, 
+                        minimum size=2cm, 
+                inner sep=0.1cm}]
+
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+
+                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
+                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
+
+                \node[robot, below=1.5 of h1] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }};
+                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
+                \node[robot, right=of r2] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }} edge (r2);
+                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
+                \node[robot, right=of r4] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r4);
+                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
+
+                \node at (r5 |- h1) (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
+                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+
+            \end{tikzpicture}
+        }
+
+        \vspace*{1cm}
+
+        \onslide<2>
+        \resizebox{0.7\paperwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                    robot/.style={fill=hriSec1CompDark!50},
+                    every edge/.style={<-, draw, ultra thick},
+                    every node/.style={ draw, 
+                        thick,  
+                        circle, 
+                        font=\sf,
+                        align=center,
+                        node distance=2cm,
+                        fill=hriSec3CompDark!50, 
+                        minimum size=2cm, 
+                inner sep=0.1cm}]
+
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, 0) {Human\\actions};
+                \node[font=\large, draw=none, fill=none, rotate=90] at (-2, -3.5) {Robot\\actions};
+
+
+                \node (h1) {\hatpaction{TAKE}{GREY\_TAPE}{TABLE}};
+                \node[right=of h1] (h2) {\hatpaction{PUT}{GREY\_TAPE}{BIN1 }} edge (h1);
+
+                \node[robot, below=1.5 of h1] (r3) {\hatpaction{TAKE}{BOTTLE}{TABLE }};
+                \node[robot, right=of r3] (r4) {\hatpaction{PUTRV}{BOTTLE}{TABLE}} edge (r3);
+                \node[robot, right=of r4] (r1) {\hatpaction{TAKE}{BLACK\_TAPE}{TABLE }} edge (r4);
+                \node[robot, right=of r1] (r2) {\hatpaction{PUT}{BLACK\_TAPE}{BIN2 }} edge (r1);
+                \node[robot, right=of r2] (r5) {\hatpaction{TAKE}{BOOK}{TABLE }} edge (r2);
+                \node[robot, right=of r5] (r6) {\hatpaction{PUT}{BOOK}{BIN2 }} edge (r5);
+
+                \node[right=of h2] (h3) {\hatpaction{TAKE}{BOTTLE}{TABLE}} edge (h2) edge (r4);
+                \node[right=of h3] (h4) {\hatpaction{PUT}{BOTTLE}{BIN1}} edge (h3);
+
+            \end{tikzpicture}
+        }
+
+    \end{figure}
 \end{frame}
 
 
