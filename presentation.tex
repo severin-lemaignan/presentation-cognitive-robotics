@@ -19,7 +19,7 @@
 \usetheme{hri}
 
 \usepackage{tikz}
-\usetikzlibrary{fpu,fit,calc,mindmap,backgrounds,positioning,svg.path}
+\usetikzlibrary{shapes,fpu,fit,calc,mindmap,backgrounds,positioning,svg.path}
 
 \graphicspath{{figs/}}
 
@@ -47,16 +47,15 @@
     >=latex,
     every edge/.style={<-, draw, very thick},
     every node/.style={draw, font=\sf, node distance=0.5, rounded corners,
-    align=center, inner sep=5pt,fill=hriSec2Dark!50},
+                       align=center, inner sep=5pt,fill=hriSec2Dark!50},
     classof/.style={<-, draw=black!60, dashed},
     property/.style={<-, draw=hriSec2Comp},
     propname/.style={above, draw=none, fill=none, font=\tt, inner sep=2pt},
     instance/.style={draw=hriSec1Dark, font=\sf, node distance=0.5, rounded corners,
-align=center, inner sep=5pt, fill=none}]
+                     align=center, inner sep=5pt, fill=none}]
 
     \node[fill=hriSec2Comp!50] (thing) {\textbf{thing}};
-    \node [fill=hriSec3CompDark!50, node distance=1.8, below left=of
-    thing](sthing) {place} edge[dashed] (thing);
+    \node [fill=hriSec3CompDark!50, node distance=1.8, below left=of thing](sthing) {place} edge[dashed] (thing);
     \node [fill=hriSec3CompDark!50, below left=of sthing] (agent) {agent} edge (sthing);
         \node [fill=hriSec3CompDark!50, below=of sthing] (artifact) {artifact} edge (sthing);
         \node [fill=hriSec3CompDark!50, below right=of sthing] (location) {physical
@@ -1188,6 +1187,117 @@ Plymouth University}}
 
 \imageframe[caption="Theory of Mind tasks"]{zoo}
 
+\subsection{More on Mutual Modelling}
+
+
+{
+\paper{Dillenbourg, Lemaignan et al., {\Medium The Symmetry of Partner Modelling}, Intl. J. of Computer Supported Collaborative Learning 2016}
+\begin{frame}{The False-Belief Experiment, reloaded}
+    \centering
+    \only<1>{
+        \includegraphics[width=0.7\textwidth]{triadic_false_beliefs.pdf}
+
+    }
+
+    \only<2>{
+        \begin{multicols}{2}
+
+            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
+
+            \columnbreak
+
+            \mbox{}\vfill
+
+            \begin{itemize}
+                \item \model{A}{B}{X}
+                \item \Model{A}{B}{X}
+            \end{itemize}
+
+            \scriptsize
+            e.g. {\color{hriSec1} \model{\text{robot}}{\text{Sally}}{plans}}
+
+            \vfill\mbox{}
+
+        \end{multicols}
+    }
+
+    \only<3>{
+        \begin{itemize}
+            \item {\Medium Robot is the observer}\\
+                \Model{R}{\text{Sally}|\text{Ann}}{plans}? can the human
+                verbalise it? i.e. \model{H}{R}{\Mmodel{R}{H}{plans}}?
+
+            \item {\Medium Robot is an active participant}\\
+                \model{H}{R}{knowledge|plans|goals}? i.e. How Ann interprets the
+                behaviour of a robot who moves the ball from the beige box to
+                the blue box while Sally is away?
+
+        \end{itemize}
+    }
+    \only<4>{
+        \begin{multicols}{2}
+            \vspace*{0.4cm}
+            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
+
+
+
+            \begin{tikzpicture}[
+                    >=latex,
+                scale=0.5]
+
+                \draw(0,2) node (A) {\scriptsize Sally};
+                \draw(0,-2) node (B) {\scriptsize Ann};
+                \draw(10,0) node (C) {\scriptsize robot};
+
+                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
+                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
+                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
+                \draw[->,very thick] (A) to (C);
+                \draw[->,very thick] (B) to (C);
+
+            \end{tikzpicture}
+
+            \vspace*{1cm}
+
+            \begin{tikzpicture}[
+                    >=latex,
+                scale=0.5]
+
+                \draw(0,2) node (A) {\scriptsize Sally};
+                \draw(0,-2) node (B) {\scriptsize Ann};
+                \draw(10,0) node (C) {\scriptsize robot};
+
+                \draw(5,2) node {\scriptsize \Model{R}{ Sally}{ X}};
+                \draw(5,-2) node {\scriptsize \Model{R}{ Ann}{ X}};
+                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above]
+                {$\Delta_3$};
+                \draw[<-,very thick] (A) to (C);
+                \draw[<-,very thick] (B) to (C);
+
+            \end{tikzpicture}
+        \end{multicols}
+    }
+    \only<5>{
+        Do Sally and Ann have the same accuracy when modelling the robot?
+
+        {\centering
+            \(\Delta_2 = \Delta(\Mmodel{\text{Sally}}{R}{X}, \Mmodel{\text{Ann}}{R}{X})\)
+
+        }
+
+        \vspace*{1em}
+        Conversely, what may lead the robot to model more accurately
+        Sally or Ann?
+
+        {\centering
+            \(\Delta_3= \Delta(\Mmodel{R}{\text{Sally}}{X}, \Mmodel{R}{\text{Ann}}{X})\)
+
+        }
+
+    }
+\badge{europe_epfl}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Role of Unexpected Behaviours}
 
@@ -1203,6 +1313,7 @@ Plymouth University}}
     \video{0.4\paperwidth}{videos/ranger-correct.m4v}
     \video{0.4\paperwidth}{videos/ranger-disobey.m4v}
 
+\badge{europe_epfl}
 \end{frame}
 
 
@@ -1226,6 +1337,7 @@ Plymouth University}}
     \video{0.8\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
     }
 
+\badge{europe_epfl}
 \end{frame}
 
 \imageframe{cowriter-fsm.png}
@@ -1246,7 +1358,6 @@ Plymouth University}}
 {
 \paper{Baxter, Lemaignan, Trafton {\Medium Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
 \begin{frame}{Cognitive Architectures for social HRI}
-        \badge{europe_plym}
 
     \begin{multicols}{2}
         \resizebox{0.7\columnwidth}{!}{%
@@ -1285,6 +1396,7 @@ Plymouth University}}
     %\refToContrib{Someone here...}
 
     \end{multicols}
+        \badge{europe_plym}
 \end{frame}
 }
 
@@ -1504,6 +1616,132 @@ Plymouth University}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dialogue Grounding}
+
+{
+\paper{Lemaignan et al. {\Medium Grounding the Interaction: Anchoring
+Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
+\begin{frame}{Dialogue Grounding}
+    \centering
+
+    \vspace*{2em}
+    ``Where is the other tape?''\\
+    $\downarrow$\\
+    find({\tt\scriptsize ?obj isAt ?loc, ?obj type VideoTape, ?obj differentFrom JIDO-E})
+    \badge{europe_phd}
+\end{frame}
+
+\begin{frame}{Dialogue Grounding}
+    \begin{figure}
+        \centering
+
+        \resizebox{0.4\paperwidth}{!}{%
+
+
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={draw, very thick},
+                skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+                label/.style={midway, align=center, font=\scriptsize, above},
+                subpart/.style={rounded corners, draw, align=center, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}]
+
+            %%% PARSING
+
+            \node at (0,0)[skill, fill=hriSec3CompDark!50] (prepro) {Pre-processing};
+                \node [left=0.7 of prepro] (input) {\textbf{Input}};
+                \path (input) edge [->] (prepro);
+
+                %\path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
+                \node [below =0.4 of prepro, skill, fill=hriSec3CompDark!50] (parsing) {Parsing};
+                \path (prepro) edge [->] (parsing);
+
+                \coordinate (base-onto) at (4,0);
+
+                %%% RESOLUTION
+                \uncover<2->{
+                    \node [below=0.4 of parsing, skill, fill=hriSec3!50, minimum height=4cm, minimum width=5cm] (resolution) {};
+                \node [subpart, below=0.2 of resolution.115] (pron) {Pronouns \& \\ anaphora resolution};
+                \node [subpart, below=0.2 of pron] (noun) {Noun phrase \\ resolution};
+                \node [subpart, right=0.3 of noun, anchor=north west] (discr) {Discrimination};
+                \node [subpart, below=0.2 of noun] (verb) {Verbal phrase \\ resolution};
+                \node [subpart, cylinder, shape border rotate=90, aspect=0.5, below=0.2 of discr] (actions) {Actions};
+                \path (pron) edge [->] (noun);
+                \path (noun) edge [->] (discr);
+                \path (noun) edge [->] (verb);
+                \path (verb) edge [dashed, <->] (actions);
+                \path (pron) edge [dashed, <->] node[label] {queries} (pron -| base-onto);
+                \path (noun.20) edge [dashed, <->] node[label] {queries} (noun.20 -| base-onto);
+                \path (discr) edge [<->] (discr -| base-onto);
+
+                \node [left=0.2 of resolution.west, rotate=90, anchor=south] {Resolution};
+                \path (parsing) edge [->] (pron);
+            }
+
+            %%% INTERPRETATION
+                \uncover<3->{
+                    \node [skill, below=0.4 of resolution,minimum width=5cm, minimum height=3cm] (interp) {};
+                \node [subpart, below=0.2 of interp.north] (content) {Content analysis};
+                \node [below=0.6 of content.south west, subpart] (question) {Question \\ handler};
+                \node [below=0.6 of content.south east, subpart] (stat) {Statement \\ builder};
+                \path (content) edge [->] node[label, left] {question} (question);
+                \path (content) edge [->] node [label, right] {goal | statement} (stat);
+                \path (stat) edge [->] node [label] {asserts} (stat -| base-onto);
+
+                \node [left=0.2 of interp.west, rotate=90, anchor=south] {Interpretation};
+
+                \path (verb) edge [->] (content);
+                \path (question) edge [dashed, bend right, <->] node[label] {queries} (question.south -| base-onto);
+            }
+
+            %%% ONTOLOGY
+                \uncover<2->{
+                    \node at (resolution.north -| base-onto) [rotate=-90, skill, minimum height=2cm, minimum width=7cm, fill=hriSec3!50, anchor=south west] (onto) {Ontology server};
+
+                }
+
+            %%% VERBALIZATION
+            \uncover<4->{
+                \node [below=0.7 of interp, skill, fill=hriSec2Dark!50] (verb) {Verbalization};
+            \path (question) edge [->] (verb);
+            \path (stat) edge [->] (verb);
+            \path (discr.south east) edge [black!50, dashed, bend left, <->] (verb.north east);
+            \node [right=0.7 of verb] (output) {\textbf{Output}};
+            \path (verb) edge [->] (output);
+        }
+        \end{tikzpicture}
+        }
+    \end{figure}
+
+    \badge{europe_phd}
+\end{frame}
+
+\begin{frame}{Dialogue Grounding}
+    \centering
+
+    \vspace*{2em}
+    ``Give me the book on the table''\\
+
+    \uncover<2-> {
+        $\downarrow$\\
+    {\tt me} $\rightarrow$ {\tt baby\_1} \\
+    find({\tt\scriptsize ?obj type table}) $\rightarrow$ {\tt ikea\_table} \\
+    find({\tt\scriptsize ?obj type book, ?obj isOn ikea\_table}) $\rightarrow$ {\tt harry\_potter} \\
+}
+
+    \uncover<3-> {
+        $\downarrow$\\
+        { \tt
+            \textbf{baby\_1} desires \textbf{action1}, \\
+            \textbf{action1} type \textbf{Give}, \\
+            \textbf{action1} performedBy \textbf{myself}, \\
+            \textbf{action1} actsOnObject \textbf{harry\_potter}, \\
+            \textbf{action1} receivedBy \textbf{baby\_1} \\
+        }
+    }
+    \badge{europe_phd}
+\end{frame}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Human-aware Planning}
@@ -1785,115 +2023,5 @@ Plymouth University}}
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{More on Mutual Modelling}
-
-
-{
-\paper{Dillenbourg, Lemaignan et al., {\Medium The Symmetry of Partner Modelling}, Intl. J. of Computer Supported Collaboratibe Learning 2016}
-\begin{frame}{The False-Belief Experiment, reloaded}
-    \centering
-    \only<1>{
-        \includegraphics[width=0.7\textwidth]{triadic_false_beliefs.pdf}
-
-    }
-
-    \only<2>{
-        \begin{multicols}{2}
-
-            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
-
-            \columnbreak
-
-            \mbox{}\vfill
-
-            \begin{itemize}
-                \item \model{A}{B}{X}
-                \item \Model{A}{B}{X}
-            \end{itemize}
-
-            \scriptsize
-            e.g. {\color{hriSec1} \model{\text{robot}}{\text{Sally}}{plans}}
-
-            \vfill\mbox{}
-
-        \end{multicols}
-    }
-
-    \only<3>{
-        \begin{itemize}
-            \item {\Medium Robot is the observer}\\
-                \Model{R}{\text{Sally}|\text{Ann}}{plans}? can the human
-                verbalise it? i.e. \model{H}{R}{\Mmodel{R}{H}{plans}}?
-
-            \item {\Medium Robot is an active participant}\\
-                \model{H}{R}{knowledge|plans|goals}? i.e. How Ann interprets the
-                behaviour of a robot who moves the ball from the beige box to
-                the blue box while Sally is away?
-
-        \end{itemize}
-    }
-    \only<4>{
-        \begin{multicols}{2}
-            \vspace*{0.4cm}
-            \includegraphics[width=0.9\columnwidth]{triadic_false_beliefs.pdf}
-
-
-
-            \begin{tikzpicture}[
-                    >=latex,
-                scale=0.5]
-
-                \draw(0,2) node (A) {\scriptsize Sally};
-                \draw(0,-2) node (B) {\scriptsize Ann};
-                \draw(10,0) node (C) {\scriptsize robot};
-
-                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
-                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
-                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
-                \draw[->,very thick] (A) to (C);
-                \draw[->,very thick] (B) to (C);
-
-            \end{tikzpicture}
-
-            \vspace*{1cm}
-
-            \begin{tikzpicture}[
-                    >=latex,
-                scale=0.5]
-
-                \draw(0,2) node (A) {\scriptsize Sally};
-                \draw(0,-2) node (B) {\scriptsize Ann};
-                \draw(10,0) node (C) {\scriptsize robot};
-
-                \draw(5,2) node {\scriptsize \Model{R}{ Sally}{ X}};
-                \draw(5,-2) node {\scriptsize \Model{R}{ Ann}{ X}};
-                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above]
-                {$\Delta_3$};
-                \draw[<-,very thick] (A) to (C);
-                \draw[<-,very thick] (B) to (C);
-
-            \end{tikzpicture}
-        \end{multicols}
-    }
-    \only<5>{
-        Do Sally and Ann have the same accuracy when modelling the robot?
-
-        {\centering
-            \(\Delta_2 = \Delta(\Mmodel{\text{Sally}}{R}{X}, \Mmodel{\text{Ann}}{R}{X})\)
-
-        }
-
-        \vspace*{1em}
-        Conversely, what may lead the robot to model more accurately
-        Sally or Ann?
-
-        {\centering
-            \(\Delta_3= \Delta(\Mmodel{R}{\text{Sally}}{X}, \Mmodel{R}{\text{Ann}}{X})\)
-
-        }
-
-    }
-\end{frame}
 
 \end{document}
