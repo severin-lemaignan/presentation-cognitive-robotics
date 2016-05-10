@@ -21,6 +21,14 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,fpu,fit,calc,mindmap,backgrounds,positioning,svg.path}
 
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
 \graphicspath{{figs/}}
 
 % for model of anthopomorphism
@@ -321,7 +329,6 @@ Plymouth University}}
     }
 \end{frame}
 
-\imageframe[color=white]{islands2}
 
 {
 \paper{Baxter, Lemaignan, Trafton {\Medium Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
@@ -345,41 +352,27 @@ Plymouth University}}
                 child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
                 child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
             }
-            child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
+            child[concept color=hriSec2Comp,text=white,grow=-30, visible on=<2->] { node[concept] (knowledge) {Social Knowledge} 
                 [counterclockwise from=-120]
                 child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
                 child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
                 child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
             }
-            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
+            child[concept color=hriSec3Comp,text=black, grow=-120,visible on=<3->] { node[concept] (comm) {Communication} 
                 [counterclockwise from=180]
                 child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
                 child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
             }
-            child[concept color=hriSec3,text=white,grow=180] { node[concept] (dynamics) {Interaction Dynamics} 
+            child[concept color=hriSec3,text=white,grow=180,visible on=<4->] { node[concept] (dynamics) {Interaction Dynamics} 
                 [clockwise from=180]
                 child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
             }
-            child[concept color=hriSec2,text=black, grow=120] { node[concept] (action) {Performing with humans} 
+            child[concept color=hriSec2,text=black, grow=120,visible on=<5->] { node[concept] (action) {Performing with humans} 
                 [counterclockwise from=80]
                 child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
                 child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
                 child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
             };
-
-            \uncover<2>{
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (attention.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (knowledge.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (dynamics.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (long-term.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (soc-ctxt.center) {};
-
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (common-sense.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
-            }
 
 
         \end{tikzpicture}
@@ -440,7 +433,7 @@ Plymouth University}}
 \subsection{From Spatial to Symbolic Models}
 \begin{frame}{Situation Assessment}
         \centering
-        \video{0.7\textwidth}{videos/model3d.webm?autostart&start=22}\\
+        \video{0.7\textwidth}{videos/model3d.webm?autostart&start=22&stop=34}\\
         \vspace*{1em}
         \includegraphics[width=0.9\textwidth]{spark}
 
@@ -481,7 +474,6 @@ Plymouth University}}
 
         \end{tabular}
 
-        \badge{europe_phd}
 \end{frame}
 
 \begin{frame}{From Spatial Model to Symbolic Model}
@@ -637,7 +629,7 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Modelling the Other}
+\section{Adding the Human to the Equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -688,7 +680,6 @@ Plymouth University}}
         ``Give me the can!''\\
         $\downarrow$\\
         find({\tt\scriptsize ?obj type Can, model='severin'})
-        \badge{europe_phd}
     \end{frame}
 }
 
@@ -716,7 +707,7 @@ Plymouth University}}
            [Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
 \begin{frame}{Shopping list for HRI?}
     \centering
-    \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+    \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
         \toprule
         {\Medium Already in the HRI fridge} & {\Medium To buy...} \\
         \midrule
@@ -737,7 +728,7 @@ Plymouth University}}
            [Lemaignan, Dillenbourg {\Medium Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
 \begin{frame}{Autistic assets and deficits observed in real life}
     \centering
-    \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+    \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
         \toprule
         {\Medium Assets} & {\Medium Deficits} \\
         \midrule
@@ -765,13 +756,12 @@ Plymouth University}}
 {
     \paper{Lemaignan et al. {\Medium Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{Cognitive Engagement and Meta-cognition}
-    \video{0.55\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4}
+    \video{0.55\textwidth}{videos/cowriter-session1_3minExcerpt_1x.mp4?autostart}
 
     \begin{flushright}
         \includegraphics[width=0.5\textwidth]{henry}
     \end{flushright}
 
-        \badge{europe_epfl}
 \end{frame}
 }
 
@@ -925,21 +915,6 @@ Plymouth University}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Anthropomorphism and Engagement}
-
-{
-\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
-\fullbackground{ranger-background}
-\begin{frame}{Anthropomorphism != Engagement}
-
-\begin{figure}
-    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger-interactions-vs-qualitative-score}
-\end{figure}
-        \badge{europe_epfl}
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Cognitive Context and Anthropomorphism}
 
 {
@@ -950,6 +925,21 @@ Plymouth University}}
         \hspace*{1cm}
         \includegraphics[width=0.45\linewidth]{cognitive-priming}
     \end{center}
+        \badge{europe_epfl}
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Anthropomorphism and Engagement}
+
+{
+\paper{Lemaignan, Fink, Dillenbourg {\Medium You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
+\fullbackground{ranger-background}
+\begin{frame}{Anthropomorphism != Engagement}
+
+\begin{figure}
+    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger-interactions-vs-qualitative-score}
+\end{figure}
         \badge{europe_epfl}
 \end{frame}
 }
@@ -993,63 +983,108 @@ Plymouth University}}
 \section{A Summary and Some Ideas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{The Experimental Summary}
-
-    \begin{multicols}{4}
-        \includegraphics[width=\columnwidth]{henry}
-
-        \includegraphics[width=\columnwidth]{realSetup}
-
-        \includegraphics[width=\columnwidth]{ranger-background}
-
-        \includegraphics[width=\columnwidth]{cleantable}
-
-        \includegraphics[width=\columnwidth]{croquignole-single}
-
-        \includegraphics[width=\columnwidth]{stimulus-toys}
-
-        \includegraphics[width=\columnwidth]{dialogs}
-
-        \includegraphics[width=\columnwidth]{roboscopie}
-
-        \includegraphics[width=\columnwidth]{this_box}
-    \end{multicols}
-
-
-\end{frame}
-
 {
-    \paper{Mnih et al. {\Medium Human-level control through deep reinforcement learning} -- Nature 2015}
-\begin{frame}{Learning Complex Behaviours}
+    \fullbackground{experiments}
+\begin{frame}{}
+%
+%    \begin{multicols}{3}
+%        \includegraphics[width=\columnwidth]{henry}
+%
+%        \includegraphics[width=\columnwidth]{this_box}
+%
+%        \includegraphics[width=\columnwidth]{ranger-background}
+%
+%        \includegraphics[width=\columnwidth]{cleantable}
+%
+%        \includegraphics[width=\columnwidth]{croquignole-single}
+%
+%        \includegraphics[width=\columnwidth]{stimulus-toys}
+%
+%        \includegraphics[width=\columnwidth]{dialogs}
+%
+%        \includegraphics[width=\columnwidth]{roboscopie}
+%
+%        \includegraphics[width=\columnwidth]{realSetup}
+%    \end{multicols}
 
-    \begin{center}
-        \includegraphics[width=\linewidth]{breakout}
-    \end{center}
+    \centering
+        \resizebox{!}{0.6\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=white,text=hriWarmGreyDark]
+            node[concept] {\Medium Social\\Cognition in HRI}
+            [clockwise from=30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
+                [clockwise from=120]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
+                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
+            }
+            child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
+                [counterclockwise from=-120]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
+            }
+            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
+                [counterclockwise from=180]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
+            }
+            child[concept color=hriSec3,text=white,grow=180>] { node[concept] (dynamics) {Interaction Dynamics} 
+                [clockwise from=180]
+                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
+            }
+            child[concept color=hriSec2,text=black, grow=120] { node[concept] (action) {Performing with humans} 
+                [counterclockwise from=80]
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
+            };
+
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (attention.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (knowledge.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (dynamics.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (long-term.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (soc-ctxt.center) {};
+
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (common-sense.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
 
 
-        \begin{itemize}
-            \item Inputs: raw screen image + score
-            \item from the outside, looks like planning
-            \item<2-> \sout{1.000.000} {\Medium 500} games to play a good human-level
-        \end{itemize}
-
-    \uncover<3> {
-        \begin{center}
-            {\Medium Could we also learn social dynamics?}
-        \end{center}
+        \end{tikzpicture}
     }
+
 \end{frame}
 }
 
+\begin{frame}{Attention, Awareness, Alignment}
 
-\begin{frame}{Attention, Alignment, Awareness}
-
+    \begin{multicols}{2}
     \begin{center}
-        \includegraphics<1>[height=0.7\pageheight]{playing_together}
-        \includegraphics<2>[height=0.7\pageheight]{playing_together_gaze}
-        \includegraphics<3>[height=0.7\pageheight]{playing_together_awareness}
-        \includegraphics<4>[height=0.7\pageheight]{playing_together_mutual_awareness}
+        \includegraphics<1>[width=1.3\columnwidth]{playing_together}
+        \includegraphics<2>[width=1.3\columnwidth]{playing_together_gaze}
+        \includegraphics<3>[width=1.3\columnwidth]{playing_together_awareness}
+        \includegraphics<4>[width=1.3\columnwidth]{playing_together_mutual_awareness}
     \end{center}
+    \columnbreak
+        \uncover<2>{
+                    \vspace*{2cm}
+            ``Awareness is a construct that represents the attentional state of a brain''
+                    \vspace{1cm}
+
+                    \scriptsize[Graziano {\Medium Consciousness and the Social Brain} -- 2013]
+                }
+    \end{multicols}
 \end{frame}
 
 
@@ -1103,6 +1138,30 @@ Plymouth University}}
 \end{frame}
 }
 
+{
+    \paper{Mnih et al. {\Medium Human-level control through deep reinforcement learning} -- Nature 2015}
+\begin{frame}{Learning Complex Behaviours}
+
+    \begin{center}
+        \includegraphics[width=\linewidth]{breakout}
+    \end{center}
+
+
+        \begin{itemize}
+            \item Inputs: raw screen image + score
+            \item from the outside, looks like planning
+            \item<2-> \sout{1.000.000} {\Medium 500} games to play a good human-level
+        \end{itemize}
+
+    \uncover<3> {
+        \begin{center}
+            {\Medium Could we also learn social dynamics?}
+        \end{center}
+    }
+\end{frame}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1118,57 +1177,6 @@ Plymouth University}}
     {\Medium Thank you!}
 
     {\Medium\tt\scriptsize severin.lemaignan@plymouth.ac.uk}
-
-    \vfill
-        \resizebox{!}{0.6\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/6}, 
-                level 2 concept/.append style={sibling angle=60}, 
-            concept color=white,text=hriWarmGreyDark]
-            node[concept] {\Medium Social\\Cognition in HRI}
-            [clockwise from=30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
-                [clockwise from=120]
-                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept]
-                {Inference of mental models} };
-            }
-            child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
-                [counterclockwise from=-120]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Social rules} }
-                child[concept color=hriSec3Comp,text=black] { node[concept] {Social context} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept]
-                {Common-sense} };
-            }
-            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
-                [counterclockwise from=180]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Verbal} }
-                child[concept color=hriSec1Dark,text=white] { node[concept]
-                {Non-verbal} };
-            }
-            child[concept color=hriSec3,text=white,grow=180] { node[concept] (dynamics) {Interaction Dynamics} 
-                [clockwise from=180]
-                child[concept color=hriSec2Dark,text=white] { node[concept]
-                {Long-term interaction} };
-            }
-            child[concept color=hriSec2,text=black, grow=120] { node[concept]
-                (action) {Performing with humans} 
-                [counterclockwise from=80]
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
-                child[concept color=hriSec3,text=white] { node[concept] {Joint
-                actions} };
-            };
-
-        \end{tikzpicture}
-
-    }
 
 \end{frame}
 }
