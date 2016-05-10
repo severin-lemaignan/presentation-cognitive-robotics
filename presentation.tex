@@ -1117,14 +1117,19 @@ Plymouth University}}
                 \node at (1,1) {Associative\\links};
             }
 
-                \uncover<2>{
-                    \node[above=0.3 of i21]{Bert};
-                \node[above=0.3 of i22]{Tony};
-                \node[above=0.3 of i23]{Chris};
+            \uncover<2>{
+                \node[above=0.3 of i21,anchor=east]{Bert};
+                \node[above=0.3 of i22,anchor=east]{Tony};
+                \node[above=0.3 of i23,anchor=east]{Chris};
 
                 \node[right=0.3 of i11]{Green cube in focus};
                 \node[right=0.3 of i12]{Red cube in focus};
                 \node[right=0.3 of i13]{Board in focus};
+
+                \node[below=0.3 of i31,anchor=east]{Slow Motion};
+                \node[below=0.3 of i32,anchor=east]{Avg. Motion};
+                \node[below=0.3 of i33,anchor=east]{Fast Motion};
+
             }
 
                 \path[draw,dashed, hriSec3Dark, thick]  (i23) -- (i11) -- (i31) -- (i23);
