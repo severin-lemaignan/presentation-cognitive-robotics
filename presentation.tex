@@ -321,6 +321,8 @@ Plymouth University}}
     }
 \end{frame}
 
+\imageframe[color=white]{islands2}
+
 {
 \paper{Baxter, Lemaignan, Trafton {\Medium Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
 \begin{frame}{Functions for Social Cognition}
@@ -340,45 +342,45 @@ Plymouth University}}
             child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
                 [clockwise from=120]
                 child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept]
-                {Inference of mental models} };
+                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
             }
             child[concept color=hriSec2Comp,text=white,grow=-30] { node[concept] (knowledge) {Social Knowledge} 
                 [counterclockwise from=-120]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Social rules} }
-                child[concept color=hriSec3Comp,text=black] { node[concept] {Social context} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept]
-                {Common-sense} };
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
             }
             child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
                 [counterclockwise from=180]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Verbal} }
-                child[concept color=hriSec1Dark,text=white] { node[concept]
-                {Non-verbal} };
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
             }
             child[concept color=hriSec3,text=white,grow=180] { node[concept] (dynamics) {Interaction Dynamics} 
                 [clockwise from=180]
-                child[concept color=hriSec2Dark,text=white] { node[concept]
-                {Long-term interaction} };
+                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
             }
-            child[concept color=hriSec2,text=black, grow=120] { node[concept]
-                (action) {Performing with humans} 
+            child[concept color=hriSec2,text=black, grow=120] { node[concept] (action) {Performing with humans} 
                 [counterclockwise from=80]
                 child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
                 child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
-                child[concept color=hriSec3,text=white] { node[concept] {Joint
-                actions} };
+                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
             };
 
-%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
-%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (adapt.center) {};
-%                \node[circle, draw=red, very thick, minimum size=1.6cm] at (plans.center) {};
-%                \node[circle, draw=red, very thick, minimum size=2cm] at (krr.center) {};
-%                \node[circle, draw=red, very thick, minimum size=2cm] at (perception.center) {};
-%
-%                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
-%
+            \uncover<2>{
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (attention.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (knowledge.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (dynamics.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (long-term.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (soc-ctxt.center) {};
+
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (common-sense.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (dialog.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
+            }
+
 
         \end{tikzpicture}
     }
@@ -423,16 +425,16 @@ Plymouth University}}
 % ]{pr2-baby-4.jpg}
 
 
-\begin{frame}{Representation}
-    Building robotic qualia: ``what it is like for the robot to experience...''
-    \begin{enumerate}
-        \item From situation assessment...
-        \item ...to symbolic models...
-        \item ...to perspective taking...
-        \item ...to(wards) mutual modelling
-   \end{enumerate}
-
-\end{frame}
+%\begin{frame}{Representation}
+%    Building robotic qualia: ``what it is like for the robot to experience...''
+%    \begin{enumerate}
+%        \item From situation assessment...
+%        \item ...to symbolic models...
+%        \item ...to perspective taking...
+%        \item ...to(wards) mutual modelling
+%   \end{enumerate}
+%
+%\end{frame}
 
 
 \subsection{From Spatial to Symbolic Models}
