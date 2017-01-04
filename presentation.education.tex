@@ -1,0 +1,286 @@
+\documentclass[compress]{beamer}
+
+%--------------------------------------------------------------------------
+% Common packages
+%--------------------------------------------------------------------------
+\usepackage[english]{babel}
+\usepackage{pgfpages} % required for notes on second screen
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{tabularx,ragged2e}
+\usepackage{booktabs}
+\usepackage{marvosym}
+
+%--------------------------------------------------------------------------
+% Load theme
+%--------------------------------------------------------------------------
+\usetheme{hri}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,fpu,fit,calc,mindmap,backgrounds,positioning,svg.path}
+
+\tikzset{
+    invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+      \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
+\graphicspath{{figs/}}
+
+
+%--------------------------------------------------------------------------
+% General presentation settings
+%--------------------------------------------------------------------------
+\title{Of Cognition and Social Robots}
+\subtitle{Is ``Social Cognition'' in HRI just a buzz word?}
+\date{INRIA Flowers -- {\bf May 11, 2016}}
+\author{Séverin Lemaignan}
+\institute{Centre for Robotics and Neural Systems\\{\bf
+Plymouth University}}
+
+%--------------------------------------------------------------------------
+% Notes settings
+%--------------------------------------------------------------------------
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{hide notes}
+
+\begin{document}
+
+\licenseframe{https://github.com/severin-lemaignan/presentation-cognitive-robotics}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \section{Child-Robot Interaction for Learning}
+
+ \begin{frame}{Social or not Social?}
+     \begin{center}
+         \resizebox{\linewidth}{!}{
+             \begin{tikzpicture}[>=latex]
+                 \node[double arrow,draw] (spec) {Interaction spectrum};
+                 \node<1>[left=of spec] {Non-social};
+                 \node<2>[left=of spec] {\bf Cellulo};
+                 \node<1>[right=of spec] {Social};
+                 \node<2>[right=of spec] {\bf CoWriter};
+             \end{tikzpicture}
+         }
+     \end{center}
+ \end{frame}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %% Cellulo
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \begin{frame}{Non-social interaction}
+     What is the most effective learning tool in a classroom?
+
+     \begin{center}
+         \includegraphics<2>[width=0.8\linewidth]{cellulo/pencil}
+     \end{center}
+ \end{frame}
+
+ \imageframe[caption=Pens and paper are pervasive...]{cellulo/classroom}
+ \imageframe[caption=...so should be the robots]{cellulo/classroom-withcellulo}
+
+{
+    \paper{\"Ozg\"ur, Lemaignan et al. {\bf Cellulo: Versatile Handheld Robots
+    for Education} -- HRI 2017}
+ \begin{frame}{Cellulo: design principles}
+
+     \begin{itemize}
+         \item<1-> {\bf ubiquitous}: a pervasive yet unremarkable tool
+             that blend into the daily learning routine; has to be reliable (\ie
+             trustworthy), readily replaceable (\ie cheap, no affective bonding), intuitive (\ie few
+             simple affordances)
+
+         \item<2-> {\bf versatile}: applicable to a broad range of learning
+             scenarios; the robots’ hardware, appearance and interaction
+             modalities must not imply or be constrained to specific use cases
+
+         \item<3-> {\bf practical}: to gain field
+             acceptance in the classrooms, educative robots must critically
+             represent a net educative gain and must not incur higher
+             workload for the teachers
+     \end{itemize}
+
+        \badge{europe_epfl}
+ \end{frame}
+}
+
+ \begin{frame}{Cellulo: hardware}
+     \begin{center}
+         \includegraphics[width=0.8\linewidth]{cellulo/hardware-design}
+     \end{center}
+     \begin{itemize}
+         \item Holomonic motion
+         \item Sub-mm absolute localisation (no external hardware)
+         \item Haptic feedback + tactile RGB LED buttons 
+         \item Bluetooth
+         \item<2> Affordable (prototype: 125 \EUR)
+     \end{itemize}
+        \badge{europe_epfl}
+ \end{frame}
+
+ \videoframe[0.56]{figs/cellulo/cellulo-swarm-demo.mp4}
+
+{
+    \paper{Hostettler, \"Ozg\"ur, Lemaignan et al. {\bf Real-Time High-Accuracy
+    2D Localization with Structured Patterns} -- ICRA 2016}
+ \begin{frame}{Interaction with the paper}
+     \badge{europe_epfl}
+     Critically, Cellulo is meant as an {\bf interaction between
+     (classroom-friendly) paper and the robots}.
+
+     \pause
+
+     Achieved through a {\bf paper-based absolute localisation system}
+
+     \begin{center}
+         \includegraphics<3>[width=0.8\linewidth]{cellulo/treasure-game-1}
+         \includegraphics<4>[width=\linewidth]{cellulo/treasure-game-2}
+     \end{center}
+
+     \only<5>{
+
+         \begin{itemize}
+             \item even more than 'classroom-friendly', paper is 'teacher-friendly'
+             \item easy to manipulate, copy, print, cutout, dispose...
+             \item unique activity IDs: drop the robots onto the sheet, it
+                 recognizes the activity
+         \end{itemize}
+     }
+
+ \end{frame}
+}
+
+ \imageframe[color=black,caption=Concept 1: chemistry]{cellulo/concept-molecules}
+ \imageframe[color=black,caption=Concept 2: solar system]{cellulo/concept-solar-system}
+
+{
+    \paper{\"Ozg\"ur, Lemaignan et al. {\bf Cellulo: Versatile Handheld Robots
+    for Education} -- HRI 2017}
+ \begin{frame}{Interaction Design space}
+     \begin{center}
+         \includegraphics[width=0.8\linewidth]{cellulo/interaction-space}
+     \end{center}
+        \badge{europe_epfl}
+ \end{frame}
+ }
+
+ \begin{frame}[plain]{}
+     ...at the other end of the spectrum...
+ \end{frame}
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %% CoWriter
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\imageframe{cowriter/joe1}
+\imageframe{cowriter/joe2}
+\imageframe[color=black]{cowriter/diego-writing}
+
+
+\begin{frame}{Robots?}
+    \badge{europe_epfl}
+    \begin{itemize}
+        \item<1-> Robots do not know how to write!
+        \item<2-> Learning by Teaching
+        \item<3-> (nice side-effect: we can adapt to each child and each disabilities)
+    \end{itemize}
+\end{frame}
+
+\imageframe[color=black]{cowriter/diego-correct}
+
+\begin{frame}[plain]{}
+    \centering
+    Mind modelling is {\bf mutual}
+
+    We can take advantage of it in HRI at fundamental levels
+
+\end{frame}
+
+{
+    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
+\begin{frame}{Cognitive Engagement and Meta-cognition}
+    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
+
+    \begin{flushright}
+        \includegraphics[width=0.5\textwidth]{cowriter/henry}
+    \end{flushright}
+
+\end{frame}
+}
+
+\begin{frame}{Technical Challenges}
+    \badge{europe_epfl}
+    \begin{itemize}
+        \item<1-> Get a child-proof robot to write...
+        \item<2-> ...badly...
+        \item<3-> Make it able to learn...
+        \item<4-> ...with the help of children
+    \end{itemize}
+\end{frame}
+
+
+
+{
+    \paper{Hood, Lemaignan et al. {\bf When Children Teach a Robot to Write: An
+    Autonomous Teachable Humanoid [...]} -- HRI 2015}
+\begin{frame}{CoWriter implementation}
+    \centering
+
+    \only<1>{
+        \video{0.8\textwidth}{figs/cowriter/nao-tablet-demo.mp4}
+    }
+
+    \only<2>{
+        \includegraphics[width=0.8\textwidth]{cowriter/cowriter-g.png}
+    }
+
+    \badge{europe_epfl}
+\end{frame}
+}
+
+{
+    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
+\begin{frame}{Before -- After}
+    \begin{center}
+        \includegraphics[width=0.43\linewidth]{cowriter/lettre-base}
+        \uncover<2>{
+            \hspace{1cm}%
+        \includegraphics[width=0.43\linewidth]{cowriter/lettre-final}
+    }
+    \end{center}
+        \badge{europe_epfl}
+\end{frame}
+}
+
+\begin{frame}{The Robot as a Social Agent}
+    \begin{itemize}
+        \item<1-> Not a 'tool to teach robotics', not a facilitator
+        \item<2-> {\bf The robot as 'cognitive agent' is key here} (Protégé effect,
+            metacognition)
+        \item<3-> (note: a tool for the teacher vs a social agent for the child!)
+        \item<4-> Could we replace it by someone else? Not easily
+    \end{itemize}
+
+\end{frame}
+
+
+\imageframe{cowriter/cowriter-fsm.png}
+
+
+\end{document}
