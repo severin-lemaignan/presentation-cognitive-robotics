@@ -1,9 +1,11 @@
 
 LATEX=lualatex
-TARGET=presentation.tex
+TARGET=presentation.education.tex
+#TARGET=presentation.tex
 
 DOT=$(wildcard figs/*.dot)
 SVG=$(wildcard figs/*.svg)
+SVG+=$(wildcard figs/*/*.svg)
 
 all: paper
 
