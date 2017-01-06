@@ -59,7 +59,7 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Framing the research direction}
 
- \begin{frame}{What is the problem?}
+ \begin{frame}{Our starting point}
 
         {\bf Symbolic artificial social cognition}:
         works well as long as anchored in \emph{perceptual inputs} (including visual
@@ -69,7 +69,7 @@ Plymouth University}}
 
         {\bf What about non-perceptual inputs? \ie representations}
 
-        Intuitively, social modelling goes beyond computing what the human
+        Intuitively, social modeling goes beyond computing what the human
         perceives or does not perceive $\rightarrow$ Flavell's \emph{cognitive
         connections} vs \emph{mental representations}.
 
@@ -89,6 +89,27 @@ Plymouth University}}
     ...or rather, an {\bf embodied} computational model of social cognition?
 
     \footnotesize (we'll come back to this in a moment)
+
+\end{frame}
+
+\begin{frame}{One question}
+
+    \Large
+    \centering
+
+    Can sociality emerge from interaction?
+
+    \pause
+    \normalsize
+    \vspace{2em}
+
+    Both ``emerge'' as \emph{arise from} and ``emerge`` as in \emph{emergent paradigm of
+    cognition}!
+
+    \pause
+
+    ``Social cognition arising in interaction''? certainly looks like a situated \&
+    embodied view on cognition
 
 \end{frame}
 
@@ -119,26 +140,19 @@ Plymouth University}}
 \end{frame}
 }
 
-\begin{frame}{One question}
+{
+    \paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social
+    Human-Robot Interaction} HRI 2016}
+\begin{frame}{Cognitive Architecture as a methodology}
 
-    \Large
-    \centering
+    \begin{center}
+        \includegraphics[width=\linewidth]{cogarch-methodology}
+    \end{center}
 
-    Can sociality emerge from interaction?
-
-    \pause
-    \normalsize
-    \vspace{2em}
-
-    Both ``emerge'' as \emph{arise from} and ``emerge`` as in \emph{emergent paradigm of
-    cognition}!
-
-    \pause
-
-    ``Social cognition arising in interaction''? certainly looks like a situated \&
-    embodied view on cognition
-
+        \badge{europe_plym}
 \end{frame}
+}
+
 
  \section{A theoretical toolbox}
 
@@ -371,7 +385,7 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
     \begin{itemize}
         \item Symbolic artificial social cognition: \emph{social situation
             assessment}, \emph{mutual task planning}
-        \item {\bf Cognitive neurosciences} $\rightarrow$ theories of social
+        \item Cognitive neurosciences $\rightarrow$ theories of social
             awareness
         \item Developmental psychology
             \begin{itemize}
@@ -490,46 +504,65 @@ Model of Attention} 1995; Block 1996}
 \end{frame}
 }
 
-\begin{frame}{What are the gaps?}
+\begin{frame}{An hybrid model of cognition}
 
     \begin{itemize}
+        \item \emph{phenomenal experience} modelled in a connectionist
+            (sub-symbolic) fashion (associative
+    memory network)
+\item \emph{access conciousness} in a cognitivist (symbolic) fashion (typically,
+    an ontology or epistemic logics)
 
-        \item  mental representations are likely not simply instantaneous
-            'snapshots' -- even though I could argue that they indirectly embed
-            a notion of time and history as they are snapshots of activated
-            units in an associative memory network;
+    \end{itemize}
 
-        \item equating attention to a set of activated units in a memory network raises
-            questions regarding the nature of these units: physical entities? active
-            interaction modalities? ...? In particular, the right level of
-            abstraction of these units is not immediately clear: the spectrum is
-            rather large, from raw perceptual inputs 'à la Tony Morse' to
+    $\Rightarrow$ bottom-up
+
+    \pause
+
+    The \emph{Biased Competition Model of Attention} supports bottom-up as well
+    as {\bf top-down biasing mechanisms}: 
+    
+    \begin{itemize}
+        \item \emph{bottom-up}: if a unit is
+            activated longer/stronger, it biases the resulting attention to this
+            unit.
+        \item \emph{top-down}: abstract cognitive process can influence the memory network
+            to bias the attention process. Practically less clear, but also potentially very interesting
+            as it {\bf closes the loop between the emergent and cognitivist
+            paradigms}
+
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Many gaps calling for investigation!}
+
+\footnotesize
+    \begin{itemize}
+
+        \item<+-> mental representations as instantaneous 'snapshots' is a {\bf strong
+            assumption} (and what about representation of lasting situations?)
+
+        \item<+-> if attention is the set of activated units in a memory network,
+            {\bf what are the units?} physical entities? social events? situations?
+            what is the right level of abstraction: from raw perceptual inputs to
             high-level units like objects, joint gazing, etc.
 
-        \item the Biased Competition Model of Attention supports interesting bottom-up
-            and top-down biasing mechanisms: bottom-up is quite clear (if a unit is
-            activated longer/stronger, it biases the resulting attention to this
-            unit. Top-down is less clear (but also potentially very interesting
-            as it closes the loop between the sub-symbolic and symbolic models):
-            how more abstract cognitive process can influence the memory network
-            to bias the attention process?
 
-        \item the access to other's mental representations is mediated by one's own
-            attentional system: the consequences of this mediation are not immediately
-            clear
+        \item<+-> {\bf the mapping} between 'phenomenal consciousness' and
+            'access consciousness' and, respectively, sub-symbolic and symbolic
+            computational structures {\bf might be naive}. This need to be
+            better evidenced, if only because the frontier between phenomenal
+            and access consciousness is all but clear (as pointed by Graziano).
 
-        \item I conveniently map the split between 'phenomenal consciousness' and
-            'access consciousness' respectively to sub-symbolic and symbolic
-            computational structures. This need to be better evidenced, if only
-            because the frontier between phenomenal and access consciousness is
-            all be clear (as pointed by Graziano).
+        \item<+-> what is the {\bf social motivation} for the robot to carry
+            over this modeling? What social drives?
 
-        \item It is not yet clear how the sub-symbolic and symbolic models of the
-            different agent co-exist: is each agent a different unit in the same
-            associative network?  one associative memory per agent? what about
-            the symbolic level?
+        \item<+-> at epistemic level, if access to other's mental
+            representations is \emph{mediated} by one's own attentional system,
+            these mental representations are subjective. {\bf Can we equate humans'
+            and robots' subjectivities?}
 
-        \item What is the {\bf motivation}? What social drives?
     \end{itemize}
 
 \end{frame}
@@ -640,7 +673,7 @@ Model of Attention} 1995; Block 1996}
 \section{La route est encore longue}
 \begin{frame}{Open questions}
 
-    The most obvious one: {\bf what cognitive model?}
+    The most obvious one: {\bf what cognitive architecture?}
 
     $\rightarrow$ will draw from hybrid architectures (CLARION), internal
     simulation (HAMMER), sub-symbolic cognitive architecture (ERA)
@@ -660,6 +693,8 @@ Model of Attention} 1995; Block 1996}
         \item prior knowledge of person
         \item location of salient objects
     \end{itemize}
+
+    Probably not the end of it, though!
 
 \end{frame}
 
