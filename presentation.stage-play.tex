@@ -36,9 +36,9 @@
 %--------------------------------------------------------------------------
 % General presentation settings
 %--------------------------------------------------------------------------
-\title{Of Cognition and Social Robots}
-\subtitle{Is ``Social Cognition'' in HRI just a buzz word?}
-\date{INRIA Flowers -- {\bf May 11, 2016}}
+\title{Cognition and Social Robots}
+\subtitle{Investigating the emergence of artifical social cognition}
+\date{INRIA Flowers -- {\bf 10th January 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
 Plymouth University}}
@@ -57,8 +57,7 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
- \section{The Emergence of (Artificial?) Sociality}
+\section{Framing the research direction}
 
  \begin{frame}{What is the problem?}
 
@@ -76,37 +75,135 @@ Plymouth University}}
 
  \end{frame}
 
+\begin{frame}{A long-term direction}
 
-\begin{frame}{Cognitive Neurosciences}
+    Adapting and unifying the large and disparate set of theories on social
+    cognition to {\bf build a theory of social cognition for
+    robots}
+
+    \pause
+    ...or rather, {\bf a computational model of social cognition for robots}
+
+    \pause
+
+    ...or rather, an {\bf embodied} computational model of social cognition?
+
+    \footnotesize (we'll come back to this in a moment)
+
+\end{frame}
+
+{
+    \paper{cited in Lewandowsky and Farrell, {\bf Computational Modeling In
+    Cognition}, 2011}
+\begin{frame}{A model?}
+
+    Models attempt to \emph{explain}: 
+    \begin{quote}
+        ``identifying the causes for an event or phenomenon of interest''
+    \end{quote}
+    \begin{quote}
+        ``unifying disparate phenomena''
+    \end{quote}
+
+        A model's value is gained from
+    \begin{quote}
+        ``predicting facts that, absent the theory, would be antecedently
+        improbable''
+    \end{quote}
+
+    \pause
+
+    ...we will come back to the predictive power of a model of artifical social
+    cognition.
+
+\end{frame}
+}
+
+\begin{frame}{One question}
+
     \Large
     \centering
+
+    Can sociality emerge from interaction?
+
+    \pause
+    \normalsize
+    \vspace{2em}
+
+    Both ``emerge'' as \emph{arise from} and ``emerge`` as in \emph{emergent paradigm of
+    cognition}!
+
+    \pause
+
+    ``Social cognition arising in interaction''? certainly looks like a situated \&
+    embodied view on cognition
+
+\end{frame}
+
+ \section{A theoretical toolbox}
+
+ \begin{frame}{Unifying theories}
+
+     If we are to attempt to unify (or more modestly, to draw inspiration from) a range
+     of interdiscplinary approaches/theories, we might want to build conceptual
+     toolbox first.
+ \end{frame}
+
+
+{
+    \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
+\begin{frame}{In Cognitive Neurosciences}
+    \large
+    \centering
     Graziano's Attention Schemata Theory
+
+    \begin{columns}
+
+        \begin{column}{0.5\linewidth}
+
+            \begin{center}
+                \includegraphics<1>[width=1.3\columnwidth]{playing_together}
+                \includegraphics<2>[width=1.3\columnwidth]{playing_together_gaze}
+                \includegraphics<3>[width=1.3\columnwidth]{playing_together_awareness}
+                \includegraphics<4>[width=1.3\columnwidth]{playing_together_mutual_awareness}
+            \end{center}
+
+        \end{column}
+
+        \begin{column}{0.5\linewidth}
+
+            \only<2>{
+                \vspace*{1.5cm}
+                Attention is more about {\bf representation} than visual perspective
+
+                \vspace{0.7cm}
+                ``Awareness is a construct that represents the attentional state
+                of a brain''
+
+            }
+            \only<3>{
+                \vspace*{1.5cm}
+                Graziano's postulate that modelling other's state of awareness
+                is {\bf mediated by one's own attentional system}, through joint
+                attention
+            }
+            \only<4>{
+                \vspace*{1.5cm}
+                    It follows that {\bf joint attention is the process that gives
+                    rise to social awareness}
+            }
+
+        \end{column}
+
+    \end{columns}
+
 \end{frame}
+}
 
-\begin{frame}{Attention, Awareness, Alignment}
-
-    \begin{multicols}{2}
-    \begin{center}
-        \includegraphics<1>[width=1.3\columnwidth]{playing_together}
-        \includegraphics<2>[width=1.3\columnwidth]{playing_together_gaze}
-        \includegraphics<3>[width=1.3\columnwidth]{playing_together_awareness}
-        \includegraphics<4>[width=1.3\columnwidth]{playing_together_mutual_awareness}
-    \end{center}
-    \columnbreak
-        \uncover<2>{
-                    \vspace*{1.5cm}
-                    Attention is more about {\bf representation} than visual perspective
-                    \vspace{0.7cm}
-
-            ``Awareness is a construct that represents the attentional state of a brain''
-
-                    \scriptsize[Graziano {\bf Consciousness and the Social Brain} -- 2013]
-                }
-    \end{multicols}
-\end{frame}
-
-
-\begin{frame}{Stages of play}
+{
+    \paper{Parten, {\bf Social participation among preschool children} Journal
+    of Abnormal and Social Psychology 1932}
+\begin{frame}{In Developmental psychology: stages of play}
 
     Mildred Parten's {\bf stages of play} (1930s!):
 
@@ -128,11 +225,12 @@ Plymouth University}}
     \end{enumerate}
 
 \end{frame}
+}
 
 {
 \paper{Rubin, Maioni, Hornung {\bf Free Play Behaviors in Middle- and
 Lower-Class Preschoolers [...]} -- Child Development 1976}
-\begin{frame}{How is it spread?}
+\begin{frame}{In Developmental psychology: stages of play}
     At 3-4 years,
 
     \begin{itemize}
@@ -147,7 +245,10 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
 \end{frame}
 }
 
-\begin{frame}{Stages of play}
+{
+    \paper{Smilansky, {\bf The effects of sociodramatic play on disadvantaged
+    children: preschool children} 1968}
+\begin{frame}{In Developmental psychology: stages of play}
 
     An orthogonal hierarchy stems from Piaget (further elaborated by
     Smilansky).
@@ -168,14 +269,29 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
     \end{enumerate}
 
 \end{frame}
+}
 
-\begin{frame}{Socio-cognitive hierarchies}
+\begin{frame}{Socio-cognitive hierarchies of play behaviour}
     \begin{itemize}
         \item Parten: {\bf Social hierarchy}
         \item Piaget/Smilansky: {\bf Cognitive hierarchy}
     \end{itemize}
 \end{frame}
 
+{
+    \paper{Wimmer and Perner, {\bf Beliefs about beliefs:
+    Representation and constraining function [...]}, Cognition, 1983}
+\begin{frame}{In Social psychology: Theory of Mind}
+        
+    \centering
+
+    1st order ToM: the False-Belief Experiment
+
+    \includegraphics[width=0.6\textwidth]{triadic_false_beliefs}
+\end{frame}
+}
+
+\imageframe{zoo}
 
 {
     \paper{Frith and Happé {\bf Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
@@ -218,6 +334,38 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
 \end{frame}
 }
 
+{
+    \paper{Verbrugge, {\bf Logic and social cognition}, Journal of Philosophical
+    Logic, 2009}
+\begin{frame}{In Epistemic Logics: Agreement as $\infty$-order ToM}
+    \only<1>{
+    \begin{center}
+    \includegraphics[width=0.4\textwidth]{mutual-agreement.pdf}
+    \end{center}
+}
+\only<2->{
+    \begin{center}
+    \includegraphics[width=0.2\textwidth]{mutual-agreement.pdf}
+    \end{center}
+
+    \uncover<2->{
+    Shared knowledge
+\[
+    \mathsf{EK}_J\varphi \leftrightarrow \bigwedge_{i \in J}\mathsf{K}_i\varphi
+\]
+}
+\uncover<3>{
+    Common knowledge 
+\[
+    \mathsf{CK}_J\varphi \leftrightarrow
+\mathsf{EK}_J\varphi \wedge \mathsf{EK}_J\mathsf{EK}_J\varphi \wedge
+\mathsf{EK}_J\mathsf{EK}_J\mathsf{EK}_J\varphi \wedge ...
+\]
+}
+}
+\end{frame}
+}
+
 
 \begin{frame}{My toolbox to investigate artificial social cognition}
     \begin{itemize}
@@ -238,67 +386,109 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
 \end{frame}
 
 
-\begin{frame}{The question}
 
-    \Large
-    \centering
+\section{Back to the question}
 
-    Can sociality emerge from interaction?
+\begin{frame}{A model of artificial social cognition}
+
+    I postulate {\bf two stages}:
+
+    \begin{enumerate}
+        \item building models of others' minds
+        \item exploiting these models to socially act:
+            \begin{itemize}
+                \item prediction, reading others' intentions
+                \item adapting own behaviour, alignment
+                \item establish join goals
+                \item ultimately, performing joint actions
+            \end{itemize}
+    \end{enumerate}
+
+    \vspace{2em}
+    $\rightarrow$ Social analogs of \emph{perception} \& \emph{action}
 
 \end{frame}
 
-\section{How to tackle the question?}
+{
+    \paper{see discussion in Vernon, {\bf Artificial Cognitive Systems: A Primer} 2014}
+\begin{frame}{Cognitivist vs Emergent paradigms}
 
-\begin{frame}{Phrasing hypotheses}
+    ``building'', ``exploiting'', ``reading'', ``establishing''... my terminolgy
+    denotes a cognitivist approach (`I, the designer of the system, explicitly implement
+    these capabilities')
 
-    {\bf Hypothesis 1}: mental representations are snapshots of
+    \pause
+    
+    Reformulation in the emergent paradigm:
+
+    \begin{enumerate}
+        \item developing internal states \emph{connoting} others' minds
+        \item perturbing (influencing) actions synthesis with these states
+    \end{enumerate}
+
+    \pause
+
+    Hybrid approaches are possible -- mapping to ``phenomenal experience'' vs
+    ``access counciousness''.
+\end{frame}
+}
+
+\begin{frame}{Sketching a path forward: mentalizing}
+
+    {\bf Hypothesis 1}: Graziano is right: mental representations are snapshots of
     \emph{awareness}, \emph{awareness} being itself a label for the
     \emph{memory-mediated process of attention}.
 
     \pause
 
     {\bf Hypothesis 2}: this can be extended to social cognition. \textbf{Modeling one
-    other mental representations equates to taking snapshots of her current
+    other mental representations equates to taking snapshots of their current
     state of awareness}.
 
     As we do not have direct access to others' process of attention, it has to
-    be mediated. Following Graziano, we suggest that \textbf{modelling other's
+    be mediated. Following Graziano, we hypotesise that \textbf{modelling other's
     state of awareness is mediated by one's own attentional system, through
     joint attention mechanisms}.
 
+
 \end{frame}
 
-\begin{frame}{Applied to robotics}
+{
 
-    \begin{enumerate}
-        \item<+-> {\bf mental representations} are {\bf snapshots of what we are
-            aware of};
+    \paper{Graziano's Attention Schemata Theory; Desimone and Ducan {\bf Biased Competition
+Model of Attention} 1995; Block 1996}
+
+\begin{frame}{In more details}
+\footnotesize
+    \begin{enumerate} \item<+-> {\bf mental representations} are {\bf snapshots
+                of what we are aware of}
+
         \item<+-> {\bf awareness} is the label we conveniently put on the {\bf
-            process of attention};
+            process of attention}
+
         \item<+-> attention at time t is the label we put on the set of the {\bf
-            activated units} in
-            a (biased) {\bf associative memory network};
-        \item<+-> modelling {\bf others’ mental representations} is taking snapshots of their own
-current state of awareness;
+            activated units} in a (biased) {\bf associative memory network}
 
-\item<+-> modelling other’s state of awareness, \ie their current attentional process,
-    is {\bf mediated by one’s own attentional system}, typically through {\bf
-            joint attention}
-mechanisms;
+        \item<+-> modelling {\bf others’ mental representations} is taking
+            snapshots of their own current state of awareness
 
-\item<+-> Points 1 to 5 essentially refer to a \emph{phenomenal} awareness (a
-    \emph{raw} inner experience). \emph{Phenomenal} awareness can be turned into
-            \emph{access consciousness} (the abstract, cognitive ability to reflect on the inner experience);
+        \item<+-> modelling other’s state of awareness, \ie their current
+            attentional process, is {\bf mediated by one’s own attentional
+            system}, typically through {\bf joint attention} mechanisms
+
+        \item<+-> Points 1 to 5 essentially refer to a \emph{phenomenal}
+            awareness (a \emph{raw} inner experience). \emph{Phenomenal}
+            awareness can be turned into \emph{access consciousness} (the
+            abstract, cognitive ability to reflect on the inner experience)
 
         \item<+-> In robots, \emph{access consciousness} can be mapped to {\bf
-            symbolic representations}.
-    \end{enumerate}
+            symbolic representations}
 
-(2) is Graziano's Attention Schemata Theory; (3) is based on Biased Competition
-Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
+    \end{enumerate}
 
 
 \end{frame}
+}
 
 \begin{frame}{What are the gaps?}
 
@@ -344,28 +534,24 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
 
 \end{frame}
 
-{
-    \paper{cited in Lewandowsky and Farrell, {\bf Computational Modeling In
-    Cognition}, 2011}
-\begin{frame}{Towards a model of the emergence of sociality}
 
-        A model's value is gained from
-    \begin{quote}
-        ``predicting facts that, absent the theory, would be antecedently
-        improbable''
-    \end{quote}
+\begin{frame}{Sketching a path forward: social behaviours}
 
-    Looking for an \emph{explanation}: 
-    \begin{quote}
-        ``identifying the causes for an event or phenomenon of interest''
-    \end{quote}
-    \begin{quote}
-        ``unifying disparate phenomena''
-    \end{quote}
+    {\bf Hypothesis 3}: together, representations of one's and others' minds are
+    \emph{necessary} and \emph{sufficient} for social behaviours to emerge
+
+    {\bf Hypothesis 3'}: representations of one's and others' minds, along with
+    a situation (physical and temporal environment), are \emph{necessary} and
+    \emph{sufficient} conditions for social behaviours to emerge
+
+    \pause
+
+    How?
+
+
 \end{frame}
-}
 
-\begin{frame}{What is the predictive power of such a theory?}
+\begin{frame}{What could the model predict?}
 
     \begin{itemize}
 
@@ -387,13 +573,18 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
         \item {\bf 'natural' protodeclarative pointing}: I 'just' know when I really
             need to draw your attention on something
 
-        \item {\bf Emergence of Parten's hierarchy!}
+        \item {\bf Emergence of Parten's hierarchy?}
 
     \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Importance of free play}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimental investigation}
+
+\begin{frame}{An experimental framework for investigation}
 
     \begin{itemize}
         \item<1-> Typical socio-cognitive tasks are either toy scenarios (\ie do not mirror
@@ -402,7 +593,8 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
         \item<2-> $\Rightarrow$ {\bf free play}: richer set of cognitive and
             social dynamics; importance of motivation/drive; forces us to deal
             with uncertain and unexpected situations
-        \item<3-> If we are to avoid Wizard-Of-Oz, implementation challenge!
+        \item<3-> Challenge to isolate behaviours, analyses them (and if we are
+            to avoid Wizard-Of-Oz, implementation challenge!)
     \end{itemize}
 \end{frame}
 
@@ -430,10 +622,22 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
             geometry is genuine
     \end{itemize}
 \end{frame}
-\imageframe[color=black]{next/zoo-activity2}
-\videoframe[0.56]{figs/next/zoo-builder-proto-smaller.mkv}
-\imageframe[color=black]{next/zoo-activity}
 
+\imageframe[color=black]{next/zoo-activity2}
+\imageframe[color=black]{next/zoo-activity}
+\videoframe[0.56]{figs/next/zoo-builder-proto-smaller.mkv}
+
+
+\begin{frame}{Analysis}
+
+    \begin{itemize}
+        \item Ballard's (and Anderson's extension) coding of children's free-play interactions
+        \item behavioural alignment between partners: for instance, using
+            Słowinski's \emph{Individual Motor Signature}
+    \end{itemize}
+\end{frame}
+
+\section{La route est encore longue}
 \begin{frame}{Open questions}
 
     The most obvious one: {\bf what cognitive model?}
@@ -446,7 +650,7 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
 
     \pause
     
-    The second most obvious one: how abstract the inputs? very low-level?
+    The second most obvious one: {\bf what are the inputs?} low-level?
     high-level? To reconstruct someone else's attentional state, Graziano suggests:
 
     \begin{itemize}
@@ -459,14 +663,12 @@ Model of Attention, Desimone and Duncan 1995; (6) comes from Block 1996.
 
 \end{frame}
 
-\begin{frame}{Analyse}
+\begin{frame}[plain]{}
 
-    \begin{itemize}
-        \item behavioural alignment between partners: for instance, using \emph{Individual Motor
-Signature}
-        \item nature of interactions between partners: 
+    {\bf Thank you!}
 
-    \end{itemize}
+    {\bf\tt\scriptsize severin.lemaignan@plymouth.ac.uk}
+
 \end{frame}
 
 \end{document}
