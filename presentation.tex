@@ -151,33 +151,33 @@ Plymouth University}}
 
 \end{frame}
 
-\begin{frame}[plain]{}
-
-    \begin{multicols}{2}
-        \resizebox{\columnwidth}{!}{%
-        \vspace*{4cm}
-        \begin{tikzpicture}
-            
-            \path[small mindmap, level 1 concept/.append style={sibling angle=360/7}, concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-            child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
-            child[concept color=hriSec2CompDark,text=white] { node[concept] {Language} }
-            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} }
-            child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-            child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} };
-        \end{tikzpicture}
-    }
-
-    \begin{center}
-        \includegraphics[width=0.4\columnwidth]{humans.png}
-    \end{center}
-
-    \end{multicols}
-
-\end{frame}
+%\begin{frame}[plain]{}
+%
+%    \begin{multicols}{2}
+%        \resizebox{\columnwidth}{!}{%
+%        \vspace*{4cm}
+%        \begin{tikzpicture}
+%            
+%            \path[small mindmap, level 1 concept/.append style={sibling angle=360/7}, concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+%            node[concept] {Cognition}
+%            [clockwise from=-30]
+%            child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
+%            child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
+%            child[concept color=hriSec2CompDark,text=white] { node[concept] {Language} }
+%            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} }
+%            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} }
+%            child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
+%            child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} };
+%        \end{tikzpicture}
+%    }
+%
+%    \begin{center}
+%        \includegraphics[width=0.4\columnwidth]{humans.png}
+%    \end{center}
+%
+%    \end{multicols}
+%
+%\end{frame}
 
 
 \begin{frame}[plain]{}
@@ -212,14 +212,14 @@ Plymouth University}}
                 child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
             child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making} } };
 
-        \onslide<2>{
-        \path (decision) edge[->, bend left] (action);
-        \path (percept) edge[->, bend left] (action);
-        \path (krr) edge[<->, bend right] (reason);
-        \path (plan) edge[<->] (reason);
-        \path (percept) edge[->, bend left] (krr);
-        \path (krr) edge[->, bend left] (plan);
-        }
+%        \onslide<2>{
+%        \path (decision) edge[->, bend left] (action);
+%        \path (percept) edge[->, bend left] (action);
+%        \path (krr) edge[<->, bend right] (reason);
+%        \path (plan) edge[<->] (reason);
+%        \path (percept) edge[->, bend left] (krr);
+%        \path (krr) edge[->, bend left] (plan);
+%        }
 
         \end{tikzpicture}
     }
@@ -234,167 +234,114 @@ Plymouth University}}
 \end{frame}
 
 
-\begin{frame}[plain]{}
-
-    \begin{multicols}{2}
-        \resizebox{1.3\columnwidth}{!}{%
-        \begin{tikzpicture}
-            
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (perception) {Perception}
-                [clockwise from=40]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
-            }
-            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Management} 
-                [clockwise from=-30]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (mmodel) {Mutual Modelling} }
-            }
-            child[concept color=hriSec2,text=white] { node[concept] {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=hriSec3,text=white] { node[concept] (plans) {Task Planning} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Communication} }
-            }
-            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
-            }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} 
-                [clockwise from=110]
-                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} } 
-            };
-
-        \end{tikzpicture}
-    }
-
-    \begin{center}
-        \vspace*{1cm}
-        \includegraphics[width=0.4\columnwidth]{humans.png}
-        \includegraphics[width=0.5\columnwidth]{pr2.png}
-    \end{center}
-
-    \end{multicols}
-
-\end{frame}
-
-
-\begin{frame}[plain]{}
-\centering
-        \resizebox{!}{0.7\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/5}, 
-                level 2 concept/.append style={sibling angle=120}, 
-            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
-                [clockwise from=40]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
-            }
-            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Representation} 
-                [clockwise from=-30]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (memory) {Memory} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind} }
-            }
-            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
-                [counterclockwise from=110]
-                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication} }
-            }
-            child[concept color=hriSec3Comp,text=white] { node[concept] (learning) {Learning} 
-                [counterclockwise from=130]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
-            }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
-                [clockwise from=110]
-                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making} } 
-            };
-
-        \path (decision) edge[->, bend left] (action);
-        \path (percept) edge[->, bend left] (action);
-        \path (krr) edge[<->, bend right] (reason);
-        \path (plan) edge[<->] (reason);
-        \path (percept) edge[->, bend left] (krr);
-        \path (krr) edge[->, bend left] (plan);
-        \path (learning) edge[->, bend left] (reason);
-        \path (learning) edge[->, bend left] (krr);
-        \path (percept) edge[<->, bend left] (learning);
-        \path (dialog) edge[->, bend left] (tom);
-        \path (tom) edge[->, bend left] (comm);
-        \path (percept) edge[<->, bend left] (memory);
+%\begin{frame}[plain]{}
+%
+%    \begin{multicols}{2}
+%        \resizebox{1.3\columnwidth}{!}{%
+%        \begin{tikzpicture}
+%            
+%            \path[small mindmap, 
+%                level 1 concept/.append style={sibling angle=360/5}, 
+%                level 2 concept/.append style={sibling angle=120}, 
+%            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+%            node[concept] {Cognition}
+%            [clockwise from=-30]
+%            child[concept color=hriSec1,text=white] { node[concept] (perception) {Perception}
+%                [clockwise from=40]
+%                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
+%                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
+%            }
+%            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Management} 
+%                [clockwise from=-30]
+%                child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
+%                child[concept color=hriSec3CompDark,text=white] { node[concept] (mmodel) {Mutual Modelling} }
+%            }
+%            child[concept color=hriSec2,text=white] { node[concept] {Action Execution} 
+%                [counterclockwise from=110]
+%                child[concept color=hriSec3,text=white] { node[concept] (plans) {Task Planning} }
+%                child[concept color=hriSec2CompDark,text=white] { node[concept] {Communication} }
+%            }
+%            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} 
+%                [counterclockwise from=130]
+%                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
+%            }
+%            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} 
+%                [clockwise from=110]
+%                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
+%                child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} } 
+%            };
+%
+%        \end{tikzpicture}
+%    }
+%
+%    \begin{center}
+%        \vspace*{1cm}
+%        \includegraphics[width=0.4\columnwidth]{humans.png}
+%        \includegraphics[width=0.5\columnwidth]{pr2.png}
+%    \end{center}
+%
+%    \end{multicols}
+%
+%\end{frame}
 
 
-        \end{tikzpicture}
-    }
-\end{frame}
+%\begin{frame}[plain]{}
+%\centering
+%        \resizebox{!}{0.7\paperheight}{%
+%            \begin{tikzpicture}[
+%                    >=latex,
+%                every edge/.style={<-, draw, very thick}]
+%        
+%
+%            \path[small mindmap, 
+%                level 1 concept/.append style={sibling angle=360/5}, 
+%                level 2 concept/.append style={sibling angle=120}, 
+%            concept color=hriWarmGreyLight,text=hriWarmGreyDark]
+%            node[concept] {Cognition}
+%            [clockwise from=-30]
+%            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
+%                [clockwise from=40]
+%                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
+%                child[concept color=hriSec2CompDark,text=white] { node[concept] (dialog) {Communication} }
+%            }
+%            child[concept color=hriSec2Comp,text=white] { node[concept] (krr) {Knowledge Representation} 
+%                [clockwise from=-30]
+%                child[concept color=hriSec1CompDark,text=white] { node[concept] (memory) {Memory} }
+%                child[concept color=hriSec3CompDark,text=white] { node[concept] (tom) {Theory of Mind} }
+%            }
+%            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
+%                [counterclockwise from=110]
+%                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning} }
+%                child[concept color=hriSec2CompDark,text=white] { node[concept] (comm) {Communication} }
+%            }
+%            child[concept color=hriSec3Comp,text=white] { node[concept] (learning) {Learning} 
+%                [counterclockwise from=130]
+%                child[concept color=hriSec1CompDark,text=white] { node[concept] (adapt) {Adaptation} }
+%            }
+%            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
+%                [clockwise from=110]
+%                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
+%                child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making} } 
+%            };
+%
+%        \path (decision) edge[->, bend left] (action);
+%        \path (percept) edge[->, bend left] (action);
+%        \path (krr) edge[<->, bend right] (reason);
+%        \path (plan) edge[<->] (reason);
+%        \path (percept) edge[->, bend left] (krr);
+%        \path (krr) edge[->, bend left] (plan);
+%        \path (learning) edge[->, bend left] (reason);
+%        \path (learning) edge[->, bend left] (krr);
+%        \path (percept) edge[<->, bend left] (learning);
+%        \path (dialog) edge[->, bend left] (tom);
+%        \path (tom) edge[->, bend left] (comm);
+%        \path (percept) edge[<->, bend left] (memory);
+%
+%
+%        \end{tikzpicture}
+%    }
+%\end{frame}
 
-
-{
-\paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
-\begin{frame}{Functions for Social Cognition}
-\centering
-        \resizebox{!}{0.7\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/6}, 
-                level 2 concept/.append style={sibling angle=60}, 
-            concept color=white,text=hriWarmGreyDark]
-            node[concept] {\bf Social\\Cognition in HRI}
-            [clockwise from=30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
-                [clockwise from=120]
-                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
-                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
-            }
-            child[concept color=hriSec2Comp,text=white,grow=-30, visible on=<2->] { node[concept] (knowledge) {Social Knowledge} 
-                [counterclockwise from=-120]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
-                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
-            }
-            child[concept color=hriSec3Comp,text=black, grow=-120,visible on=<3->] { node[concept] (comm) {Communication} 
-                [counterclockwise from=180]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
-            }
-            child[concept color=hriSec3,text=white,grow=180,visible on=<4->] { node[concept] (dynamics) {Interaction Dynamics} 
-                [clockwise from=180]
-                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
-            }
-            child[concept color=hriSec2,text=black, grow=120,visible on=<5->] { node[concept] (action) {Performing with humans} 
-                [counterclockwise from=80]
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
-                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
-            };
-
-
-        \end{tikzpicture}
-    }
-%    \\
-%    Learn -- Memorize -- Reason -- Represent -- Assess Situation
-    \badge{europe_plym}
-\end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -488,6 +435,9 @@ Plymouth University}}
 
 \end{frame}
 
+{
+    \paper{Lemaignan et al. {\bf ORO, a Knowledge Management Module for
+    Cognitive Architectures in Robotics}, IROS 2010}
 \begin{frame}{From Spatial Model to Symbolic Model}
 
     \begin{figure}
@@ -528,6 +478,7 @@ Plymouth University}}
 
         \badge{europe_phd}
 \end{frame}
+}
 
 {
 \paper{Lemaignan, Alami, {\bf Explicit Knowledge and the Deliberative Layer: Lessons Learned}, IROS 2013}
@@ -1004,8 +955,6 @@ Plymouth University}}
     \end{frame}
 }
 
-\imageframe[caption=Next step: the representation-level]{zoo}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1345,6 +1294,59 @@ Plymouth University}}
 
 \section{A Summary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
+\begin{frame}{Functions for Social Cognition}
+\centering
+        \resizebox{!}{0.7\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=white,text=hriWarmGreyDark]
+            node[concept] {\bf Social\\Cognition in HRI}
+            [clockwise from=30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
+                [clockwise from=120]
+                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
+                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
+            }
+            child[concept color=hriSec2Comp,text=white,grow=-30, visible on=<2->] { node[concept] (knowledge) {Social Knowledge} 
+                [counterclockwise from=-120]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
+            }
+            child[concept color=hriSec3Comp,text=black, grow=-120,visible on=<3->] { node[concept] (comm) {Communication} 
+                [counterclockwise from=180]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
+            }
+            child[concept color=hriSec3,text=white,grow=180,visible on=<4->] { node[concept] (dynamics) {Interaction Dynamics} 
+                [clockwise from=180]
+                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
+            }
+            child[concept color=hriSec2,text=black, grow=120,visible on=<5->] { node[concept] (action) {Performing with humans} 
+                [counterclockwise from=80]
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
+            };
+
+
+        \end{tikzpicture}
+    }
+%    \\
+%    Learn -- Memorize -- Reason -- Represent -- Assess Situation
+    \badge{europe_plym}
+\end{frame}
+}
 
 {
     \fullbackground{experiments}
@@ -1914,11 +1916,11 @@ Model of Attention} 1995; Block 1996}
 \end{frame}
 }
 
-\section{La route est encore longue}
+\section{That's only the start of it!}
 \subsection{What's next?}
-\begin{frame}{Open questions}
+\begin{frame}{Only the start of it!}
 
-    The most obvious one: {\bf what cognitive architecture?}
+    {\bf What cognitive model? what cognitive architecture?}
 
     $\rightarrow$ will draw from hybrid architectures (CLARION), internal
     simulation (HAMMER), sub-symbolic cognitive architecture (ERA)
@@ -1928,7 +1930,7 @@ Model of Attention} 1995; Block 1996}
 
     \pause
     
-    The second most obvious one: {\bf what are the inputs?} low-level?
+    {\bf What inputs for a connectionist take on social interactions?} low-level?
     high-level? To reconstruct someone else's attentional state, Graziano suggests:
 
     \begin{itemize}
@@ -2406,109 +2408,11 @@ Model of Attention} 1995; Block 1996}
 %\end{frame}
 %}
 
-\subsection{LAAS Cognitive Architecture}
-{
-    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-    Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{From ``Technical Integration''...}
-    \begin{figure}
-        \centering
-
-        \resizebox{0.9\paperwidth}{!}{%
-
-            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
-
-            \begin{tikzpicture}[
-                    >=latex,
-                    every edge/.style={draw, very thick},
-                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-                label/.style={midway, align=center, font=\scriptsize, fill=white}]
-
-                %%% Separation between deliberative layer and sensori-motor layer
-                \draw[dotted, thick] (-8,-5) -- (12, -5);
-
-                %%% SPARK
-                \uncover<2->{
-                \node at (4,-3.5)[skill, fill=hriSec3!50] (spark) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
-                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
-                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
-                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
-                    \end{tikzpicture}
-                };
-                }
-
-                %%% LOWLEVEL
-                \node [skill, below=0.7 of spark] (lowlevel) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (sensori) {Sensorimotor layer};
-                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
-                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
-                    \end{tikzpicture}
-                };
-
-                \uncover<2->{
-                \path (lowlevel) edge [->] (spark);
-                }
-
-                %%% ORO
-                \uncover<3->{
-                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
-                {Symbolic facts \\ and beliefs management -- {\tt oro}};
-                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
-                }
-
-                %%% HATP
-                \uncover<5->{
-                \node at (-6, 2.5)[skill, fill=hriSec1!50] (hatp) {Human-aware
-                symbolic \\task planning -- {\tt hatp}};
-                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
-                }
-
-                %%% DIALOGS
-                \uncover<4->{
-                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
-                {Dialogue processing\\{\tt dialogs}};
-                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
-                }
-                %%% SHARY
-                \uncover<5->{
-                \node at (4,4.5)[skill, fill=hriSec1Comp!50] (shary) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
-                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
-                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
-                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
-                    \end{tikzpicture}
-                };
-                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
-                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
-                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
-                }
-                %%% MHP
-                \uncover<6->{
-                \node at (9,0)[skill, fill=hriSec3CompDark!50] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
-                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
-                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
-                \path (lowlevel.east) edge [<-, bend right=60, looseness=1.3] node[label] {atomic\\actions} (mhp.south east);
-                }
-
-
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-        \badge{europe_phd}
-\end{frame}
-}
-
 
 {
 
     \paper{Devin et al. {\bf Some essential skills and their combination in an architecture for a cognitive and interactive robot} -- HRI 2016}
-\begin{frame}{...to ``Modeling of human cognition''...}
+\begin{frame}{``Modeling of human cognition''...}
 
 \resizebox{!}{0.7\paperheight}{%
 \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
