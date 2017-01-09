@@ -58,7 +58,7 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Framing the research}
-
+\subsection{Starting point}
  \begin{frame}{Our starting point}
 
         {\bf Symbolic artificial social cognition}:
@@ -75,15 +75,16 @@ Plymouth University}}
         Good for any practical HRI purposes? {\bf mostly}!
         \pause
 
-        However, {\bf it does not explain much about how social cognition actually
-        work}.
-
         Intuitively, social modeling goes beyond computing what the human
         perceives or does not perceive $\rightarrow$ Flavell's \emph{cognitive
         connections} vs \emph{mental representations}.
 
+        Symbolic cognition {\bf does not explain much about how social cognition actually
+        work}. We need a {\bf principled approach} to social cognition for robots
+
  \end{frame}
 
+\subsection{Goals}
 \begin{frame}{A long-term direction}
 
     Adapting and unifying the large and disparate set of theories on social
@@ -122,6 +123,7 @@ Plymouth University}}
 
 \end{frame}
 
+\subsection{A model of social cognition}
 {
     \paper{cited in Lewandowsky and Farrell, {\bf Computational Modeling In
     Cognition}, 2011}
@@ -162,256 +164,8 @@ Plymouth University}}
 \end{frame}
 }
 
-
- \section{A theoretical toolbox}
-
- \begin{frame}{Unifying theories}
-
-     If we are to attempt to unify (or more modestly, to draw inspiration from) a range
-     of interdiscplinary approaches/theories, we might want to build conceptual
-     toolbox first.
- \end{frame}
-
-
-{
-    \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
-\begin{frame}{In Cognitive Neurosciences}
-    \large
-    \centering
-    Graziano's Attention Schemata Theory
-
-    \begin{columns}
-
-        \begin{column}{0.5\linewidth}
-
-            \begin{center}
-                \includegraphics<1>[width=1.3\columnwidth]{playing_together}
-                \includegraphics<2>[width=1.3\columnwidth]{playing_together_gaze}
-                \includegraphics<3>[width=1.3\columnwidth]{playing_together_awareness}
-                \includegraphics<4>[width=1.3\columnwidth]{playing_together_mutual_awareness}
-            \end{center}
-
-        \end{column}
-
-        \begin{column}{0.5\linewidth}
-
-            \only<2>{
-                \vspace*{1.5cm}
-                Attention is more about {\bf representation} than visual perspective
-
-                \vspace{0.7cm}
-                ``Awareness is a construct that represents the attentional state
-                of a brain''
-
-            }
-            \only<3>{
-                \vspace*{1.5cm}
-                Graziano's postulate that modelling other's state of awareness
-                is {\bf mediated by one's own attentional system}, through joint
-                attention
-            }
-            \only<4>{
-                \vspace*{1.5cm}
-                    It follows that {\bf joint attention is the process that gives
-                    rise to social awareness}
-            }
-
-        \end{column}
-
-    \end{columns}
-
-\end{frame}
-}
-
-{
-    \paper{Parten, {\bf Social participation among preschool children} Journal
-    of Abnormal and Social Psychology 1932}
-\begin{frame}{In Developmental psychology: stages of play}
-
-    Mildred Parten's {\bf stages of play} (1930s!):
-
-    \begin{enumerate}
-        \item<1-> {\bf Solitary (independent) play}: Playing separately from
-            others, with no reference to what others are doing.
-        \item<2-> {\bf Onlooker play}: Watching others play. May engage in
-            conversation but not engaged in doing. True focus on the children at
-            play.
-        \item<3-> {\bf Parallel play} (adjacent play, social coaction): Playing
-            with similar objects, clearly beside others but not with them (near
-            but not with others.)
-        \item<4-> {\bf Associative play}:  Playing with others without
-            organization of play activity. Initiating or responding to
-            interaction with peers. 
-        \item<5-> {\bf Cooperative play}: Coordinating one’s behavior with that
-            of a peer. Everyone has a role, with the emergence of a sense of
-            belonging to a group. Beginning of "team work."
-    \end{enumerate}
-
-\end{frame}
-}
-
-{
-\paper{Rubin, Maioni, Hornung {\bf Free Play Behaviors in Middle- and
-Lower-Class Preschoolers [...]} -- Child Development 1976}
-\begin{frame}{In Developmental psychology: stages of play}
-    At 3-4 years,
-
-    \begin{itemize}
-        \item Onlooker/Unoccupied: {\bf 17\%}
-        \item Solitary: {\bf 15\%}
-        \item Parallel: {\bf 29\%}
-        \item Associative: {\bf 29\%}
-        \item Cooperative: {\bf 10\%}
-    \end{itemize}
-
-    (relatively consistent across studies/conditions)
-\end{frame}
-}
-
-{
-    \paper{Smilansky, {\bf The effects of sociodramatic play on disadvantaged
-    children: preschool children} 1968}
-\begin{frame}{In Developmental psychology: stages of play}
-
-    An orthogonal hierarchy stems from Piaget (further elaborated by
-    Smilansky).
-
-    \begin{enumerate}
-        \item<1-> {\bf Functional play}: simple repetitive muscle movements with
-            or without objects
-
-        \item<2-> {\bf Constructive play}: manipulation of objects to construct
-            or to "create" something
-
-        \item<3-> {\bf Dramatic play}: the substitution of an imaginary
-            situation to satisfy the child's personal wishes and needs
-
-        \item<4-> {\bf Games with rules}: the acceptance of prearranged rules
-            and the adjustment to these rules
-    
-    \end{enumerate}
-
-\end{frame}
-}
-
-\begin{frame}{Socio-cognitive hierarchies of play behaviour}
-    \begin{itemize}
-        \item Parten: {\bf Social hierarchy}
-        \item Piaget/Smilansky: {\bf Cognitive hierarchy}
-    \end{itemize}
-\end{frame}
-
-{
-    \paper{Wimmer and Perner, {\bf Beliefs about beliefs:
-    Representation and constraining function [...]}, Cognition, 1983}
-\begin{frame}{In Social psychology: Theory of Mind}
-        
-    \centering
-
-    1st order ToM: the False-Belief Experiment
-
-    \includegraphics[width=0.6\textwidth]{triadic_false_beliefs}
-\end{frame}
-}
-
-\imageframe{zoo}
-
-{
-    \paper{Frith and Happé {\bf Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
-           [Lemaignan, Dillenbourg {\bf Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
-\begin{frame}{Further investigating socio-cognitive traits}
-    \centering
-    \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
-        \toprule
-        {\bf Already in the HRI fridge} & {\bf To buy...} \\
-        \midrule
-        Instrumental gestures & Expressive gestures \\
-        Using person as tool & Using person as receiver of information \\
-        Talking about desires and emotions & Talking about beliefs and ideas \\
-        Showing "active" sociability & Showing "interactive" sociability \\
-        Elicited structured play & Spontaneous pretend play \\
-        \bottomrule
-    \end{tabular}
-        \badge{europe_epfl}
-\end{frame}
-}
-
-
-{
-    \paper{Frith and Happé {\bf Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
-           [Lemaignan, Dillenbourg {\bf Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
-\begin{frame}{Autistic assets and deficits observed in real life}
-    \centering
-    \begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
-        \toprule
-        {\bf Assets} & {\bf Deficits} \\
-        \midrule
-        Instrumental gestures & Expressive gestures \\
-        Using person as tool & Using person as receiver of information \\
-        Talking about desires and emotions & Talking about beliefs and ideas \\
-        Showing "active" sociability & Showing "interactive" sociability \\
-        Elicited structured play & Spontaneous pretend play \\
-        \bottomrule
-    \end{tabular}
-        \badge{europe_epfl}
-\end{frame}
-}
-
-{
-    \paper{Verbrugge, {\bf Logic and social cognition}, Journal of Philosophical
-    Logic, 2009}
-\begin{frame}{In Epistemic Logics: Agreement as $\infty$-order ToM}
-    \only<1>{
-    \begin{center}
-    \includegraphics[width=0.4\textwidth]{mutual-agreement.pdf}
-    \end{center}
-}
-\only<2->{
-    \begin{center}
-    \includegraphics[width=0.2\textwidth]{mutual-agreement.pdf}
-    \end{center}
-
-    \uncover<2->{
-    Shared knowledge
-\[
-    \mathsf{EK}_J\varphi \leftrightarrow \bigwedge_{i \in J}\mathsf{K}_i\varphi
-\]
-}
-\uncover<3>{
-    Common knowledge 
-\[
-    \mathsf{CK}_J\varphi \leftrightarrow
-\mathsf{EK}_J\varphi \wedge \mathsf{EK}_J\mathsf{EK}_J\varphi \wedge
-\mathsf{EK}_J\mathsf{EK}_J\mathsf{EK}_J\varphi \wedge ...
-\]
-}
-}
-\end{frame}
-}
-
-
-\begin{frame}{My toolbox to investigate artificial social cognition}
-    \begin{itemize}
-        \item Symbolic artificial social cognition: \emph{social situation
-            assessment}, \emph{mutual task planning}
-        \item Cognitive neurosciences $\rightarrow$ theories of social
-            awareness
-        \item Developmental psychology
-            \begin{itemize}
-                \item Parten's social hierarchy of play
-                \item Theory of Mind
-                \item socio-cognitive deficits observed in ASD
-            \end{itemize}
-        \item Modal logics (in particular, epistemic logic) $\rightarrow$
-            philosophy of mind
-        \item ...
-    \end{itemize}
-\end{frame}
-
-
-
-\section{Back to the question}
-
+\section{Sketching a model}
+\subsection{Postulates}
 \begin{frame}{A model of artificial social cognition}
 
     I postulate {\bf two stages}:
@@ -456,6 +210,57 @@ Lower-Class Preschoolers [...]} -- Child Development 1976}
 \end{frame}
 }
 
+\subsection{Graziano's attention theory}
+{
+    \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
+\begin{frame}{Modeling others' mind?}
+    \large
+    In cognitive neurosciences: Graziano's \emph{Attention Schemata Theory}
+
+    \begin{columns}
+
+        \begin{column}{0.5\linewidth}
+
+            \begin{center}
+                \includegraphics<1>[width=1.3\columnwidth]{playing_together}
+                \includegraphics<2>[width=1.3\columnwidth]{playing_together_gaze}
+                \includegraphics<3>[width=1.3\columnwidth]{playing_together_awareness}
+                \includegraphics<4>[width=1.3\columnwidth]{playing_together_mutual_awareness}
+            \end{center}
+
+        \end{column}
+
+        \begin{column}{0.5\linewidth}
+
+            \only<2>{
+                \vspace*{1.5cm}
+                Attention is more about {\bf representation} than visual perspective
+
+                \vspace{0.7cm}
+                ``Awareness is a construct that represents the attentional state
+                of a brain''
+
+            }
+            \only<3>{
+                \vspace*{1.5cm}
+                Graziano's postulate that modelling other's state of awareness
+                is {\bf mediated by one's own attentional system}, through joint
+                attention
+            }
+            \only<4>{
+                \vspace*{1.5cm}
+                    It follows that {\bf joint attention is the process that gives
+                    rise to social awareness}
+            }
+
+        \end{column}
+
+    \end{columns}
+
+\end{frame}
+}
+
+\subsection{Applied to robotics}
 \begin{frame}{Sketching a path forward: mentalizing}
 
     {\bf Hypothesis 1}: Graziano is right: mental representations are snapshots of
@@ -593,14 +398,13 @@ Model of Attention} 1995; Block 1996}
 
 \end{frame}
 
+\subsection{Model's predictions}
 \begin{frame}{What could the model predict?}
 
     \begin{itemize}
 
-        \item {\bf behavioural alignment} $\rightarrow$ surface alignment and/or
-            global alignment $\rightarrow$ the original 'maze' task by Pickering
-            and Garrod is certainly relevant here: every time you play the same
-            game with the same person, the interaction is more fluid
+        \item {\bf behavioural alignment}: each time we play together, our
+            interaction flow improves, becomes more natural
 
         \item ability to pass {\bf false-belief tasks}, including
             non-perceptual, non-physical, abstract ones,
@@ -621,11 +425,41 @@ Model of Attention} 1995; Block 1996}
 
 \end{frame}
 
+\videoframe[0.56]{figs/next/maud-zoe-pilot-edit.mkv}
+
+{
+    \paper{Parten, {\bf Social participation among preschool children} Journal
+    of Abnormal and Social Psychology 1932}
+\begin{frame}{In Developmental psychology: stages of play}
+
+    Parten's {\bf stages of play}:
+
+    \begin{enumerate}
+        \item<1-> {\bf Solitary (independent) play}: Playing separately from
+            others, with no reference to what others are doing.
+        \item<2-> {\bf Onlooker play}: Watching others play. May engage in
+            conversation but not engaged in doing. True focus on the children at
+            play.
+        \item<3-> {\bf Parallel play} (adjacent play, social coaction): Playing
+            with similar objects, clearly beside others but not with them (near
+            but not with others.)
+        \item<4-> {\bf Associative play}:  Playing with others without
+            organization of play activity. Initiating or responding to
+            interaction with peers. 
+        \item<5-> {\bf Cooperative play}: Coordinating one’s behavior with that
+            of a peer. Everyone has a role, with the emergence of a sense of
+            belonging to a group. Beginning of "team work."
+    \end{enumerate}
+
+\end{frame}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental investigation}
 
+\subsection{Experimental framework}
 \begin{frame}{An experimental framework for investigation}
 
     \begin{itemize}
@@ -640,7 +474,6 @@ Model of Attention} 1995; Block 1996}
     \end{itemize}
 \end{frame}
 
-\videoframe[0.56]{figs/next/maud-zoe-pilot-edit.mkv}
 
 \begin{frame}{An experimental framework}
 
@@ -670,16 +503,31 @@ Model of Attention} 1995; Block 1996}
 \videoframe[0.56]{figs/next/zoo-builder-proto-smaller.mkv}
 
 
-\begin{frame}{Analysis}
+{
+\paper{Lemaignan et al., {\bf From Real-time Attention Assessment to
+“With-me-ness” in Human-Robot Interaction} HRI 2016}
+\begin{frame}{An experimental framework}
+
+    Open-ended task: more an {\bf experimental framework} than a task.
 
     \begin{itemize}
-        \item Ballard's (and Anderson's extension) coding of children's free-play interactions
+        \item free play, yet sufficiently well-defined to be reproducible
+        \item focus on abstract socio-cognitive facets (perception is simplified;
+            manipulation is mostly avoided)
+    \end{itemize}
+    
+    Besides, well suited for interaction analysis, with tools like:
+    \begin{itemize}
         \item behavioural alignment between partners: for instance, using
             Słowinski's \emph{Individual Motor Signature}
+        \item Ballard's (and Anderson's extension) coding of children's free-play interactions
+        \item \emph{With-me-ness} as a metric of co-engagment
     \end{itemize}
 \end{frame}
+}
 
 \section{La route est encore longue}
+\subsection{What's next?}
 \begin{frame}{Open questions}
 
     The most obvious one: {\bf what cognitive architecture?}
