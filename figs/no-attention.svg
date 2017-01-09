@@ -316,8 +316,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="306.7711"
-     inkscape:cy="630.36558"
+     inkscape:cx="376.9767"
+     inkscape:cy="387.92897"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -326,10 +326,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1026"
+     inkscape:window-width="2560"
+     inkscape:window-height="1330"
      inkscape:window-x="0"
-     inkscape:window-y="867"
+     inkscape:window-y="54"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata4778">
@@ -339,7 +339,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -349,14 +349,14 @@
      id="layer1"
      transform="translate(612.28577,-76.576492)">
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/realSetup.jpg"
+       sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/realSetup.jpg"
        xlink:href="realSetup.jpg"
-       width="1566"
-       height="923"
-       preserveAspectRatio="none"
-       id="image5329"
+       y="76.576492"
        x="-612.28577"
-       y="76.576492" />
+       id="image5329"
+       preserveAspectRatio="none"
+       height="923"
+       width="1566" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -364,7 +364,7 @@
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ef2929;stroke-width:16.0742569;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:16.07425827, 32.14851654;stroke-dashoffset:0;stroke-opacity:1"
        d="M -132.78661,787.17662 -26.286882,517.18309" />
     <path
-       d="M -596.44663,664.94816 -35.378255,506.07141"
+       d="M -500.48214,744.75021 -35.378255,506.07141"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#fcaf3e;stroke-width:16.0742569;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:16.07425827, 32.14851654;stroke-dashoffset:0;stroke-opacity:1"
        id="path5626"
        inkscape:connector-curvature="0"
@@ -380,6 +380,6 @@
        inkscape:connector-curvature="0"
        id="path5735"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#fcaf3e;stroke-width:16.0742569;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:16.07425827, 32.14851654;stroke-dashoffset:0;stroke-opacity:1"
-       d="M -555.00063,693.86622 31.782022,507.84661" />
+       d="M -297.41173,791.85102 31.782022,507.84661" />
   </g>
 </svg>
