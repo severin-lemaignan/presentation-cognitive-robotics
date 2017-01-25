@@ -397,9 +397,11 @@ Plymouth University}}
     Interaction: An Implementation}, Artifical Intelligence, 2016}
 \begin{frame}{Situation Assessment}
         \centering
-        \video{0.7\textwidth}{videos/model3d.webm?autostart&start=22&stop=34}\\
-        \vspace*{1em}
-        \includegraphics[width=0.9\textwidth]{spark}
+        \video{0.8\textwidth}{videos/model3d.webm}\\
+        %\video{0.7\textwidth}{videos/model3d.webm?autostart&start=22&stop=34}\\
+
+        %\vspace*{1em}
+        %\includegraphics[width=0.9\textwidth]{spark}
 
         \badge{europe_phd}
 \end{frame}
@@ -595,7 +597,71 @@ Plymouth University}}
 
 
 
-\videoframe[0.56]{videos/this_box.webm?autostart&start=1}
+%\videoframe[0.56]{videos/this_box.webm?autostart&start=1}
+\videoframe[0.56]{videos/this_box.webm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Symbolic Social Cognition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Perspective Taking and Symbolic Modelling}
+
+\imageframe{humans-pt}
+
+\begin{frame}{Visual Perspective taking}
+
+        \badge{europe_phd}
+
+        \centering
+        \includegraphics[width=0.8\textwidth]{spark_vert.pdf}
+        %\vspace*{1em}
+        %\video{0.7\textwidth}{videos/talking_to_my_robot.mp4?start=84&stop=136&noaudio}
+
+\end{frame}
+
+
+{
+\paper{Ros, Lemaignan et al., {\bf Which One? Grounding the Referent Based on Efficient HRI}, ROMAN 2010}
+\begin{frame}{Multiple Symbolic Models}
+        \begin{multicols}{2}
+            \begin{figure}
+                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
+            \end{figure}
+            \begin{figure}
+                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
+            \end{figure}
+            \begin{figure}
+                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
+            \end{figure}
+            {\vspace*{1.5cm}\hspace*{2.5cm}\huge...}
+        \end{multicols}
+        \badge{europe_phd}
+\end{frame}
+}
+
+
+%\videoframe[0.56]{videos/dialogs.webm?autostart&stop=28}
+\videoframe[0.56]{videos/dialogs.webm}
+
+{
+    \paper{Lemaignan, Alami {\bf Talking to my Robot: from Knowledge Grounding to Dialogue Processing} -- HRI 2013}
+    \begin{frame}{}
+        \centering
+
+        \vspace*{2em}
+        ``Give me the can!''\\
+        $\downarrow$\\
+        find({\tt\scriptsize ?obj type Can, model='severin'})
+    \end{frame}
+}
+
+\subsection{LAAS architecture}
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
@@ -693,70 +759,12 @@ Plymouth University}}
 \end{frame}
 }
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Symbolic Social Cognition}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Perspective Taking and Symbolic Modelling}
-
-\imageframe{humans-pt}
-
-\begin{frame}{Visual Perspective taking}
-
-        \badge{europe_phd}
-
-        \centering
-        \includegraphics[width=0.8\textwidth]{spark_vert.pdf}
-        %\vspace*{1em}
-        %\video{0.7\textwidth}{videos/talking_to_my_robot.mp4?start=84&stop=136&noaudio}
-
-\end{frame}
-
-
-{
-\paper{Ros, Lemaignan et al., {\bf Which One? Grounding the Referent Based on Efficient HRI}, ROMAN 2010}
-\begin{frame}{Multiple Symbolic Models}
-        \begin{multicols}{2}
-            \begin{figure}
-                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
-            \end{figure}
-            \begin{figure}
-                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
-            \end{figure}
-            \begin{figure}
-                \resizebox{0.33\textwidth}{!}{\usebox{\ontoinstance}}
-            \end{figure}
-            {\vspace*{1.5cm}\hspace*{2.5cm}\huge...}
-        \end{multicols}
-        \badge{europe_phd}
-\end{frame}
-}
-
-
-\videoframe[0.56]{videos/dialogs.webm?autostart&stop=28}
-
-{
-    \paper{Lemaignan, Alami {\bf Talking to my Robot: from Knowledge Grounding to Dialogue Processing} -- HRI 2013}
-    \begin{frame}{}
-        \centering
-
-        \vspace*{2em}
-        ``Give me the can!''\\
-        $\downarrow$\\
-        find({\tt\scriptsize ?obj type Can, model='severin'})
-    \end{frame}
-}
-
+\videoframe[0.7]{figs/cleantable/clean-table.webm}
 
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{System integration}
+\begin{frame}{``Cleaning the table''...}
 \centering
 \resizebox{!}{0.75\paperheight}{%
 \begin{tikzpicture}[
@@ -945,7 +953,6 @@ Plymouth University}}
 \end{frame}
 }
 
-\videoframe[0.7]{figs/cleantable/clean-table.webm}
 
 
 \subsection{Theory of Mind?}
@@ -960,7 +967,8 @@ Plymouth University}}
     \paper{Warnier, Guitton, Lemaignan, Alami {\bf When the Robot Puts Itself in Your Shoes} -- ROMAN 2012}
     \begin{frame}{The False-Belief Experiment}
         \centering
-        \video{0.9\textwidth}{videos/falsebeliefs.webm?autostart}
+        %\video{0.9\textwidth}{videos/falsebeliefs.webm?autostart}
+        \video{0.9\textwidth}{videos/falsebeliefs.webm}
 
         \badge{europe_phd}
     \end{frame}
@@ -986,6 +994,7 @@ Plymouth University}}
              \end{tikzpicture}
          }
      \end{center}
+        \badge{europe_epfl}
  \end{frame}
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1132,7 +1141,8 @@ Plymouth University}}
 {
     \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{Cognitive Engagement and Meta-cognition}
-    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
+    %\video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
+    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4}
 
     \begin{flushright}
         \includegraphics[width=0.5\textwidth]{cowriter/henry}
@@ -1418,8 +1428,8 @@ Plymouth University}}
             }
             child[concept color=hriSec2,text=black, grow=120] { node[concept] (action) {Performing with humans} 
                 [counterclockwise from=80]
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (action-reco) {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (intention) {Intention reading} }
                 child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
             };
 
@@ -1433,6 +1443,8 @@ Plymouth University}}
                 \node[circle, draw=red, very thick, minimum size=1.6cm] at (dialog.center) {};
                 \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
                 \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (action-reco.center) {};
+                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (intention.center) {};
 
 
         \end{tikzpicture}
@@ -1930,9 +1942,9 @@ Model of Attention} 1995; Block 1996}
 \subsection{What's next?}
 \begin{frame}{Only the start of it!}
 
-    {\bf What cognitive model? what cognitive architecture?}
+    {\bf Which cognitive model? which cognitive architecture?}
 
-    $\rightarrow$ will draw from hybrid architectures (CLARION), internal
+    $\rightarrow$ will likely draw from hybrid architectures (CLARION), internal
     simulation (HAMMER), sub-symbolic cognitive architecture (ERA)
 
     ...but not many cognitive architectures model social interactions! (on BICA
@@ -2101,6 +2113,7 @@ Model of Attention} 1995; Block 1996}
     }
 \badge{europe_epfl}
 \end{frame}
+}
 
 \imageframe[caption="Theory of Mind tasks"]{zoo}
 
@@ -2401,7 +2414,7 @@ Model of Attention} 1995; Block 1996}
 % ]{pr2-baby-4.jpg}
 
 
-{
+%{
 %\fullbackground{background.pdf}
 %\begin{frame}[plain]
 %
@@ -2748,7 +2761,8 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 \end{frame}
 
 
-\videoframe{videos/clean-table.webm?autostart}
+%\videoframe{videos/clean-table.webm?autostart}
+\videoframe{videos/clean-table.webm}
 
 
 %\subsection{The Challenge of the Real-World\texttrademark}
@@ -2768,7 +2782,8 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 
 \videoframe[0.56]{videos/variations-splitscreen.mpg}
 
-\videoframe{videos/roboscopie.webm?start=93}
+%\videoframe{videos/roboscopie.webm?start=93}
+\videoframe{videos/roboscopie.webm}
 
 {
 \paper{Lemaignan, Gharbi, Mainprice, Herrb, Alami {\bf Roboscopie: A Theatre Performance for a Human and a Robot} -- HRI 2012}
