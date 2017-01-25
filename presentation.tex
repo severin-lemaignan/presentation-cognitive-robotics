@@ -367,28 +367,41 @@ Plymouth University}}
 \imageframe{pr2-baby-2.jpg}
 \imageframe{pr2-baby-3.jpg}
 \imageframe{pr2-baby-4.jpg}
-%\imageframe[\scriptsize \bf Mix of geometry, time, semantics\\ \vspace*{1em}
-%        High geometric/temporal granularity (e.g. nodding)\\ \vspace*{1em}
-%        Lots of common-sense knowledge, cultural background\\ \vspace*{1em}
-%        %Non-monotonic topology\\
-%        %Represent continuous/discrete fields\\
-%        Account for uncertainties\\ \vspace*{1em}
-%        %Imagine entities\\
-%        Remember the past, imagine the future\\
-%        %Temporal template matching, chronicles\\
-% ]{pr2-baby-4.jpg}
+
+{
+    \fullbackground{pr2-baby-4.jpg}
+    \begin{frame}[plain]
+        \vspace{11em}
+        \begin{exampleblock}{Many challenges}
+
+        \begin{itemize}
+            \item Mix of geometry, time, semantics
+            \item High geometric/temporal granularity (e.g. nodding)
+            \item Lots of common-sense knowledge, cultural background
+            %\item Non-monotonic topology
+            %\item Represent continuous/discrete fields
+            \item Account for uncertainties
+            %\item Imagine entities
+            \item Remember past experiences, predict future events
+            %\item Temporal template matching, chronicles
+        \end{itemize}
+        \end{exampleblock}
+    \end{frame}
+}
 
 
-%\begin{frame}{Representation}
-%    Building robotic qualia: ``what it is like for the robot to experience...''
-%    \begin{enumerate}
-%        \item From situation assessment...
-%        \item ...to symbolic models...
-%        \item ...to perspective taking...
-%        \item ...to(wards) mutual modelling
-%   \end{enumerate}
-%
-%\end{frame}
+\begin{frame}{Representation}
+    Building a \textbf{robotic qualia}: ``what it is like for the robot to experience...''
+    \pause
+
+    \begin{enumerate}
+        \item From situation assessment...
+        \item ...to symbolic models...
+        \item ...to perspective taking...
+        \item ...to(wards) mutual modelling
+   \end{enumerate}
+
+\end{frame}
 
 
 \subsection{From Spatial to Symbolic Models}
@@ -1179,6 +1192,13 @@ Plymouth University}}
 
     \badge{europe_epfl}
 \end{frame}
+
+\begin{frame}{Learning from demonstration}
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{cowriter/learningSdemo.png}
+    \end{center}
+\end{frame}
+
 }
 
 {
@@ -1256,25 +1276,21 @@ Plymouth University}}
 }
 
 
-{
-\paper{Lemaignan, Fink, Dillenbourg {\bf You're Doing It Wrong! Studying Unexpected Behaviors in Child-Robot Interaction}, ICSR 2015}
-\fullbackground{ranger-background}
-\begin{frame}{Anthropomorphism != Engagement}
-
-\begin{figure}
-    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger-interactions-vs-qualitative-score}
-\end{figure}
-        \badge{europe_epfl}
-\end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{With-me-ness}
+\subsection{Methodology}
 
 \begin{frame}{}
 
     \begin{center}
-        Can we make the assessment of engagement {\bf practical}?
+
+        Can we make the analysis of child-robot interaction {\bf practical}?
+
+        \begin{itemize}
+            \item (surface) engagement
+            \item cognitive perception/anthropomorphism
+            \item child speech recognition
+        \end{itemize}
 
     \end{center}
 
@@ -1283,7 +1299,40 @@ Plymouth University}}
 
 \imageframe[color=black]{realSetup}
 \imageframe[color=black]{no-attention}
-\imageframe{experimental_setup}
+
+\begin{frame}{Expected focus}
+
+    \centering
+
+    Example for the CoWriter task:
+
+        \begin{multicols}{2}
+           \scriptsize 
+           \begin{tabular}{p{2.5cm}p{2.5cm}}
+            \toprule
+            {\bf Interaction Phase} & {\bf Expected targets} \\
+            \midrule
+            Presentation & {\sf robot} \\ 
+            \midrule
+            Waiting for word & {\sf secondary tablet} \\ 
+            \midrule
+            Writing word & {\sf tablet}\newline {\sf robot} \\ 
+            \midrule
+            Waiting for feedback & {\sf tablet}\newline {\sf secondary tablet} \\ 
+            \midrule
+            Story telling & {\sf robot} \\ 
+            \midrule
+            Bye & {\sf robot} \\ 
+            \bottomrule
+        \end{tabular}
+
+            \includegraphics[width=0.95\columnwidth]{experimental_setup}
+        \end{multicols}
+
+\end{frame}
+
+
+
 \imageframe[color=black]{head_pose_real_world}
 
 {
@@ -1293,12 +1342,185 @@ Plymouth University}}
 \begin{frame}{With-me-ness}
         \badge{europe_epfl}
 \end{frame}
+
+\begin{frame}{With-me-ness is...}
+
+    {\bf With-me-ness is...}
+
+    \begin{itemize}
+        \item An {\bf objective} \& {\bf quantitative} precursor of engagement...
+        \item ...based on matching the {\bf user's focus of attention} with a set of
+            {\bf prior expectations}
+        \item Can be computed {\bf on-line} by the robot...
+        \item ...and {\bf sensitive to} the (task-dependent) {\bf set of
+            expectations}
+        \item $\Rightarrow$ {\bf relative} metric!
+    \end{itemize}
+
+    \centering
+
+\end{frame}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% TODO: add a slide on speech reco at Plym
+{
+    \paper{Lemaignan, Fink, Mondada, Dillenbourg {\bf You're Doing
+    It Wrong! Studying Unexpected Behaviors in CRI} ICSR
+    2015}
+\begin{frame}{Constructs for Cognitive Perception analysis}
+\tiny
+    \begin{multicols}{2}
+    \begin{table}[]
+        \begin{tabularx}{\linewidth}{p{0.9\linewidth}}
 
+    \toprule
+    {\bf Expectations} \tabularnewline
+    \midrule
+    \emph{How do you imagine a robot?} \tabularnewline
+    \emph{What could it look like?} \tabularnewline
+    \emph{Have you ever seen a robot before?} \tabularnewline
+
+    %%
+    \toprule
+    {\bf Impression} \tabularnewline
+    \midrule
+
+
+    \emph{When you first saw R, what did you think?} \tabularnewline
+    \emph{Is R a robot? How do you know?} \tabularnewline
+    \emph{Did you expect R would come over to you when you call it?} \tabularnewline
+    \emph{What happened when you put the domino in the box?} \tabularnewline
+
+    %%
+    \toprule
+    {\bf Ascribe intention} \tabularnewline
+    \midrule
+
+
+    \emph{Do you think R could go out the door all by itself?} \tabularnewline	
+    \emph{Does R always obey / come over to you?} \tabularnewline
+    \emph{Could R do something silly?} \tabularnewline
+    \emph{Why did R not come over to you when you called it?} \tabularnewline
+
+            \bottomrule
+        \end{tabularx}
+        \label{tab:options}
+    \end{table}
+
+    \begin{table}[]
+        \begin{tabularx}{\linewidth}{p{0.9\linewidth}}
+
+
+    %%
+    \toprule
+    {\bf Ascribe perceptual capabilities} \tabularnewline
+    \midrule
+
+
+    \emph{Here is a domino. Do you think R can see it?} \tabularnewline 
+    \emph{When I say \textit{``Hello R!''}, do you think R can hear it?} \tabularnewline
+
+    %%
+    \toprule
+    {\bf Ascribe emotional state} \tabularnewline
+    \midrule
+
+
+    \emph{Does R have feelings? Can R be happy or sad sometimes?}
+    \tabularnewline
+
+    %%
+    \toprule
+    {\bf Social acceptance} \tabularnewline
+    \midrule
+
+
+    \emph{Do you like R? Why (not)?} \tabularnewline
+    \emph{What do you (not) like about it?} \tabularnewline
+    \emph{Would you like to have R at home?} \tabularnewline
+
+    %%
+    \toprule
+    {\bf Companionship} \tabularnewline
+    \midrule
+
+
+    \emph{Could R be your friend? Why (not)?}\tabularnewline
+
+    %%
+    \toprule
+    {\bf Ascribe moral standing} \tabularnewline
+    \midrule
+
+
+    \emph{Assume you go on a holiday for two weeks. Is it alright to leave R
+    alone at home? Why (not)?} \tabularnewline
+
+
+            \bottomrule
+        \end{tabularx}
+        \label{tab:options}
+    \end{table}
+    \end{multicols}
+
+    \badge{europe_epfl}
+\end{frame}
+
+\begin{frame}{Behaviour vs Perception?}
+    \centering
+    Any relation between the behavioural and perceptual measurements?
+
+    \includegraphics[width=0.5\linewidth]{ranger/interactions}
+
+    We can compute for each pair an ``anthropomorphic perception'' score based on
+    the cognitive ascriptions, and...
+\end{frame}
+
+}
+
+{
+    \paper{Lemaignan, Fink, Mondada, Dillenbourg {\bf You're Doing
+    It Wrong! Studying Unexpected Behaviors in CRI} ICSR
+    2015}
+\fullbackground{ranger-background}
+\begin{frame}{Anthropomorphism != Engagement}
+
+\begin{figure}
+    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger/domino-correlation}
+\end{figure}
+        \badge{europe_epfl}
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+    \paper{Kennedy, Lemaignan et al. {\bf Child Speech Recognition in Human-Robot Interaction[...]} HRI 2017}
+\begin{frame}{Automatic Speech Recognition with Children}
+    \badge{europe_plym}
+    \begin{center}
+        \includegraphics<1>[width=0.7\linewidth]{speech-reco/record_img}
+         
+         \only<2>{
+             \footnotesize
+\begin{tabular}{@{}rcccccccc@{}}
+\toprule
+\multicolumn{1}{l}{}                                                                        & \multicolumn{2}{c}{\textbf{Google}}                                                               & \multicolumn{2}{c}{\textbf{Bing}}                                                             & \multicolumn{2}{c}{\textbf{Sphinx}}                                                          & \multicolumn{2}{c}{\textbf{Nuance}}                                                 \\
+\multicolumn{1}{l}{}                                                                        & \textit{M} LD    & \textit{\% rec.}                                                  & \textit{M} LD   & \textit{\% rec.}                                              & \textit{M} LD    & \textit{\% rec.}                                             & \textit{M} LD    & \textit{\% rec.}                                    \\ \midrule
+\begin{tabular}[c]{@{}r@{}}\textbf{fixed}\\ (\textit{n}=34)\end{tabular}                    & {\bf 0.34} & \textit{\begin{tabular}[c]{@{}c@{}}11.8\\ {[}38{]}\end{tabular}}     & 0.64 & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}}           & 0.68  & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}}          & 0.76 & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}} \\ \midrule
+\begin{tabular}[c]{@{}r@{}}\textbf{spontaneous}\\ (\textit{n}=222)\end{tabular}             & {\bf 0.39} & \textit{\begin{tabular}[c]{@{}c@{}}6.8\\ {[}17.6{]}\end{tabular}}    & 0.64 & \textit{\begin{tabular}[c]{@{}c@{}}0.5\\ {[}2.4{]}\end{tabular}}       & 0.80  & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}}          & 0.80 & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}} \\ \midrule
+\begin{tabular}[c]{@{}r@{}}\textbf{spontaneous}\\ clean only\\ (\textit{n}=83)\end{tabular} & {\bf 0.40} & \textit{\begin{tabular}[c]{@{}c@{}}6.0\\ {[}16.9{]}\end{tabular}}    & 0.63 & \textit{\begin{tabular}[c]{@{}c@{}}1.2\\ {[}1.2{]}\end{tabular}}       & 0.78  & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}}          & 0.78 & \textit{\begin{tabular}[c]{@{}c@{}}0\\ {[}0{]}\end{tabular}} \\ \bottomrule
+\end{tabular}
+
+    \textbf{M} LD: mean Levenshtein distance, at word level.
+        }
+    \end{center}
+
+
+\end{frame}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1760,6 +1982,62 @@ Model of Attention} 1995; Block 1996}
 
 \end{frame}
 
+
+{
+\paper{Baxter et al., Cognitive Architecture for HRI: Towards Behavioural
+    Alignment, 2013}
+\begin{frame}{Associative Memory Network}
+
+    \centering
+        \resizebox{0.8\linewidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={draw, very thick},
+                every node/.style={font=\bf,align=center},
+                input/.style={draw,circle, inner sep=0pt,minimum size=0.6cm}
+            ]
+
+            % draw the units
+                \foreach \x [count=\xi] in {0, 120, 240}
+                \foreach \y [count=\yi] in {-.6, 0, .6}
+                %\node[input, ball color=orange!\x!blue] at ($(\x:3)!\y!90:(0,0)$) (i\xi\yi) {};
+                    \node[input, fill=hriSec3Comp!\x!hriSec1Comp] at ($(\x:3)!\y!90:(0,0)$) (i\xi\yi) {};
+
+                \node[draw,rounded corners, fit=(i11)(i12)(i13)] (modA) {};
+                \node[draw,rounded corners, rotate fit=120,fit=(i21)(i22)(i23)] (modB) {};
+                \node[draw,rounded corners, rotate fit=60,fit=(i31)(i32)(i33)] (modC) {};
+
+                \uncover<1>{
+                    \node at (180:5.5) {Modalities} edge[->] (modB) edge[->] (modC);
+                \node at (-40:6) {Input\\units} edge[->] (i13) edge[->] (i31);
+                \node at (1,1) {Associative\\links};
+            }
+
+                \uncover<2>{
+                    \node[above=0.3 of i21]{Bert};
+                \node[above=0.3 of i22]{Tony};
+                \node[above=0.3 of i23]{Chris};
+
+                \node[right=0.3 of i11]{Green cube in focus};
+                \node[right=0.3 of i12]{Red cube in focus};
+                \node[right=0.3 of i13]{Board in focus};
+            }
+
+                \path[draw,dashed, hriSec3Dark, thick]  (i23) -- (i11) -- (i31) -- (i23);
+                \path[draw,dotted, hriSec3Dark, thick] (i23) -- (i12) -- (i32) -- (i23);
+                \path[draw, hriSec3Dark] (i21) -- (i13) -- (i33) -- (i21);
+
+            \end{tikzpicture}
+    }
+
+
+\end{frame}
+}
+
+\imageframe[caption=Associative Memory Network -- Work in progress, color=black]{memory/zoo+ros+memory}
+\imageframe[caption=Association weights, color=black]{memory/weights-zoo}
+
+
 \begin{frame}{Many gaps calling for investigation!}
 
 \footnotesize
@@ -2115,7 +2393,93 @@ Model of Attention} 1995; Block 1996}
 \end{frame}
 }
 
+\begin{frame}{}
+
+    \begin{multicols}{2}
+        \vspace*{0.6cm}
+        \begin{center}
+        \includegraphics[width=0.6\columnwidth]{tom/robot_false_beliefs.pdf}
+        \end{center}
+
+        \vspace*{1.3cm}
+        \begin{tikzpicture}[>=latex, scale=0.4]
+
+            \draw(0,0) node (a) {\scriptsize \Model{Sally}{R}{ X}};
+            \draw(10,0) node (b) {\scriptsize \Model{R}{R}{ X}};
+            \draw(10,-4) node (c) {\scriptsize \Model{R}{R}{ Y}};
+            \draw(0,-4) node (d) {\scriptsize \Model{Sally}{R}{ Y}};
+            \draw[<->,very thick] (a) -- (b) node[midway, below] {$\Delta_4$};
+            \draw[<->,very thick] (b) -- (c);
+            \draw[<->,very thick] (c) -- (d);
+            \draw[<->,very thick] (d) -- (a) node[midway, sloped, above] {$\Delta_5$};
+
+        \end{tikzpicture}
+    \end{multicols}
+
+
+
+\end{frame}
+
+
 \imageframe[caption="Theory of Mind tasks"]{zoo}
+
+
+{ \paper{Wimmer and Perner, {\bf Beliefs about beliefs: Representation and
+constraining function [...]}, Cognition, 1983]\newline
+        [Lemaignan, Dillenbourg {\bf Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
+
+\begin{frame}{1st order ToM: the False-Belief Experiment}
+
+        \begin{center} \includegraphics[width=0.7\textwidth]{sally_ann.pdf}
+        \end{center} \end{frame} }
+
+
+{
+    \paper{Flobbe et al. {\bf Children's application of theory of mind in
+    reasoning and language}, J. of Logic, Language and Information, 2008]\newline
+           [Lemaignan, Dillenbourg {\bf Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
+    \begin{frame}{2nd order ToM: the Chocolate Bar Experiment}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{tom/chocolate-bar.pdf}
+        \end{center}
+
+    \end{frame}
+}
+
+{
+    \paper{Verbrugge, {\bf Logic and social cognition}, Journal of Philosophical
+    Logic, 2009]\newline
+           [Lemaignan, Dillenbourg {\bf Mutual Modelling in Robotics: Inspirations for the Next Steps} -- HRI 2015}
+\begin{frame}{Agreement as $\infty$-order ToM}
+    \only<1>{
+        \begin{center}
+            \includegraphics[width=0.4\textwidth]{mutual-agreement.pdf}
+        \end{center}
+    }
+    \only<2->{
+        \begin{center}
+            \includegraphics[width=0.2\textwidth]{mutual-agreement.pdf}
+        \end{center}
+
+    \uncover<2->{
+        Shared knowledge
+    \[
+        \mathsf{EK}_J\varphi \leftrightarrow \bigwedge_{i \in J}\mathsf{K}_i\varphi
+    \]
+}
+    \uncover<3>{
+        Common knowledge 
+    \[
+        \mathsf{CK}_J\varphi \leftrightarrow
+    \mathsf{EK}_J\varphi \wedge \mathsf{EK}_J\mathsf{EK}_J\varphi \wedge
+    \mathsf{EK}_J\mathsf{EK}_J\mathsf{EK}_J\varphi \wedge ...
+    \]
+}
+}
+\end{frame}
+}
+
+
 
 {
     \paper{Frith and Happé {\bf Autism: Beyond "theory of mind"} -- Cognition, 1994]\newline
