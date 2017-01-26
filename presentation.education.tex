@@ -36,9 +36,9 @@
 %--------------------------------------------------------------------------
 % General presentation settings
 %--------------------------------------------------------------------------
-\title{Of Cognition and Social Robots}
-\subtitle{Is ``Social Cognition'' in HRI just a buzz word?}
-\date{INRIA Flowers -- {\bf May 11, 2016}}
+\title{robots in the classroom}
+\subtitle{to be or not to be social?}
+\date{Cognovo Symposium: Group Creativity and Education -- {\bf 26th Jan 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
 Plymouth University}}
@@ -58,38 +58,38 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \section{Child-Robot Interaction for Learning}
+\imageframe{croquignole.jpg}
 
- \begin{frame}{Social or not Social?}
-     \begin{center}
-         \resizebox{\linewidth}{!}{
-             \begin{tikzpicture}[>=latex]
-                 \node[double arrow,draw] (spec) {Interaction spectrum};
-                 \node<1>[left=of spec] {Non-social};
-                 \node<2>[left=of spec] {\bf Cellulo};
-                 \node<1>[right=of spec] {Social};
-                 \node<2>[right=of spec] {\bf CoWriter};
-             \end{tikzpicture}
-         }
-     \end{center}
- \end{frame}
+\begin{frame}{Social or not Social?}
+    \begin{center}
+        \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}[>=latex]
+                \node[double arrow,draw] (spec) {Interaction spectrum};
+                \node<1>[left=of spec] {Non-social};
+                \node<2>[left=of spec] {\bf Cellulo};
+                \node<1>[right=of spec] {Social};
+                \node<2>[right=of spec] {\bf CoWriter};
+            \end{tikzpicture}
+        }
+    \end{center}
+\end{frame}
 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %% Cellulo
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cellulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \begin{frame}{Non-social interaction}
-     What is the most effective learning tool in a classroom?
+\begin{frame}{Non-social interaction}
+    What is the most effective learning tool in a classroom?
 
-     \begin{center}
-         \includegraphics<2>[width=0.8\linewidth]{cellulo/pencil}
-     \end{center}
- \end{frame}
+    \begin{center}
+        \includegraphics<2>[width=0.8\linewidth]{cellulo/pencil}
+    \end{center}
+\end{frame}
 
- \imageframe[caption=Pens and paper are pervasive...]{cellulo/classroom}
- \imageframe[caption=...so should be the robots]{cellulo/classroom-withcellulo}
+\imageframe[caption=Pens and paper are pervasive...]{cellulo/classroom}
+\imageframe[caption=...so should be the robots]{cellulo/classroom-withcellulo}
 
 {
     \paper{\"Ozg\"ur, Lemaignan et al. {\bf Cellulo: Versatile Handheld Robots
@@ -334,7 +334,7 @@ Plymouth University}}
 \begin{frame}{Anthropomorphism != Engagement}
 
 \begin{figure}
-    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger-interactions-vs-qualitative-score}
+    \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger/domino-correlation}
 \end{figure}
         \badge{europe_epfl}
 \end{frame}
@@ -352,10 +352,42 @@ Plymouth University}}
 
 \end{frame}
 
-
 \imageframe[color=black]{realSetup}
 \imageframe[color=black]{no-attention}
-\imageframe{experimental_setup}
+
+\begin{frame}{Expected focus}
+
+    \centering
+
+    Example for the CoWriter task:
+
+        \begin{multicols}{2}
+           \scriptsize 
+           \begin{tabular}{p{2.5cm}p{2.5cm}}
+            \toprule
+            {\bf Interaction Phase} & {\bf Expected targets} \\
+            \midrule
+            Presentation & {\sf robot} \\ 
+            \midrule
+            Waiting for word & {\sf secondary tablet} \\ 
+            \midrule
+            Writing word & {\sf tablet}\newline {\sf robot} \\ 
+            \midrule
+            Waiting for feedback & {\sf tablet}\newline {\sf secondary tablet} \\ 
+            \midrule
+            Story telling & {\sf robot} \\ 
+            \midrule
+            Bye & {\sf robot} \\ 
+            \bottomrule
+        \end{tabular}
+
+            \includegraphics[width=0.95\columnwidth]{experimental_setup}
+        \end{multicols}
+
+\end{frame}
+
+
+
 \imageframe[color=black]{head_pose_real_world}
 
 {
@@ -366,6 +398,25 @@ Plymouth University}}
         \badge{europe_epfl}
 \end{frame}
 }
+
+\begin{frame}{With-me-ness is...}
+
+    {\bf With-me-ness is...}
+
+    \begin{itemize}
+        \item An {\bf objective} \& {\bf quantitative} precursor of engagement...
+        \item ...based on matching the {\bf user's focus of attention} with a set of
+            {\bf prior expectations}
+        \item Can be computed {\bf on-line} by the robot...
+        \item ...and {\bf sensitive to} the (task-dependent) {\bf set of
+            expectations}
+        \item $\Rightarrow$ {\bf relative} metric!
+    \end{itemize}
+
+    \centering
+
+\end{frame}
+
 
 
 
