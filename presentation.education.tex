@@ -64,7 +64,7 @@ Plymouth University}}
     \begin{center}
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}[>=latex]
-                \node[double arrow,draw] (spec) {Interaction spectrum};
+                \node[double arrow,draw,fill=hriSec1] (spec) {\bf Interaction spectrum};
                 \node<1>[left=of spec] {Non-social};
                 \node<2>[left=of spec] {\bf Cellulo};
                 \node<1>[right=of spec] {Social};
@@ -112,69 +112,61 @@ Plymouth University}}
              workload for the teachers
      \end{itemize}
 
-        \badge{europe_epfl}
+        %\badge{europe_epfl}
  \end{frame}
 }
 
- \begin{frame}{Cellulo: hardware}
-     \begin{center}
-         \includegraphics[width=0.8\linewidth]{cellulo/hardware-design}
-     \end{center}
-     \begin{itemize}
-         \item Holomonic motion
-         \item Sub-mm absolute localisation (no external hardware)
-         \item Haptic feedback + tactile RGB LED buttons 
-         \item Bluetooth
-         \item<2> Affordable (prototype: 125 \EUR)
-     \end{itemize}
-        \badge{europe_epfl}
- \end{frame}
+\begin{frame}{How does it look like?}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{cellulo/hardware-design}
+    \end{center}
+    \begin{itemize}
+        \item Omnidirectional
+        \item Haptic feedback + tactile RGB LED buttons 
+        \item Bluetooth
+        \item Accurate self-localisation
+        \item<2> Affordable (prototype: \pounds100)
+    \end{itemize}
+    %\badge{europe_epfl}
+\end{frame}
 
- \videoframe[0.56]{figs/cellulo/cellulo-swarm-demo.mp4}
+\videoframe[0.56]{figs/cellulo/cellulo-swarm-demo.mp4}
 
-{
-    \paper{Hostettler, \"Ozg\"ur, Lemaignan et al. {\bf Real-Time High-Accuracy
-    2D Localization with Structured Patterns} -- ICRA 2016}
- \begin{frame}{Interaction with the paper}
-     \badge{europe_epfl}
-     Critically, Cellulo is meant as an {\bf interaction between
-     (classroom-friendly) paper and the robots}.
+\begin{frame}{Interaction with the paper}
+    %\badge{europe_epfl}
+    Critically, Cellulo is meant as an {\bf interaction between the
+    (classroom-friendly) paper and the robots}.
 
-     \pause
+    \pause
 
-     Achieved through a {\bf paper-based absolute localisation system}
+    Achieved through a {\bf paper-based self-localisation system}
 
-     \begin{center}
-         \includegraphics<3>[width=0.8\linewidth]{cellulo/treasure-game-1}
-         \includegraphics<4>[width=\linewidth]{cellulo/treasure-game-2}
-     \end{center}
+    \begin{center}
+        \includegraphics<3>[width=0.8\linewidth]{cellulo/treasure-game-1}
+        \includegraphics<4>[width=\linewidth]{cellulo/treasure-game-2}
+    \end{center}
 
-     \only<5>{
+    \only<5>{
 
-         \begin{itemize}
-             \item even more than 'classroom-friendly', paper is 'teacher-friendly'
-             \item easy to manipulate, copy, print, cutout, dispose...
-             \item unique activity IDs: drop the robots onto the sheet, it
-                 recognizes the activity
-         \end{itemize}
-     }
+        \begin{itemize}
+            \item even more than 'classroom-friendly', paper is 'teacher-friendly'
+            \item easy to manipulate, copy, print, cutout, dispose...
+            \item unique activity IDs: drop the robots onto the sheet, it
+                recognizes the activity
+        \end{itemize}
+    }
 
- \end{frame}
-}
+\end{frame}
 
- \imageframe[color=black,caption=Concept 1: chemistry]{cellulo/concept-molecules}
- \imageframe[color=black,caption=Concept 2: solar system]{cellulo/concept-solar-system}
+\imageframe[color=black,caption=Concept 1: chemistry]{cellulo/concept-molecules}
+\imageframe[color=black,caption=Concept 2: solar system]{cellulo/concept-solar-system}
 
-{
-    \paper{\"Ozg\"ur, Lemaignan et al. {\bf Cellulo: Versatile Handheld Robots
-    for Education} -- HRI 2017}
- \begin{frame}{Interaction Design space}
-     \begin{center}
-         \includegraphics[width=0.8\linewidth]{cellulo/interaction-space}
-     \end{center}
-        \badge{europe_epfl}
- \end{frame}
- }
+\begin{frame}{Interaction Design space}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{cellulo/interaction-space}
+    \end{center}
+    %\badge{europe_epfl}
+\end{frame}
 
  \begin{frame}[plain]{}
      ...at the other end of the spectrum...
@@ -187,6 +179,7 @@ Plymouth University}}
  %% CoWriter
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\imageframe[color=black]{cowriter/social-learning}
 
 \imageframe{cowriter/joe1}
 \imageframe{cowriter/joe2}
@@ -194,10 +187,10 @@ Plymouth University}}
 
 
 \begin{frame}{Robots?}
-    \badge{europe_epfl}
+    %\badge{europe_epfl}
     \begin{itemize}
         \item<1-> Robots do not know how to write!
-        \item<2-> Learning by Teaching
+        \item<2-> Learning by teaching
         \item<3-> (nice side-effect: we can adapt to each child and each disabilities)
     \end{itemize}
 \end{frame}
@@ -208,79 +201,120 @@ Plymouth University}}
     \centering
     Mind modelling is {\bf mutual}
 
-    We can take advantage of it in HRI at fundamental levels
+    We can take advantage of it in human-robot interaction at fundamental levels
 
 \end{frame}
 
-{
-    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{Cognitive Engagement and Meta-cognition}
-    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
+    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4}
 
     \begin{flushright}
         \includegraphics[width=0.5\textwidth]{cowriter/henry}
     \end{flushright}
 
 \end{frame}
-}
 
-\begin{frame}{Technical Challenges}
-    \badge{europe_epfl}
-    \begin{itemize}
-        \item<1-> Get a child-proof robot to write...
-        \item<2-> ...badly...
-        \item<3-> Make it able to learn...
-        \item<4-> ...with the help of children
-    \end{itemize}
+\begin{frame}{Learning from demonstration}
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{cowriter/learningSdemo.png}
+    \end{center}
 \end{frame}
 
+%\begin{frame}{Technical Challenges}
+%    %\badge{europe_epfl}
+%    \begin{itemize}
+%        \item<1-> Get a child-proof robot to write...
+%        \item<2-> ...badly...
+%        \item<3-> Make it able to learn...
+%        \item<4-> ...with the help of children
+%    \end{itemize}
+%\end{frame}
+%
+%
+%\begin{frame}{CoWriter implementation}
+%    \centering
+%
+%    \only<1>{
+%        \video{0.8\textwidth}{figs/cowriter/nao-tablet-demo.mp4}
+%    }
+%
+%    \only<2>{
+%        \includegraphics[width=0.8\textwidth]{cowriter/cowriter-g.png}
+%    }
+%
+%    %\badge{europe_epfl}
+%\end{frame}
 
-
-{
-    \paper{Hood, Lemaignan et al. {\bf When Children Teach a Robot to Write: An
-    Autonomous Teachable Humanoid [...]} -- HRI 2015}
-\begin{frame}{CoWriter implementation}
-    \centering
-
-    \only<1>{
-        \video{0.8\textwidth}{figs/cowriter/nao-tablet-demo.mp4}
-    }
-
-    \only<2>{
-        \includegraphics[width=0.8\textwidth]{cowriter/cowriter-g.png}
-    }
-
-    \badge{europe_epfl}
-\end{frame}
-}
-
-{
-    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{Before -- After}
     \begin{center}
+        \only<1-2>{
         \includegraphics[width=0.43\linewidth]{cowriter/lettre-base}
         \uncover<2>{
             \hspace{1cm}%
         \includegraphics[width=0.43\linewidth]{cowriter/lettre-final}
-    }
+        }
+        }
+        \only<3>{
+        \includegraphics[width=0.43\linewidth]{cowriter/lettre-base-highlight}
+            \hspace{1cm}%
+        \includegraphics[width=0.43\linewidth]{cowriter/lettre-final-highlight}
+        }
     \end{center}
-        \badge{europe_epfl}
+        %\badge{europe_epfl}
 \end{frame}
-}
 
+\begin{frame}{Learning to draw a 5}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{cowriter/henry5}
+    \end{center}
+\end{frame}
+
+{
+    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{The Robot as a Social Agent}
     \begin{itemize}
-        \item<1-> Not a 'tool to teach robotics', not a facilitator
-        \item<2-> {\bf The robot as 'cognitive agent' is key here} (Protégé effect,
-            metacognition)
-        \item<3-> (note: a tool for the teacher vs a social agent for the child!)
-        \item<4-> Could we replace it by someone else? Not easily
+        \item<+-> {\bf The robot as a cognitive agent is key here}
+            \begin{itemize}
+                \item Protégé effect
+                \item metacognition
+            \end{itemize}
+        \item<+-> \textbf{New role}: not a 'tool to teach robotics', not a facilitator
+        \item<+-> (note: a tool for the teacher vs a social agent for the child!)
+        \item<+-> Could we replace it by someone else? Not easily
     \end{itemize}
 
 \end{frame}
+}
 
 
-\imageframe{cowriter/cowriter-fsm.png}
+%\imageframe{cowriter/cowriter-fsm.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+{
+\fullbackground{ranger/ranger_funny_glasses}
+\begin{frame}[plain]
+
+    \vspace{8cm}
+
+\setbeamercolor{hriSec1Demo}{fg=white}
+\begin{beamercolorbox}[wd=\linewidth,ht=6ex,dp=0.7ex]{hriSec1Demo}
+        \Large
+        So? Social or not social?\\[2em]
+        \normalsize
+    \textbf{Thank you!}\\
+    \scriptsize
+    Séverin Lemaignan\\
+    Portland Square A216 -- {\tt severin.lemaignan@plymouth.ac.uk}
+\end{beamercolorbox}
+    \vfill
+\end{frame}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -336,7 +370,7 @@ Plymouth University}}
 \begin{figure}
     \hspace*{5cm}\includegraphics[width=0.6\linewidth]{ranger/domino-correlation}
 \end{figure}
-        \badge{europe_epfl}
+        %\badge{europe_epfl}
 \end{frame}
 }
 
@@ -395,7 +429,7 @@ Plymouth University}}
 \fullbackground[scale=0.95]{with-me-ness-robot}
 
 \begin{frame}{With-me-ness}
-        \badge{europe_epfl}
+        %\badge{europe_epfl}
 \end{frame}
 }
 
