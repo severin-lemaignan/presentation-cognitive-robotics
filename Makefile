@@ -27,7 +27,7 @@ all: paper
 bib: $(TARGET:.tex=.aux)
 	BSTINPUTS=:./style bibtex $(TARGET:.tex=.aux)
 
-%.pdf: %.tex %.thumbs
+%.pdf: %.tex #%.thumbs
 	TEXINPUTS=:./style $(LATEX) --interaction=$(MODE) -shell-escape $<; if [ $$? -gt 0 ]; then echo "Error while compiling $<"; touch $<; fi
 
 paper: $(SVG:.svg=.pdf) $(DOT:.dot=.pdf) $(TARGET)
