@@ -36,8 +36,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="917.93093"
-     inkscape:cy="-250.39956"
+     inkscape:cx="610.84456"
+     inkscape:cy="-254.44017"
      inkscape:document-units="px"
      inkscape:current-layer="g3603"
      showgrid="false"
@@ -45,10 +45,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="2560"
-     inkscape:window-height="1330"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
      inkscape:window-x="0"
-     inkscape:window-y="54"
+     inkscape:window-y="867"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true" />
   <metadata
@@ -59,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,95 +87,95 @@
          id="g3603"
          style="opacity:0.431">
         <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/cleantable.jpg"
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/cleantable.jpg"
            xlink:href="cleantable.jpg"
-           transform="scale(1,-1)"
-           width="95.404015"
-           height="53.556648"
-           preserveAspectRatio="none"
+           y="-236.45502"
+           x="133.71799"
            id="image5274"
-           x="133.71799"
-           y="-236.45502" />
+           preserveAspectRatio="none"
+           height="53.556648"
+           width="95.404015"
+           transform="scale(1,-1)" />
         <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/dialogs.jpg"
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/dialogs.jpg"
            xlink:href="dialogs.jpg"
-           transform="scale(1,-1)"
-           width="95.385605"
-           height="54.846722"
-           preserveAspectRatio="none"
+           y="-236.45108"
+           x="239.086"
            id="image5263"
-           x="239.086"
-           y="-236.45108" />
+           preserveAspectRatio="none"
+           height="54.846722"
+           width="95.385605"
+           transform="scale(1,-1)" />
         <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/ranger-background.jpg"
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/ranger-background.jpg"
            xlink:href="ranger-background.jpg"
-           transform="scale(1,-1)"
-           width="95.391991"
-           height="71.543999"
-           preserveAspectRatio="none"
+           y="-106.30236"
+           x="28.348993"
            id="image5252"
-           x="28.348993"
-           y="-106.30236" />
+           preserveAspectRatio="none"
+           height="71.543999"
+           width="95.391991"
+           transform="scale(1,-1)" />
         <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/stimulus-toys.jpg"
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/stimulus-toys.jpg"
            xlink:href="stimulus-toys.jpg"
-           transform="scale(1,-1)"
-           width="95.401802"
-           height="76.239899"
-           preserveAspectRatio="none"
+           y="-100.52229"
+           x="133.71799"
            id="image5241"
-           x="133.71799"
-           y="-100.52229" />
+           preserveAspectRatio="none"
+           height="76.239899"
+           width="95.401802"
+           transform="scale(1,-1)" />
         <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/this_box.jpg"
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/this_box.jpg"
            xlink:href="this_box.jpg"
-           transform="scale(1,-1)"
-           width="95.385605"
-           height="53.6544"
-           preserveAspectRatio="none"
+           y="-166.40277"
+           x="28.348993"
            id="image5230"
-           x="28.348993"
-           y="-166.40277" />
-        <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/roboscopie.jpg"
-           xlink:href="roboscopie.jpg"
-           transform="scale(1,-1)"
-           width="95.400002"
-           height="71.550003"
            preserveAspectRatio="none"
-           id="image5219"
-           x="239.086"
-           y="-175.14935" />
-        <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/realSetup.jpg"
-           xlink:href="realSetup.jpg"
-           transform="scale(1,-1)"
-           width="95.385056"
-           height="56.219929"
-           preserveAspectRatio="none"
-           id="image5208"
-           x="239.086"
-           y="-97.146309" />
-        <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/croquignole-single.jpg"
-           xlink:href="croquignole-single.jpg"
-           transform="scale(1,-1)"
-           width="95.400314"
-           height="69.476318"
-           preserveAspectRatio="none"
-           id="image5197"
-           x="133.71799"
-           y="-176.44568" />
-        <image
-           sodipodi:absref="/home/skadge/talks/presentation-cognitive-robotics/figs/henry.jpg"
-           xlink:href="henry.jpg"
-           transform="scale(1,-1)"
+           height="53.6544"
            width="95.385605"
-           height="63.590401"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/roboscopie.jpg"
+           xlink:href="roboscopie.jpg"
+           y="-175.14935"
+           x="239.086"
+           id="image5219"
            preserveAspectRatio="none"
-           id="image5186"
+           height="71.550003"
+           width="95.400002"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/realSetup.jpg"
+           xlink:href="realSetup.jpg"
+           y="-97.146309"
+           x="239.086"
+           id="image5208"
+           preserveAspectRatio="none"
+           height="56.219929"
+           width="95.385056"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/../../presentation-cognitive-robotics/figs/ranger/croquignole-single.jpg"
+           xlink:href="../../presentation-cognitive-robotics/figs/ranger/croquignole-single.jpg"
+           y="-176.44568"
+           x="133.71799"
+           id="image5197"
+           preserveAspectRatio="none"
+           height="69.476318"
+           width="95.400314"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/slemaignan/talks/interview-plymouth/figs/../../presentation-cognitive-robotics/figs/cowriter/henry.jpg"
+           xlink:href="../../presentation-cognitive-robotics/figs/cowriter/henry.jpg"
+           y="-236.44675"
            x="28.348993"
-           y="-236.44675" />
+           id="image5186"
+           preserveAspectRatio="none"
+           height="63.590401"
+           width="95.385605"
+           transform="scale(1,-1)" />
       </g>
     </g>
   </g>
