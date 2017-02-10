@@ -1,4 +1,4 @@
-\documentclass[handout,compress]{beamer}
+\documentclass[compress]{beamer}
 
 %--------------------------------------------------------------------------
 % Common packages
@@ -66,7 +66,7 @@
 %--------------------------------------------------------------------------
 \title{Of Cognition and Social Robots}
 \subtitle{towards a theory of artificial social cognition}
-\date{Heriot-Watt University -- {\bf 3 February 2017}}
+\date{Plymouth University -- {\bf 14 February 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
 Plymouth University}}
@@ -82,7 +82,6 @@ Plymouth University}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\licenseframe{https://github.com/severin-lemaignan/presentation-cognitive-robotics}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -92,106 +91,79 @@ Plymouth University}}
 
 \imageframe{europe_map}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Academic Curriculum overview}
+    \begin{itemize}
+        \item<1-> Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
+            in mechanical engineering
+            \begin{itemize}
+                \item \textbf{top ten student} out of 1000
+            \end{itemize}
+        \item<1-> MSc in AI for Learning technologies (University Paris 5)
+            \begin{itemize}
+                \item \textbf{top student} of the year
+            \end{itemize}
+        \item<2-> Joint French (CNRS LAAS) German (Technical University of Munich)
+            PhD in AI \& Cognitive Robotics
+            \begin{itemize}
+                \item \textbf{Best 2012 CNRS PhD in Robotics}
+                \item \textbf{High Distinction} in Germany
+            \end{itemize}
+    \end{itemize}
 
-\begin{frame}[plain]{}
-
-        \LARGE
-
-        ``Cognition is a group of mental processes that includes {\bf
-        attention}, {\bf memory}, producing and understanding {\bf
-        language}, {\bf learning}, {\bf reasoning}, {\bf problem
-        solving}, and {\bf decision making}.''
-
+    \onslide<3->
+     2013: post-doc at \textbf{EPFL}, establishing there a new leading group in
+     Child-Robot interaction
+     
+    \onslide<3->
+    2015: \textbf{EU Marie Skłodowska-Curie fellow} at Plymouth University on
+    \textbf{social cognition for robots}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[plain]{}
-
-    \begin{multicols}{2}
-        \resizebox{\columnwidth}{!}{%
-        \vspace*{4cm}
-        \begin{tikzpicture}
-            
-            \path[small mindmap, level 1 concept/.append style={sibling angle=360/7}, concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-            child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
-            child[concept color=hriSec2CompDark,text=white] { node[concept] {Language} }
-            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] {Reasoning} }
-            child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-            child[concept color=hriSec1Dark,text=white] { node[concept] {Decision making} };
-        \end{tikzpicture}
+\begin{frame}{Teaching experience}
+    \only<1> {
+        \begin{itemize}
+            \item Formal teaching position during PhD
+                \begin{itemize}
+                    \item java, prolog, ontologies, ada, databases
+                \end{itemize}
+            \item Guest lectures at undergraduate \& postgraduate level
+                \begin{itemize}
+                    \item ROS, GIT, Python for robotics, robotic simulation, 3D
+                        modelling...
+                \end{itemize}
+            \item Autumn term 2016: \emph{Lecturer at Plymouth University}
+                \begin{itemize}
+                    \item ROCO318 -- Mobile and Humanoid Mobile Robots
+                \end{itemize}
+        \end{itemize}
     }
 
-    \begin{center}
-        \includegraphics[width=0.4\columnwidth]{humans.png}
-    \end{center}
+    \only<2> {
+        Strong track record in ``core'' computer sciences
 
-    \end{multicols}
+        \begin{itemize}
+            \item algorithms \& data structures
+            \item advanced C++ (C++11, STL, meta-programming)
+            \item advanced Python (meta-programming)
+            \item logic programming (Prolog, ontologies)
+            \item distributed systems (middlewares)
+            \item software engineering (GIT expertise, coding best practises)
+            \item computer vision \& 3D rendering (OpenGL)
+        \end{itemize}
 
-\end{frame}
+        + \textbf{robotics}!
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \pause
 
-\begin{frame}<1>[plain]{}
-
-    \begin{multicols}{2}
-        \resizebox{1.3\columnwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-            \path[small mindmap, 
-                  level 1 concept/.append style={sibling angle=360/5}, 
-                  level 2 concept/.append style={sibling angle=120}, 
-                  concept color=hriWarmGreyLight,text=hriWarmGreyDark]
-            node[concept] {Cognition}
-            [clockwise from=-30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception}
-                [clockwise from=0]
-                child[concept color=hriSec2Dark,text=white] { node[concept]{Attention} }
-            }
-            child[concept color=hriSec2Comp,text=white] { node[concept] (krr)
-                {Knowledge Representation} 
-                [clockwise from=-30]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] {Memory} }
-            }
-            child[concept color=hriSec2,text=white] { node[concept] (action) {Action Execution} 
-                [clockwise from=110]
-                child[concept color=hriSec3,text=white] { node[concept] (plan) {Task Planning} }
-            }
-            child[concept color=hriSec3Comp,text=white] { node[concept] {Learning} }
-            child[concept color=hriSec3CompDark,text=white] { node[concept] (reason) {Reasoning} 
-                [clockwise from=100]
-                child[concept color=hriSec3Dark,text=white] { node[concept] {Problem solving} }
-            child[concept color=hriSec1Dark,text=white] { node[concept] (decision) {Decision making} } };
-
-        \onslide<2>{
-        \path (decision) edge[->, bend left] (action);
-        \path (percept) edge[->, bend left] (action);
-        \path (krr) edge[<->, bend right] (reason);
-        \path (plan) edge[<->] (reason);
-        \path (percept) edge[->, bend left] (krr);
-        \path (krr) edge[->, bend left] (plan);
-        }
-
-        \end{tikzpicture}
+        \emph{120+ open-source repositories on GitHub; contributor to major
+        open-source projects like ROS, OpenCV}
     }
 
-    \begin{center}
-        \vspace*{1cm}
-        \includegraphics[width=0.6\columnwidth]{pr2.png}
-    \end{center}
-
-    \end{multicols}
 
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research background: symbolic social cognition}
 
 \begin{frame}[plain]{}
 
@@ -247,112 +219,23 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
-\paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
-\begin{frame}{Surface functions for Social Cognition}
-\centering
-        \resizebox{!}{0.7\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/6}, 
-                level 2 concept/.append style={sibling angle=60}, 
-            concept color=white,text=hriWarmGreyDark]
-            node[concept, visible on=<1-5>] {\bf Social\\Cognition in HRI}
-            [clockwise from=30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
-                [clockwise from=120]
-                child[concept color=hriSec3Dark,text=white] { node[concept]
-                (emotions) {Empathy Emotions} }
-                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
-            }
-            child[concept color=hriSec2Comp,text=white,grow=-45, visible on=<2->] { node[concept] (knowledge) {Social Knowledge} 
-                [counterclockwise from=-140]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
-                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
-                child[concept color=hriSec2Dark,text=white] { node[concept] (memory) {Social memory} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
-            }
-            child[concept color=hriSec3Comp,text=black, grow=-120,visible on=<3->] { node[concept] (comm) {Communication} 
-                [counterclockwise from=180]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
-            }
-            child[concept color=hriSec3,text=white,grow=180,visible on=<4->] { node[concept] (dynamics) {Interaction Dynamics} 
-                [clockwise from=180]
-                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
-            }
-            child[concept color=hriSec2,text=black, grow=120,visible on=<5->] { node[concept] (action) {Performing with humans} 
-                [counterclockwise from=80]
-                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
-                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
-            };
-
-
-                \uncover<6->{
-                    \node[above right=0.1 of attention, pin=above right:Katrin L.] {};
-                    \node[right=0.1 of attention, pin=right:Frank B.] {};
-                    \node[pin=50:Oliver L.] at ($(comm) + (50:1)$)  {};
-                    \node[above left=0.1 of long-term, pin=above left:Christian D.] {};
-                    \node[left=0.1 of dialog, pin=left:Verena R.] {};
-                    \node[below left=0.1 of dialog, pin=below left:Jekaterina N.] {};
-                    \node[pin=260:Simon K.] at ($(dialog) + (260:1.2)$)  {};
-                    \node[above left=0.1 of dialog, pin=above left:Helen H.] {};
-                    \node[below=0.1 of memory, pin=below:Helen H.] {};
-                    \node[above right=0.1 of memory, pin=above right:Patricia V.] {};
-                    \node[above=0.1 of emotions, pin=above:Jekaterina N.] {};
-                    \node[pin=260:Ruth A.] at ($(emotions) + (245:0.8)$)  {};
-                    \node[above=0.1 of knowledge, pin=above:Ron P.] {};
-                    \node[above left=0.1 of joint-action, pin=above left:Ron P.] {};
-                
-                }
-
-        \end{tikzpicture}
-    }
-    \badge{europe_plym}
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\imageframe{pr2-baby-1.jpg}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\imageframe{pr2-baby-2.jpg}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\imageframe{pr2-baby-3.jpg}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\imageframe{pr2-baby-4.jpg}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
 \fullbackground{pr2-baby-3.jpg}
 \begin{frame}[plain]
 
 
     \only<2>{
     \vspace{11em}
-    \begin{exampleblock}{Many challenges}
+    \begin{exampleblock}{Complex challenges}
 
         \begin{itemize}
             \item Mix of geometry, time, semantics
-            \item High geometric/temporal granularity (e.g. nodding)
-            \item Lots of common-sense knowledge, cultural background
+            \item High geometric/temporal granularity of social signals (e.g. nodding)
+            \item Common-sense knowledge, context, cultural background
                 %\item Non-monotonic topology
                 %\item Represent continuous/discrete fields
             \item Account for uncertainties
                 %\item Imagine entities
-            \item Remember past experiences, predict future events
+            \item Social memory; ``remember the past to predict the future''
                 %\item Temporal template matching, chronicles
         \end{itemize}
     \end{exampleblock}
@@ -360,10 +243,12 @@ Plymouth University}}
 \end{frame}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[plain]
 
     \centering
-    {\bf Situated dialogue} evidences nicely these challenges
+    {\bf Situated dialogue} effectively evidences these challenges
 
     \begin{columns}
         \begin{column}{0.5\linewidth}
@@ -385,126 +270,19 @@ Plymouth University}}
     \vspace{2em}
     My PhD: a symbolic approach to this problem
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Symbolic Social Cognition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{Situation Assessment}
-        \centering
-        \video{0.8\textwidth}{videos/model3d.webm}\\
-        %\video{0.7\textwidth}{videos/model3d.webm?autostart&start=22&stop=34}\\
-
-        %\vspace*{1em}
-        %\includegraphics[width=0.9\textwidth]{spark}
-
-        \badge{europe_phd}
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-    Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}<1>[label=symbolicrelations]{}
-        \centering
-        \scriptsize
-
-        \begin{tabular}{p{1.5cm}lp{2cm}}
-            Subject & Predicate  & Object  \\ 
-            \hline
-            \concept{Location} & \concept{isAt} $\equiv$ \concept{cyc:objectFoundInLocation}  &  \concept{Location}  \\ 
-                               &  $\rightarrow$ \concept{isOn} $\equiv$ \concept{cyc:above\_Touching}  &   \\ 
-                               &  $\rightarrow$ \concept{isIn}  &   \\ 
-                               &  $\rightarrow$ \concept{isNextTo}  &   \\ 
-
-            \concept{Location}  & \concept{isAbove} $\equiv$ \concept{cyc:above-Generally}  &  \concept{Location} \\ 
-            \concept{Location}  & \concept{isBelow}  & \concept{Location} \\
-            \onslide<2>{\\\hline
-            \concept{Location}  & \concept{hasRelativePosition}  & \concept{Location}  \\ 
-                                   & 	$\rightarrow$ \concept{behind} $\equiv$ \concept{cyc:behind-Generally}  & \\ 
-                                      &  $\rightarrow$ \concept{inFrontOf} $\equiv$ \concept{cyc:inFrontOf-Generally}  & \\ 
-                                         &  $\rightarrow$ \concept{leftOf}  &  \\ 
-                                            &  $\rightarrow$ \concept{rightOf}  & 	 \\ 
-            \concept{Object}  & \concept{cyc:farFrom}  &  \concept{Agent} \\ 
-            \concept{Object}  & \concept{cyc:near}  &  \concept{Agent} \\
-
-            \hline
-            \concept{Agent}  & \concept{looksAt}  & \concept{SpatialThing} \\
-            \concept{Agent}  & \concept{sees}  &  \concept{SpatialThing}  \\ 
-            \concept{SpatialThing}  & \concept{isInFieldOfView}  & \concept{xsd:boolean}  \\ 
-            \concept{Agent}  & \concept{pointsAt} $\equiv$ \concept{cyc:pointingToward}  & \concept{SpatialThing} \\ 
-            \concept{Agent}  & \concept{focusesOn}  &  \concept{SpatialThing}  \\ 
-            \concept{Agent} & \concept{seesWithHeadMovement} &  \concept{SpatialThing} \\
-            \concept{Agent} & \concept{canReach} &  \concept{Object} \\%
-        }
-        \end{tabular}
-
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Lemaignan et al. {\bf ORO, a Knowledge Management Module for
-    Cognitive Architectures in Robotics}, IROS 2010}
-\begin{frame}{From Spatial Model to Symbolic Model}
-
-    \begin{figure}
-        \centering
-
-        \resizebox{0.9\paperwidth}{!}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                    every edge/.style={<-, draw, very thick},
-                    every node/.style={draw, font=\sf, node distance=0.5, rounded corners,
-                align=center, inner sep=5pt,fill=hriSec2Dark!50}]
-
-                \node[fill=hriSec2Comp!50] (thing) {\bf thing};
-                \node [fill=hriSec3CompDark!50, node distance=1.8, below left=of thing](sthing) {spatial thing} edge (thing);
-                \node [fill=hriSec3CompDark!50, above left=of sthing] {posture} edge (sthing);
-                \node [fill=hriSec3CompDark!50, left=of sthing] {shape} edge (sthing);
-                \node [fill=hriSec3CompDark!50, below=of sthing] (location) {location} edge (sthing);
-                \node [fill=hriSec3CompDark!50, below right=of location] {zone} edge (location);
-                \node [fill=hriSec3CompDark!50, below left=of location] (set) {spatial enduring thing} edge (location);
-                \node [fill=hriSec3CompDark!50, below right=of set] {obstacle} edge (set);
-                \node [fill=hriSec3CompDark!50, below left=of set] {opening} edge (set);
-                \node [fill=hriSec3CompDark!50, below=1 of set] {partially tangible thing} edge (set);
-                \node [fill=hriSec3CompDark!50, above left=of set] {place} edge (set);
-
-                \node [node distance=1, below right=of thing] (tthing) {temporal thing} edge (thing);
-                \node [below=of tthing] (tte) {thing with temporal extent} edge (tthing);
-                \node [below right=of tte] {time interval} edge (tte);
-                \node [below=1 of tte] (sit) {situation} edge (tte);
-                \node [below right=of sit] (evt) {event} edge (sit);
-                \node [below right=of evt] (act) {action} edge (evt);
-                \node [below=of act] {purposeful action} edge (act);
-                \node [below left=of sit] {static situation} edge (sit);
-
-            \end{tikzpicture}
-        }
-
-    \end{figure}
-
-        \badge{europe_phd}
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-\paper{Lemaignan, Alami, {\bf Explicit Knowledge and the Deliberative Layer: Lessons Learned}, IROS 2013}
-\begin{frame}{Online Instantiation}
+\begin{frame}{Symbolic situation assessment}
 
     \begin{columns}
         \begin{column}{0.4\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{pr2-scene.jpg}
+        \includegraphics[width=\linewidth]{human-perspective-small}
              
         \end{column}
         \begin{column}{0.6\linewidth}
@@ -576,6 +354,7 @@ Plymouth University}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 {
 \paper{Lemaignan et al. {\bf Grounding the Interaction: Anchoring
 Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
@@ -687,63 +466,47 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 \end{frame}
 }
 
-\begin{frame}[plain]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation}, Artifical Intelligence, 2016}
+\begin{frame}{Multi-modal interaction}
+
+    \begin{columns}
+        \begin{column}{0.4\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{human-perspective-small}
+             
+        \end{column}
+        \begin{column}{0.6\linewidth}
+        
     \centering
     What about
 
     {\bf ``Give me \emph{that} book''}?
 
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \footnotesize
+    (or even: {\bf ``Give me \emph{that}!''})
 
-\imageframe{humans-pt}
+       \end{column}
+    \end{columns}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Visual Perspective taking}
 
         \badge{europe_phd}
-
-        \centering
-        \includegraphics[width=0.8\textwidth]{spark_vert.pdf}
-        %\vspace*{1em}
-        %\video{0.7\textwidth}{videos/talking_to_my_robot.mp4?start=84&stop=136&noaudio}
-
 \end{frame}
-
-\againframe<2>{symbolicrelations}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+}
 
 \videoframe[0.56]{videos/this_box.webm?autostart&start=1}
 %\videoframe[0.56]{videos/this_box.webm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-\paper{Lemaignan et al. {\bf Grounding the Interaction: Anchoring
-Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
-\begin{frame}{Dialogue Grounding}
-    \centering
-
-    \vspace*{2em}
-    ``Where is the other tape?''\\
-    $\downarrow$\\
-    find({\tt\scriptsize ?obj isAt ?loc, ?obj type VideoTape, ?obj differentFrom TAPE1})
-
-    \pause
-
-    \vspace*{2em}
-    Symbolic approaches effective at dealing with this kind of constraints
-
-    \badge{europe_phd}
-\end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{One step further: Theory of Mind}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[plain]
 
@@ -759,6 +522,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         {\bf False-belief situation}
     \end{center}
 \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{The False-Belief Experiment}
@@ -932,136 +696,14 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{
-    \paper{Warnier, Guitton, Lemaignan, Alami {\bf When the Robot Puts Itself in Your Shoes} -- ROMAN 2012}
-    \begin{frame}{The False-Belief Experiment}
-        \centering
-        %\video{0.9\textwidth}{videos/falsebeliefs.webm?autostart}
-        \video{0.9\textwidth}{videos/falsebeliefs.webm}
-
-        \badge{europe_phd}
-    \end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \videoframe[0.56]{videos/dialogs.webm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Lemaignan, Alami {\bf Talking to my Robot: from Knowledge Grounding to Dialogue Processing} -- HRI 2013}
-    \begin{frame}{}
-        \centering
-
-        \vspace*{2em}
-        ``Give me the can!''\\
-        $\downarrow$\\
-        find({\tt\scriptsize ?obj type Can, model='severin'})
-    \end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Architectures}
-
-\begin{frame}[plain]
-%
-%    \begin{multicols}{3}
-%        \includegraphics[width=\columnwidth]{henry}
-%
-%        \includegraphics[width=\columnwidth]{this_box}
-%
-%        \includegraphics[width=\columnwidth]{ranger-background}
-%
-%        \includegraphics[width=\columnwidth]{cleantable}
-%
-%        \includegraphics[width=\columnwidth]{croquignole-single}
-%
-%        \includegraphics[width=\columnwidth]{stimulus-toys}
-%
-%        \includegraphics[width=\columnwidth]{dialogs}
-%
-%        \includegraphics[width=\columnwidth]{roboscopie}
-%
-%        \includegraphics[width=\columnwidth]{realSetup}
-%    \end{multicols}
-
-    \centering
-        \resizebox{!}{0.6\paperheight}{%
-            \begin{tikzpicture}[
-                    >=latex,
-                every edge/.style={<-, draw, very thick}]
-        
-
-            \path[small mindmap, 
-                level 1 concept/.append style={sibling angle=360/6}, 
-                level 2 concept/.append style={sibling angle=60}, 
-            concept color=white,text=hriWarmGreyDark]
-            node[concept] {\bf Social\\Cognition in HRI}
-            [clockwise from=30]
-            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
-                [clockwise from=120]
-                child[concept color=hriSec3Dark,text=white] { node[concept]{Emotions} }
-                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
-            }
-            child[concept color=hriSec2Comp,text=white,grow=-45] { node[concept] (knowledge) {Social Knowledge} 
-                [counterclockwise from=-140]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
-                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
-                child[concept color=hriSec2Dark,text=white] { node[concept] (memory) {Social memory} }
-                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
-            }
-            child[concept color=hriSec3Comp,text=black, grow=-120] { node[concept] (comm) {Communication} 
-                [counterclockwise from=180]
-                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
-            }
-            child[concept color=hriSec3,text=white,grow=180>] { node[concept] (dynamics) {Interaction Dynamics} 
-                [clockwise from=180]
-                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
-            }
-            child[concept color=hriSec2,text=black, grow=120] { node[concept] (action) {Performing with humans} 
-                [counterclockwise from=80]
-                child[concept color=hriSec2CompDark,text=white] { node[concept] (action-reco) {Action, behaviour recognition} }
-                child[concept color=hriSec1Dark,text=white] { node[concept] (intention) {Intention reading} }
-                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
-            };
-
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (attention.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (knowledge.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (dynamics.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (long-term.center) {};
-
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (common-sense.center) {};
-                \node[circle, draw=red, very thick, minimum size=1.6cm] at (dialog.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (action-reco.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (intention.center) {};
-
-
-        \end{tikzpicture}
-    }
-
-    \pause
-
-    \bf How to integrate all these?
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\imageframe[color=white]{islands1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{Into an control architecture}
+\begin{frame}<6-7>{Into an control architecture}
     \begin{figure}
         \centering
 
@@ -1157,6 +799,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         \badge{europe_phd}
 \end{frame}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
 \paper{Lemaignan et al. {\bf Artificial Cognition for Social Human-Robot
@@ -1361,97 +1005,77 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\imageframe[color=white]{islands2}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\imageframe[color=white]{islands3}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\imageframe[color=white]{islands4}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Experimental work}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
     \fullbackground{experiments}
 \begin{frame}[plain]
 
     \Large\centering
-    \textbf{Since my PhD, a lot of experimental work}
+    \textbf{Since my PhD, further experimental work to characterise human-robot
+    interaction}
 
     \pause
-    One example: the \emph{CoWriter} project
+
+    \normalsize
+    \vspace{2em}
+    One example to evidence the importance of a \textbf{socio-cognitive
+    approach} to HRI: the \emph{CoWriter} project
 \end{frame}
 }
 
-
-\imageframe{cowriter/joe1}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\imageframe{cowriter/joe2}
+\imageframe[color=black]{cowriter/henry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 
-\imageframe[color=black]{cowriter/diego-writing}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Robots?}
+\begin{frame}{The CoWriter project}
     \badge{europe_epfl}
+
+    Can we address children' hand-writing impairments with robots?
+
     \begin{itemize}
-        \item<1-> Robots do not know how to write!
-        \item<2-> Learning by Teaching
-        \item<3-> (nice side-effect: we can adapt to each child and each disabilities)
+        \item<2-> Robots do not know how to write!
+        \item<3-> Learning by Teaching
+        \item<4-> (nice side-effect: we can adapt to each child and each disabilities)
     \end{itemize}
 \end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\videoframe[0.56]{figs/cowriter/training-s.mp4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%{
+%    \paper{Hood, Lemaignan et al. {\bf When Children Teach a Robot to Write: An
+%    Autonomous Teachable Humanoid [...]} -- HRI 2015}
+%
+%\begin{frame}{Learning from demonstration}
+%    \begin{center}
+%    \includegraphics[width=0.8\textwidth]{cowriter/learningSdemo.png}
+%    \end{center}
+%\end{frame}
+%
+%}
+
+%{
+%    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
+%\begin{frame}{Learning to draw a 5}
+%    \begin{center}
+%        \includegraphics[width=0.8\linewidth]{cowriter/henry5}
+%    \end{center}
+%    \badge{europe_epfl}
+%\end{frame}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \imageframe[color=black]{cowriter/diego-correct}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[plain]{}
-    \centering
-    Mind modelling is {\bf mutual}
-
-    We can take advantage of it in HRI at fundamental levels
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
-\begin{frame}{Cognitive Engagement and Meta-cognition}
-    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
-    %\video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4}
-
-    \begin{flushright}
-        \includegraphics[width=0.5\textwidth]{cowriter/henry}
-    \end{flushright}
-
-\end{frame}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-    \paper{Hood, Lemaignan et al. {\bf When Children Teach a Robot to Write: An
-    Autonomous Teachable Humanoid [...]} -- HRI 2015}
-
-\begin{frame}{Learning from demonstration}
-    \begin{center}
-    \includegraphics[width=0.8\textwidth]{cowriter/learningSdemo.png}
-    \end{center}
-\end{frame}
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Before -- After}
     \begin{center}
@@ -1473,15 +1097,6 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{
-    \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
-\begin{frame}{Learning to draw a 5}
-    \begin{center}
-        \includegraphics[width=0.8\linewidth]{cowriter/henry5}
-    \end{center}
-    \badge{europe_epfl}
-\end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1496,36 +1111,115 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
                 \item Protégé effect
                 \item metacognition
             \end{itemize}
-        \item<+-> \textbf{New role}: not a 'tool to teach robotics', not a facilitator
-        \item<+-> (note: a tool for the teacher vs a social agent for the child!)
+        \item<+-> \textbf{New role}: not a 'tool to teach robotics', not a
+            facilitator \\
+        (note: a tool for the teacher vs a social agent for the child!)
         \item<+-> Could we replace it by someone else? Not easily
     \end{itemize}
     \badge{europe_epfl}
 \end{frame}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{What else?}
+
+        \begin{tikzpicture}
+            \node[rotate=90,text width=2cm]{\textbf{Social HRI\\on the field}};
+        \end{tikzpicture}
+            \hyperlink{croquignole}{\includegraphics[height=0.2\paperheight]{ranger/croquignole-single}}
+            \hspace{0.5em}
+            \hyperlink{dominos}{\includegraphics[height=0.2\paperheight]{ranger/domino-mistake}}
+            \hspace{0.5em}
+            \hyperlink{anthropomorphism}{\includegraphics[height=0.2\paperheight]{dynamics_anthropo}}
+
+        \begin{tikzpicture}
+            \node[rotate=90,text width=2cm]{\textbf{Robots for \\Learning}};
+        \end{tikzpicture}
+            \hyperlink{cellulo}{\includegraphics[height=0.2\paperheight]{cellulo/concept-solar-system}}
+            \hspace{0.5em}
+            \hyperlink{cowriter-impl}{\includegraphics[height=0.2\paperheight]{cowriter/pca}}
+
+        \begin{tikzpicture}
+            \node[rotate=90]{\textbf{Methodology}};
+        \end{tikzpicture}
+            \hyperlink{withmeness}{\includegraphics[height=0.2\paperheight]{withmeness/withmeness}}
+            \hspace{0.5em}
+            \hyperlink{asr}{\includegraphics[height=0.2\paperheight]{speech-reco/record_img}}
+            \hspace{0.5em}
+            \hyperlink{constructs}{\includegraphics[height=0.2\paperheight]{ranger/questionnaire}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{The next steps}
 
-\begin{frame}{Scaffolding the research}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    What are the next challenges for artificial social cognition?
+\imageframe[color=white]{islands1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imageframe[color=white]{islands4}
+
+{
+    \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
+
+\begin{frame}{Towards a cognitive architecture}
+
+    Guiding research question: \textbf{What are the principles that underpin
+    social cognition?}
 
     \pause
 
+    One working hypothesis: \textbf{Sociality emerge from interaction}
+
+    $\Rightarrow$ situated \& embodied view on social cognition
+
+    \pause
+
+    \emph{Attention Schemata} theory:
     \begin{itemize}
-        \item<+-> typical socio-cognitive tasks are either toy scenarios (\ie do not mirror
-            real-world siutation) or simple, constrainted tasks that do not
-            reflect the complexity \& dynamics of real-world interactions
+        \item \textbf{Social interaction is mediated by
+    attention}
+        \item \textbf{Modelling other's attention is building a theory of their mind}
+
+    \end{itemize}
+
+    \pause
+
+
+    Fine, but... testable predictions?
+
+    \badge{europe_plym}
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Operationalising the research}
+
+    \begin{itemize}
+        \item<+-> typical socio-cognitive tasks are to simple and constrainted.
+            Do not reflect the complexity \& dynamics of real-world interactions
         \item<+-> yet, research \emph{in the wild} is difficult to conduct
             rigorously and to replicate
-        \item<+-> $\Rightarrow$ I want to set {\bf free play} as our next horizon: \emph{rich set of cognitive and
+        \item<+-> $\Rightarrow$ {\bf free play as our next horizon}: \emph{rich set of cognitive and
             social dynamics}; importance of motivation/drive; forces us to deal
             with uncertain and unexpected situations
-        %\item<+-> Challenge to isolate behaviours, analyses them (and if we are
-        %    to avoid Wizard-Of-Oz, implementation challenge!)
+        \item<+-> But challenging as well! What is the action policy? Focus
+            instead on the \textbf{social policy}
     \end{itemize}
+
+    \badge{europe_plym}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1563,7 +1257,14 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{What social behaviours do I aim for?}
+\imageframe[caption=A framework for artificial socio-cognition]{memory/setup}
+\videoframe[0.56]{figs/next/zoo-builder-proto-smaller.mkv}
+\imageframe[color=black]{memory/zoo+ros+memory}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Key Predicted Social Behaviours}
 
 
     \begin{itemize}
@@ -1589,10 +1290,12 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
     \end{itemize}
 
-    $\Rightarrow$ a research programme for the next 5-10 years
+    $\Rightarrow$ significant scientific targets for human-robot interaction
 \end{frame}
 
-\begin{frame}{My research plan}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Research approach}
 
     \centering
     \begin{tikzpicture}[
@@ -1607,8 +1310,9 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         \node<1>[below=0.2 of practical,text width=5cm] (practicaldesc) {
             \begin{itemize}
                 \item symbolic approach
-                \item extended representation capabilities (like
-                pre-supposition accomodation)
+                \item complete with respect to cognitive capabilities
+                \item focus on long-term autonomy
+                \item cross-hardware
             \end{itemize} };
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \node<2>[below=0.2 of practical,text width=5cm] {
@@ -1671,7 +1375,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
             \end{tikzpicture}
             }
 
-            The ``Edinburgh Architecture for Socio-Cognitive Robots''
+            The ``Plymouth Architecture for Socio-Cognitive Robots''
 
         };
 
@@ -1682,7 +1386,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \node[below right=of top] (basic) {\emph{Basic research}} edge (top);
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \node<1>[below=0.2 of basic, text width=5cm] (basicdesc) {
+        \node<1>[below=0.2 of basic, text width=7cm] (basicdesc) {
             \begin{itemize}
                 \item principled approach
                 \item emergent paradigm
@@ -1700,7 +1404,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         };
 
         \coordinate (bottom) at (top |- practicaldesc.south);
-        \node<1>[below=1 of bottom] (hyb) {hybridation};
+        \node<1>[below=1 of bottom] (hyb) {cross-pollination};
         \draw<1>[<->,thick] (practicaldesc.south) to[bend right] (basicdesc.south);
 
 
@@ -1710,61 +1414,33 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 \end{frame}
 
 
-\begin{frame}{Developing Child-Robot Interaction at Edinburgh}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Developing Child-Robot Interaction at Plymouth}
 
     \begin{columns}
         \begin{column}{0.4\linewidth}
             \begin{center}
-                \includegraphics[width=\linewidth]{edinburgh/rablab}
+                \includegraphics[width=\linewidth]{plymouth/babylab}
                 \vspace{2em}
 
-                \uncover<2>{
-                \includegraphics[width=\linewidth]{edinburgh/sickchildrenhospital}
-                }
             \end{center}
         \end{column}
         \begin{column}{0.6\linewidth}
 
-            Create a \textbf{KidsLab}, within the Robotarium
+            Create a \textbf{KidsLab}
                 \begin{itemize}
-                    \item experimental space suited for 4 to 13 years old
+                    \item experimental space suited for 5 to 13 years old
                     \item fully equipped (recording, tracking, touch tables)
-                    \item in connection with UoE Wee Sciences lab and the RabLab
+                    \item in close cooperation with Caroline Floccia \& the
+                        BabyLab
                 \end{itemize}
 
             \vspace{2em}
 
-            \uncover<2>{
-            Establish collaboration with the (new) \textbf{Royal Hospital for Sick
-            Children}
-            \begin{itemize}
-                \item field experiments
-                \item research with real-world impact on children
-            \end{itemize}
-        }
         \end{column}
     \end{columns}
 \end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{A framework for free play}
-
-    \begin{center}
-        \only<1>{
-            \video{\linewidth}{figs/next/zoo-builder-proto-smaller.mkv}
-        }
-        \only<2>{
-            \includegraphics[width=\linewidth]{memory/zoo+ros+memory}
-        }
-            \only<3>{
-                \includegraphics[width=0.8\linewidth]{memory/weights-zoo}
-            }
-    \end{center}
-\end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1778,8 +1454,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
             \begin{itemize}
                 \item up to \pounds 125,000
                 \item max 2 years, no closing date to submit
-                \item covers equipment, but no PhD
-                \item fund the \textbf{KidsLab} project
+                \item funding for the \textbf{KidsLab} project
+                \item covers equipment + one post-doc
             \end{itemize}
         \item {\bf EPSRC Early Career Fellowship}
             \begin{itemize}
@@ -1798,15 +1474,14 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
     \begin{itemize}
         \item {\bf Co-Investigator on a H2020 project}
             \begin{itemize}
-                \item close contacts with IST Lisbon, LAAS-CNRS, Plymouth, EPFL,
+                \item close contacts with IST Lisbon, LAAS-CNRS, EPFL,
                     INRIA Bordeaux
             \end{itemize}
         \item Submit a {\bf EPSRC Standard Research} proposal
             \begin{itemize}
                 \item aimed at reaching independence (1 PhD, 1 post-doc)
-                \item focus on practical, long-term field deployments (\eg Sick
-                    Children hospital)
-                \item considering multi-proposal submission, possibly with
+                \item focus on socio-cognitive architecture + long-term field deployment
+                \item multi-proposal submission, possibly with
                     Lincoln U. (expertise on Cognitive Architectures)
             \end{itemize}
         \item {\bf ERC Starting Grant}
@@ -1819,50 +1494,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
     \end{itemize}
     }
 
-    \only<3>{
-    Long-term (within 5 years)
-    \begin{itemize}
-        \item {\bf European (?) project coordination}
-            \begin{itemize}
-                \item Typically a EU \emph{Future and Emerging Technologies}
-                    funding
-            \end{itemize}
-    \end{itemize}
-    }
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{What else?}
-
-        \begin{tikzpicture}
-            \node[rotate=90,text width=2cm]{\textbf{Social HRI\\on the field}};
-        \end{tikzpicture}
-            \hyperlink{croquignole}{\includegraphics[height=0.2\paperheight]{ranger/croquignole-single}}
-            \hspace{0.5em}
-            \hyperlink{dominos}{\includegraphics[height=0.2\paperheight]{ranger/domino-mistake}}
-            \hspace{0.5em}
-            \hyperlink{anthropomorphism}{\includegraphics[height=0.2\paperheight]{dynamics_anthropo}}
-
-        \begin{tikzpicture}
-            \node[rotate=90,text width=2cm]{\textbf{Robots for \\Learning}};
-        \end{tikzpicture}
-            \hyperlink{cellulo}{\includegraphics[height=0.2\paperheight]{cellulo/concept-solar-system}}
-            \hspace{0.5em}
-            \hyperlink{cowriter-impl}{\includegraphics[height=0.2\paperheight]{cowriter/pca}}
-
-        \begin{tikzpicture}
-            \node[rotate=90]{\textbf{Methodology}};
-        \end{tikzpicture}
-            \hyperlink{withmeness}{\includegraphics[height=0.2\paperheight]{withmeness/withmeness}}
-            \hspace{0.5em}
-            \hyperlink{asr}{\includegraphics[height=0.2\paperheight]{speech-reco/record_img}}
-            \hspace{0.5em}
-            \hyperlink{constructs}{\includegraphics[height=0.2\paperheight]{ranger/questionnaire}}
-
-\end{frame}
-
-\imageframe[caption=Not a lonely work!]{collage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1885,10 +1517,6 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\licenseframe{https://github.com/severin-lemaignan/presentation-cognitive-robotics}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \appendix
 \begin{frame}[label=appendix]{Supplementary material}
     \small
@@ -1897,7 +1525,6 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
     %\tableofcontents
     \end{multicols}
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Performing in Human Environments}
@@ -2326,6 +1953,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 \end{frame}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section[pyRobots]{pyRobots Example}
 
@@ -2650,7 +2278,6 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
  \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[label=cowriter-impl]{Technical Challenges}
     \badge{europe_epfl}
@@ -2690,6 +2317,8 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 \end{frame}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[plain]
     \begin{center}
         \includegraphics[width=0.8\linewidth]{cowriter/cowriter-fsm.png}
@@ -2700,11 +2329,9 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section[Practical CRI]{Child-Robot Interaction: the Practical Side}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \imageframe{croquignole.jpg}
 
@@ -2779,6 +2406,8 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
     \textbf{``With-me-ness''}: real-time estimation of surface engagement
 \end{frame}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \imageframe[color=black]{realSetup}
 
@@ -2992,6 +2621,7 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 {
     \paper{Lemaignan, Fink, Mondada, Dillenbourg {\bf You're Doing
     It Wrong! Studying Unexpected Behaviors in CRI} ICSR
@@ -3008,6 +2638,7 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
     \backbutton{}
 \end{frame}
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
@@ -4092,6 +3723,9 @@ constraining function [...]}, Cognition, 1983]\newline
 
 \end{frame}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
