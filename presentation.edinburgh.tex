@@ -716,8 +716,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\videoframe[0.56]{videos/this_box.webm?autostart&start=1}
-%\videoframe[0.56]{videos/this_box.webm}
+%\videoframe[0.56]{videos/this_box.webm?autostart&start=1}
+\videoframe[0.56]{videos/this_box.webm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1032,15 +1032,12 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
                 \node[circle, draw=red, very thick, minimum size=1.6cm] at (mmodel.center) {};
                 \node[circle, draw=red, very thick, minimum size=1.6cm] at (attention.center) {};
                 \node[circle, draw=red, very thick, minimum size=2cm] at (knowledge.center) {};
-                \node[circle, draw=red, very thick, minimum size=2cm] at (dynamics.center) {};
+                \node[circle, draw=red, very thick, minimum size=2cm] at (memory.center) {};
                 \node[circle, draw=red, very thick, minimum size=1.6cm] at (long-term.center) {};
 
                 \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (common-sense.center) {};
                 \node[circle, draw=red, very thick, minimum size=1.6cm] at (dialog.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (joint-action.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (soc-rules.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (action-reco.center) {};
-                \node[circle, dashed, draw=red, thick, minimum size=1.6cm] at (intention.center) {};
+                \node[circle, draw=red, very thick, minimum size=1.6cm] at (non-verbal.center) {};
 
 
         \end{tikzpicture}
@@ -1161,11 +1158,11 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 {
 \paper{Lemaignan et al. {\bf Artificial Cognition for Social Human-Robot
      Interaction: An Implementation} Artifical Intelligence, 2016}
-\begin{frame}{One example}
+\begin{frame}{Human-robot joint task achievement}
 
     \begin{center}
 
-     Walkthrough one full-stack example in the question
+        Walkthrough of one full-stack example: for \hyperlink{cleanthetable}{the questions}
      \vspace{2em}
 
      \begin{columns}
@@ -1383,7 +1380,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
     \textbf{Since my PhD, a lot of experimental work}
 
     \pause
-    One example: the \emph{CoWriter} project
+    One example that shows that 'socio-cognitive robotics' is not just a
+    buzz: the \emph{CoWriter} project
 \end{frame}
 }
 
@@ -1428,8 +1426,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 {
     \paper{Lemaignan et al. {\bf Learning by Teaching a Robot: The Case of Handwriting} -- Robotics and Automation Magazine 2016}
 \begin{frame}{Cognitive Engagement and Meta-cognition}
-    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
-    %\video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4}
+    %\video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4?autostart}
+    \video{0.55\textwidth}{figs/cowriter/cowriter-session1_3minExcerpt_1x.mp4}
 
     \begin{flushright}
         \includegraphics[width=0.5\textwidth]{cowriter/henry}
@@ -1604,14 +1602,16 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \node[below left=of top] (practical) {\emph{Practical}} edge (top);
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \node<1>[below=0.2 of practical,text width=5cm] (practicaldesc) {
+        \node<1>[below=0.2 of practical,text width=5.5cm] (practicaldesc) {
             \begin{itemize}
-                \item symbolic approach
+                \item initially symbolic approach
                 \item extended representation capabilities (like
                 pre-supposition accomodation)
+                \item multi-platform
+                \item support integration at HW HRI group level
             \end{itemize} };
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \node<2>[below=0.2 of practical,text width=5cm] {
+        \node<2>[below=0.2 of practical,text width=5.5cm] {
 
             \centering 
 
@@ -1685,8 +1685,9 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         \node<1>[below=0.2 of basic, text width=5cm] (basicdesc) {
             \begin{itemize}
                 \item principled approach
-                \item emergent paradigm
-                \item initially based on the \emph{attention schemata theory}
+                \item emergent/developmental paradigm
+                \item inspiration from neurosciences (\emph{\hyperlink{attentionschemata}{attention schemata
+                    theory}})
                 \item associative memory networks
             \end{itemize}
         };
@@ -1700,7 +1701,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         };
 
         \coordinate (bottom) at (top |- practicaldesc.south);
-        \node<1>[below=1 of bottom] (hyb) {hybridation};
+        \node<1>[below=0.2 of bottom] (hyb) {cross-pollination};
         \draw<1>[<->,thick] (practicaldesc.south) to[bend right] (basicdesc.south);
 
 
@@ -1710,7 +1711,29 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 \end{frame}
 
 
-\begin{frame}{Developing Child-Robot Interaction at Edinburgh}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{A framework for free play}
+
+    \begin{center}
+        \only<1>{
+            \includegraphics[width=0.8\linewidth]{next/zoo-activity2}
+        }
+        \only<2>{
+            \video{\linewidth}{figs/next/zoo-builder-proto-smaller.mkv}
+        }
+        \only<3>{
+            \includegraphics[width=\linewidth]{memory/zoo+ros+memory}
+        }
+        \only<4>{
+            \includegraphics[width=0.8\linewidth]{memory/weights-zoo}
+        }
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Developing Child-Robot Interaction at Heriot Watt}
 
     \begin{columns}
         \begin{column}{0.4\linewidth}
@@ -1735,8 +1758,8 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
             \vspace{2em}
 
             \uncover<2>{
-            Establish collaboration with the (new) \textbf{Royal Hospital for Sick
-            Children}
+            Establish collaboration with the (new) Royal Hospital for Sick
+            Children
             \begin{itemize}
                 \item field experiments
                 \item research with real-world impact on children
@@ -1745,25 +1768,6 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
         \end{column}
     \end{columns}
 \end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{A framework for free play}
-
-    \begin{center}
-        \only<1>{
-            \video{\linewidth}{figs/next/zoo-builder-proto-smaller.mkv}
-        }
-        \only<2>{
-            \includegraphics[width=\linewidth]{memory/zoo+ros+memory}
-        }
-            \only<3>{
-                \includegraphics[width=0.8\linewidth]{memory/weights-zoo}
-            }
-    \end{center}
-\end{frame}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1778,7 +1782,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
             \begin{itemize}
                 \item up to \pounds 125,000
                 \item max 2 years, no closing date to submit
-                \item covers equipment, but no PhD
+                \item covers equipment + 1 post-doc
                 \item fund the \textbf{KidsLab} project
             \end{itemize}
         \item {\bf EPSRC Early Career Fellowship}
@@ -1815,17 +1819,6 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
                 \item max 5 years
                 \item within 7 years of PhD completion, \ie before 2019
                 \item project on {\bf Emergence of artificial social cognition}
-            \end{itemize}
-    \end{itemize}
-    }
-
-    \only<3>{
-    Long-term (within 5 years)
-    \begin{itemize}
-        \item {\bf European (?) project coordination}
-            \begin{itemize}
-                \item Typically a EU \emph{Future and Emerging Technologies}
-                    funding
             \end{itemize}
     \end{itemize}
     }
@@ -1911,7 +1904,7 @@ Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{``Cleaning the table''...}
+\begin{frame}[label=cleanthetable]{``Cleaning the table''...}
 \centering
 \resizebox{!}{0.75\paperheight}{%
 \begin{tikzpicture}[
@@ -3208,7 +3201,7 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 
 {
     \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
-\begin{frame}{Modeling others' mind?}
+\begin{frame}[label=attentionschemata]{Modeling others' mind?}
     \large
     In cognitive neurosciences: Graziano's \emph{Attention Schemata Theory}
 
