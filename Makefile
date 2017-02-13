@@ -1,7 +1,7 @@
 
 LATEX=lualatex
 
-TEXTARGETS=$(wildcard ./presentation*.tex)
+TEXTARGETS=$(wildcard ./presentation.tex)
 
 TARGET=$(TEXTARGETS:.tex=.pdf)
 
@@ -37,9 +37,15 @@ touch:
 
 force: touch paper
 
+dist: paper
+	mkdir -p dist
+	cp $(TARGET) dist/
+	for f in `./make_video_preview.py $(TARGET:.pdf=.tex) --list | uniq`; do mkdir -p dist/`dirname $$f`;cp $$f dist/$$f;  done
+
 clean:
 	rm -f *.vrb *.spl *.idx *.aux *.log *.snm *.out *.toc *.nav *intermediate *~ *.glo *.ist *.bbl *.blg $(SVG:.svg=.pdf) $(DOT:.dot=.svg) $(DOT:.dot=.pdf)
 	rm -rf _minted*
 
 distclean: clean
 	rm -f $(TARGET:.tex=.pdf)
+	rm -rf dist
