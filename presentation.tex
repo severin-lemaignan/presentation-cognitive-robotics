@@ -65,8 +65,7 @@
 % General presentation settings
 %--------------------------------------------------------------------------
 \title{Of Cognition and Social Robots}
-%\subtitle{towards a theory of artificial social cognition}
-\subtitle{}
+\subtitle{a vision for artificial social cognition in HRI}
 \date{Plymouth University -- {\bf 14 February 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
@@ -92,47 +91,95 @@ Plymouth University}}
 
 \section*{Curriculum \& Teaching}
 
-\imageframe{europe_map}
+%\imageframe{europe_map}
 
-\begin{frame}{Academic Curriculum}
-    \begin{itemize}
-        \item<1-> Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
-            in mechanical engineering
-            \begin{itemize}
-                \item \textbf{top ten student} out of 1000
-            \end{itemize}
-        \item<1-> MSc in AI for Learning technologies (University Paris 5)
-            \begin{itemize}
-                \item \textbf{top student} of the year
-            \end{itemize}
-        \item<2-> Joint French (CNRS LAAS) German (Technical University of Munich)
-            PhD in AI \& Cognitive Robotics
-            \begin{itemize}
-                \item \textbf{Best 2012 CNRS PhD in Robotics}
-                \item \textbf{High Distinction} in Germany
-            \end{itemize}
+{
+    \fullbackground{europe_map}
+    \begin{frame}[plain]
+            \begin{tikzpicture}[>=latex, remember picture, overlay,
+                input/.style={draw,circle, inner sep=0pt,minimum size=0.1cm}
+                ]
 
-    \end{itemize}
+                %\foreach \x in {-1, -0.9,..., 1}
+                %    \foreach \y in {-1, -0.9,..., 1}
+                %        \node[input] at (page cs:\x,\y){};
 
+                \coordinate (kit) at (page cs:0.45,0.02);
+                \coordinate (paris) at (page cs:0.2,0);
+                \coordinate (paris2) at (page cs:0.23,-0.04);
+                \coordinate (toulouse) at (page cs:0.1,-0.3);
+                \coordinate (tum) at (page cs:0.55,0.05);
 
-\end{frame}
+                \node<2-3>[text width=5cm] at (page cs:-0.5,0.1) (msc) {\footnotesize Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
+                in \textbf{Mechanical Engineering}
 
-\begin{frame}{Academic Curriculum}
-    2013-2015: \textbf{post-doc at EPFL}
+                \emph{top ten student out of 1000}
+                };
+                \node<3>[text width=5cm] at (page cs:-0.5,-0.28) (msc2)
+                {\footnotesize MSc in \textbf{AI for Learning technologies} (Paris 5)
+                
+                \emph{top student of the year}
+                };
+
+                \path<2-3>[->,ultra thick] (msc) edge (kit);
+                \path<2-3>[->,ultra thick] (msc) edge (paris);
+                \path<3>[->,ultra thick] (msc2) edge (paris2);
+
+                \node<4>[text width=5cm] at (page cs:-0.5,0.0) (phd)
+                {\footnotesize Joint French (CNRS LAAS) German (Technical University of Munich)
+                PhD in \textbf{AI \& Cognitive Robotics}
+                \vspace{1em}
+
+                \emph{Best 2012 CNRS PhD in Robotics}\\
+                \emph{PhD with High Distinction @TUM}
+                };
+
+                \path<4>[->,ultra thick] (phd) edge (toulouse);
+                \path<4>[->,ultra thick] (phd) edge (tum);
+            \end{tikzpicture}
+    \end{frame}
+}
+
+%\begin{frame}{Academic Curriculum}
+%    \begin{itemize}
+%        \item<1-> Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
+%            in mechanical engineering
+%            \begin{itemize}
+%                \item \textbf{top ten student} out of 1000
+%            \end{itemize}
+%        \item<1-> MSc in AI for Learning technologies (University Paris 5)
+%            \begin{itemize}
+%                \item \textbf{top student} of the year
+%            \end{itemize}
+%        \item<2-> Joint French (CNRS LAAS) German (Technical University of Munich)
+%            PhD in AI \& Cognitive Robotics
+%            \begin{itemize}
+%                \item \textbf{Best 2012 CNRS PhD in Robotics}
+%                \item \textbf{High Distinction} in Germany
+%            \end{itemize}
+%
+%    \end{itemize}
+%
+%
+%\end{frame}
+
+\begin{frame}{Since my PhD}
+    2013--2015  \textbf{Post-doc at EPFL}
     \begin{itemize}
         \item<+-> built up a leading group in child-robot interaction
-        \item<+-> from 1 PhD to 3 PhD + 2-3 MSc students
+        \item<+-> went up to 3 PhD + 3 MSc students
         \item<+-> joint supervisions with Portugal, France
         \item<+-> 2 high-visibility projects with large media coverage
-        \item<+-> 7 papers in 4 years at high-profile HRI conference, \textbf{2 awards}
+        \item<+-> 7 papers in 4 years at high-profile HRI conference, 2 awards
     \end{itemize}
 
     \onslide<6->
-    2015: \textbf{EU Marie Skłodowska-Curie fellow} at Plymouth University on
-    \textbf{social cognition for robots}
+    2015--2017 \textbf{EU Marie Skłodowska-Curie fellow} at Plymouth University on
+    \textbf{Theory of Mind} \& \textbf{Social cognition for robots}
 
     \onslide<7->
 
+    \vspace{1em}
     \large\centering
     \textbf{50+ publications}; \textbf{900+ citations}; \textbf{H-index=15}
 
@@ -143,22 +190,64 @@ Plymouth University}}
 \begin{frame}[plain]
 
         \begin{center}
-
-            \includegraphics[width=0.3\linewidth]{teaching/events}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/grassfire}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/kalman}\hspace{1em}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/events}};
+                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it SOFT252};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/grassfire}};
+                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it
+                        SOFT561};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/kalman}};
+                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it ROCO503};
+                    \end{tikzpicture}
 
             \pause
-
-            \includegraphics[width=0.3\linewidth]{teaching/git}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/nyquist}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/3d}\hspace{1em}
-
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/git}};
+                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it SOFT152};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/nyquist}};
+                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it ROCO222};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/3d}};
+                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it SOFT153};
+                    \end{tikzpicture}
             \pause
-
-            \includegraphics[width=0.3\linewidth]{teaching/ros}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/omnidirectional}\hspace{1em}
-            \includegraphics[width=0.3\linewidth]{teaching/costmap}\hspace{1em}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/ros}};
+                        \node[fill=hriSec1!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it NET302};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/omnidirectional}};
+                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it ROCO318};
+                    \end{tikzpicture}
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/costmap}};
+                        \node[fill=hriSec2Dark!20,draw,rotate=-45] at (1,1)
+                        {\tiny\it AINT252};
+                    \end{tikzpicture}
 
         \end{center}
 
@@ -187,7 +276,7 @@ Plymouth University}}
         Strong track record in core computer sciences
 
         \begin{itemize}
-            \item \textbf{advanced C++} (C++11, STL, meta-programming)
+            \item \textbf{advanced C++} (C++11/14, STL, meta-programming)
             \item \textbf{advanced Python} (meta-programming)
             \item \textbf{software engineering} (GIT expertise, coding best practises)
             \item logic programming (Prolog, ontologies)
@@ -204,9 +293,10 @@ Plymouth University}}
 
 \end{frame}
 
+\imageframe[color=black]{perso/robots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Research background: symbolic social cognition}
+\section{Research background\newline Symbolic Social Cognition}
 
 
 \imageframe{pr2-baby-3}
