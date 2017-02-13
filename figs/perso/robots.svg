@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="524.04736mm"
+   height="300.00003mm"
+   viewBox="0 0 1856.8607 1062.9922"
+   id="svg7476"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="robots.svg">
+  <defs
+     id="defs7478">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8136">
+      <rect
+         style="opacity:1;fill:#d5aa80;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8138"
+         width="613.34778"
+         height="1062.9922"
+         x="-6.1035156e-05"
+         y="-10.629982" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8144">
+      <rect
+         style="opacity:1;fill:#d5aa80;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8146"
+         width="242.27856"
+         height="253.76564"
+         x="613.16254"
+         y="798.59656" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8150">
+      <rect
+         style="opacity:1;fill:#d5aa80;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8152"
+         width="439.53802"
+         height="403.68512"
+         x="1417.3228"
+         y="648.67706" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="676.81869"
+     inkscape:cy="266.17632"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-page="true"
+     borderlayer="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="867"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7481">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,10.629982)">
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/bert-brl.jpg"
+       xlink:href="bert-brl.jpg"
+       transform="matrix(0.937,0,0,0.937,103.13681,53.582753)"
+       clip-path="url(#clipPath8150)"
+       width="468.4574"
+       height="425.80466"
+       preserveAspectRatio="none"
+       id="image8098"
+       x="1388.4033"
+       y="646.67706" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/icub.jpg"
+       xlink:href="icub.jpg"
+       width="411.84708"
+       height="411.84708"
+       preserveAspectRatio="none"
+       id="image8109"
+       x="627.19324"
+       y="386.63733" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/rosie-tum.jpg"
+       xlink:href="rosie-tum.jpg"
+       transform="matrix(0.937,0,0,0.937,46.266876,58.305217)"
+       clip-path="url(#clipPath8144)"
+       width="242.09332"
+       height="307.24014"
+       preserveAspectRatio="none"
+       id="image8120"
+       x="613.34778"
+       y="798.59656" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/fixing_nao.jpg"
+       xlink:href="fixing_nao.jpg"
+       transform="matrix(0.937,0,0,0.937,19.320477,32.814583)"
+       clip-path="url(#clipPath8136)"
+       width="799.21588"
+       height="1062.9922"
+       preserveAspectRatio="none"
+       id="image8043"
+       x="-185.86813"
+       y="-10.629921" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/pr2-roboscopie.jpg"
+       xlink:href="pr2-roboscopie.jpg"
+       width="411.84711"
+       height="617.77075"
+       preserveAspectRatio="none"
+       id="image8054"
+       x="1431.1682"
+       y="10.138207" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/jido.png"
+       xlink:href="jido.png"
+       width="231.13873"
+       height="399.66357"
+       preserveAspectRatio="none"
+       id="image8065"
+       x="-442.83627"
+       y="170.45375" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/cellulo.JPG"
+       xlink:href="cellulo.JPG"
+       width="526.48309"
+       height="237.77841"
+       preserveAspectRatio="none"
+       id="image8076"
+       x="873.14038"
+       y="806.59015" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/rangers.jpg"
+       xlink:href="rangers.jpg"
+       width="753.32452"
+       height="359.26624"
+       preserveAspectRatio="none"
+       id="image8087"
+       x="638.67297"
+       y="1.4478832" />
+    <image
+       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/pepper.jpg"
+       xlink:href="pepper.jpg"
+       width="345.43634"
+       height="398.97894"
+       preserveAspectRatio="none"
+       id="image8131"
+       x="1060.2736"
+       y="386.20474" />
+  </g>
+</svg>
