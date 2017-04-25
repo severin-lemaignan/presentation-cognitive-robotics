@@ -66,7 +66,7 @@
 %--------------------------------------------------------------------------
 \title{Of Cognition and Social Robots}
 \subtitle{walking the path to artificial social cognition in HRI}
-\date{IST Lisbon -- {\bf 26 May 2017}}
+\date{IST Lisbon -- {\bf 26 April 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
 Plymouth University}}
@@ -89,9 +89,8 @@ Plymouth University}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Who Am I?}
+\section*{Who Am I?}
 
-\imageframe[color=black]{perso/robots}
 
 {
     \fullbackground{europe_map}
@@ -115,12 +114,12 @@ Plymouth University}}
                 \node<2-3>[text width=5cm] at (page cs:-0.5,0.1) (msc) {\footnotesize Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
                 in \textbf{Mechanical Engineering}
 
-                \emph{top ten student out of 1000}
+                %\emph{top ten student out of 1000}
                 };
-                \node<3>[text width=5cm] at (page cs:-0.5,-0.28) (msc2)
+                \node<3>[text width=5cm] at (page cs:-0.5,-0.22) (msc2)
                 {\footnotesize MSc in \textbf{AI for Learning technologies} (Paris 5)
                 
-                \emph{top student of the year}
+                %\emph{top student of the year}
                 };
 
                 \path<2-3>[->,ultra thick] (msc) edge (kit);
@@ -132,15 +131,15 @@ Plymouth University}}
                 PhD in \textbf{AI \& Cognitive Robotics}
                 \vspace{1em}
 
-                \emph{Best 2012 CNRS PhD in Robotics}\\
-                \emph{PhD with High Distinction @TUM}
+                %\emph{Best 2012 CNRS PhD in Robotics}\\
+                %\emph{PhD with High Distinction @TUM}
                 };
 
                 \path<4>[->,ultra thick] (phd) edge (toulouse);
                 \path<4>[->,ultra thick] (phd) edge (tum);
 
                 \node<5>[text width=5cm] at (page cs:-0.5,-0.1) (postdoc-epfl)
-                {\footnotesize Post-doc at EPFL
+                {\footnotesize \textbf{Post-doc at EPFL}
                 \vspace{1em}
 
                 \emph{Supervision of the HRI team}\\
@@ -150,7 +149,7 @@ Plymouth University}}
                 \path<5>[->,ultra thick] (postdoc-epfl) edge (epfl);
 
                 \node<6>[text width=5cm] at (page cs:-0.5,-0.1) (postdoc-plym)
-                {\footnotesize Post-doc at Plymouth University
+                {\footnotesize \textbf{Post-doc at Plymouth University}
                 \vspace{1em}
 
                 \emph{EU Marie Skłodowska-Curie fellow} \\
@@ -163,6 +162,8 @@ Plymouth University}}
             \end{tikzpicture}
     \end{frame}
 }
+
+\imageframe[color=black]{perso/robots}
 
 %\begin{frame}{Academic Curriculum}
 %    \begin{itemize}
@@ -219,6 +220,16 @@ Plymouth University}}
 
 \imageframe{pr2-baby-3}
 
+\note{
+    \begin{itemize}
+            \item Mix of geometry, time, semantics
+            \item High geometric/temporal granularity (e.g. nodding)
+            \item Lots of common-sense knowledge, cultural background
+            \item Account for uncertainties
+            \item Remember past experiences, predict future events
+    \end{itemize}
+
+}
 
 \begin{frame}[plain]
 
@@ -252,7 +263,7 @@ Plymouth University}}
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}<3>{Multi-modal Symbolic situation assessment}
+\begin{frame}<3>[label=sitass]{Multi-modal Symbolic situation assessment}
 
     \begin{columns}
         \begin{column}{0.4\linewidth}
@@ -682,27 +693,27 @@ Plymouth University}}
 %\section{One step further: Theory of Mind}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\begin{frame}[plain]
-%
-%    \begin{center}
-%        \includegraphics[width=0.8\linewidth]{videos/this_box_thumb}
-%
-%        What if I ask for the video tape in the box, but the robot previously
-%        moved it somewhere else?
-%
-%
-%    \pause
-%
-%        {\bf False-belief situation}
-%    \end{center}
-%\end{frame}
-%
+
+\begin{frame}[plain]
+
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{videos/this_box_thumb}
+
+        What if I ask for the object in the box, but the robot has
+        moved it somewhere else?
+
+
+    \pause
+
+        {\bf False-belief situation}
+    \end{center}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
 \paper{Ros, Lemaignan et al., {\bf Which One? Grounding the Referent Based on Efficient HRI}, ROMAN 2010}
-\begin{frame}{Parallel Models: towards theory of mind}
+\begin{frame}{Parallel Models: towards a theory of mind}
         \begin{multicols}{2}
             \begin{figure}
                 \resizebox{0.4\textwidth}{!}{
@@ -743,7 +754,7 @@ Plymouth University}}
                 right] (table);
                 \node [instance, right=2 of book] (red) {red} edge[property] node[propname] {hasColor} (book);
 
-                \node [instance,right=1 of robot,fill=hriSec2] {myself} edge[property] node[propname, auto,above] {$\equiv$} (robot);
+                \node<2> [instance,right=1 of robot,fill=hriSec2] {myself} edge[property] node[propname, auto,above] {$\equiv$} (robot);
 
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
@@ -794,7 +805,7 @@ Plymouth University}}
                 right] (table);
                 \node [instance, right=2 of book] (red) {red} edge[property] node[propname] {hasColor} (book);
 
-                \node [instance,below left=1 of human,fill=hriSec2] {myself} edge[property] node[propname, auto,above] {$\equiv$} (human);
+                \node<2> [instance,below left=1 of human,fill=hriSec2] {myself} edge[property] node[propname, auto,above] {$\equiv$} (human);
 
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
@@ -844,7 +855,7 @@ Plymouth University}}
                 right] (table);
                 \node [instance, right=2 of book] (red) {red} edge[property] node[propname] {hasColor} (book);
 
-                \node [instance,below=1 of human2,fill=hriSec2] {myself} edge[property] node[propname, auto] {$\equiv$} (human2);
+                \node<2> [instance,below=1 of human2,fill=hriSec2] {myself} edge[property] node[propname, auto] {$\equiv$} (human2);
 
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
@@ -876,7 +887,7 @@ Plymouth University}}
 \begin{frame}{Experimental work}
 
         \begin{tikzpicture}
-            \node[rotate=90,text width=2cm]{\textbf{Social HRI\\in the field}};
+            \node[rotate=90,text width=2cm]{\textbf{Understanding\\ social interaction}};
         \end{tikzpicture}
             \hyperlink{croquignole}{\includegraphics[height=0.2\paperheight]{ranger/croquignole-single}}
             \hspace{0.5em}
@@ -947,42 +958,163 @@ Plymouth University}}
 
 \section{What's next on our agenda?}
 
-\begin{frame}{}
+\begin{frame}<1>[label=whatsnext]{}
     \badge{europe_plym}
 
     \begin{center}
 
     \Large
-    \bf To push the boundaries of social robotics, we need to stress our robots
+    \bf How to push the boundaries of social robotics?
 
     \end{center}
 
     \begin{itemize}
-        \item unpredictable situations
+        \item open, underspecified situations
         \item complex social dynamics
         \item rich semantics
+        \item interplay of several socio-cognitive functions
     \end{itemize}
 
-    \pause
+\end{frame}
 
+{
+\paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
+\begin{frame}<5>{Surface functions for Social Cognition}
+\centering
+        \resizebox{!}{0.7\paperheight}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                every edge/.style={<-, draw, very thick}]
+        
+
+            \path[small mindmap, 
+                level 1 concept/.append style={sibling angle=360/6}, 
+                level 2 concept/.append style={sibling angle=60}, 
+            concept color=white,text=hriWarmGreyDark]
+            node[concept, visible on=<1-5>] {\bf Social\\Cognition in HRI}
+            [clockwise from=30]
+            child[concept color=hriSec1,text=white] { node[concept] (percept) {Perception of Human's State}
+                [clockwise from=120]
+                child[concept color=hriSec3Dark,text=white] { node[concept]
+                (emotions) {Empathy Emotions} }
+                child[concept color=hriSec2Dark,text=white] { node[concept] (attention) {Attention} }
+                child[concept color=hriSec2CompDark,text=white] { node[concept] (mmodel) {Inference of mental models} };
+            }
+            child[concept color=hriSec2Comp,text=white,grow=-45, visible on=<2->] { node[concept] (knowledge) {Social Knowledge} 
+                [counterclockwise from=-140]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (soc-rules) {Social rules} }
+                child[concept color=hriSec3Comp,text=black] { node[concept] (soc-ctxt) {Social context} }
+                child[concept color=hriSec2Dark,text=white] { node[concept] (memory) {Social memory} }
+                child[concept color=hriSec3CompDark,text=white] { node[concept] (common-sense) {Common-sense} };
+            }
+            child[concept color=hriSec3Comp,text=black, grow=-120,visible on=<3->] { node[concept] (comm) {Communication} 
+                [counterclockwise from=180]
+                child[concept color=hriSec1CompDark,text=white] { node[concept] (dialog) {Verbal} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] (non-verbal) {Non-verbal} };
+            }
+            child[concept color=hriSec3,text=white,grow=180,visible on=<4->] { node[concept] (dynamics) {Interaction Dynamics} 
+                [clockwise from=180]
+                child[concept color=hriSec2Dark,text=white] { node[concept] (long-term) {Long-term interaction} };
+            }
+            child[concept color=hriSec2,text=black, grow=120,visible on=<5->] { node[concept] (action) {Performing with humans} 
+                [counterclockwise from=80]
+                child[concept color=hriSec2CompDark,text=white] { node[concept] {Action, behaviour recognition} }
+                child[concept color=hriSec1Dark,text=white] { node[concept] {Intention reading} }
+                child[concept color=hriSec3,text=white] { node[concept] (joint-action) {Joint actions} };
+            };
+
+
+        \end{tikzpicture}
+    }
+    \badge{europe_plym}
+\end{frame}
+}
+
+\begin{frame}{Yet...}
+    \badge{europe_plym}
+
+    \begin{itemize}
+        \item<+-> natural interaction $\Rightarrow$ meaningful task
+        \item<+-> realistic with today's technologies
+        \item<+-> reproducible and measurable
+        \item<+-> focused on social cognition
+    \end{itemize}
+
+    \only<+-> {
     \begin{center}
 
     \Large
 
-    \bf What task??
+    \bf Finding the right task is difficult!
 
     \end{center}
+}
+\end{frame}
+
+{
+    \paper{Parten, {\bf Social participation among preschool children} Journal
+    of Abnormal and Social Psychology 1932}
+\begin{frame}[label=parten]{Theoretical framework: stages of play}
+
+    In developmental psychology, Parten's {\bf stages of play}:
+
+    \begin{enumerate}
+        \item<1-> \includegraphics[height=1cm]{figs/stagesofplay/solitary} {\bf Solitary (independent) play}
+        \item<2-> \includegraphics[height=1cm]{figs/stagesofplay/onlooker} {\bf Onlooker play}
+        \item<3-> \includegraphics[height=1cm]{figs/stagesofplay/parallel}{\bf Parallel play}
+        \item<4-> \includegraphics[height=1cm]{figs/stagesofplay/associative}{\bf Associative play}
+        \item<5-> \includegraphics[height=1cm]{figs/stagesofplay/cooperative}{\bf Cooperative play}
+    \end{enumerate}
+
+    \note{
+    \begin{enumerate}
+        \item {\bf Solitary (independent) play}: Playing separately from
+            others, with no reference to what others are doing.
+        \item {\bf Onlooker play}: Watching others play. May engage in
+            conversation but not engaged in doing. True focus on the children at
+            play.
+        \item {\bf Parallel play} (adjacent play, social coaction): Playing
+            with similar objects, clearly beside others but not with them (near
+            but not with others.)
+        \item {\bf Associative play}:  Playing with others without
+            organization of play activity. Initiating or responding to
+            interaction with peers. 
+        \item {\bf Cooperative play}: Coordinating one’s behavior with that
+            of a peer. Everyone has a role, with the emergence of a sense of
+            belonging to a group. Beginning of "team work."
+    \end{enumerate}
+    }
+
 
 \end{frame}
+}
 
 \videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv}
 %\videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv?autostart&noaudio}
 
-\imageframe{freeplay/setup}
+\imageframe[caption=Free-play sandbox]{freeplay/setup}
 \imageframe[color=black]{freeplay/analysis}
+
+\note{
+
+    Many dimensions:
+
+    \begin{itemize}
+        \item communication
+            \begin{itemize}
+                \item gaze \& visual attention
+                \item social gestures
+            \end{itemize}
+    \end{itemize}
+
+
+    Large dataset acquisition: we target about 50 interactions, around 15 min
+    each -- two age groups: 4 years old / 7 years old
+}
+
 %\videoframe[0.56]{figs/freeplay/zoo-builder-proto-smaller.mkv}
 
-\begin{frame}{The big questions}
+\begin{frame}{Open research questions}
     \badge{europe_plym}
 
     \begin{center}
@@ -991,10 +1123,11 @@ Plymouth University}}
 
 
     \begin{itemize}
-        \item \bf Dimensionality Reduction?
-        \item {\bf Task-independent social dynamics?}\\{\large interaction flow, adaptation,
+        \item \bf Dimensionality reduction
+        \item {\bf Task-independent social dynamics}\\{\large interaction flow, adaptation,
             social patterns...}
-        \item \bf Situation awareness?
+        \item \bf Situation awareness\\{\large what happens? who does what?
+            why?\\ $\rightarrow$ mind modelling}
         \item<2> \bf ...a principled model of social cognition?
     \end{itemize}
 
@@ -1025,7 +1158,7 @@ Plymouth University}}
     \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013] \newline
     [Jaeger {\bf Controlling recurrent neural networks by conceptors} -- 2014}
 
-\begin{frame}{}
+\begin{frame}{A direction}
     \badge{europe_plym}
 
     \begin{center}
@@ -1046,7 +1179,7 @@ Plymouth University}}
     \pause
 
     \begin{itemize}
-        \item Instrumental role of \textbf{attention}
+        \item Instrumental role of \textbf{\hyperlink{attentionschemata}{attention}}
         \item Unsupervised \textbf{recurrent neural networks} to model others'
             minds $\rightarrow$ a \textbf{connectionist theory of mind}
 
@@ -1086,7 +1219,7 @@ Plymouth University}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Key Milestones for HRI}
+\begin{frame}{Key outcomes for HRI}
 
     \begin{itemize}
 
@@ -1094,31 +1227,32 @@ Plymouth University}}
             flow}
 
         \item {\bf surface and deep behavioural alignment}
-            %: each time we play together, our
-            %interaction flow improves, becomes more natural
+            \note[item]{behavioural alignment: each time we play together, our
+            interaction flow improves, becomes more natural}
 
 
-        \item {\bf generation of   'natural' (\ie emergent) turn-taking}
-            %: I 'just' know when it is my
-            %turn to act
-
-        \item {\bf 'natural' protodeclarative pointing}
-            %: I 'just' know when I really
-            %need to draw your attention on something
+        \item {\bf allow the robot to merge into natural social dynamics}
+            \begin{itemize}
+                \item 'natural' (\ie emergent) turn-taking
+                \item 'natural' protodeclarative pointing
+            \end{itemize}
+            \note[item]{natural social dynamics: I 'just' know when it is my
+            turn to act; I 'just' know when I really need to draw your attention
+            on something}
 
     \end{itemize}
 
     \pause
     \begin{itemize}
-%        \item {\bf recursive awareness}: \emph{being aware of being aware} -- typically
-%            evidenced by being able to describe/verbalize its own state of
-%            awareness 
+            %        \item {\bf recursive awareness}: \emph{being aware of being aware} -- typically
+            %            evidenced by being able to describe/verbalize its own state of
+            %            awareness 
         \item ability to pass non-perceptual {\bf false-belief tasks}
             %, including
             %non-perceptual, non-physical, abstract ones,
 
-        \item {\bf replication of \hyperlink{parten}{Parten's stages of
-            play}}
+        \item {\bf emergence of \hyperlink{parten}{Parten's stages of
+            play}?}
 
 
     \end{itemize}
@@ -1538,6 +1672,8 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\againframe<3>{sitass}
+
 {
 \paper{Lemaignan et al. {\bf Grounding the Interaction: Anchoring
 Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
@@ -1567,6 +1703,7 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
         }
     }
     \badge{europe_phd}
+    \backbutton{}
 \end{frame}
 }
 
@@ -2327,7 +2464,7 @@ Situated Discourse in Everyday HRI} -- Intl. J. of Social Robotics 2011}
 
 {
     \paper{Graziano {\bf Consciousness and the Social Brain} -- 2013}
-\begin{frame}{Modeling others' mind?}
+\begin{frame}[label=attentionschemata]{Modeling others' mind?}
     \large
     In cognitive neurosciences: Graziano's \emph{Attention Schemata Theory}
 
@@ -2570,14 +2707,11 @@ Model of Attention} 1995; Block 1996}
 
     \pause
 
-    How? ...recruit me to discover ;-)
-
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Experimental investigation}
+\section{The freeplay sandbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2616,6 +2750,8 @@ Model of Attention} 1995; Block 1996}
 
 \videoframe[0.56]{figs/freeplay/zoo-builder-proto-smaller.mkv}
 
+
+\imageframe{figs/freeplay/freeplay-sandbox-architecture.pdf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
@@ -2672,9 +2808,11 @@ Model of Attention} 1995; Block 1996}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Theories on theory of mind}
+\section{Theory of mind}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\videoframe[0.56]{videos/falsebeliefs.webm}
 
 \begin{frame}{}
 
@@ -2923,34 +3061,6 @@ constraining function [...]}, Cognition, 1983]\newline
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Parten, {\bf Social participation among preschool children} Journal
-    of Abnormal and Social Psychology 1932}
-\begin{frame}[label=parten]{Theoretical framework: stages of play}
-
-    In developmental psychology, Parten's {\bf stages of play}:
-
-    \begin{enumerate}
-        \item<1-> {\bf Solitary (independent) play}: Playing separately from
-            others, with no reference to what others are doing.
-        \item<2-> {\bf Onlooker play}: Watching others play. May engage in
-            conversation but not engaged in doing. True focus on the children at
-            play.
-        \item<3-> {\bf Parallel play} (adjacent play, social coaction): Playing
-            with similar objects, clearly beside others but not with them (near
-            but not with others.)
-        \item<4-> {\bf Associative play}:  Playing with others without
-            organization of play activity. Initiating or responding to
-            interaction with peers. 
-        \item<5-> {\bf Cooperative play}: Coordinating one’s behavior with that
-            of a peer. Everyone has a role, with the emergence of a sense of
-            belonging to a group. Beginning of "team work."
-    \end{enumerate}
-
-\end{frame}
-}
-
 
 \section{Dynamics of Interaction}
 
