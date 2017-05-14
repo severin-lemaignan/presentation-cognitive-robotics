@@ -194,63 +194,43 @@ Plymouth University}}
         \begin{center}
                     \begin{tikzpicture}[>=latex]
                         \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/events}};
-                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it SOFT252};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/grassfire}};
-                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it
-                        SOFT561};
+                        {\includegraphics[width=0.3\linewidth]{teaching/nyquist}};
                     \end{tikzpicture}
                     \begin{tikzpicture}[>=latex]
                         \node
                         {\includegraphics[width=0.3\linewidth]{teaching/kalman}};
-                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it ROCO503};
-                    \end{tikzpicture}
-
-            \pause
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/git}};
-                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it SOFT152};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/nyquist}};
-                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it ROCO222};
                     \end{tikzpicture}
                     \begin{tikzpicture}[>=latex]
                         \node
                         {\includegraphics[width=0.3\linewidth]{teaching/3d}};
-                        \node[fill=hriSec3!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it SOFT153};
                     \end{tikzpicture}
+
             \pause
                     \begin{tikzpicture}[>=latex]
                         \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/ros}};
-                        \node[fill=hriSec1!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it NET302};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
                         {\includegraphics[width=0.3\linewidth]{teaching/omnidirectional}};
-                        \node[fill=hriSec2!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it ROCO318};
                     \end{tikzpicture}
                     \begin{tikzpicture}[>=latex]
                         \node
                         {\includegraphics[width=0.3\linewidth]{teaching/costmap}};
-                        \node[fill=hriSec2Dark!20,draw,rotate=-45] at (1,1)
-                        {\tiny\it AINT252};
                     \end{tikzpicture}
-
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/grassfire}};
+                    \end{tikzpicture}
+            \pause
+                    \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/git}};
+                    \end{tikzpicture}
+                       \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/ros}};
+                    \end{tikzpicture}
+                 \begin{tikzpicture}[>=latex]
+                        \node
+                        {\includegraphics[width=0.3\linewidth]{teaching/events}};
+                    \end{tikzpicture}
         \end{center}
 
 \end{frame}
@@ -298,7 +278,7 @@ Plymouth University}}
 \imageframe[color=black]{perso/robots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Research background\newline Symbolic Social Cognition}
+\section*{Symbolic Social Cognition}
 
 
 \imageframe{pr2-baby-3}
@@ -392,7 +372,7 @@ Plymouth University}}
         \node [instance, below=3 of agent] (human) {human\_1} edge[classof, bend left] (agent);
         \node [instance, above left=of human] (human2) {human\_2} edge[classof, bend left] (agent);
         \node [instance, above right=of human, anchor=south] (robot) {myself} edge[classof, bend left] (agent);
-        \node [instance, right=of human, anchor=north west] (book) {book\_game\_thrones}
+        \node [instance, right=of human, anchor=north west] (book) {book\_harry\_potter}
         edge[classof] (artifact);
         \node [instance, right=2 of robot] (ikea) {ikea\_table} edge[classof, bend
         right] (table);
@@ -403,9 +383,11 @@ Plymouth University}}
         \uncover<3>{
         \draw[dotted, thick] (-8,-6.2) -- +(16, 0);
 
-        \node [instance, below=5 of act] (moving) {move\_act\_42} edge[classof] (act);
-        \path (moving.west) edge [property, out=180, in=-80, looseness=1] node[propname,below] {currentlyPerforms} (human.230);
-        \path (human.280) edge [property, out=-80, in=-90, looseness=3.5] node[propname,right] {looksAt} (robot.south);
+        \node [instance, below=5 of act] (moving) {move\_to\_socket} edge[classof] (act);
+        \path (moving.south west) edge [property, out=200, in=-80,looseness=0.9] node[propname,below] {currentlyPerforms} (human2);
+
+        \path (robot.south) edge [property, out=-80, in=-90, looseness=2] node[propname,right] {looksAt} (human.290);
+        \path (book.south) edge [property, out=-100, in=-90, looseness=1] node[propname,below] {looksAt} (human.270);
         \path (ikea.south) edge [property, out=-90, in=-80, looseness=2.5] node[propname, auto] {isOn} (book.320);
         }
         \end{tikzpicture}
@@ -444,7 +426,7 @@ Plymouth University}}
 %        {\tt me} $\rightarrow$ {\tt human\_1} \\
 %        find({\tt\scriptsize ?obj type table}) $\rightarrow$ {\tt ikea\_table} \\
 %        find({\tt\scriptsize ?obj type book, ?obj isOn ikea\_table})
-%        $\rightarrow$ {\tt book\_game\_thrones} \\
+%        $\rightarrow$ {\tt book\_harry\_potter} \\
 %    }
 %
 %    \uncover<3-> {
@@ -637,9 +619,9 @@ Plymouth University}}
 
                 \node [instance, below=3 of agent] (human) {human\_1} edge[classof, bend left] (agent);
                 \node [instance, above left=of human] (human2) {human\_2} edge[classof, bend left] (agent);
-                \node [instance, above right=of human, anchor=south] (robot) {pr2\_robot} edge[classof, bend left] (agent);
+                \node [instance, above right=of human, anchor=south] (robot) {robot} edge[classof, bend left] (agent);
 ;
-                \node [instance, right=of human, anchor=north west] (book) {book\_game\_thrones}
+                \node [instance, right=of human, anchor=north west] (book) {book\_harry\_potter}
                 edge[classof] (artifact);
                 \node [instance, right=3 of robot] (ikea) {ikea\_table} edge[classof, bend
                 right] (table);
@@ -649,8 +631,9 @@ Plymouth University}}
 
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
-                \path (book.200) edge [property, out=-100, in=-80, looseness=2]
-                node[propname,auto] {isNextTo} (human.south);
+                \path (book.200) edge [property, out=-100, in=-80, looseness=2] node[propname,auto] {looksAt} (human.south);
+                \node [instance, below=5 of act] (moving) {move\_to\_socket} edge[classof] (act);
+                \path (moving.south west) edge [property, out=200, in=-80,looseness=1] node[propname,below] {currentlyPerforms} (human2);
                 \path (book.270) edge [property, out=-100, in=-90, looseness=3.5] node[propname,auto] {looksAt} (robot.south);
                 \path (ikea.south) edge [property, out=-90, in=-80, looseness=3] node[propname, auto] {isOn} (book.320);
                 \end{tikzpicture}
@@ -688,9 +671,9 @@ Plymouth University}}
 
                 \node [instance, below=3 of agent] (human) {human\_1} edge[classof, bend left] (agent);
                 \node [instance, above left=of human] (human2) {human\_2} edge[classof, bend left] (agent);
-                \node [instance, above right=of human, anchor=south] (robot) {pr2\_robot} edge[classof, bend left] (agent);
+                \node [instance, above right=of human, anchor=south] (robot) {robot} edge[classof, bend left] (agent);
 ;
-                \node [instance, right=of human, anchor=north west] (book) {book\_game\_thrones}
+                \node [instance, right=of human, anchor=north west] (book) {book\_harry\_potter}
                 edge[classof] (artifact);
                 \node [instance, right=3 of robot] (ikea) {ikea\_table} edge[classof, bend
                 right] (table);
@@ -701,7 +684,7 @@ Plymouth University}}
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
                 \path (book.200) edge [property, out=-100, in=-80, looseness=2]
-                node[propname,auto] {isNextTo} (human.south);
+                node[propname,auto] {looksAt} (human.south);
                 \path (book.270) edge [property, out=-100, in=-90, looseness=3.5] node[propname,auto] {looksAt} (robot.south);
                 \path (ikea.south) edge [property, out=-90, in=-80, looseness=3] node[propname, auto] {isOn} (book.320);
                 \end{tikzpicture}
@@ -738,9 +721,9 @@ Plymouth University}}
 
                 \node [instance, below=3 of agent] (human) {human\_1} edge[classof, bend left] (agent);
                 \node [instance, above left=of human] (human2) {human\_2} edge[classof, bend left] (agent);
-                \node [instance, above right=of human, anchor=south] (robot) {pr2\_robot} edge[classof, bend left] (agent);
+                \node [instance, above right=of human, anchor=south] (robot) {robot} edge[classof, bend left] (agent);
 ;
-                \node [instance, right=of human, anchor=north west] (book) {book\_game\_thrones}
+                \node [instance, right=of human, anchor=north west] (book) {book\_harry\_potter}
                 edge[classof] (artifact);
                 \node [instance, right=3 of robot] (ikea) {ikea\_table} edge[classof, bend
                 right] (table);
@@ -750,10 +733,6 @@ Plymouth University}}
 
                 \draw[dotted, thick] (-7,-8) -- (7.5, -8);
 
-                \path (book.200) edge [property, out=-100, in=-80, looseness=2]
-                node[propname,auto] {isNextTo} (human.south);
-                \path (book.270) edge [property, out=-100, in=-90, looseness=3.5] node[propname,auto] {looksAt} (robot.south);
-                \path (ikea.south) edge [property, out=-90, in=-80, looseness=3] node[propname, auto] {isOn} (book.320);
                 \end{tikzpicture}
             }
             \end{figure}
@@ -1152,9 +1131,9 @@ Plymouth University}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Research Vision}
+\section*{Research Vision}
 
-\begin{frame}<1>[label=whatsnext]{}
+\begin{frame}<1>[plain,label=whatsnext]{}
     %\badge{europe_plym}
 
     \begin{center}
@@ -1163,15 +1142,18 @@ Plymouth University}}
     \bf How to push the boundaries of social robotics?
 
     \end{center}
-
-    \begin{itemize}
-        \item open, underspecified situations
-        \item complex social dynamics
-        \item rich semantics
-        \item interplay of several socio-cognitive functions
-    \end{itemize}
-
 \end{frame}
+
+
+\imageframe[caption={open, underspecified situations\par complex~social~dynamics\par rich~semantics\par interplay~of~socio-cognitive~functions}]{pr2-baby-3}
+
+%    \begin{itemize}
+%        \item open, underspecified situations
+%        \item complex social dynamics
+%        \item rich semantics
+%        \item interplay of several socio-cognitive functions
+%    \end{itemize}
+
 
 {
 \paper{Baxter, Lemaignan, Trafton {\bf Workshop on Cognitive Architectures for Social HRI} -- HRI 2016}
@@ -1226,26 +1208,21 @@ Plymouth University}}
 \end{frame}
 }
 
-\begin{frame}{Yet...}
-    %\badge{europe_plym}
+\imageframe[caption={yet...}]{pr2-baby-3}
+
+\note{
+    Finding the right task is difficult!
 
     \begin{itemize}
-        \item<+-> natural interaction $\Rightarrow$ meaningful task
-        \item<+-> realistic with today's technologies
-        \item<+-> reproducible and measurable
-        \item<+-> focused on social cognition
+        \item natural interaction $\Rightarrow$ meaningful task
+        \item realistic with today's technologies
+        \item reproducible and measurable
+        \item focused on social cognition
     \end{itemize}
-
-    \only<+-> {
-    \begin{center}
-
-    \Large
-
-    \bf Finding the right task is difficult!
-
-    \end{center}
 }
-\end{frame}
+
+%\videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv}
+\videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv?autostart&noaudio}
 
 {
     \paper{Parten, {\bf Social participation among preschool children} Journal
@@ -1255,11 +1232,11 @@ Plymouth University}}
     In developmental psychology, Parten's {\bf stages of play}:
 
     \begin{enumerate}
-        \item<1-> \includegraphics[height=1cm]{figs/stagesofplay/solitary} {\bf Solitary (independent) play}
-        \item<2-> \includegraphics[height=1cm]{figs/stagesofplay/onlooker} {\bf Onlooker play}
-        \item<3-> \includegraphics[height=1cm]{figs/stagesofplay/parallel}{\bf Parallel play}
-        \item<4-> \includegraphics[height=1cm]{figs/stagesofplay/associative}{\bf Associative play}
-        \item<5-> \includegraphics[height=1cm]{figs/stagesofplay/cooperative}{\bf Cooperative play}
+        \item \includegraphics[height=1cm]{figs/stagesofplay/solitary} {\bf Solitary (independent) play}
+        \item \includegraphics[height=1cm]{figs/stagesofplay/onlooker} {\bf Onlooker play}
+        \item \includegraphics[height=1cm]{figs/stagesofplay/parallel}{\bf Parallel play}
+        \item \includegraphics[height=1cm]{figs/stagesofplay/associative}{\bf Associative play}
+        \item \includegraphics[height=1cm]{figs/stagesofplay/cooperative}{\bf Cooperative play}
     \end{enumerate}
 
     \note{
@@ -1285,9 +1262,6 @@ Plymouth University}}
 \end{frame}
 }
 
-%\videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv}
-\videoframe[0.56]{figs/freeplay/maud-zoe-pilot-edit.mkv?autostart&noaudio}
-
 \imageframe[caption=Free-play sandbox]{freeplay/setup}
 \imageframe[color=black]{freeplay/freeplay-sandbox-screenshot}
 %\imageframe[color=black]{freeplay/analysis}
@@ -1311,7 +1285,7 @@ Plymouth University}}
 
 %\videoframe[0.56]{figs/freeplay/zoo-builder-proto-smaller.mkv}
 
-\begin{frame}{Open research questions}
+\begin{frame}{What is to be investigated?}
     %\badge{europe_plym}
 
     \begin{center}
@@ -1427,7 +1401,7 @@ Plymouth University}}
             interaction flow improves, becomes more natural}
 
 
-        \item {\bf allow the robot to merge into natural social dynamics}
+        \item {\bf enable the robot to merge into natural social dynamics}
             \begin{itemize}
                 \item 'natural' (\ie emergent) turn-taking
                 \item 'natural' protodeclarative pointing
@@ -1443,7 +1417,7 @@ Plymouth University}}
             %        \item {\bf recursive awareness}: \emph{being aware of being aware} -- typically
             %            evidenced by being able to describe/verbalize its own state of
             %            awareness 
-        \item ability to pass non-perceptual {\bf false-belief tasks}
+        \item artifical {\bf Theory of Mind beyond purely perceptual models}
             %, including
             %non-perceptual, non-physical, abstract ones,
 
