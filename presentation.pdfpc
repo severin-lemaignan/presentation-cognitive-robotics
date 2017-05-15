@@ -1,0 +1,70 @@
+[file]
+presentation.pdf
+[notes]
+### 4
+
+- Sept 2017: lecturer at Plymouth
+### 5
+Teaching experience in:
+
+- theoretical foundations -- maths, physics, probabilistic algorithms
+
+- robotics -- kinematics, algorithms
+
+- computer science: software engineering, distributed computing, middleware, programming### 8
+
+- Mix of geometry, time, semantics
+- High geometric/temporal granularity (e.g. nodding)
+- Lots of common-sense knowledge, cultural background
+- Account for uncertainties
+- Remember past experiences, predict future events
+### 23
+Finding the right task is difficult
+
+- natural interaction -> meaningful task
+- realistic with today's technologies
+- *reproducible and mesurable*
+- focused on social cognition
+### 25
+- Solitary (independent) play}: Playing separately from others, with no reference to what others are doing.
+
+- Onlooker play}: Watching others play. May engage in conversation but not engaged in doing. True focus on the children at play
+
+- Parallel play} (adjacent play, social coaction): Playing with similar objects, clearly beside others but not with them (near but not with others.)
+
+- Associative play}:  Playing with others without organization of play activity. Initiating or responding to interaction with peers.
+
+- Cooperative play}: Coordinating one’s behavior with that of a peer. Everyone has a role, with the emergence of a sense of belonging to a group. Beginning of "team work."
+### 26
+
+- make it *technically tractable* 
+  - physical playground replaced by large touchscreen (sandtray)
+  - sidelines the difficult problem of perception and
+manipulation in a dense & cluttered scene
+
+- the touchscreen strictly replace the perception of objects on
+the playground (exports ROS TF frames of each object) and
+their manipulation (receives virtual ’touches’ from the robot)
+
+- importantly, perception of the partner and of the global scene
+geometry is genuine: still *situated interaction*### 27
+
+Open-ended task: more an experimental framework than a task.
+
+- free play, yet sufficiently well-defined to be reproducible
+- focus on abstract socio-cognitive facets (perception is
+simplified; manipulation is mostly avoided)
+
+Besides, well suited for interaction analysis, with tools like:
+
+- behavioural alignment between partners: for instance, using
+Słowinski’s Individual Motor Signature
+- Ballard’s (and Anderson’s extension) coding of children’s
+free-play interactions
+- With-me-ness as a metric of co-engagment
+
+### 29
+
+- *behavioural alignment*: each time we play together, our interaction flow improves, becomes more natural
+
+- *natural social dynamics*: I 'just' know when it is my turn to act; I 'just' know when I really need to draw your attention on something
