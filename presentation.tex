@@ -66,7 +66,7 @@
 %--------------------------------------------------------------------------
 \title{Of Cognition and Social Robots}
 \subtitle{on the way to artificial social cognition in HRI}
-\date{University of Edinburgh -- {\bf 15 May 2017}}
+\date{Heriot-Watt University -- {\bf 16 May 2017}}
 \author{Séverin Lemaignan}
 \institute{Centre for Robotics and Neural Systems\\{\bf
 Plymouth University}}
@@ -114,13 +114,13 @@ Plymouth University}}
 
                 \node<2-3>[text width=5cm] at (page cs:-0.5,0.1) (msc) {\footnotesize Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
                 in \textbf{Mechanical Engineering}
-
-                \emph{top ten student out of 1000}
+                %
+                %\emph{top ten student out of 1000}
                 };
                 \node<3>[text width=5cm] at (page cs:-0.5,-0.28) (msc2)
                 {\footnotesize MSc in \textbf{AI for Learning technologies} (Paris 5)
-                
-                \emph{top student of the year}
+                %
+                %\emph{top student of the year}
                 };
 
                 \path<2-3>[->,ultra thick] (msc) edge (kit);
@@ -132,147 +132,37 @@ Plymouth University}}
                 PhD in \textbf{AI \& Cognitive Robotics}
                 \vspace{1em}
 
-                \emph{Best 2012 CNRS PhD in Robotics}\\
-                \emph{PhD with High Distinction @TUM}
+                %\emph{Best 2012 CNRS PhD in Robotics}\\
+                %\emph{PhD with High Distinction @TUM}
                 };
 
                 \path<4>[->,ultra thick] (phd) edge (toulouse);
                 \path<4>[->,ultra thick] (phd) edge (tum);
+
+                \node<5>[text width=5cm] at (page cs:-0.5,-0.1) (postdoc-epfl)
+                {\footnotesize \textbf{Post-doc at EPFL}
+                \vspace{1em}
+
+                \emph{Supervision of the HRI team}\\
+                \emph{Two main projects: CoWriter \& Cellulo}
+                };
+
+                \path<5>[->,ultra thick] (postdoc-epfl) edge (epfl);
+
+                \node<6>[text width=5cm] at (page cs:-0.5,-0.1) (postdoc-plym)
+                {\footnotesize \textbf{Post-doc at Plymouth University}
+                \vspace{1em}
+
+                \emph{EU Marie Skłodowska-Curie fellow} \\
+                \emph{Social Cognition in Robotics}
+                };
+
+                \path<6>[->,ultra thick] (postdoc-plym) edge (plym);
+
+
             \end{tikzpicture}
     \end{frame}
 }
-
-%\begin{frame}{Academic Curriculum}
-%    \begin{itemize}
-%        \item<1-> Joint French (ParisTech) German (Karlsruhe Institute of Technology) MSc
-%            in mechanical engineering
-%            \begin{itemize}
-%                \item \textbf{top ten student} out of 1000
-%            \end{itemize}
-%        \item<1-> MSc in AI for Learning technologies (University Paris 5)
-%            \begin{itemize}
-%                \item \textbf{top student} of the year
-%            \end{itemize}
-%        \item<2-> Joint French (CNRS LAAS) German (Technical University of Munich)
-%            PhD in AI \& Cognitive Robotics
-%            \begin{itemize}
-%                \item \textbf{Best 2012 CNRS PhD in Robotics}
-%                \item \textbf{High Distinction} in Germany
-%            \end{itemize}
-%
-%    \end{itemize}
-%
-%
-%\end{frame}
-
-\begin{frame}{Since my PhD}
-    2013--2015  \textbf{Post-doc at EPFL}
-    \begin{itemize}
-        \item<+-> built up a leading group in child-robot interaction
-        \item<+-> went up to 3 PhD + 3 MSc students
-        \item<+-> joint supervisions with Portugal, France
-        \item<+-> 2 high-visibility projects with large media coverage
-        \item<+-> 8 papers in 5 years at high-profile HRI conference, 3 awards
-    \end{itemize}
-
-    \onslide<6->
-    2015--2017 \textbf{EU Marie Skłodowska-Curie fellow} at Plymouth University on
-    \textbf{Theory of Mind} \& \textbf{Social cognition for robots}
-
-    \onslide<7->
-
-    \vspace{1em}
-    \large\centering
-    \textbf{60+ publications}; \textbf{1000+ citations}; \textbf{H-index=15}
-
-\end{frame}
-
-\imageframe[color=black]{teaching}
-
-\begin{frame}[plain]
-
-        \begin{center}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/nyquist}};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/kalman}};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/3d}};
-                    \end{tikzpicture}
-
-            \pause
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/omnidirectional}};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/costmap}};
-                    \end{tikzpicture}
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/grassfire}};
-                    \end{tikzpicture}
-            \pause
-                    \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/git}};
-                    \end{tikzpicture}
-                       \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/ros}};
-                    \end{tikzpicture}
-                 \begin{tikzpicture}[>=latex]
-                        \node
-                        {\includegraphics[width=0.3\linewidth]{teaching/events}};
-                    \end{tikzpicture}
-        \end{center}
-
-\end{frame}
-
-\begin{frame}{CS expertise}
-%    \only<1> {
-%        \begin{itemize}
-%            \item Formal teaching position during PhD
-%                \begin{itemize}
-%                    \item java, prolog, ontologies, ada, databases
-%                \end{itemize}
-%            \item Guest lectures at undergraduate \& postgraduate level
-%                \begin{itemize}
-%                    \item ROS, GIT, Python for robotics, robotic simulation, 3D
-%                        modelling...
-%                \end{itemize}
-%            \item Autumn term 2016: \emph{Lecturer at Plymouth University}
-%                \begin{itemize}
-%                    \item ROCO318 -- Mobile and Humanoid Mobile Robots
-%                \end{itemize}
-%        \end{itemize}
-%    }
-%
-%    \only<2> {
-
-        \begin{itemize}
-            \item \textbf{advanced C++} (C++11/14, STL, meta-programming)
-            \item \textbf{advanced Python} (meta-programming)
-            \item \textbf{software engineering} (GIT expertise, coding best practises)
-            \item logic programming (Prolog, ontologies)
-            \item distributed systems (middlewares)
-            \item computer vision \& 3D rendering (OpenGL)
-            \item algorithms \& data structures
-        \end{itemize}
-
-        \textbf{120+ open-source repositories} on GitHub; \textbf{contributor to major
-        open-source projects} like \textbf{ROS}, \textbf{OpenCV}
-
-%    }
-
-
-\end{frame}
 
 \imageframe[color=black]{perso/robots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -404,149 +294,248 @@ Plymouth University}}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%{
-%\paper{Lemaignan et al. {\bf Grounding the Interaction: Anchoring
-%Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
-%\begin{frame}{Dialogue Grounding}
-%    \centering
-%
-%    I keep the NLP details for the questions, but:\\
-%
-%    \begin{columns}
-%        \begin{column}{0.65\linewidth}
-%
-%    \centering
-%    \vspace*{2em}
-%    {\bf ``Give me the book on the table''}\\
-%
-%    \uncover<2-> {
-%        $\downarrow$\\
-%        {\tt me} $\rightarrow$ {\tt human\_1} \\
-%        find({\tt\scriptsize ?obj type table}) $\rightarrow$ {\tt ikea\_table} \\
-%        find({\tt\scriptsize ?obj type book, ?obj isOn ikea\_table})
-%        $\rightarrow$ {\tt book\_harry\_potter} \\
-%    }
-%
-%    \uncover<3-> {
-%        $\downarrow$\\
-%        { \tt
-%            \textbf{human\_1} desires \textbf{give\_act\_1}, \\
-%            \textbf{give\_act\_1} type \textbf{Give}, \\
-%            \textbf{give\_act\_1} performedBy \textbf{myself}, \\
-%            \textbf{give\_act\_1} actsOnObject \textbf{book}, \\
-%            \textbf{give\_act\_1} receivedBy \textbf{human\_1} \\
-%        }
-%    }
-%            
-%        \end{column}
-%        \begin{column}{0.35\linewidth}
-%         \resizebox{\linewidth}{!}{%
-% 
-% 
-%             \begin{tikzpicture}[
-%                     >=latex,
-%                 every edge/.style={draw, very thick},
-%                 skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-%                 label/.style={midway, align=center, font=\scriptsize, above},
-%                 subpart/.style={rounded corners, draw, align=center, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}]
-% 
-%             %%% PARSING
-% 
-%             \node at (0,0)[skill, fill=hriSec3CompDark!50] (prepro) {Pre-processing};
-%                 \node [left=0.7 of prepro] (input) {\textbf{Input}};
-%                 \path (input) edge [->] (prepro);
-% 
-%                 %\path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
-%                 \node [below =0.4 of prepro, skill, fill=hriSec3CompDark!50] (parsing) {Parsing};
-%                 \path (prepro) edge [->] (parsing);
-% 
-%                 \coordinate (base-onto) at (4,0);
-% 
-%                 %%% RESOLUTION
-%                     \node [below=0.4 of parsing, skill, fill=hriSec3!50, minimum height=4cm, minimum width=5cm] (resolution) {};
-%                 \node [subpart, below=0.2 of resolution.115] (pron) {Pronouns \& \\ anaphora resolution};
-%                 \node [subpart, below=0.2 of pron] (noun) {Noun phrase \\ resolution};
-%                 \node [subpart, right=0.3 of noun, anchor=north west] (discr) {Discrimination};
-%                 \node [subpart, below=0.2 of noun] (verb) {Verbal phrase \\ resolution};
-%                 \node [subpart, cylinder, shape border rotate=90, aspect=0.5, below=0.2 of discr] (actions) {Actions};
-%                 \path (pron) edge [->] (noun);
-%                 \path (noun) edge [->] (discr);
-%                 \path (noun) edge [->] (verb);
-%                 \path (verb) edge [dashed, <->] (actions);
-%                 \path (pron) edge [dashed, <->] node[label] {queries} (pron -| base-onto);
-%                 \path (noun.20) edge [dashed, <->] node[label] {queries} (noun.20 -| base-onto);
-%                 \path (discr) edge [<->] (discr -| base-onto);
-% 
-%                 \node [left=0.2 of resolution.west, rotate=90, anchor=south] {Resolution};
-%                 \path (parsing) edge [->] (pron);
-% 
-%             %%% INTERPRETATION
-%                     \node [skill, below=0.4 of resolution,minimum width=5cm, minimum height=3cm] (interp) {};
-%                 \node [subpart, below=0.2 of interp.north] (content) {Content analysis};
-%                 \node [below=0.6 of content.south west, subpart] (question) {Question \\ handler};
-%                 \node [below=0.6 of content.south east, subpart] (stat) {Statement \\ builder};
-%                 \path (content) edge [->] node[label, left] {question} (question);
-%                 \path (content) edge [->] node [label, right] {goal | statement} (stat);
-%                 \path (stat) edge [->] node [label] {asserts} (stat -| base-onto);
-% 
-%                 \node [left=0.2 of interp.west, rotate=90, anchor=south] {Interpretation};
-% 
-%                 \path (verb) edge [->] (content);
-%                 \path (question) edge [dashed, bend right, <->] node[label] {queries} (question.south -| base-onto);
-% 
-%             %%% ONTOLOGY
-%                     \node at (resolution.north -| base-onto) [rotate=-90, skill, minimum height=2cm, minimum width=7cm, fill=hriSec3!50, anchor=south west] (onto) {Ontology server};
-% 
-% 
-%             %%% VERBALIZATION
-%                 \node [below=0.7 of interp, skill, fill=hriSec2Dark!50] (verb) {Verbalization};
-%             \path (question) edge [->] (verb);
-%             \path (stat) edge [->] (verb);
-%             \path (discr.south east) edge [black!50, dashed, bend left, <->] (verb.north east);
-%             \node [right=0.7 of verb] (output) {\textbf{Output}};
-%             \path (verb) edge [->] (output);
-%         \end{tikzpicture}
-%         }
-%
-%        \end{column}
-%    \end{columns}
-%
-%        \badge{europe_phd}
-%\end{frame}
-%}
-%
+
+{
+\paper{Lemaignan et al. {\bf Grounding the Interaction: Anchoring
+Situated Discourse in Everyday HRI} Intl. J. of Social Robotics 2011}
+\begin{frame}{Dialogue Grounding}
+    \centering
+
+    \begin{columns}
+        \begin{column}{0.65\linewidth}
+
+    \centering
+    \vspace*{2em}
+    {\bf ``Give me the book on the table''}\\
+
+    \uncover<2-> {
+        $\downarrow$\\
+        {\tt me} $\rightarrow$ {\tt human\_1} \\
+        find({\tt\scriptsize ?obj type table}) $\rightarrow$ {\tt ikea\_table} \\
+        find({\tt\scriptsize ?obj type book, ?obj isOn ikea\_table})
+        $\rightarrow$ {\tt book\_harry\_potter} \\
+    }
+
+    \uncover<3-> {
+        $\downarrow$\\
+        { \tt
+            \textbf{human\_1} desires \textbf{give\_act\_1}, \\
+            \textbf{give\_act\_1} type \textbf{Give}, \\
+            \textbf{give\_act\_1} performedBy \textbf{myself}, \\
+            \textbf{give\_act\_1} actsOnObject \textbf{book}, \\
+            \textbf{give\_act\_1} receivedBy \textbf{human\_1} \\
+        }
+    }
+            
+        \end{column}
+        \begin{column}{0.35\linewidth}
+         \resizebox{\linewidth}{!}{%
+ 
+ 
+             \begin{tikzpicture}[
+                     >=latex,
+                 every edge/.style={draw, very thick},
+                 skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+                 label/.style={midway, align=center, font=\scriptsize, above},
+                 subpart/.style={rounded corners, draw, align=center, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}]
+ 
+             %%% PARSING
+ 
+             \node at (0,0)[skill, fill=hriSec3CompDark!50] (prepro) {Pre-processing};
+                 \node [left=0.7 of prepro] (input) {\textbf{Input}};
+                 \path (input) edge [->] (prepro);
+ 
+                 %\path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
+                 \node [below =0.4 of prepro, skill, fill=hriSec3CompDark!50] (parsing) {Parsing};
+                 \path (prepro) edge [->] (parsing);
+ 
+                 \coordinate (base-onto) at (4,0);
+ 
+                 %%% RESOLUTION
+                     \node [below=0.4 of parsing, skill, fill=hriSec3!50, minimum height=4cm, minimum width=5cm] (resolution) {};
+                 \node [subpart, below=0.2 of resolution.115] (pron) {Pronouns \& \\ anaphora resolution};
+                 \node [subpart, below=0.2 of pron] (noun) {Noun phrase \\ resolution};
+                 \node [subpart, right=0.3 of noun, anchor=north west] (discr) {Discrimination};
+                 \node [subpart, below=0.2 of noun] (verb) {Verbal phrase \\ resolution};
+                 \node [subpart, cylinder, shape border rotate=90, aspect=0.5, below=0.2 of discr] (actions) {Actions};
+                 \path (pron) edge [->] (noun);
+                 \path (noun) edge [->] (discr);
+                 \path (noun) edge [->] (verb);
+                 \path (verb) edge [dashed, <->] (actions);
+                 \path (pron) edge [dashed, <->] node[label] {queries} (pron -| base-onto);
+                 \path (noun.20) edge [dashed, <->] node[label] {queries} (noun.20 -| base-onto);
+                 \path (discr) edge [<->] (discr -| base-onto);
+ 
+                 \node [left=0.2 of resolution.west, rotate=90, anchor=south] {Resolution};
+                 \path (parsing) edge [->] (pron);
+ 
+             %%% INTERPRETATION
+                     \node [skill, below=0.4 of resolution,minimum width=5cm, minimum height=3cm] (interp) {};
+                 \node [subpart, below=0.2 of interp.north] (content) {Content analysis};
+                 \node [below=0.6 of content.south west, subpart] (question) {Question \\ handler};
+                 \node [below=0.6 of content.south east, subpart] (stat) {Statement \\ builder};
+                 \path (content) edge [->] node[label, left] {question} (question);
+                 \path (content) edge [->] node [label, right] {goal | statement} (stat);
+                 \path (stat) edge [->] node [label] {asserts} (stat -| base-onto);
+ 
+                 \node [left=0.2 of interp.west, rotate=90, anchor=south] {Interpretation};
+ 
+                 \path (verb) edge [->] (content);
+                 \path (question) edge [dashed, bend right, <->] node[label] {queries} (question.south -| base-onto);
+ 
+             %%% ONTOLOGY
+                     \node at (resolution.north -| base-onto) [rotate=-90, skill, minimum height=2cm, minimum width=7cm, fill=hriSec3!50, anchor=south west] (onto) {Ontology server};
+ 
+ 
+             %%% VERBALIZATION
+                 \node [below=0.7 of interp, skill, fill=hriSec2Dark!50] (verb) {Verbalization};
+             \path (question) edge [->] (verb);
+             \path (stat) edge [->] (verb);
+             \path (discr.south east) edge [black!50, dashed, bend left, <->] (verb.north east);
+             \node [right=0.7 of verb] (output) {\textbf{Output}};
+             \path (verb) edge [->] (output);
+         \end{tikzpicture}
+         }
+
+        \end{column}
+    \end{columns}
+
+        \badge{europe_phd}
+\end{frame}
+}
+
+{
+    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation}, Artifical Intelligence, 2016}
+\begin{frame}<6>[label=archi]{Into an control architecture}
+    \begin{figure}
+        \centering
+
+        \resizebox{0.9\paperwidth}{!}{%
+
+            
+            \alt<7>{\newcommand{\dimming}{10}}{\newcommand{\dimming}{50}}
+
+            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
+
+            \begin{tikzpicture}[
+                    >=latex,
+                    every edge/.style={draw, very thick},
+                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
+                label/.style={midway, align=center, font=\scriptsize, fill=white}]
+
+                %%% Separation between deliberative layer and sensori-motor layer
+                \draw[dotted, thick] (-8,-5) -- (12, -5);
+
+                %%% SPARK
+                \uncover<2->{
+                    \node at (4,-3.5)[skill, fill=hriSec3!\dimming] (spark) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
+                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
+                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
+                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
+                    \end{tikzpicture}
+                };
+                }
+
+                %%% LOWLEVEL
+                \node [skill, below=0.7 of spark,fill=gray!\dimming] (lowlevel) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (sensori) {Sensorimotor layer};
+                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
+                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
+                    \end{tikzpicture}
+                };
+
+                \uncover<2->{
+                \path (lowlevel) edge [->] (spark);
+                }
+
+                %%% ORO
+                \uncover<3->{
+                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
+                {Symbolic facts \\ and beliefs management -- {\tt oro}};
+                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
+                }
+
+                %%% HATP
+                \uncover<5->{
+                \node at (-6, 2.5)[skill, fill=hriSec1!\dimming] (hatp) {Human-aware
+                symbolic \\task planning -- {\tt hatp}};
+                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
+                }
+
+                %%% DIALOGS
+                \uncover<4->{
+                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
+                {Dialogue processing\\{\tt dialogs}};
+                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
+                }
+                %%% SHARY
+                \uncover<5->{
+                \node at (4,4.5)[skill, fill=hriSec1Comp!\dimming] (shary) {%
+                    \begin{tikzpicture}
+                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
+                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
+                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
+                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
+                    \end{tikzpicture}
+                };
+                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
+                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
+                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
+                }
+                %%% MHP
+                \uncover<6->{
+                \node at (9,0)[skill, fill=hriSec3CompDark!\dimming] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
+                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
+                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
+                \path (lowlevel.east) edge [<-, bend right=60, looseness=1.3] node[label] {atomic\\actions} (mhp.south east);
+                }
+
+
+
+            \end{tikzpicture}
+        }
+    \end{figure}
+
+        \badge{europe_phd}
+\end{frame}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%{
-%    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-%    Interaction: An Implementation}, Artifical Intelligence, 2016}
-%\begin{frame}{Multi-modal interaction}
-%
-%    \begin{columns}
-%        \begin{column}{0.4\linewidth}
-%        \centering
-%        \includegraphics[width=\linewidth]{human-perspective-small}
-%             
-%        \end{column}
-%        \begin{column}{0.6\linewidth}
-%        
-%    \centering
-%    What about
-%
-%    {\bf ``Give me \emph{that} book''}?
-%
-%     \footnotesize
-%    (or even: {\bf ``Give me \emph{that}!''})
-%
-%       \end{column}
-%    \end{columns}
-%
-%
-%
-%        \badge{europe_phd}
-%\end{frame}
-%}
+
+{
+    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation}, Artifical Intelligence, 2016}
+\begin{frame}{Multi-modal interaction}
+
+    \begin{columns}
+        \begin{column}{0.4\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{human-perspective-small}
+             
+        \end{column}
+        \begin{column}{0.6\linewidth}
+        
+    \centering
+    What about
+
+    {\bf ``Give me \emph{that} book''}?
+
+     \footnotesize
+    (or even: {\bf ``Give me \emph{that}!''})
+
+       \end{column}
+    \end{columns}
+
+
+
+        \badge{europe_phd}
+\end{frame}
+}
 
 %\videoframe[0.56]{videos/this_box.webm}
 \videoframe[0.56]{videos/this_box.webm?autostart&start=1}
@@ -574,13 +563,13 @@ Plymouth University}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\begin{frame}{The False-Belief Experiment}
-%    \centering
-%    \includegraphics[width=0.7\textwidth]{sally_ann.pdf}
-%
-%\end{frame}
-%
+
+\begin{frame}{The False-Belief Experiment}
+    \centering
+    \includegraphics[width=0.7\textwidth]{sally_ann.pdf}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
@@ -747,319 +736,130 @@ Plymouth University}}
 \videoframe[0.56]{videos/dialogs.webm?autostart}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%{
-%    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-%    Interaction: An Implementation}, Artifical Intelligence, 2016}
-%\begin{frame}<6-7>{Into an control architecture}
-%    \begin{figure}
-%        \centering
-%
-%        \resizebox{0.9\paperwidth}{!}{%
-%
-%            
-%            \alt<7>{\newcommand{\dimming}{10}}{\newcommand{\dimming}{50}}
-%
-%            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
-%
-%            \begin{tikzpicture}[
-%                    >=latex,
-%                    every edge/.style={draw, very thick},
-%                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-%                label/.style={midway, align=center, font=\scriptsize, fill=white}]
-%
-%                %%% Separation between deliberative layer and sensori-motor layer
-%                \draw[dotted, thick] (-8,-5) -- (12, -5);
-%
-%                %%% SPARK
-%                \uncover<2->{
-%                    \node at (4,-3.5)[skill, fill=hriSec3!\dimming] (spark) {%
-%                    \begin{tikzpicture}
-%                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
-%                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
-%                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
-%                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
-%                    \end{tikzpicture}
-%                };
-%                }
-%
-%                %%% LOWLEVEL
-%                \node [skill, below=0.7 of spark,fill=gray!\dimming] (lowlevel) {%
-%                    \begin{tikzpicture}
-%                        \node at (0,0) (sensori) {Sensorimotor layer};
-%                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
-%                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
-%                    \end{tikzpicture}
-%                };
-%
-%                \uncover<2->{
-%                \path (lowlevel) edge [->] (spark);
-%                }
-%
-%                %%% ORO
-%                \uncover<3->{
-%                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
-%                {Symbolic facts \\ and beliefs management -- {\tt oro}};
-%                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
-%                }
-%
-%                %%% HATP
-%                \uncover<5->{
-%                \node at (-6, 2.5)[skill, fill=hriSec1!\dimming] (hatp) {Human-aware
-%                symbolic \\task planning -- {\tt hatp}};
-%                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
-%                }
-%
-%                %%% DIALOGS
-%                \uncover<4->{
-%                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
-%                {Dialogue processing\\{\tt dialogs}};
-%                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
-%                }
-%                %%% SHARY
-%                \uncover<5->{
-%                \node at (4,4.5)[skill, fill=hriSec1Comp!\dimming] (shary) {%
-%                    \begin{tikzpicture}
-%                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
-%                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
-%                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
-%                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
-%                    \end{tikzpicture}
-%                };
-%                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
-%                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
-%                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
-%                }
-%                %%% MHP
-%                \uncover<6->{
-%                \node at (9,0)[skill, fill=hriSec3CompDark!\dimming] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
-%                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
-%                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
-%                \path (lowlevel.east) edge [<-, bend right=60, looseness=1.3] node[label] {atomic\\actions} (mhp.south east);
-%                }
-%
-%
-%
-%            \end{tikzpicture}
-%        }
-%    \end{figure}
-%
-%        \badge{europe_phd}
-%\end{frame}
-%}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%{
-%\paper{Lemaignan et al. {\bf Artificial Cognition for Social Human-Robot
-%     Interaction: An Implementation} Artifical Intelligence, 2016}
-%\begin{frame}{One example}
-%
-%    \begin{center}
-%
-%     Walkthrough one full-stack example in the question
-%     \vspace{2em}
-%
-%     \begin{columns}
-%         \begin{column}{0.3\linewidth}
-%                 \includegraphics[height=0.6\paperheight]{clean-table}
-%         \end{column}
-%         \begin{column}{0.7\linewidth}
-%             \centering
-%             \resizebox{!}{0.6\paperheight}{%
-%                 \begin{tikzpicture}[
-%                         >=latex,
-%                     every edge/.style={draw, ultra thick, ->},
-%                     every node/.style={align=center},
-%                     robot/.style={fill=hriSec2Comp!50},
-%                     plan/.style={draw,
-%                      thick,  
-%                      circle, 
-%                      font=\sf,
-%                      align=center,
-%                      fill=hriSec3CompDark!50, 
-%                      minimum size=1cm, 
-%                      inner sep=0.1cm}
-%                  ]
-%
-%                     \coordinate (figbottom) at (-0.5, -28.5);
-%
-%
-%                     \fill[gray!10!white] (4.6,.5) rectangle (figbottom);
-%
-%                     \path (-0.5,0) edge (figbottom) node[sloped, above left, rotate=90] {\large\bf time};
-%
-%                     \node at (2,0) (percept) {\bf Perception};
-%                     \node[below=0.5 of percept.south west, anchor=mid] {camera};
-%                     \node[below=0.5 of percept.south east, anchor=mid] {3D model};
-%
-%                     \node[right=4 of percept, minimum width=2.5cm] (kb) {\bf Knowledge};
-%                     \node[below=0.5 of kb.south west, anchor=mid east] (kbr) {robot};
-%                     \node[below=0.5 of kb.south east, anchor=mid west] (kbh) {human};
-%                     \draw[dotted] (kbr) to (figbottom -| kbr);
-%                     \draw[dotted] (kbh) to (figbottom -| kbh);
-%
-%                     \fill[gray!10!white] (12,.5) rectangle (17,0 |- figbottom);
-%                     \node[right=4.5 of kb] (plan) {\bf Plan};
-%                     \node[below=0.5 of plan.south west, anchor=mid east] (probot) {robot};
-%                     \node[below=0.5 of plan.south east, anchor=mid west] (phuman) {human};
-%                     \draw[dotted] (probot) to (figbottom -| probot);
-%                     \draw[dotted] (phuman) to (figbottom -| phuman);
-%
-%                     \node[right=5 of plan] (action) {\bf Actions};
-%                     \node[below=0.5 of action.south west, anchor=mid east] (arobot) {robot};
-%                     \node[below=0.5 of action.south east, anchor=west] (ahuman) {human\\(monitoring)};
-%                     \draw[dotted] (arobot) to (figbottom -| arobot);
-%                     \draw[dotted] (ahuman) to (figbottom -| ahuman);
-%
-%                     \draw[dashed] (-0.6,-1.2) --(24, -1.2);
-%
-%                     \node[anchor=east] at (-0.5, -3) (t1) {\Large $t_1$};
-%                     \node[anchor=east, below=6 of t1] (t2) {\Large $t_2$};
-%                     \node[anchor=east, below=6 of t2] (t3) {\Large $t_3$};
-%                     \node[anchor=east, below=4 of t3] (t4) {\Large $t_4$};
-%                     \node[anchor=east, below=5 of t4] (t5) {\Large $t_5$};
-%
-%                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                     %%% PERCEPTIONS
-%                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%         \node at (t1 -| percept) (cam1) {\includegraphics[height=2cm]{cleantable/manip_run_cam1.png}};
-%         \node at (t2 -| percept) (cam2) {\includegraphics[height=2cm]{cleantable/manip_run_cam2.png}};
-%         \node at (t3 -| percept) (cam3) {\includegraphics[height=2cm]{cleantable/manip_run_cam3.png}};
-%         \node at (t4 -| percept) (cam4) {\includegraphics[height=2cm]{cleantable/manip_run_cam4.png}};
-%         \node at (t5 -| percept) (cam5) {\includegraphics[height=2cm]{cleantable/manip_run_cam5.png}};
-%
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         %%% KNOWLEDGE
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%         \node[fill=white,align=left] at (cam1 -| kbr) (kb1) {\stmt{TAPE isVisible true}\\
-%                                                    \stmt{TAPE isReachable true}\\
-%                                                    \stmt{TAPE isOn TABLE}\\
-%                                                    \stmt{BIN isVisible true}\\
-%                                                    \stmt{BIN isReachable false}};
-%
-%         \node[fill=white,align=left] at (cam1 -| kbh) {\stmt{TAPE isVisible true}\\
-%                                                    \stmt{TAPE isReachable false}\\
-%                                                    \stmt{TAPE isOn TABLE}\\
-%                                                    \stmt{BIN isVisible true}\\
-%                                                    \stmt{BIN isReachable true}};
-%
-%         \node[fill=white,align=left] at (cam2 -| kbr) (kb2) {\stmt{ROBOT hasInHand TAPE}};
-%
-%
-%         \node[fill=white,align=left] at (cam3 -| kbr) {\stmt{TAPE isReachable true}\\
-%                                        \stmt{TAPE isVisible true} \\
-%                                        \stmt{TAPE isOn TABLE}};
-%
-%         \node[fill=white,align=left ] at (cam3 -| kbh) (kb3) {\stmt{TAPE isReachable true}\\
-%                                         \stmt{TAPE isVisible true}};
-%
-%         \node[fill=white,align=left] at (cam4 -| kbh) (kb4) {\stmt{HUMAN hasInHand TAPE}};
-%
-%         \node[fill=white,align=left] at (cam5 -| kbr)  {\stmt{TAPE isIn BIN}};
-%         \node[fill=white,align=left] at (cam5 -| kbh) (kb5) {\stmt{TAPE isIn BIN}};
-%
-%         %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         %%% PLANS
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%         \node[fill=gray!10!white,below=1 of plan] (incoming) {\bf \Large Incoming goal \\ \it Clean the table!};
-%
-%         \node[anchor=north, plan, robot] at (cam1.south -| probot) (pr1) {\bf TAKE\\TAPE\\TABLE};
-%         \node[anchor=north, plan, robot] at (cam2.south -| probot)  (pr2) {\bf PUTRV\\TAPE\\TABLE} edge[<-] (pr1);
-%         \node[anchor=north, plan] at (cam3.south -| phuman) (ph1) {\bf TAKE\\TAPE\\TABLE} edge[<-] (pr2);
-%         \node[anchor=north, plan]  at (cam4.south -| phuman) (ph2) {\bf PUT\\TAPE\\BIN} edge[<-] (ph1);
-%
-%         \node[fill=gray!10!white,anchor=north] at (cam5.south -| plan) (done) {\bf \Large Goal completed};
-%
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         %%% ACTIONS
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%         \only{
-%             \node[fill=white] at (pr1 -| arobot) (ep1) {\it evaluate pre-conditions};
-%
-%         \node[below=0.1 of ep1] (mhp1) {%
-%             \begin{tikzpicture}
-%                 \node[fill=white] (title) {\bf motion planning};
-%                 \node[below=0.1 of title.south west, label=below:{\tt PICK\_GOTO}] (mapg) {\includegraphics{cleantable/MHP_ARM_PICK_GOTO}};
-%                 \node[fill=white,right=of mapg, label=below:{\tt TAKE\_TO\_FREE}] (mattf) {\includegraphics{cleantable/MHP_ARM_TAKE_TO_FREE}} edge[<-] (mapg);
-%             \end{tikzpicture}
-%         };
-%         \node[fill=white,below=0.1 of mhp1] (me1) {\bf motion execution};
-%         \node[fill=white,below=0.1 of me1] (ae1) {\it assess post-conditions};
-%     }
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         \only{
-%             \node[fill=white] at (pr2 -| arobot) (ep2) {\it evaluate pre-conditions};
-%
-%         \node[below=0.1 of ep2] (mhp2) {%
-%             \begin{tikzpicture}
-%                 \node[fill=white] (title) {\bf motion planning};
-%                 \node[fill=white,below=0.1 of title, label=below:{\tt ESCAPE}] (maeo) {\includegraphics{cleantable/MHP_ARM_ESCAPE_OBJECT}};
-%                 \node[left=of maeo, label=below:{\tt PLACE\_FROM\_FREE}] (mapff) {\includegraphics{cleantable/MHP_ARM_PLACE_FROM_FREE}} edge (maeo);
-%                 \node[fill=white,right=of maeo, label=below:{\tt TO\_FREE}] (maf) {\includegraphics{cleantable/MHP_ARM_FREE}} edge[<-] (maeo);
-%             \end{tikzpicture}
-%         };
-%         \node[fill=white,below=0.1 of mhp2] (me2) {\bf motion execution};
-%         \node[fill=white,below=0.1 of me2] (ae2) {\it assess post-conditions};
-%     }
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%         \node[anchor=north] at (ph1 -| ahuman) (wait1) {%
-%             \begin{tikzpicture}
-%                 \node[fill=white] (title) {\it wait for pick\\ {\tt TAPE} \it from {\tt TABLE}};
-%                 \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_pick}};
-%             \end{tikzpicture}
-%         };
-%
-%         \node[anchor=north] at (ph2 -| ahuman) (wait2) {%
-%             \begin{tikzpicture}
-%                 \node[fill=white] (title) {\it wait for put\\ {\tt TAPE} \it into {\tt BIN}};
-%                 \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_throw}};
-%             \end{tikzpicture}
-%         };
-%
-%
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         %%% FLOW
-%         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%         \draw[dotted, ->, in=45, out=180] (incoming.west) to (kb1);
-%         \draw[dotted, ->, bend right] (kb1) to (pr1);
-%         \draw[dotted, ->, bend left] (pr1) to (ep1);
-%         \draw[dotted, ->, in=45, out=180] (ae1.west) to (kb2);
-%         \draw[dotted, ->, bend right] (kb2) to (pr2);
-%         \draw[dotted, ->, bend left] (pr2) to (ep2);
-%         \draw[dotted, ->, in=45, out=180] (ae2.west) to (kb3);
-%         \draw[dotted, ->, bend right] (kb3) to (ph1);
-%         \draw[dotted, ->, bend left] (ph1) to (wait1);
-%         \draw[dotted, ->, in=-20, out=180] (wait1.west) to (kb4.east);
-%         \draw[dotted, ->, bend right] (kb4) to (ph2);
-%         \draw[dotted, ->, bend left] (ph2) to (wait2);
-%         \draw[dotted, ->, in=20, out=180] (wait2.west) to (kb5);
-%         \draw[dotted, ->, bend left] (kb5.east) to (done.north);
-%
-%
-%     \end{tikzpicture}
-%      }
-%         \end{column}
-%     \end{columns}
-%    \end{center}
-%
-%\end{frame}
-%}
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Experimental expertise}
+\section*{Field work}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \imageframe[color=black]{experiments}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Social or not Social?}
+    \begin{center}
+        \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}[>=latex]
+                \node[double arrow,draw] (spec) {Interaction spectrum};
+                \node<1>[left=of spec] {Non-social};
+                \node<2>[left=of spec] {\bf Cellulo};
+                \node<1>[right=of spec] {Social};
+                \node<2>[right=of spec] {\bf CoWriter};
+            \end{tikzpicture}
+        }
+    \end{center}
+    \badge{europe_epfl}
+\end{frame}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %% Cellulo
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Non-social interaction}
+    What is the most effective learning tool in a classroom?
+
+    \begin{center}
+        \includegraphics<2>[width=0.8\linewidth]{cellulo/pencil}
+    \end{center}
+\end{frame}
+
+\imageframe[caption=Pens and paper are pervasive...]{cellulo/classroom}
+\imageframe[caption=...so should the robots]{cellulo/classroom-withcellulo}
+
+{
+    \paper{\"Ozg\"ur, Lemaignan et al. {\bf Cellulo: Versatile Handheld Robots
+    for Education} -- HRI 2017}
+ \begin{frame}{Cellulo: design principles}
+
+     \begin{itemize}
+         \item {\bf ubiquitous}
+             \note[item]{ubiquitous: a pervasive yet unremarkable tool
+             that blend into the daily learning routine; has to be
+             trustworthy(\ie reliable), readily replaceable (\ie cheap, no
+             affective bonding), intuitive (\ie few simple affordances)}
+
+         \item {\bf versatile}
+             \note[item]{versatile: applicable to a broad range of learning
+             scenarios; the robots’ hardware, appearance and interaction
+             modalities must not imply or be constrained to specific use cases}
+
+         \item {\bf practical}
+             \note[item]{practical: to gain field
+             acceptance in the classrooms, educative robots must critically
+             represent a net educative gain and must not incur higher
+             workload for the teachers}
+     \end{itemize}
+
+        \badge{europe_epfl}
+ \end{frame}
+}
+
+ \begin{frame}{Cellulo: hardware}
+     \begin{center}
+         \includegraphics[width=0.8\linewidth]{cellulo/hardware-design}
+     \end{center}
+     \begin{itemize}
+         \item Holomonic motion
+         \item Sub-mm absolute localisation (no external hardware)
+         \item Haptic feedback + tactile RGB LED buttons 
+         \item Bluetooth
+         \item<2> Affordable (prototype: \EUR125)
+     \end{itemize}
+        \badge{europe_epfl}
+ \end{frame}
+
+ \videoframe[0.56]{figs/cellulo/cellulo-swarm-demo.mp4}
+
+{
+    \paper{Hostettler, \"Ozg\"ur, Lemaignan et al. {\bf Real-Time High-Accuracy
+    2D Localization with Structured Patterns} -- ICRA 2016}
+ \begin{frame}{Interaction with the paper}
+     \badge{europe_epfl}
+     Critically, Cellulo is meant as an {\bf interaction between
+     (classroom-friendly) paper and the robots}.
+
+     \pause
+
+     Achieved through a {\bf paper-based absolute localisation system}
+
+     \begin{center}
+         \includegraphics<3>[width=0.8\linewidth]{cellulo/treasure-game-1}
+         \includegraphics<4>[width=\linewidth]{cellulo/treasure-game-2}
+     \end{center}
+
+     \only<5>{
+
+         \begin{itemize}
+             \item even more than 'classroom-friendly', paper is 'teacher-friendly'
+             \item easy to manipulate, copy, print, cutout, dispose...
+             \item unique activity IDs: drop the robots onto the sheet, it
+                 recognizes the activity
+         \end{itemize}
+     }
+
+ \end{frame}
+}
+
+ \imageframe[color=black,caption=Concept 1: chemistry]{cellulo/concept-molecules}
+ \imageframe[color=black,caption=Concept 2: solar system]{cellulo/concept-solar-system}
+
+ \begin{frame}[plain]{}
+     ...at the other end of the spectrum...
+ \end{frame}
+
 
 \imageframe[color=black]{cowriter/henry}
 
@@ -1262,7 +1062,7 @@ Plymouth University}}
 }
 
 \imageframe[caption=Free-play sandbox]{freeplay/setup}
-%\imageframe[color=black]{freeplay/freeplay-sandbox-screenshot}
+\imageframe[color=black]{freeplay/freeplay-sandbox-screenshot}
 \imageframe[color=black]{freeplay/analysis}
 
 \note{
@@ -1417,25 +1217,16 @@ Plymouth University}}
 %    \badge{europe_plym}
 %\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\imageframe[color=black]{memory/zoo+ros+memory}
-
+%\begin{frame}{Joint projects?}
+%
+%    \begin{center}
+%        How can we work together?
+%    \end{center}
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\imageframe{collage}
 
 {
     \fullbackground[color=black]{eeg}
@@ -1685,18 +1476,220 @@ Plymouth University}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Performing in Human Environments}
+\section{An architecture for human-robot joint action}
 
+\againframe<1-7>{archi}
 
 \videoframe[0.7]{figs/cleantable/clean-table.webm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\paper{Lemaignan et al. {\bf Artificial Cognition for Social Human-Robot
+     Interaction: An Implementation} Artifical Intelligence, 2016}
+\begin{frame}{Full integration}
+
+    \begin{center}
+
+     \begin{columns}
+         \begin{column}{0.3\linewidth}
+                 \includegraphics[height=0.6\paperheight]{clean-table}
+         \end{column}
+         \begin{column}{0.7\linewidth}
+             \centering
+             \resizebox{!}{0.6\paperheight}{%
+                 \begin{tikzpicture}[
+                         >=latex,
+                     every edge/.style={draw, ultra thick, ->},
+                     every node/.style={align=center},
+                     robot/.style={fill=hriSec2Comp!50},
+                     plan/.style={draw,
+                      thick,  
+                      circle, 
+                      font=\sf,
+                      align=center,
+                      fill=hriSec3CompDark!50, 
+                      minimum size=1cm, 
+                      inner sep=0.1cm}
+                  ]
+
+                     \coordinate (figbottom) at (-0.5, -28.5);
+
+
+                     \fill[gray!10!white] (4.6,.5) rectangle (figbottom);
+
+                     \path (-0.5,0) edge (figbottom) node[sloped, above left, rotate=90] {\large\bf time};
+
+                     \node at (2,0) (percept) {\bf Perception};
+                     \node[below=0.5 of percept.south west, anchor=mid] {camera};
+                     \node[below=0.5 of percept.south east, anchor=mid] {3D model};
+
+                     \node[right=4 of percept, minimum width=2.5cm] (kb) {\bf Knowledge};
+                     \node[below=0.5 of kb.south west, anchor=mid east] (kbr) {robot};
+                     \node[below=0.5 of kb.south east, anchor=mid west] (kbh) {human};
+                     \draw[dotted] (kbr) to (figbottom -| kbr);
+                     \draw[dotted] (kbh) to (figbottom -| kbh);
+
+                     \fill[gray!10!white] (12,.5) rectangle (17,0 |- figbottom);
+                     \node[right=4.5 of kb] (plan) {\bf Plan};
+                     \node[below=0.5 of plan.south west, anchor=mid east] (probot) {robot};
+                     \node[below=0.5 of plan.south east, anchor=mid west] (phuman) {human};
+                     \draw[dotted] (probot) to (figbottom -| probot);
+                     \draw[dotted] (phuman) to (figbottom -| phuman);
+
+                     \node[right=5 of plan] (action) {\bf Actions};
+                     \node[below=0.5 of action.south west, anchor=mid east] (arobot) {robot};
+                     \node[below=0.5 of action.south east, anchor=west] (ahuman) {human\\(monitoring)};
+                     \draw[dotted] (arobot) to (figbottom -| arobot);
+                     \draw[dotted] (ahuman) to (figbottom -| ahuman);
+
+                     \draw[dashed] (-0.6,-1.2) --(24, -1.2);
+
+                     \node[anchor=east] at (-0.5, -3) (t1) {\Large $t_1$};
+                     \node[anchor=east, below=6 of t1] (t2) {\Large $t_2$};
+                     \node[anchor=east, below=6 of t2] (t3) {\Large $t_3$};
+                     \node[anchor=east, below=4 of t3] (t4) {\Large $t_4$};
+                     \node[anchor=east, below=5 of t4] (t5) {\Large $t_5$};
+
+                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                     %%% PERCEPTIONS
+                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+         \node at (t1 -| percept) (cam1) {\includegraphics[height=2cm]{cleantable/manip_run_cam1.png}};
+         \node at (t2 -| percept) (cam2) {\includegraphics[height=2cm]{cleantable/manip_run_cam2.png}};
+         \node at (t3 -| percept) (cam3) {\includegraphics[height=2cm]{cleantable/manip_run_cam3.png}};
+         \node at (t4 -| percept) (cam4) {\includegraphics[height=2cm]{cleantable/manip_run_cam4.png}};
+         \node at (t5 -| percept) (cam5) {\includegraphics[height=2cm]{cleantable/manip_run_cam5.png}};
+
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         %%% KNOWLEDGE
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+         \node[fill=white,align=left] at (cam1 -| kbr) (kb1) {\stmt{TAPE isVisible true}\\
+                                                    \stmt{TAPE isReachable true}\\
+                                                    \stmt{TAPE isOn TABLE}\\
+                                                    \stmt{BIN isVisible true}\\
+                                                    \stmt{BIN isReachable false}};
+
+         \node[fill=white,align=left] at (cam1 -| kbh) {\stmt{TAPE isVisible true}\\
+                                                    \stmt{TAPE isReachable false}\\
+                                                    \stmt{TAPE isOn TABLE}\\
+                                                    \stmt{BIN isVisible true}\\
+                                                    \stmt{BIN isReachable true}};
+
+         \node[fill=white,align=left] at (cam2 -| kbr) (kb2) {\stmt{ROBOT hasInHand TAPE}};
+
+
+         \node[fill=white,align=left] at (cam3 -| kbr) {\stmt{TAPE isReachable true}\\
+                                        \stmt{TAPE isVisible true} \\
+                                        \stmt{TAPE isOn TABLE}};
+
+         \node[fill=white,align=left ] at (cam3 -| kbh) (kb3) {\stmt{TAPE isReachable true}\\
+                                         \stmt{TAPE isVisible true}};
+
+         \node[fill=white,align=left] at (cam4 -| kbh) (kb4) {\stmt{HUMAN hasInHand TAPE}};
+
+         \node[fill=white,align=left] at (cam5 -| kbr)  {\stmt{TAPE isIn BIN}};
+         \node[fill=white,align=left] at (cam5 -| kbh) (kb5) {\stmt{TAPE isIn BIN}};
+
+         %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         %%% PLANS
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+         \node[fill=gray!10!white,below=1 of plan] (incoming) {\bf \Large Incoming goal \\ \it Clean the table!};
+
+         \node[anchor=north, plan, robot] at (cam1.south -| probot) (pr1) {\bf TAKE\\TAPE\\TABLE};
+         \node[anchor=north, plan, robot] at (cam2.south -| probot)  (pr2) {\bf PUTRV\\TAPE\\TABLE} edge[<-] (pr1);
+         \node[anchor=north, plan] at (cam3.south -| phuman) (ph1) {\bf TAKE\\TAPE\\TABLE} edge[<-] (pr2);
+         \node[anchor=north, plan]  at (cam4.south -| phuman) (ph2) {\bf PUT\\TAPE\\BIN} edge[<-] (ph1);
+
+         \node[fill=gray!10!white,anchor=north] at (cam5.south -| plan) (done) {\bf \Large Goal completed};
+
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         %%% ACTIONS
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+         \only{
+             \node[fill=white] at (pr1 -| arobot) (ep1) {\it evaluate pre-conditions};
+
+         \node[below=0.1 of ep1] (mhp1) {%
+             \begin{tikzpicture}
+                 \node[fill=white] (title) {\bf motion planning};
+                 \node[below=0.1 of title.south west, label=below:{\tt PICK\_GOTO}] (mapg) {\includegraphics{cleantable/MHP_ARM_PICK_GOTO}};
+                 \node[fill=white,right=of mapg, label=below:{\tt TAKE\_TO\_FREE}] (mattf) {\includegraphics{cleantable/MHP_ARM_TAKE_TO_FREE}} edge[<-] (mapg);
+             \end{tikzpicture}
+         };
+         \node[fill=white,below=0.1 of mhp1] (me1) {\bf motion execution};
+         \node[fill=white,below=0.1 of me1] (ae1) {\it assess post-conditions};
+     }
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         \only{
+             \node[fill=white] at (pr2 -| arobot) (ep2) {\it evaluate pre-conditions};
+
+         \node[below=0.1 of ep2] (mhp2) {%
+             \begin{tikzpicture}
+                 \node[fill=white] (title) {\bf motion planning};
+                 \node[fill=white,below=0.1 of title, label=below:{\tt ESCAPE}] (maeo) {\includegraphics{cleantable/MHP_ARM_ESCAPE_OBJECT}};
+                 \node[left=of maeo, label=below:{\tt PLACE\_FROM\_FREE}] (mapff) {\includegraphics{cleantable/MHP_ARM_PLACE_FROM_FREE}} edge (maeo);
+                 \node[fill=white,right=of maeo, label=below:{\tt TO\_FREE}] (maf) {\includegraphics{cleantable/MHP_ARM_FREE}} edge[<-] (maeo);
+             \end{tikzpicture}
+         };
+         \node[fill=white,below=0.1 of mhp2] (me2) {\bf motion execution};
+         \node[fill=white,below=0.1 of me2] (ae2) {\it assess post-conditions};
+     }
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+         \node[anchor=north] at (ph1 -| ahuman) (wait1) {%
+             \begin{tikzpicture}
+                 \node[fill=white] (title) {\it wait for pick\\ {\tt TAPE} \it from {\tt TABLE}};
+                 \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_pick}};
+             \end{tikzpicture}
+         };
+
+         \node[anchor=north] at (ph2 -| ahuman) (wait2) {%
+             \begin{tikzpicture}
+                 \node[fill=white] (title) {\it wait for put\\ {\tt TAPE} \it into {\tt BIN}};
+                 \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_throw}};
+             \end{tikzpicture}
+         };
+
+
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         %%% FLOW
+         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         \draw[dotted, ->, in=45, out=180] (incoming.west) to (kb1);
+         \draw[dotted, ->, bend right] (kb1) to (pr1);
+         \draw[dotted, ->, bend left] (pr1) to (ep1);
+         \draw[dotted, ->, in=45, out=180] (ae1.west) to (kb2);
+         \draw[dotted, ->, bend right] (kb2) to (pr2);
+         \draw[dotted, ->, bend left] (pr2) to (ep2);
+         \draw[dotted, ->, in=45, out=180] (ae2.west) to (kb3);
+         \draw[dotted, ->, bend right] (kb3) to (ph1);
+         \draw[dotted, ->, bend left] (ph1) to (wait1);
+         \draw[dotted, ->, in=-20, out=180] (wait1.west) to (kb4.east);
+         \draw[dotted, ->, bend right] (kb4) to (ph2);
+         \draw[dotted, ->, bend left] (ph2) to (wait2);
+         \draw[dotted, ->, in=20, out=180] (wait2.west) to (kb5);
+         \draw[dotted, ->, bend left] (kb5.east) to (done.north);
+
+
+     \end{tikzpicture}
+      }
+         \end{column}
+     \end{columns}
+    \end{center}
+
+\end{frame}
+}
+
+
+
 
 {
     \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
     Interaction: An Implementation}, Artifical Intelligence, 2016}
 \begin{frame}{``Cleaning the table''...}
 \centering
+
 \resizebox{!}{0.75\paperheight}{%
 \begin{tikzpicture}[
         >=latex,
@@ -2161,6 +2154,139 @@ Plymouth University}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Representation}
+
+\begin{frame}{Representation}
+    Building a \textbf{robotic qualia}: ``what it is like for the robot to experience...''
+    \pause
+
+    \begin{enumerate}
+        \item From situation assessment...
+        \item ...to symbolic models...
+        \item ...to perspective taking...
+        \item ...to(wards) mutual modelling
+   \end{enumerate}
+
+\end{frame}
+
+
+{
+    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation}, Artifical Intelligence, 2016}
+\begin{frame}{Situation Assessment}
+        \centering
+        \video{0.8\textwidth}{videos/model3d.webm}\\
+        %\video{0.7\textwidth}{videos/model3d.webm?autostart&start=22&stop=34}\\
+
+        %\vspace*{1em}
+        %\includegraphics[width=0.9\textwidth]{spark}
+
+        \badge{europe_phd}
+\end{frame}
+}
+
+
+{
+    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
+    Interaction: An Implementation}, Artifical Intelligence, 2016}
+\begin{frame}{}
+        \centering
+        \scriptsize
+
+        \begin{tabular}{p{1.5cm}lp{2cm}}
+            Subject & Predicate  & Object  \\ 
+            \hline
+            \concept{Location} & \concept{isAt} $\equiv$ \concept{cyc:objectFoundInLocation}  &  \concept{Location}  \\ 
+                               &  $\rightarrow$ \concept{isOn} $\equiv$ \concept{cyc:above\_Touching}  &   \\ 
+                               &  $\rightarrow$ \concept{isIn}  &   \\ 
+                               &  $\rightarrow$ \concept{isNextTo}  &   \\ 
+
+            \concept{Location}  & \concept{isAbove} $\equiv$ \concept{cyc:above-Generally}  &  \concept{Location} \\ 
+            \concept{Location}  & \concept{isBelow}  & \concept{Location} \\
+            \hline
+            \concept{Location}  & \concept{hasRelativePosition}  & \concept{Location}  \\ 
+                                   & 	$\rightarrow$ \concept{behind} $\equiv$ \concept{cyc:behind-Generally}  & \\ 
+                                      &  $\rightarrow$ \concept{inFrontOf} $\equiv$ \concept{cyc:inFrontOf-Generally}  & \\ 
+                                         &  $\rightarrow$ \concept{leftOf}  &  \\ 
+                                            &  $\rightarrow$ \concept{rightOf}  & 	 \\ 
+            \concept{Object}  & \concept{cyc:farFrom}  &  \concept{Agent} \\ 
+            \concept{Object}  & \concept{cyc:near}  &  \concept{Agent} \\
+
+            \hline
+            \concept{Agent}  & \concept{looksAt}  & \concept{SpatialThing} \\
+            \concept{Agent}  & \concept{sees}  &  \concept{SpatialThing}  \\ 
+            \concept{SpatialThing}  & \concept{isInFieldOfView}  & \concept{xsd:boolean}  \\ 
+            \concept{Agent}  & \concept{pointsAt} $\equiv$ \concept{cyc:pointingToward}  & \concept{SpatialThing} \\ 
+            \concept{Agent}  & \concept{focusesOn}  &  \concept{SpatialThing}  \\ 
+            \concept{Agent} & \concept{seesWithHeadMovement} &  \concept{SpatialThing} \\
+            \concept{Agent} & \concept{canReach} &  \concept{Object} \\ 
+
+        \end{tabular}
+
+\end{frame}
+}
+
+{
+    \paper{Lemaignan et al. {\bf ORO, a Knowledge Management Module for
+    Cognitive Architectures in Robotics}, IROS 2010}
+\begin{frame}{From Spatial Model to Symbolic Model}
+
+    \begin{figure}
+        \centering
+
+        \resizebox{0.9\paperwidth}{!}{%
+            \begin{tikzpicture}[
+                    >=latex,
+                    every edge/.style={<-, draw, very thick},
+                    every node/.style={draw, font=\sf, node distance=0.5, rounded corners,
+                align=center, inner sep=5pt,fill=hriSec2Dark!50}]
+
+                \node[fill=hriSec2Comp!50] (thing) {\bf thing};
+                \node [fill=hriSec3CompDark!50, node distance=1.8, below left=of thing](sthing) {spatial thing} edge (thing);
+                \node [fill=hriSec3CompDark!50, above left=of sthing] {posture} edge (sthing);
+                \node [fill=hriSec3CompDark!50, left=of sthing] {shape} edge (sthing);
+                \node [fill=hriSec3CompDark!50, below=of sthing] (location) {location} edge (sthing);
+                \node [fill=hriSec3CompDark!50, below right=of location] {zone} edge (location);
+                \node [fill=hriSec3CompDark!50, below left=of location] (set) {spatial enduring thing} edge (location);
+                \node [fill=hriSec3CompDark!50, below right=of set] {obstacle} edge (set);
+                \node [fill=hriSec3CompDark!50, below left=of set] {opening} edge (set);
+                \node [fill=hriSec3CompDark!50, below=1 of set] {partially tangible thing} edge (set);
+                \node [fill=hriSec3CompDark!50, above left=of set] {place} edge (set);
+
+                \node [node distance=1, below right=of thing] (tthing) {temporal thing} edge (thing);
+                \node [below=of tthing] (tte) {thing with temporal extent} edge (tthing);
+                \node [below right=of tte] {time interval} edge (tte);
+                \node [below=1 of tte] (sit) {situation} edge (tte);
+                \node [below right=of sit] (evt) {event} edge (sit);
+                \node [below right=of evt] (act) {action} edge (evt);
+                \node [below=of act] {purposeful action} edge (act);
+                \node [below left=of sit] {static situation} edge (sit);
+
+            \end{tikzpicture}
+        }
+
+    \end{figure}
+
+        \badge{europe_phd}
+\end{frame}
+}
+
+
+\imageframe{humans-pt}
+
+\begin{frame}{Visual Perspective taking}
+
+        \badge{europe_phd}
+
+        \centering
+        \includegraphics[width=0.8\textwidth]{spark_vert.pdf}
+        %\vspace*{1em}
+        %\video{0.7\textwidth}{videos/talking_to_my_robot.mp4?start=84&stop=136&noaudio}
+
+\end{frame}
+
+
+
 
 \section{Dialogue Grounding}
 
@@ -3949,299 +4075,6 @@ constraining function [...]}, Cognition, 1983]\newline
 \end{frame}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{
-    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-    Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}<1-7>{Into an control architecture}
-    \begin{figure}
-        \centering
-
-        \resizebox{0.9\paperwidth}{!}{%
-
-            
-            \alt<7>{\newcommand{\dimming}{10}}{\newcommand{\dimming}{50}}
-
-            \tikzset{subpart/.style={draw, font=\scriptsize, fill opacity=0.5, text opacity=1, fill=white!50}}
-
-            \begin{tikzpicture}[
-                    >=latex,
-                    every edge/.style={draw, very thick},
-                    skill/.style={draw, rounded corners, align=center, inner sep=5pt, fill=black!20},
-                label/.style={midway, align=center, font=\scriptsize, fill=white}]
-
-                %%% Separation between deliberative layer and sensori-motor layer
-                \draw[dotted, thick] (-8,-5) -- (12, -5);
-
-                %%% SPARK
-                \uncover<2->{
-                    \node at (4,-3.5)[skill, fill=hriSec3!\dimming] (spark) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (geom) {Geometric \& Temporal Reasoning -- {\tt spark}};
-                        \node [subpart, below=0.2 of geom.south west, anchor=north west] (world-update) {Sensors fusion};
-                        \node [subpart, right=0.2 of world-update] (geom-model) {Geometric model of the environment};
-                        \node [subpart, right=0.2 of geom-model] (fact-prod) {Symbolic facts production};
-                    \end{tikzpicture}
-                };
-                }
-
-                %%% LOWLEVEL
-                \node [skill, below=0.7 of spark,fill=gray!\dimming] (lowlevel) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (sensori) {Sensorimotor layer};
-                        %\node [subpart, below=0.2 of sensori.south west, anchor=north west, align=left] (perception) {{\bf Perception} \\ 2D markers, RGB-D, motion capture};
-                        %\node [subpart, align=right, right=0.2 of perception] {{\bf Actuation} \\ Head's pan-tilt unit, grippers, arms, wheels};
-                    \end{tikzpicture}
-                };
-
-                \uncover<2->{
-                \path (lowlevel) edge [->] (spark);
-                }
-
-                %%% ORO
-                \uncover<3->{
-                \node at (0,0)[skill, ultra thick, fill=hriSec2Dark!50] (oro)
-                {Symbolic facts \\ and beliefs management -- {\tt oro}};
-                \path (spark.100) edge [->, bend right] node[label] {symbolic \\ facts} (oro);
-                }
-
-                %%% HATP
-                \uncover<5->{
-                \node at (-6, 2.5)[skill, fill=hriSec1!\dimming] (hatp) {Human-aware
-                symbolic \\task planning -- {\tt hatp}};
-                \path (hatp) edge [<->, bend right] node[label] {world model and \\ agents beliefs} (oro.170);
-                }
-
-                %%% DIALOGS
-                \uncover<4->{
-                \node at (-6, -3) [skill, fill=hriSec3Dark!50] (dialogs)
-                {Dialogue processing\\{\tt dialogs}};
-                \path (dialogs) edge [<->, bend left] node[label] {natural language \\ grounding} (oro.190);
-                }
-                %%% SHARY
-                \uncover<5->{
-                \node at (4,4.5)[skill, fill=hriSec1Comp!\dimming] (shary) {%
-                    \begin{tikzpicture}
-                        \node at (0,0) (exec) {Execution Controller -- {\tt shary} | {\tt pyrobots}};
-                        \node [subpart, below=0.2 of exec.south west, anchor=north west] (plans) {Goal \& Plans \\ management};
-                        \node [subpart, right=0.2 of plans] (sit-asses) {Situation assessment \\ and context management};
-                        \node [subpart, right=0.2 of sit-asses] {Action instantiation, \\ execution and monitoring};
-                    \end{tikzpicture}
-                };
-                \path (shary) edge [<->, bend left] node[label] {events, \\ world model and \\ agents beliefs} (oro);
-                \path (shary) edge [<->, bend left, looseness=0.8] node[label] {action monitoring \\ and management of \\ position hypotheses} (spark);
-                \path (shary.west) edge [<->, bend right] node[label] {shared \\ plans} (hatp);
-                }
-                %%% MHP
-                \uncover<6->{
-                \node at (9,0)[skill, fill=hriSec3CompDark!\dimming] (mhp) {Human-aware Motion \\ and Manipulation Planning\\{\tt mhp}};
-                \path (shary.340) edge [<->, bend left] node[label] {motion plan \\ requests} (mhp);
-                \path (spark.5) edge [->, bend right] node[label] {environment\\model} (mhp);
-                \path (lowlevel.east) edge [<-, bend right=60, looseness=1.3] node[label] {atomic\\actions} (mhp.south east);
-                }
-
-
-
-            \end{tikzpicture}
-        }
-    \end{figure}
-
-        \badge{europe_phd}
-\end{frame}
-}
-
-{
-    \paper{Lemaignan et al., {\bf Artificial Cognition for Social Human-Robot
-    Interaction: An Implementation}, Artifical Intelligence, 2016}
-\begin{frame}{``Cleaning the table''...}
-\centering
-
-\resizebox{!}{0.75\paperheight}{%
-\begin{tikzpicture}[
-        >=latex,
-        every edge/.style={draw, ultra thick, ->},
-        every node/.style={align=center},
-        robot/.style={fill=hriSec2Comp!50},
-        plan/.style={draw,
-                     thick,  
-                     circle, 
-                     font=\sf,
-                     align=center,
-                     fill=hriSec3CompDark!50, 
-                     minimum size=1cm, 
-                     inner sep=0.1cm}
-        ]
-
-        \coordinate<1> (figbottom) at (-0.5, -28.5);
-        \coordinate<2-5> (figbottom) at (-0.5, -10.5);
-        \node<2-5> at (0,5) {};
-        \node<2-5> at ($(figbottom) + (0,-5)$) {};
-
-
-        \fill[gray!10!white] (4.6,.5) rectangle (figbottom);
-
-        \path (-0.5,0) edge (figbottom) node[sloped, above left, rotate=90] {\large\bf time};
-
-        \node at (2,0) (percept) {\bf Perception};
-            \node[below=0.5 of percept.south west, anchor=mid] {camera};
-            \node[below=0.5 of percept.south east, anchor=mid] {3D model};
-
-        \node[right=4 of percept, minimum width=2.5cm] (kb) {\bf Knowledge};
-            \node[below=0.5 of kb.south west, anchor=mid east] (kbr) {robot};
-            \node[below=0.5 of kb.south east, anchor=mid west] (kbh) {human};
-            \draw[dotted] (kbr) to (figbottom -| kbr);
-            \draw[dotted] (kbh) to (figbottom -| kbh);
-
-        \fill[gray!10!white] (12,.5) rectangle (17,0 |- figbottom);
-        \node[right=4.5 of kb] (plan) {\bf Plan};
-            \node[below=0.5 of plan.south west, anchor=mid east] (probot) {robot};
-            \node[below=0.5 of plan.south east, anchor=mid west] (phuman) {human};
-            \draw[dotted] (probot) to (figbottom -| probot);
-            \draw[dotted] (phuman) to (figbottom -| phuman);
-
-        \node[right=5 of plan] (action) {\bf Actions};
-            \node[below=0.5 of action.south west, anchor=mid east] (arobot) {robot};
-            \node[below=0.5 of action.south east, anchor=west] (ahuman) {human\\(monitoring)};
-            \draw[dotted] (arobot) to (figbottom -| arobot);
-            \draw[dotted] (ahuman) to (figbottom -| ahuman);
-
-        \draw[dashed] (-0.6,-1.2) --(24, -1.2);
-
-        \node<1,2>[anchor=east] at (-0.5, -3) (t1) {\Large $t_1$};
-        \node<1,2>[anchor=east, below=6 of t1] (t2) {\Large $t_2$};
-        \node<3>[anchor=east] at (-0.5, -3) (t2) {\Large $t_2$};
-        \node<1,3>[anchor=east, below=6 of t2] (t3) {\Large $t_3$};
-        \node<4>[anchor=east] at (-0.5, -3) (t3) {\Large $t_3$};
-        \node<1,4>[anchor=east, below=4 of t3] (t4) {\Large $t_4$};
-        \node<5>[anchor=east] at (-0.5, -3) (t4) {\Large $t_4$};
-        \node<1,5>[anchor=east, below=5 of t4] (t5) {\Large $t_5$};
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%% PERCEPTIONS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \node<1,2> at (t1 -| percept) (cam1) {\includegraphics[height=2cm]{cleantable/manip_run_cam1.png}};
-        \node<1,3> at (t2 -| percept) (cam2) {\includegraphics[height=2cm]{cleantable/manip_run_cam2.png}};
-        \node<1,4> at (t3 -| percept) (cam3) {\includegraphics[height=2cm]{cleantable/manip_run_cam3.png}};
-        \node<1,5> at (t4 -| percept) (cam4) {\includegraphics[height=2cm]{cleantable/manip_run_cam4.png}};
-        \node<1,5> at (t5 -| percept) (cam5) {\includegraphics[height=2cm]{cleantable/manip_run_cam5.png}};
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%% KNOWLEDGE
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \node<1,2>[fill=white,align=left] at (cam1 -| kbr) (kb1) {\stmt{TAPE isVisible true}\\
-                                                        \stmt{TAPE isReachable true}\\
-                                                        \stmt{TAPE isOn TABLE}\\
-                                                        \stmt{BIN isVisible true}\\
-                                                        \stmt{BIN isReachable false}};
-
-        \node<1,2>[fill=white,align=left] at (cam1 -| kbh) {\stmt{TAPE isVisible true}\\
-                                                        \stmt{TAPE isReachable false}\\
-                                                        \stmt{TAPE isOn TABLE}\\
-                                                        \stmt{BIN isVisible true}\\
-                                                        \stmt{BIN isReachable true}};
-
-        \node<1,3>[fill=white,align=left] at (cam2 -| kbr) (kb2) {\stmt{ROBOT hasInHand TAPE}};
-
-
-        \node<1,4>[fill=white,align=left] at (cam3 -| kbr) {\stmt{TAPE isReachable true}\\
-                                            \stmt{TAPE isVisible true} \\
-                                            \stmt{TAPE isOn TABLE}};
-
-        \node<1,4>[fill=white,align=left ] at (cam3 -| kbh) (kb3) {\stmt{TAPE isReachable true}\\
-                                             \stmt{TAPE isVisible true}};
-
-        \node<1,5>[fill=white,align=left] at (cam4 -| kbh) (kb4) {\stmt{HUMAN hasInHand TAPE}};
-
-        \node<1,5>[fill=white,align=left] at (cam5 -| kbr)  {\stmt{TAPE isIn BIN}};
-        \node<1,5>[fill=white,align=left] at (cam5 -| kbh) (kb5) {\stmt{TAPE isIn BIN}};
-
-        %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%% PLANS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \node<1,2>[fill=gray!10!white,below=1 of plan] (incoming) {\bf \Large Incoming goal \\ \it Clean the table!};
-
-        \node<1,2>[anchor=north, plan, robot] at (cam1.south -| probot) (pr1) {\bf TAKE\\TAPE\\TABLE};
-        \node<1,3>[anchor=north, plan, robot] at (cam2.south -| probot)  (pr2) {\bf PUTRV\\TAPE\\TABLE} edge[<-] (pr1);
-        \node<1,4>[anchor=north, plan] at (cam3.south -| phuman) (ph1) {\bf TAKE\\TAPE\\TABLE} edge[<-] (pr2);
-        \node<1,5>[anchor=north, plan]  at (cam4.south -| phuman) (ph2) {\bf PUT\\TAPE\\BIN} edge[<-] (ph1);
-
-        \node<1,5>[fill=gray!10!white,anchor=north] at (cam5.south -| plan) (done) {\bf \Large Goal completed};
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%% ACTIONS
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \only<1,2>{
-        \node[fill=white] at (pr1 -| arobot) (ep1) {\it evaluate pre-conditions};
-
-        \node[below=0.1 of ep1] (mhp1) {%
-            \begin{tikzpicture}
-                \node[fill=white] (title) {\bf motion planning};
-                \node[below=0.1 of title.south west, label=below:{\tt PICK\_GOTO}] (mapg) {\includegraphics{cleantable/MHP_ARM_PICK_GOTO}};
-                \node[fill=white,right=of mapg, label=below:{\tt TAKE\_TO\_FREE}] (mattf) {\includegraphics{cleantable/MHP_ARM_TAKE_TO_FREE}} edge[<-] (mapg);
-            \end{tikzpicture}
-        };
-        \node[fill=white,below=0.1 of mhp1] (me1) {\bf motion execution};
-        \node[fill=white,below=0.1 of me1] (ae1) {\it assess post-conditions};
-        }
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \only<1,3>{
-        \node[fill=white] at (pr2 -| arobot) (ep2) {\it evaluate pre-conditions};
-
-        \node[below=0.1 of ep2] (mhp2) {%
-            \begin{tikzpicture}
-                \node[fill=white] (title) {\bf motion planning};
-                \node[fill=white,below=0.1 of title, label=below:{\tt ESCAPE}] (maeo) {\includegraphics{cleantable/MHP_ARM_ESCAPE_OBJECT}};
-                \node[left=of maeo, label=below:{\tt PLACE\_FROM\_FREE}] (mapff) {\includegraphics{cleantable/MHP_ARM_PLACE_FROM_FREE}} edge (maeo);
-                \node[fill=white,right=of maeo, label=below:{\tt TO\_FREE}] (maf) {\includegraphics{cleantable/MHP_ARM_FREE}} edge[<-] (maeo);
-            \end{tikzpicture}
-        };
-        \node[fill=white,below=0.1 of mhp2] (me2) {\bf motion execution};
-        \node[fill=white,below=0.1 of me2] (ae2) {\it assess post-conditions};
-        }
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        \node<1,4>[anchor=north] at (ph1 -| ahuman) (wait1) {%
-            \begin{tikzpicture}
-                \node[fill=white] (title) {\it wait for pick\\ {\tt TAPE} \it from {\tt TABLE}};
-                \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_pick}};
-            \end{tikzpicture}
-        };
-
-        \node<1,5>[anchor=north] at (ph2 -| ahuman) (wait2) {%
-            \begin{tikzpicture}
-                \node[fill=white] (title) {\it wait for put\\ {\tt TAPE} \it into {\tt BIN}};
-                \node[below=0.1 of title] {\includegraphics{cleantable/wait_for_throw}};
-            \end{tikzpicture}
-        };
-
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%% FLOW
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \draw<1,2>[dotted, ->, in=45, out=180] (incoming.west) to (kb1);
-        \draw<1,2>[dotted, ->, bend right] (kb1) to (pr1);
-        \draw<1,2>[dotted, ->, bend left] (pr1) to (ep1);
-        \draw<1,2>[dotted, ->, in=45, out=180] (ae1.west) to (kb2);
-        \draw<1,3>[dotted, ->, bend right] (kb2) to (pr2);
-        \draw<1,3>[dotted, ->, bend left] (pr2) to (ep2);
-        \draw<1>[dotted, ->, in=45, out=180] (ae2.west) to (kb3);
-        \draw<1,4>[dotted, ->, bend right] (kb3) to (ph1);
-        \draw<1,4>[dotted, ->, bend left] (ph1) to (wait1);
-        \draw<1>[dotted, ->, in=-20, out=180] (wait1.west) to (kb4.east);
-        \draw<1,5>[dotted, ->, bend right] (kb4) to (ph2);
-        \draw<1,5>[dotted, ->, bend left] (ph2) to (wait2);
-        \draw<1,5>[dotted, ->, in=20, out=180] (wait2.west) to (kb5);
-        \draw<1,5>[dotted, ->, bend left] (kb5.east) to (done.north);
-
-
- \end{tikzpicture}
- }
-\end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,31 +1,21 @@
 [file]
 presentation.pdf
 [notes]
-### 4
-
-- Sept 2017: lecturer at Plymouth
-### 5
-Teaching experience in:
-
-- theoretical foundations -- maths, physics, probabilistic algorithms
-
-- robotics -- kinematics, algorithms
-
-- computer science: software engineering, distributed computing, middleware, programming### 8
+### 8
 
 - Mix of geometry, time, semantics
 - High geometric/temporal granularity (e.g. nodding)
 - Lots of common-sense knowledge, cultural background
 - Account for uncertainties
 - Remember past experiences, predict future events
-### 23
+### 34
 Finding the right task is difficult
 
 - natural interaction -> meaningful task
 - realistic with today's technologies
 - *reproducible and mesurable*
 - focused on social cognition
-### 25
+### 36
 - Solitary (independent) play}: Playing separately from others, with no reference to what others are doing.
 
 - Onlooker play}: Watching others play. May engage in conversation but not engaged in doing. True focus on the children at play
@@ -35,7 +25,7 @@ Finding the right task is difficult
 - Associative play}:  Playing with others without organization of play activity. Initiating or responding to interaction with peers.
 
 - Cooperative play}: Coordinating one’s behavior with that of a peer. Everyone has a role, with the emergence of a sense of belonging to a group. Beginning of "team work."
-### 26
+### 37
 
 - make it *technically tractable* 
   - physical playground replaced by large touchscreen (sandtray)
@@ -47,7 +37,9 @@ the playground (exports ROS TF frames of each object) and
 their manipulation (receives virtual ’touches’ from the robot)
 
 - importantly, perception of the partner and of the global scene
-geometry is genuine: still *situated interaction*### 27
+geometry is genuine: still *situated interaction*
+
+### 39
 
 Open-ended task: more an experimental framework than a task.
 
@@ -63,7 +55,7 @@ Słowinski’s Individual Motor Signature
 free-play interactions
 - With-me-ness as a metric of co-engagment
 
-### 29
+### 41
 
 - *behavioural alignment*: each time we play together, our interaction flow improves, becomes more natural
 
