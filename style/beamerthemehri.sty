@@ -219,6 +219,9 @@
     \expandafter\insertsectionHEADaux\insertsectionhead}
     \newcommand{\insertsectionHEADaux}[3]{\MakeUppercase{#3}
 }
+\newcommand{\insertSECTION}{%
+    \MakeUppercase{\insertsection}
+}
 
 \if@doSectionPage\@empty
 \else
@@ -230,7 +233,7 @@
 \setbeamercolor{background canvas}{bg=hriWarmGreyDark}
 \begin{frame}[plain]
 \centering
-\vfill\usebeamerfont{section title}\textcolor{white}{\insertsectionHEAD}\vfill
+\vfill\usebeamerfont{section title}\textcolor{white}{\insertSECTION}\vfill
 \end{frame}
 \endgroup
 }
@@ -315,14 +318,30 @@
 \renewcommand{\theFancyVerbLine}{
   \sffamily\textcolor[rgb]{0.5,0.5,0.5}{\scriptsize\arabic{FancyVerbLine}}}
 
-\newminted{cpp}{frame=lines,
+\newminted{cmake}{frame=none,
+                 linenos=false,
+                 fontsize=\footnotesize,
+                 xleftmargin=1.8em}
+
+\newmintinline[cmake]{cmake}{fontsize=\small}
+
+
+\newminted{asm}{frame=none,
                  linenos=false,
                  fontsize=\small,
                  xleftmargin=1.8em}
 
+\newmintinline[asm]{asm}{fontsize=\small}
+
+
+\newminted{cpp}{frame=none,
+                 linenos=false,
+                 fontsize=\scriptsize,
+                 xleftmargin=1em}
+
 \newmintinline[cpp]{cpp}{fontsize=\small}
 
-\newminted{python}{frame=lines,
+\newminted{python}{frame=none,
                  linenos=false,
                  fontsize=\scriptsize,
                  xleftmargin=1.8em}
@@ -360,15 +379,16 @@
 
 \pgfkeys{
     /background/.is family, /background,
-    default/.style = {scale = 1.0,color=white,caption=\empty},
+    default/.style = {scale = 1.0,color=white,caption=\empty,page=1},
     scale/.estore in = \bgScale,
     color/.estore in = \bgColor,
     caption/.estore in = \bgCaption,
+    page/.estore in = \bgPage,
 }
 
 \newcommand\badge[1]{%
     \begin{tikzpicture}[remember picture,overlay]%
-        \node [xshift=-1cm,yshift=-1.4cm] at (current page.north east){\includegraphics[width=2cm,height=2cm,keepaspectratio]{#1}};%
+        \node [xshift=-.4cm,yshift=-1.8cm,anchor=east] at (current page.north east){\includegraphics[height=2cm,keepaspectratio]{#1}};%
     \end{tikzpicture}%
 }
 

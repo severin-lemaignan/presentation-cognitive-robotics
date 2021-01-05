@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -15,7 +13,7 @@
    viewBox="0 0 1856.8607 1062.9922"
    id="svg7476"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
    sodipodi:docname="robots.svg">
   <defs
      id="defs7478">
@@ -52,6 +50,17 @@
          x="1417.3228"
          y="648.67706" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath861">
+      <rect
+         style="fill:#ff1300;stroke-width:4.60985;stroke-linecap:round;stop-color:#000000"
+         id="rect863"
+         width="344.70355"
+         height="410.10568"
+         x="1054.0176"
+         y="388.95767" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -60,9 +69,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="676.81869"
-     inkscape:cy="266.17632"
+     inkscape:zoom="1.4"
+     inkscape:cx="1239.1653"
+     inkscape:cy="654.7735"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -75,8 +84,10 @@
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      inkscape:window-x="0"
-     inkscape:window-y="867"
-     inkscape:window-maximized="1" />
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata7481">
     <rdf:RDF>
@@ -85,7 +96,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -95,91 +106,92 @@
      id="layer1"
      transform="translate(0,10.629982)">
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/bert-brl.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/bert-brl.jpg"
        xlink:href="bert-brl.jpg"
-       transform="matrix(0.937,0,0,0.937,103.13681,53.582753)"
-       clip-path="url(#clipPath8150)"
-       width="468.4574"
-       height="425.80466"
-       preserveAspectRatio="none"
-       id="image8098"
+       y="646.67706"
        x="1388.4033"
-       y="646.67706" />
+       id="image8098"
+       preserveAspectRatio="none"
+       height="425.80466"
+       width="468.4574"
+       clip-path="url(#clipPath8150)"
+       transform="matrix(0.937,0,0,0.937,103.13681,53.582753)" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/icub.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/icub.jpg"
        xlink:href="icub.jpg"
-       width="411.84708"
-       height="411.84708"
-       preserveAspectRatio="none"
-       id="image8109"
+       y="386.63733"
        x="627.19324"
-       y="386.63733" />
+       id="image8109"
+       preserveAspectRatio="none"
+       height="411.84708"
+       width="411.84708" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/rosie-tum.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/rosie-tum.jpg"
        xlink:href="rosie-tum.jpg"
-       transform="matrix(0.937,0,0,0.937,46.266876,58.305217)"
-       clip-path="url(#clipPath8144)"
-       width="242.09332"
-       height="307.24014"
-       preserveAspectRatio="none"
-       id="image8120"
+       y="798.59656"
        x="613.34778"
-       y="798.59656" />
+       id="image8120"
+       preserveAspectRatio="none"
+       height="307.24014"
+       width="242.09332"
+       clip-path="url(#clipPath8144)"
+       transform="matrix(0.937,0,0,0.937,46.266876,58.305217)" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/fixing_nao.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/fixing_nao.jpg"
        xlink:href="fixing_nao.jpg"
-       transform="matrix(0.937,0,0,0.937,19.320477,32.814583)"
-       clip-path="url(#clipPath8136)"
-       width="799.21588"
-       height="1062.9922"
-       preserveAspectRatio="none"
-       id="image8043"
+       y="-10.629921"
        x="-185.86813"
-       y="-10.629921" />
+       id="image8043"
+       preserveAspectRatio="none"
+       height="1062.9922"
+       width="799.21588"
+       clip-path="url(#clipPath8136)"
+       transform="matrix(0.937,0,0,0.937,19.320477,32.814583)" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/pr2-roboscopie.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/pr2-roboscopie.jpg"
        xlink:href="pr2-roboscopie.jpg"
-       width="411.84711"
-       height="617.77075"
-       preserveAspectRatio="none"
-       id="image8054"
+       y="10.138207"
        x="1431.1682"
-       y="10.138207" />
+       id="image8054"
+       preserveAspectRatio="none"
+       height="617.77075"
+       width="411.84711" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/jido.png"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/jido.png"
        xlink:href="jido.png"
-       width="231.13873"
-       height="399.66357"
-       preserveAspectRatio="none"
-       id="image8065"
+       y="170.45375"
        x="-442.83627"
-       y="170.45375" />
+       id="image8065"
+       preserveAspectRatio="none"
+       height="399.66357"
+       width="231.13873" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/cellulo.JPG"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/cellulo.JPG"
        xlink:href="cellulo.JPG"
-       width="526.48309"
-       height="237.77841"
-       preserveAspectRatio="none"
-       id="image8076"
+       y="806.59015"
        x="873.14038"
-       y="806.59015" />
+       id="image8076"
+       preserveAspectRatio="none"
+       height="237.77841"
+       width="526.48309" />
     <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/rangers.jpg"
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/rangers.jpg"
        xlink:href="rangers.jpg"
-       width="753.32452"
-       height="359.26624"
-       preserveAspectRatio="none"
-       id="image8087"
+       y="1.4478832"
        x="638.67297"
-       y="1.4478832" />
-    <image
-       sodipodi:absref="/home/slemaignan/talks/presentation-cognitive-robotics/figs/perso/pepper.jpg"
-       xlink:href="pepper.jpg"
-       width="345.43634"
-       height="398.97894"
+       id="image8087"
        preserveAspectRatio="none"
-       id="image8131"
-       x="1060.2736"
-       y="386.20474" />
+       height="359.26624"
+       width="753.32452" />
+    <image
+       sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/perso/supervised.jpg"
+       xlink:href="supervised.jpg"
+       clip-path="url(#clipPath861)"
+       y="368.54749"
+       x="1050.2035"
+       id="image855"
+       preserveAspectRatio="none"
+       height="531.27551"
+       width="350.35059" />
   </g>
 </svg>
