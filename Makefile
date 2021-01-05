@@ -1,7 +1,8 @@
 
 LATEX=lualatex
 
-TEXTARGETS=$(wildcard ./presentation.tex)
+#TEXTARGETS=$(wildcard ./presentation.tex)
+TEXTARGETS=presentation.profile.project.tex
 
 TARGET=$(TEXTARGETS:.tex=.pdf)
 
@@ -14,7 +15,7 @@ MODE ?= batchmode
 all: paper
 
 %.pdf: %.svg
-	inkscape --export-pdf $(@) $(<)
+	inkscape -o $(@) $(<)
 
 %.aux: paper
 
