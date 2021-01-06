@@ -1,4 +1,5 @@
-\documentclass[compress]{beamer}
+%\documentclass[xcolor=table,handout,compress]{beamer}
+\documentclass[xcolor=table]{beamer}
 
 %--------------------------------------------------------------------------
 % Common packages
@@ -13,6 +14,20 @@
 \usepackage{tabularx,ragged2e}
 \usepackage{booktabs}
 \usepackage{marvosym}
+
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+  \expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+  {%else
+    % removed \addtocontents commands
+    \clearpage\beamer@notesactions%
+  }
+}
+\newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+\newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+\makeatother
+
 
 %--------------------------------------------------------------------------
 % Load theme

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128.00012mm"
+   height="96.000008mm"
+   viewBox="0 0 453.54374 340.15751"
+   id="svg3581"
+   version="1.1"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
+   sodipodi:docname="experiments-cHRI.svg">
+  <defs
+     id="defs3583">
+    <clipPath
+       id="clipPath3611"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3613"
+         d="m 0,0 362.83502,0 0,272.409 L 0,272.409 0,0 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4159">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4161"
+         width="116.4906"
+         height="70.584702"
+         x="11.900836"
+         y="-91.230553" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath861">
+      <rect
+         style="fill:#ff1300;stroke-width:3.68788;stroke-linecap:round;stop-color:#000000"
+         id="rect863"
+         width="105.58709"
+         height="101.15179"
+         x="244.60448"
+         y="-188.99202" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath881">
+      <rect
+         style="fill:#ff1300;stroke-width:3.68788;stroke-linecap:round;stop-color:#000000"
+         id="rect883"
+         width="103.94186"
+         height="63.292316"
+         x="244.75369"
+         y="-83.474144" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath866">
+      <rect
+         style="fill:#ff1300;stroke-width:3.68788;stroke-linecap:round;stop-color:#000000"
+         id="rect868"
+         width="107.76569"
+         height="59.425407"
+         x="195.29028"
+         y="-253.63129" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath886">
+      <rect
+         style="fill:#ff1300;stroke-width:3.68788;stroke-linecap:round;stop-color:#000000"
+         id="rect888"
+         width="104.98131"
+         height="83.968239"
+         x="196.09283"
+         y="-103.73782" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="139.87867"
+     inkscape:cy="137.1339"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3603"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:document-rotation="0"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata3586">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(59.629016,-360.14059)">
+    <g
+       transform="matrix(1.25,0,0,-1.25,98.942409,605.29809)"
+       inkscape:label="presentation"
+       id="g3597">
+      <g
+         transform="translate(-126.85714,-76.02)"
+         id="g3603"
+         style="opacity:1">
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/cellulo/cellulo-windfields.png"
+           xlink:href="cellulo/cellulo-windfields.png"
+           clip-path="url(#clipPath886)"
+           transform="scale(1,-1)"
+           y="-107.55918"
+           x="165.67812"
+           id="image880"
+           preserveAspectRatio="none"
+           height="91.371208"
+           width="141.33551" />
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/ranger-background.jpg"
+           xlink:href="ranger-background.jpg"
+           y="-176.63934"
+           x="79.470726"
+           id="image5252"
+           preserveAspectRatio="none"
+           height="78.901405"
+           width="105.20186"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/ranger/croquignole-single.jpg"
+           xlink:href="ranger/croquignole-single.jpg"
+           y="-188.05316"
+           x="195.6756"
+           id="image5197"
+           preserveAspectRatio="none"
+           height="76.621086"
+           width="105.21104"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/cowriter/henry.jpg"
+           xlink:href="cowriter/henry.jpg"
+           y="-254.22458"
+           x="79.470726"
+           id="image5186"
+           preserveAspectRatio="none"
+           height="70.129875"
+           width="105.19482"
+           transform="scale(1,-1)" />
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/speech-reco/record_img.jpg"
+           xlink:href="speech-reco/record_img.jpg"
+           clip-path="url(#clipPath4159)"
+           transform="matrix(1,0,0,-1,67.284171,0)"
+           width="104.93051"
+           height="92.07653"
+           preserveAspectRatio="none"
+           id="image4154"
+           x="11.900836"
+           y="-90.826492" />
+        <image
+           sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/head_pose-442.png"
+           xlink:href="head_pose-442.png"
+           clip-path="url(#clipPath866)"
+           transform="scale(1,-1)"
+           y="-268.54022"
+           x="197.33112"
+           id="image859"
+           preserveAspectRatio="none"
+           height="78.541901"
+           width="104.72255" />
+      </g>
+    </g>
+  </g>
+</svg>
