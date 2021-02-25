@@ -144,6 +144,8 @@
 \end{frame}
 }
 
+\imageframe[color=black]{perso/robots}
+
 \begin{frame}{Associate Prof in Social Robotics and AI}
     \begin{itemize}
         \item Supervising 2 groups at BRL (embodied cognition and autonomous
@@ -161,7 +163,6 @@
 \end{frame}
 
 
-\imageframe[color=black]{perso/robots}
 
 
 \imageframe[scale=0.95]{collaborations_map}
@@ -172,14 +173,20 @@
 
 \section{1. Symbolic social cognition}
 
-\begin{frame}<4>[label=sitass]{Objective: ``Can you give me that book?''}
+{
+    \paper{Lemaignan et al. \textbf{Grounding the Interaction: Anchoring Situated Discourse in Everyday [...]} Intl. Journal of
+    Social Rob. 2011]\\
+
+    [Lemaignan et al. \textbf{ORO, a Knowledge Management Module for Cognitive Architectures in Robotics} IROS 2010}
+
+\begin{frame}<4>[label=sitass]{Fully solving ``Can you give me that book?''}
 
     \begin{columns}
         \begin{column}{0.3\linewidth}
             \centering
-            \includegraphics[width=\linewidth]{situation-assessment}
+            \includegraphics[width=\linewidth]{human-perspective-small}
 
-            {\tiny
+            {\scriptsize
             \begin{itemize}
                 \item real-time situation assessment
                 \item geometric reasoning
@@ -247,7 +254,7 @@
 
             \end{figure}
 
-            {\tiny
+            {\scriptsize
             \begin{itemize}
                 \item ontologies
                 \item real-time symbolic reasoning
@@ -335,7 +342,7 @@
                     }
                 \end{figure}
 
-            {\tiny
+            {\scriptsize
             \begin{itemize}
                 \item symbolic grounding
                 \item natural language processing
@@ -351,6 +358,7 @@
 
         %\badge{europe_phd}
     \end{frame}
+}
 
 \begin{frame}{Symbolic social cognition}
 
@@ -370,12 +378,16 @@ Impact:
     \begin{itemize}
         \item Prix GdR Meilleure thèse
         \item 10+ publications, incl. \emph{Intl. Journal of Social Robotics};
-            \emph{IROS}x2; \emph{HRI}; \emph{RoMAN}x2; \textbf{500+ citations}
+            \emph{IROS}x2; \emph{HRI}; \emph{RoMAN}x2; 500+ citations
     \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{2. Real-world social autonomy}
+
+{
+    \paper{Lemaignan et al. \textbf{Artificial Cognition for Social Human-Robot Interaction: An Implementation} Artificial
+    Intelligence 2017}
 
 \begin{frame}<6>{Architecture for social \& autonomous interaction}
 
@@ -471,7 +483,19 @@ Impact:
 
             \end{tikzpicture}
         }
+
+            {\scriptsize
+            \begin{itemize}
+                \item full socio-cognitive architecture for autonomy
+                \item semantic-driven via semantic blackboard
+                \item full interaction loop: NLP, joint goals, joint actions,
+                    real-time monitoring
+            \end{itemize}
+            }
+
+
          \end{column}
+
          \begin{column}{0.5\linewidth}
              \centering
              \resizebox{\columnwidth}{!}{%
@@ -657,13 +681,93 @@ Impact:
     \end{center}
 
 \end{frame}
+}
 
-\begin{frame}{Expert-in-the-loop machine learning}
+{
+    \paper{Mohamed, Lemaignan \textbf{ROS for Human-Robot Interaction} Arxiv
+    2021 (under review RSS)}
+
+\begin{frame}{Social signal processing pipeline}
+    \begin{center}
+        \includegraphics[width=\columnwidth]{architectures/ros4hri-pipeline}
+    \end{center}
+    ROS4HRI: first integrated, multi-modal, ROS-based pipeline for social signal
+    processing
+\end{frame}
+}
+
+\begin{frame}{Real-world social autonomy}
+
+Main contributions:
+
+    \begin{enumerate}
+        \item state-of-art \textbf{cognitive architecture for social interaction}
+        \item framing \textbf{semantic-aware robotic architectures}
+        \item large-scale, multi-modal, standard-compliant \textbf{social signal
+            processing}
+    \end{enumerate}
+
+Impact:
+    \begin{itemize}
+        \item major publications, incl. \emph{Artificial Intelligence},
+            \emph{HRI}, \emph{IROS}; 800+ citations
+        \item 2nd most cited paper \emph{ever} from \emph{Artificial Intelligence}
+        \item major contribution to open-source robotics; 150+ GitHub repos
+    \end{itemize}
+\end{frame}
+
+
+\section{3. Data-driven HRI}
+
+%\imageframe[color=black]{social-interactions/social-interactions.pdf}
+
+{
+    \paper{Lemaignan et al. \textbf{The PInSoRo dataset: Supporting the data-driven study of child-child and child-robot [...]} PLOS One 2018]
+
+    [Bartlett et al. \textbf{What Can You See? Identifying Cues on Internal States from the Kinematics [...]} FrontiersIn 2019}
+
+\begin{frame}{Large scale dataset of social interactions}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \includegraphics[width=\columnwidth]{pinsoro/annotator.jpg}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \includegraphics[width=\columnwidth]{kinematics_social_dynamics/clip_skel_05_thumb.jpg}
+
+        \end{column}
+    \end{columns}
+    \vspace{0.5cm}
+\begin{columns}
+    \begin{column}{0.5\linewidth}
+        {\scriptsize
+        \begin{itemize}
+            \item PInSoRo dataset: 45h+ and 2M frames of annotated natural interactions
+            \item new data analysis techniques to estimate internal state from body language
+            \item first-in-kind dataset for data-driven study of social
+                interactions
+        \end{itemize}
+        }
+    \end{column}
+    \begin{column}{0.5\linewidth}
+            \includegraphics[trim=1cm 0 4cm 0,clip,width=\columnwidth]{kinematics_social_dynamics/efa-embeddings.png}
+    \end{column}
+\end{columns}
+
+\end{frame}
+}
+
+{
+    \paper{Senft et al. \textbf{Teaching robots social autonomy from in situ
+    human guidance} Science Robotics 2019]
+
+    [Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
+
+\begin{frame}{SPARC: Expert-in-the-loop machine learning}
 
     \begin{columns}
         \begin{column}{0.5\linewidth}
                 \centering
-                \includegraphics[height=3cm]{couch25k/hri.jpg}
+                \includegraphics[height=3cm]{sparc/overview.jpg}
         \end{column}
         \begin{column}{0.5\linewidth}
                 \centering
@@ -673,164 +777,33 @@ Impact:
         \centering
         \includegraphics[height=4cm]{couch25k/architecture.pdf}
 \end{frame}
+}
 
-\begin{frame}{Real-world social autonomy}
+\begin{frame}{Data-driven HRI}
 
 Main contributions:
 
     \begin{enumerate}
-        \item \textbf{ontologies} to model the robot knowledge
-        \item \textbf{situation assessment} using real-time 3D models of the
-            environment to generate symbolic facts
-        \item \textbf{perspective taking} and \textbf{theory of mind}: generate and
-            maintain symbolic knowledge models for all the agents
-        \item Application: \textbf{perspective-aware situated dialogue} with real-time \textbf{symbolic
-            grounding}
+        \item leading role in \textbf{shaping the emergent field of data-driven
+            HRI}
+        \item pioneering work on \textbf{data-driven behaviour analysis} for social
+            robotics, drawing from both psychology and AI.
+        \item major advances towards \textbf{learning autonomous social
+            policies} for service robots
     \end{enumerate}
 
 Impact:
     \begin{itemize}
-        \item Prix GdR Meilleure thèse
-        \item 10+ publications, incl. \emph{Intl. Journal of Social Robotics};
-            \emph{IROS}x2; \emph{HRI}; \emph{RoMAN}x2; \textbf{500+ citations}
+        \item top publications incl. \emph{Science Robotics}, \emph{FrontiersIn
+            Robotics and AI}, \emph{PLOS One}, \emph{RSS}, 300+ citations
+        \item first large-scale and open dataset of natural social interactions
     \end{itemize}
 \end{frame}
 
 
-\section[cHRI]{...to child-robot interaction...}
-
-\imageframe[color=black]{experiments-cHRI}
-
-\section[Data-driven HRI]{...to data-driven HRI: interactive reinforcement learning}
-{
-    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
-    RSS 2020}
-    \fullbackground[scale=0.9]{couch25k/finalactiondist.png}
-\begin{frame}{}
-\end{frame}
-}
-{
-    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment}
-    RSS 2020}
-    \fullbackground[scale=0.9]{couch25k/fullcomp_lbmr.png}
-\begin{frame}{}
-\end{frame}
-}
-
-\section[Social dynamics]{Data-driven HRI: social dynamics}
-{
-    \paper{Lemaignan et al. \textbf{The PInSoRo dataset [...]} PLOS ONE
-    2018}
-    \fullbackground[scale=0.9]{pinsoro/annotator.jpg}
-\begin{frame}{}
-\end{frame}
-}
-
-%\videoframe[0.56]{figs/kinematics_social_dynamics/clip_skel_01.mp4}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\videoframe[0.56]{figs/kinematics_social_dynamics/clip_01.mp4}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\videoframe[0.56]{figs/kinematics_social_dynamics/clip_skel_05.mp4}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\videoframe[0.56]{figs/kinematics_social_dynamics/clip_05.mp4}
-
-\imageframe[caption={200 participants, 4 clips each, on MTurk}]{kinematics_social_dynamics/questionnaire.png}
-%\imageframe{kinematics_social_dynamics/dataset.png}
-%\imageframe[caption={For each construct, calculate $\Delta$ and $\Sigma$}]{kinematics_social_dynamics/dataset-sumdiff.png}
-
-{
-    \paper{Bartlett et al. \textbf{What Can You See? Identifying Cues on
-Internal States from the Kinematics [...]} Frontiers
-2019}
-\begin{frame}{EFA: Exploratory Factor Analysis}
-
-\tiny
-\rowcolors{2}{gray!25}{white}
-\begin{tabular}{lrr|rr|rr}
-
-    {} & \multicolumn{2}{l}{\bf Factor 1\onslide<2->{: imbalance}} &
-    \multicolumn{2}{l}{\bf Factor 2\onslide<2->{: (negative) valence}} & \multicolumn{2}{l}{\bf
-    Factor 3\onslide<2->{: engagement}} \\
-    {} & \emph{full-scene} &  \onslide<3->{\emph{mov.-alone}} & \emph{full-scene} &
-    \onslide<3->{\emph{mov.-alone}} & \emph{full-scene} &
-    \onslide<3->{\emph{mov.-alone}} \\
-\midrule
-    \textbf{$\Delta$ Sad       } &      0.41 &  \only<3->{0.52} &           &                  &           &       \\
-    \textbf{$\Sigma$ Sad       } &           &                  &      0.72 & \only<3->{ 0.53} &           & \only<3->{ 0.49} \\
-    \textbf{$\Delta$ Happy     } &      0.49 &  \only<3->{0.53} &           &                  &           & \\
-    \textbf{$\Sigma$ Happy      } &           &                 &           & \only<3->{-0.51} &     -0.55 & \\
-    \textbf{$\Delta$ Angry     } &      0.40 &  \only<3->{0.62} &           &                  &           & \\
-    \textbf{$\Sigma$ Angry      } &           &                 &      0.81 & \only<3->{ 0.85} &           & \\
-    \textbf{$\Delta$ Excited   } &      0.53 &  \only<3->{0.63} &           &                  &           & \\
-    \textbf{$\Sigma$ Excited    } &           &                 &           &                  &     -0.71 & \\
-    \textbf{$\Delta$ Calm      } &      0.45 &  \only<3->{0.63} &           &                  &           & \\
-    \textbf{$\Sigma$ Calm       } &           &  \only<3-> {  } &           & \only<3->{-0.45} &           & \\
-    \textbf{$\Delta$ Friendly  } &      0.69 &  \only<3->{0.56} &           &                  &           & \\
-    \textbf{$\Sigma$ Friendly   } &           &  \only<3->{   } &           & \only<3->{-0.60} &     -0.43 & \\
-    \textbf{$\Delta$ Aggressive} &      0.78 &  \only<3->{0.79} &           &                  &           & \\
-    \textbf{$\Sigma$ Aggressive } &           &  \only<3->{   } &      0.80 & \only<3->{ 0.72} &     -0.36 & \\
-    \textbf{$\Delta$ Engaged   } &           &  \only<3->{0.39} &           &                  &      0.65 & \only<3->{ 0.52} \\
-    \textbf{$\Sigma$ Engaged    } &           &  \only<3->{   } &           &                  &     -0.64 & \only<3->{-0.64} \\
-    \textbf{$\Delta$ Distracted} &           &  \only<3->{    } &           &                  &      0.65 & \only<3->{ 0.63} \\
-    \textbf{$\Sigma$ Distracted } &           &  \only<3->{   } &      0.63 &                  &           & \only<3->{ 0.82} \\
-    \textbf{$\Delta$ Bored     } &           &  \only<3->{0.44} &           &                  &      0.61 & \only<3->{ 0.54} \\
-    \textbf{$\Sigma$ Bored      } &           &  \only<3->{   } &      0.58 &                  &      0.48 & \only<3->{ 0.83} \\
-    \textbf{$\Delta$ Frustrated} &      0.53 &  \only<3->{0.61} &           &                  &           &       \\
-    \textbf{$\Sigma$ Frustrated } &           &  \only<3->{   } &      0.70 & \only<3->{ 0.69} &           &       \\
-    \textbf{$\Delta$ Dominant  } &      0.75 &  \only<3->{0.81} &           &                  &           &       \\
-    \textbf{$\Sigma$ Dominant   } &           &  \only<3->{   } &      0.53 & \only<3->{ 0.52} &           &       \\
-    \textbf{$\Delta$ Submissive} &      0.68 &  \only<3->{0.72} &           &                  &           &       \\
-    \textbf{$\Sigma$ Submissive } &          &                  &      0.54 &                  &           &       \\
-
-\end{tabular}
-
-    \note{Very strong correlation: Factor 1: r = 0.94, p < 0.001; for Factor 2: r = 0.84, p < 0.001; for Factor 3: r = 0.81, p < 0.001}
-
-\end{frame}
-}
-
-\begin{frame}{Three constructs to rule them all}
-        \centering
-        \includegraphics[width=0.9\linewidth]{kinematics_social_dynamics/clips.jpg}
-
-    \textbf{Interaction imbalance}
-    
-    \textbf{Interaction valence}
-    
-    \textbf{Engagement}
-
-\end{frame}
-
-%\begin{frame}{Mean EFA projection of clips per social situation}
-%
-%    \only<1>{
-%        The 20 clips were labelled after their salient social features
-%        (\emph{aggressive}, \emph{excited}, \emph{aimless}, \emph{fun},
-%        \emph{cooperative}, \emph{bored}, \emph{dominant}).
-%
-%        \vspace{2cm}
-%        What happen if we project the ratings for 'aggressive' clips,
-%        'excited' clips, etc. onto the 3 EFA factors?
-%
-%    }
-%
-%    \only<2->{
-%    \begin{center}
-%        \includegraphics<2>[width=\linewidth]{kinematics_social_dynamics/means-imbalance-vs-valence.png}
-%        \includegraphics<3>[width=\linewidth]{kinematics_social_dynamics/means-imbalance-vs-engagement.png}
-%    \end{center}
-%    }
-%
-%\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{4. Human factors}
 
 {
     \fullbackground{experiments-col}
@@ -842,9 +815,9 @@ Internal States from the Kinematics [...]} Frontiers
     Extensive experimental work:
 
     \begin{itemize}
-        \item around 25 field experiments to date
+        \item over 25 field experiments over the past 10 years
         \item focus on real-world experiments (eg schools, gyms) 
-        \item worked with 200+ children
+        \item child-robot interaction expertise: worked with 200+ children
     \end{itemize}
 
     \end{column}
@@ -855,11 +828,69 @@ Internal States from the Kinematics [...]} Frontiers
 }
 
 
-\section{Where next?}
-
-\imageframe[color=black]{social-interactions/social-interactions.pdf}
-
 \begin{frame}{}
+
+        \begin{tikzpicture}
+            \node[rotate=90,text width=2.5cm]{\small\textbf{Understanding\\interaction}};
+        \end{tikzpicture}
+            \hyperlink{croquignole}{\includegraphics[height=0.2\paperheight]{trust/Tiago_and_participant}}
+            \hspace{0.5em}
+            \hyperlink{dominos}{\includegraphics[trim=10cm 0 4cm 0,clip,height=0.2\paperheight]{dynamic-language/Preview_image}}
+            \hspace{0.5em}
+            \hyperlink{anthropomorphism}{\includegraphics[height=0.2\paperheight]{dynamics_anthropo}}
+
+        \begin{tikzpicture}
+            \node[rotate=90,text width=2cm]{\textbf{Robots for \\Learning}};
+        \end{tikzpicture}
+            \hyperlink{cellulo}{\includegraphics[height=0.2\paperheight]{cowriter/cowriter-session1_3minExcerpt_1x_thumb}}
+            \hspace{0.5em}
+            \hyperlink{cowriter-impl}{\includegraphics[height=0.2\paperheight]{cowriter/pca}}
+
+        \begin{tikzpicture}
+            \node[rotate=90]{\textbf{Methodology}};
+        \end{tikzpicture}
+            \hyperlink{withmeness}{\includegraphics[height=0.2\paperheight]{withmeness/withmeness}}
+            \hspace{0.5em}
+            \hyperlink{asr}{\includegraphics[height=0.2\paperheight]{speech-reco/record_img}}
+            \hspace{0.5em}
+            \hyperlink{constructs}{\includegraphics[height=0.2\paperheight]{triadic_false_beliefs}}
+
+\end{frame}
+
+\begin{frame}{Social robotics and human factors}
+
+Main contributions:
+
+    \begin{enumerate}
+        \item transdiscplinary expertise: key role in \textbf{bridging research in cognitive psychology
+            with robotics}
+        \item number of \textbf{cross-disciplinary experimental work} and literature surveys
+        \item major contribution to \textbf{child-robot interaction}, in
+            particular the \textbf{importance of social engagement}
+            between children and robots
+    \end{enumerate}
+
+Impact:
+    \begin{itemize}
+        \item 20+ publications on human factors and experimental robotics,
+              1000+ citations
+        \item EU H2020 Marie-Curie fellowship on Theory of Mind
+        \item invited expert to EU \& UNICEF on the Ethics of child-robot
+            interactions
+    \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\imageframe{my_background/00}
+
+
+\section{Research project}
+
+
+\begin{frame}[label=researchquestion]{}
 
     \begin{center}
 
@@ -875,11 +906,12 @@ Internal States from the Kinematics [...]} Frontiers
             \end{itemize}
         \item complex social dynamics
             \begin{itemize}
-                \item<3-> $\rightarrow$ \emph{social} situation assessment 
+                \item<3-> $\rightarrow$ \textbf{social situation assessment} 
             \end{itemize}
         \item diversity of tasks; long term, sustained interactions
             \begin{itemize}
-                \item<4-> $\rightarrow$ goal-driven, non-repetitive behaviours
+                \item<4-> $\rightarrow$ \textbf{goal-driven, non-repetitive
+                    behaviours}
             \end{itemize}
     \end{itemize}
 
@@ -888,7 +920,7 @@ Internal States from the Kinematics [...]} Frontiers
         \item<5-> social acceptability
         \item<5-> responsible AI
             \begin{itemize}
-                \item<6-> $\rightarrow$ \emph{public-in-the-loop} research
+                \item<6-> $\rightarrow$ \textbf{public-in-the-loop} research
                     
             \end{itemize}
     \end{itemize}
@@ -897,6 +929,46 @@ Internal States from the Kinematics [...]} Frontiers
 
 \end{frame}
 
+\begin{frame}{My research project}
+    \centering
+    \LARGE
+    \vfill
+    {\bf Understand the dynamics of long-term social human-robot interactions;
+
+    create and sustain responsible, real-world interactions with robots}
+    \vfill
+
+    \pause
+    How to balance long-term \emph{social autonomy} (goal-driven architecture)
+    with \emph{human oversight}?
+    
+\end{frame}
+
+\begin{frame}<1-2>[label=wps]{Research programme}
+    \begin{center}
+    \only<1>{
+        \includegraphics[width=\linewidth]{architectures/wps}
+    }
+    \only<2>{
+        \includegraphics[trim=8cm 20cm 8cm 0,clip,width=\linewidth]{architectures/wps}
+    }
+    \only<3>{
+        \includegraphics[trim=30cm 8cm 0 8cm,clip,width=0.7\linewidth]{architectures/wps}
+    }
+    \only<4>{
+        \includegraphics[trim=8cm 0 8cm 16cm,clip,width=\linewidth]{architectures/wps}
+    }
+    \only<5>{
+        \includegraphics[trim=0 8cm 34cm 8cm,clip,width=0.7\linewidth]{architectures/wps}
+    }
+    \end{center}
+\end{frame}
+
+\imageframe[color=black]{social-interactions/social.jpg}
+\imageframe[scale=0.9]{architectures/strand1.pdf}
+
+\againframe<3>{wps}
+\againframe<4>{wps}
 
 \begin{frame}{`human-in-the-loop' HRI}
     \begin{center}
@@ -944,30 +1016,27 @@ Internal States from the Kinematics [...]} Frontiers
     \end{center}
 \end{frame}
 
-
-\imageframe[scale=0.9]{architectures/wps.pdf}
-\imageframe[color=black]{social-interactions/social.jpg}
-\imageframe[scale=0.9]{architectures/strand1.pdf}
 \imageframe[scale=0.9]{architectures/archi.pdf}
 
+\againframe<5>{wps}
+\againframe<1>{wps}
 
-\begin{frame}{Integration ISIR}
 
-    $\rightarrow$ natural integration to PiRos team
+\begin{frame}{Integration LAAS}
+
+    $\rightarrow$ natural integration to RIS team
 
     \begin{itemize}
-        \item<1-> work well aligned with Mohamed's on social signal processing
-        \item<2-> model of humans $\rightarrow$ integration with the cognitive
-            neuroscience experts (eg Malika), face decoding (Kevin, Laurence)
-        \item<2-> robust perception: Catherine A.
-        \item<3> non-verbal communication: Catherine P.
+        \item<1-> TBD
+        \item<2-> TBD
+        \item<3> TBD
     \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {
-    \fullbackground[color=black]{colleagues/colleagues.pdf}
+    \fullbackground[color=black]{lastpage}
 \begin{frame}[plain]
 
     \begin{columns}
@@ -976,10 +1045,15 @@ Internal States from the Kinematics [...]} Frontiers
         \begin{column}{0.4\linewidth}
 
 \setbeamercolor{hriSec1Demo}{fg=white!70!black}
+    \vspace{6em}
 \begin{beamercolorbox}[wd=\linewidth,ht=6ex,dp=0.7ex]{hriSec1Demo}
     \textbf{Thank you!}
-    \vspace{3em}
 \end{beamercolorbox}
+    \vspace{12em}
+    {\scriptsize
+            \emph{(picture from \emph{roboscopie}, a theatre play I 'programmed' with director Nicolas Darrot in
+            2012)}
+    }
         \end{column}
     \end{columns}
 \end{frame}

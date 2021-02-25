@@ -14,7 +14,7 @@
    version="1.1"
    id="svg143"
    sodipodi:docname="architecture.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
    style="overflow:hidden">
   <metadata
      id="metadata147">
@@ -37,21 +37,22 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2560"
-     inkscape:window-height="1012"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
      id="namedview145"
      showgrid="false"
-     inkscape:zoom="2.9033886"
-     inkscape:cx="433.73533"
-     inkscape:cy="77.897605"
-     inkscape:window-x="3840"
-     inkscape:window-y="32"
+     inkscape:zoom="1.0265029"
+     inkscape:cx="983.02185"
+     inkscape:cy="454.23203"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g4867"
+     inkscape:current-layer="g141"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0" />
   <defs
      id="defs17">
     <image
@@ -270,12 +271,11 @@
        id="text21"
        x="-672.22974"
        y="1209.719"
-       style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Validated<tspan
+       style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Validated<tspan
    x="-657.58936"
    y="1232.8353"
    id="tspan19"
-   style="stroke-width:0.77054536">Actions</tspan>
-</text>
+   style="stroke-width:0.770545">Actions</tspan></text>
     <g
        clip-path="url(#clip6)"
        transform="matrix(0.77054539,0,0,0.77054539,1570.0107,452.62429)"
@@ -310,35 +310,25 @@
        font-weight="400"
        font-size="38"
        id="text59"
-       style="font-weight:400;font-size:29.28072548px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536"
-       x="1269.3439"
-       y="732.33228">Learner</text>
-    <path
-       d="m 1079.9438,763.92462 c 0,-8.08533 6.555,-14.64036 14.6404,-14.64036 h 159.5028 c 8.0831,0 14.6404,6.55503 14.6404,14.64036 v 58.56145 c 0,8.08533 -6.5573,14.64036 -14.6404,14.64036 h -159.5028 c -8.0854,0 -14.6404,-6.55503 -14.6404,-14.64036 z"
-       stroke-miterlimit="8"
-       id="path61"
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.54109073;stroke-miterlimit:8" />
+       style="font-weight:400;font-size:43.7874px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545"
+       x="1084.4222"
+       y="743.41321"><tspan
+         style="font-weight:normal;stroke-width:0.770545"
+         id="tspan993">RL/kNN/MLP learners</tspan></text>
     <text
        font-weight="400"
        font-size="38"
        id="text63"
        x="1146.0181"
        y="802.4519"
-       style="font-weight:400;font-size:29.28072548px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Style</text>
-    <path
-       d="m 1303.4019,763.92462 c 0,-8.08533 6.5574,-14.64036 14.6404,-14.64036 h 159.5029 c 8.083,0 14.6404,6.55503 14.6404,14.64036 v 58.56145 c 0,8.08533 -6.5574,14.64036 -14.6404,14.64036 h -159.5029 c -8.083,0 -14.6404,-6.55503 -14.6404,-14.64036 z"
-       stroke-miterlimit="8"
-       id="path65"
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.54109073;stroke-miterlimit:8" />
+       style="font-weight:400;font-size:29.2807px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Style</text>
     <text
        font-weight="400"
        font-size="38"
        id="text67"
        x="1360.0293"
        y="802.4519"
-       style="font-weight:400;font-size:29.28072548px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Action</text>
+       style="font-weight:400;font-size:29.2807px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Action</text>
     <path
        d="m 732.42785,770.16065 c 0,1.7422 38.63823,3.15461 86.30109,3.15461 47.66285,0 86.30108,-1.41241 86.30108,-3.15461 v 51.48322 c 0,1.74143 -38.63823,3.15384 -86.30108,3.15384 -47.66286,0 -86.30109,-1.41241 -86.30109,-3.15384 z"
        id="path69"
@@ -361,7 +351,7 @@
        id="text85"
        x="975.62573"
        y="550.13452"
-       style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">State</text>
+       style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">State</text>
     <text
        font-weight="400"
        font-size="25"
@@ -369,34 +359,30 @@
        id="text93"
        x="-469.57629"
        y="1163.286"
-       style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Next <tspan
+       style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Next <tspan
    x="-469.57629"
    y="1186.4023"
    id="tspan87"
-   style="stroke-width:0.77054536">suggestion</tspan>
-<tspan
+   style="stroke-width:0.770545">suggestion</tspan><tspan
    x="-449.54211"
    y="1053.1835"
    id="tspan89"
-   style="stroke-width:0.77054536">Validated</tspan>
-<tspan
+   style="stroke-width:0.770545">Validated</tspan><tspan
    x="-433.36066"
    y="1076.2999"
    id="tspan91"
-   style="stroke-width:0.77054536">actions</tspan>
-</text>
+   style="stroke-width:0.770545">actions</tspan></text>
     <text
        font-weight="400"
        font-size="25"
        id="text99"
        x="1280.6106"
        y="549.51434"
-       style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Next action<tspan
+       style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Next action<tspan
    x="703.71875"
    y="599.59979"
    id="tspan95"
-   style="stroke-width:0.77054536" />
-</text>
+   style="stroke-width:0.770545" /></text>
     <g
        id="g4880"
        transform="translate(207.50063,529.03904)">
@@ -410,7 +396,7 @@
            stroke-miterlimit="8"
            id="path105" />
         <text
-           style="font-weight:400;font-size:38px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif"
+           style="font-weight:400;font-size:38px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif"
            font-weight="400"
            font-size="38"
            transform="translate(384.059,543)"
@@ -442,18 +428,17 @@
        id="g4885"
        transform="rotate(45,828.09411,467.22124)">
       <text
-         style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536"
+         style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545"
          y="833.50769"
          x="-760.92413"
          id="text103"
          transform="rotate(-90)"
          font-size="25"
          font-weight="400">Personality, <tspan
-   style="stroke-width:0.77054536"
+   style="stroke-width:0.770545"
    id="tspan101"
    y="856.62402"
-   x="-760.92413">average speed etc.</tspan>
-</text>
+   x="-760.92413">average speed etc.</tspan></text>
       <path
          style="stroke-width:0.77054536"
          inkscape:connector-curvature="0"
@@ -473,7 +458,7 @@
        id="text127"
        x="-696.11664"
        y="1150.9341"
-       style="font-weight:400;font-size:19.26363564px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536">Suggestions</text>
+       style="font-weight:400;font-size:19.2636px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545">Suggestions</text>
     <path
        d="m 963.2062,531.99046 52.8424,-1.1e-4 v -0.77054 l -52.8424,10e-5 z m 51.2371,4.43053 9.6318,-4.81593 -9.6318,-4.81589 z"
        id="path129"
@@ -490,100 +475,21 @@
        inkscape:connector-curvature="0"
        style="stroke-width:0.77054536"
        sodipodi:nodetypes="ccccccccc" />
-    <g
-       id="g981"
-       transform="matrix(0.77054539,0,0,0.77054539,159.57969,312.44223)">
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         id="circle975"
-         cx="871.21362"
-         cy="262.29422"
-         r="18.752991" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         x="860.53198"
-         y="274.71506"
-         id="text979"><tspan
-           sodipodi:role="line"
-           id="tspan977"
-           x="860.53198"
-           y="274.71506"
-           style="font-weight:bold">3</tspan></text>
-    </g>
-    <g
-       transform="matrix(0.77054539,0,0,0.77054539,762.02678,312.97302)"
-       id="g997">
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         id="circle991"
-         cx="871.21362"
-         cy="262.29422"
-         r="18.752991" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         x="860.53198"
-         y="274.71506"
-         id="text995"><tspan
-           sodipodi:role="line"
-           id="tspan993"
-           x="860.53198"
-           y="274.71506"
-           style="font-weight:bold">6</tspan></text>
-    </g>
-    <g
-       transform="matrix(0.77054539,0,0,0.77054539,569.88066,521.57364)"
-       id="g1005">
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         id="circle999"
-         cx="871.21362"
-         cy="262.29422"
-         r="18.752991" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         x="860.53198"
-         y="274.71506"
-         id="text1003"><tspan
-           sodipodi:role="line"
-           id="tspan1001"
-           x="860.53198"
-           y="274.71506"
-           style="font-weight:bold">5</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30.82181549px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.77054536"
-       x="915.25421"
-       y="523.44733"
-       id="text1013"><tspan
-         sodipodi:role="line"
-         id="tspan1011"
-         x="915.25421"
-         y="523.44733"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536">State</tspan><tspan
-         sodipodi:role="line"
-         x="915.25421"
-         y="562.06262"
-         id="tspan1015"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536">analyser</tspan></text>
     <text
        id="text1021"
-       y="523.44733"
-       x="915.25421"
-       style="font-style:normal;font-weight:normal;font-size:30.82181549px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.77054536"
+       y="516.17041"
+       x="866.38733"
+       style="font-style:normal;font-weight:normal;font-size:38.3903px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.770545"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
-         y="523.44733"
-         x="915.25421"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
+         y="516.17041"
+         x="866.38733"
          id="tspan1017"
          sodipodi:role="line">State</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
          id="tspan1019"
-         y="562.06262"
-         x="915.25421"
+         y="565.16956"
+         x="866.38733"
          sodipodi:role="line">analyser</tspan></text>
     <g
        id="g1059">
@@ -593,58 +499,37 @@
          id="path35"
          stroke-miterlimit="8"
          d="m 1023.694,493.59187 c 0,-10.28447 8.3373,-18.62177 18.6218,-18.62177 h 207.7875 c 10.2868,0 18.6241,8.3373 18.6241,18.62177 v 74.48554 c 0,10.28447 -8.3373,18.62177 -18.6241,18.62177 h -207.7875 c -10.2845,0 -18.6218,-8.3373 -18.6218,-18.62177 z" />
-      <g
-         id="g989"
-         transform="matrix(0.77054539,0,0,0.77054539,433.99832,313.50381)">
-        <circle
-           r="18.752991"
-           cy="262.29422"
-           cx="871.21362"
-           id="circle983"
-           style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers" />
-        <text
-           id="text987"
-           y="274.71506"
-           x="860.53198"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             style="font-weight:bold"
-             y="274.71506"
-             x="860.53198"
-             id="tspan985"
-             sodipodi:role="line">4</tspan></text>
-      </g>
       <text
          id="text1027"
-         y="525.46796"
-         x="1214.3303"
-         style="font-style:normal;font-weight:normal;font-size:30.82181549px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.77054536"
+         y="519.03125"
+         x="1152.4541"
+         style="font-style:normal;font-weight:normal;font-size:39.0047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.770545"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
-           y="525.46796"
-           x="1214.3303"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
+           y="519.03125"
+           x="1152.4541"
            id="tspan1023"
            sodipodi:role="line">Action</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
            id="tspan1025"
-           y="564.08325"
-           x="1214.3303"
+           y="568.81458"
+           x="1152.4541"
            sodipodi:role="line">moderator</tspan></text>
     </g>
     <text
        id="text1033"
-       y="524.93713"
-       x="1452.6552"
-       style="font-style:normal;font-weight:normal;font-size:30.82181549px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.77054536"
+       y="521.61877"
+       x="1498.3624"
+       style="font-style:normal;font-weight:normal;font-size:30.8218px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.770545"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';text-align:start;text-anchor:start;stroke-width:0.77054536"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
          id="tspan1031"
-         y="524.93713"
-         x="1452.6552"
+         y="521.61877"
+         x="1498.3624"
          sodipodi:role="line">Behaviour</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';text-align:start;text-anchor:start;stroke-width:0.77054536"
-         y="563.55243"
-         x="1452.6552"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
+         y="560.95795"
+         x="1498.3624"
          sodipodi:role="line"
          id="tspan1037">manager</tspan></text>
     <g
@@ -668,42 +553,21 @@
          id="path77"
          stroke-miterlimit="8"
          d="m 477.80303,499.23482 c 0,-6.45486 5.232,-11.68686 11.68686,-11.68686 h 146.14626 c 6.45486,0 11.68686,5.232 11.68686,11.68686 v 46.74591 c 0,6.45486 -5.232,11.68686 -11.68686,11.68686 H 489.48989 c -6.45486,0 -11.68686,-5.232 -11.68686,-11.68686 z" />
-      <g
-         transform="matrix(0.77054539,0,0,0.77054539,-158.17188,303.41879)"
-         id="g965">
-        <circle
-           style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers"
-           id="path956"
-           cx="871.21362"
-           cy="262.29422"
-           r="18.752991" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-           x="860.53198"
-           y="274.71506"
-           id="text960"><tspan
-             sodipodi:role="line"
-             id="tspan958"
-             x="860.53198"
-             y="274.71506"
-             style="font-weight:bold">2</tspan></text>
-      </g>
       <text
          id="text1043"
          y="513.72955"
-         x="636.14441"
-         style="font-style:normal;font-weight:normal;font-size:30.82181549px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.77054536"
+         x="564.63092"
+         style="font-style:normal;font-weight:normal;font-size:30.8218px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.770545"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
            id="tspan1041"
            y="513.72955"
-           x="636.14441"
+           x="564.63092"
            sodipodi:role="line">External</tspan><tspan
            id="tspan1047"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';text-align:end;text-anchor:end;stroke-width:0.77054536"
-           y="552.34485"
-           x="636.14441"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;text-align:center;text-anchor:middle;stroke-width:0.770545"
+           y="553.06873"
+           x="564.63092"
            sodipodi:role="line">sensors</tspan></text>
     </g>
     <g
@@ -728,33 +592,22 @@
          stroke-miterlimit="8"
          d="m 958.9682,274.75698 c 0,-10.28447 8.3373,-18.62177 18.62177,-18.62177 h 299.48243 c 10.2868,0 18.6241,8.3373 18.6241,18.62177 v 74.48554 c 0,10.28447 -8.3373,18.62177 -18.6241,18.62177 H 977.58997 c -10.28447,0 -18.62177,-8.3373 -18.62177,-18.62177 z" />
       <text
-         y="322.0069"
-         x="1025.2417"
-         style="font-weight:400;font-size:29.28072548px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536"
+         y="298.36429"
+         x="1132.8278"
+         style="font-weight:400;font-size:34.7002px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545"
          id="text49"
          font-size="38"
-         font-weight="400">Teacher Interface</text>
-      <g
-         transform="matrix(0.77054539,0,0,0.77054539,331.02499,112.33426)"
-         id="g973">
-        <circle
-           r="18.752991"
-           cy="262.29422"
-           cx="871.21362"
-           id="circle967"
-           style="fill:none;stroke:#000000;stroke-width:1.75748026;stroke-linecap:square;stroke-linejoin:bevel;paint-order:stroke fill markers" />
-        <text
-           id="text971"
-           y="274.71506"
-           x="860.53198"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;-inkscape-font-specification:'Liberation Serif, \'Liberation Serif\'_MSFontService, sans-serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             style="font-weight:bold"
-             y="274.71506"
-             x="860.53198"
-             id="tspan969"
-             sodipodi:role="line">1</tspan></text>
-      </g>
+         font-weight="400"><tspan
+           sodipodi:role="line"
+           id="tspan995"
+           x="1132.8278"
+           y="298.36429"
+           style="text-align:center;text-anchor:middle;stroke-width:0.770545">Teacher</tspan><tspan
+           sodipodi:role="line"
+           id="tspan997"
+           x="1132.8278"
+           y="341.73953"
+           style="text-align:center;text-anchor:middle;stroke-width:0.770545">Interface</tspan></text>
       <g
          id="g4907"
          transform="matrix(1.3657154,0,0,-1.3657154,618.63652,909.8774)">
@@ -805,13 +658,12 @@
             <text
                transform="matrix(1,0,0,-1,530.67,411.1)"
                style="font-variant:normal;font-weight:normal;font-size:6px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text78">
-              <tspan
+               id="text78"
+               y="0"><tspan
                  x="0 3 6 8.9940004 10.488 11.982 14.97 17.982 20.976 22.469999 25.469999"
                  y="0"
                  sodipodi:role="line"
-                 id="tspan76">Challenging</tspan>
-            </text>
+                 id="tspan76">Challenging</tspan></text>
           </g>
         </g>
         <image
@@ -884,7 +736,7 @@
        style="stroke-width:0.77054536" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:17.42180061px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       style="font-style:normal;font-weight:normal;font-size:17.4218px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
        x="-100.02193"
        y="1162.6516"
        id="text980"
@@ -893,27 +745,27 @@
          id="tspan978"
          x="-100.02193"
          y="1162.6516"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402">Task</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597">Task</tspan><tspan
          sodipodi:role="line"
          x="-100.02193"
          y="1184.4786"
          id="tspan982"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402">Actions</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597">Actions</tspan></text>
     <text
        transform="rotate(-90)"
        id="text988"
        y="857.93146"
        x="-691.73022"
-       style="font-style:normal;font-weight:normal;font-size:17.42180061px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       style="font-style:normal;font-weight:normal;font-size:17.4218px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597"
          id="tspan986"
          y="857.93146"
          x="-691.73022"
          sodipodi:role="line">Task State</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:17.42180061px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       style="font-style:normal;font-weight:normal;font-size:17.4218px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
        x="656.27588"
        y="470.9332"
        id="text1004"><tspan
@@ -921,16 +773,16 @@
          x="656.27588"
          y="470.9332"
          id="tspan1002"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402">Heart rate;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597">Heart rate;</tspan><tspan
          sodipodi:role="line"
          x="656.27588"
          y="492.71045"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597"
          id="tspan1008">Speed;</tspan><tspan
          sodipodi:role="line"
          x="656.27588"
          y="514.48767"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';stroke-width:2.29597402"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1;font-family:FlamaLight;-inkscape-font-specification:FlamaLight;stroke-width:2.29597"
          id="tspan1006">User exertion</tspan></text>
     <g
        id="g4867"
@@ -946,11 +798,10 @@
          transform="translate(335.658,387)"
          font-size="38"
          font-weight="400"
-         style="font-weight:400;font-size:38px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif">Programme <tspan
+         style="font-weight:400;font-size:38px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif">Programme <tspan
    id="tspan111"
    y="45"
-   x="20.5625">Manager</tspan>
-</text>
+   x="20.5625">Manager</tspan></text>
     </g>
     <g
        id="g4875"
@@ -962,7 +813,7 @@
          stroke-miterlimit="8"
          d="m 905.03002,770.16065 c 0,1.7422 -38.63823,3.15461 -86.30108,3.15461 -47.66286,0 -86.30109,-1.41241 -86.30109,-3.15461 0,-1.74144 38.63823,-3.15385 86.30109,-3.15385 47.66285,0 86.30108,1.41241 86.30108,3.15385 z m 0,0 v 51.48322 c 0,1.74143 -38.63823,3.15384 -86.30108,3.15384 -47.66286,0 -86.30109,-1.41241 -86.30109,-3.15384 v -51.48322" />
       <text
-         style="font-weight:400;font-size:29.28072548px;font-family:'Liberation Serif', '\'Liberation Serif\'_MSFontService', sans-serif;stroke-width:0.77054536"
+         style="font-weight:400;font-size:29.2807px;font-family:FlamaLight, '\'FlamaLight\'_MSFontService', sans-serif;stroke-width:0.770545"
          y="807.0752"
          x="747.7309"
          id="text75"

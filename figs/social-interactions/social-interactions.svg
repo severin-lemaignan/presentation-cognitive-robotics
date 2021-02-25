@@ -89,8 +89,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="210.48496"
-     inkscape:cy="325.23394"
+     inkscape:cx="84.527929"
+     inkscape:cy="191.22197"
      inkscape:document-units="px"
      inkscape:current-layer="g3603"
      showgrid="false"
@@ -99,9 +99,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1025"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-height="1052"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:document-rotation="0"
@@ -134,43 +134,43 @@
         <image
            sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/sparc/overview.jpg"
            xlink:href="../sparc/overview.jpg"
-           transform="scale(1,-1)"
-           y="-131.92453"
-           x="7.8389778"
-           id="image882"
-           preserveAspectRatio="none"
+           width="177.33351"
            height="118.15239"
-           width="177.33351" />
+           preserveAspectRatio="none"
+           id="image882"
+           x="4.6110954"
+           y="-255.58791"
+           transform="scale(1,-1)" />
         <image
            sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/pinsoro/annotator.jpg"
            xlink:href="../pinsoro/annotator.jpg"
-           transform="scale(1,-1)"
-           y="-258.08734"
-           x="5.5643463"
-           id="image896"
-           preserveAspectRatio="none"
+           width="176.84584"
            height="108.53913"
-           width="176.84584" />
+           preserveAspectRatio="none"
+           id="image896"
+           x="4.9483271"
+           y="-124.48836"
+           transform="scale(1,-1)" />
         <image
            sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/pinsoro/3d-point-cloud-facial-features.jpeg"
            xlink:href="../pinsoro/3d-point-cloud-facial-features.jpeg"
-           transform="scale(1,-1)"
-           y="-258.14804"
-           x="190.66798"
-           id="image924"
-           preserveAspectRatio="none"
+           width="168.45462"
            height="108.23209"
-           width="168.45462" />
+           preserveAspectRatio="none"
+           id="image924"
+           x="190.05196"
+           y="-124.54906"
+           transform="scale(1,-1)" />
         <image
            sodipodi:absref="/home/severin/talks/presentation-cognitive-robotics/figs/couch25k/hri.jpg"
            xlink:href="../couch25k/hri.jpg"
-           transform="scale(1,-1)"
-           y="-131.92453"
-           x="199.5701"
-           id="image938"
-           preserveAspectRatio="none"
+           width="157.59421"
            height="118.19566"
-           width="157.59421" />
+           preserveAspectRatio="none"
+           id="image938"
+           x="196.34221"
+           y="-255.58791"
+           transform="scale(1,-1)" />
       </g>
     </g>
   </g>
