@@ -9,13 +9,13 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   viewBox="0 0 1410.8861 619.17361"
+   viewBox="0 0 1397.4172 675.77316"
    stroke-miterlimit="10"
    id="svg341"
    sodipodi:docname="strand1.svg"
    inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
-   width="1410.8861"
-   height="619.17365"
+   width="1397.4172"
+   height="675.77319"
    style="fill:none;stroke:none;stroke-linecap:square;stroke-miterlimit:10">
   <metadata
      id="metadata347">
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3517,14 +3517,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1025"
+     inkscape:window-height="1052"
      id="namedview343"
      showgrid="false"
      inkscape:zoom="0.6356172"
-     inkscape:cx="313.3637"
-     inkscape:cy="-244.55311"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:cx="717.97035"
+     inkscape:cy="309.41835"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g1766"
      inkscape:snap-global="false"
@@ -3536,7 +3536,7 @@
   <g
      clip-path="none"
      id="g339"
-     transform="translate(-11.539071,-110.44445)">
+     transform="translate(-21.273484,-53.844893)">
     <g
        transform="matrix(-0.56110892,0.82774198,0.82774198,0.56110892,368.26043,-549.70835)"
        id="g1800"
@@ -4055,7 +4055,7 @@
            sodipodi:role="line"
            id="tspan2012-6">→ 'word2vec'</tspan><tspan
            style="font-weight:normal;stroke-width:0.568143"
-           y="474.31622"
+           y="474.91986"
            x="291.82483"
            sodipodi:role="line"
            id="tspan1804">for social interaction</tspan></text>
@@ -4120,7 +4120,7 @@
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
    id="tspan1661">underworlds</tspan></tspan><tspan
            style="font-weight:normal;stroke-width:0.568143"
-           y="473.99136"
+           y="474.595"
            x="1197.5284"
            sodipodi:role="line"
            id="tspan1723">sociograms, f-formations</tspan></text>
@@ -4137,12 +4137,12 @@
          sodipodi:role="line"
          id="tspan1729">→ eg FACS, experimental</tspan><tspan
          style="font-weight:normal;stroke-width:0.568143"
-         y="473.90475"
+         y="474.50839"
          x="18.785656"
          sodipodi:role="line"
          id="tspan1737">programme on</tspan><tspan
          style="font-weight:normal;stroke-width:0.568143"
-         y="504.01611"
+         y="504.61975"
          x="18.785656"
          sodipodi:role="line"
          id="tspan1739">mentalizing</tspan></text>
@@ -4158,8 +4158,19 @@
            id="path1764"
            d="m 160.04084,634.01744 v 0 c 0,-9.2049 7.46207,-16.66699 16.66702,-16.66699 H 1834.1907 c 4.4203,0 8.6596,1.75598 11.7853,4.88165 3.1257,3.12567 4.8817,7.36499 4.8817,11.78534 v 22.9685 c 0,9.20495 -7.4621,16.66699 -16.667,16.66699 H 176.70786 c -9.20495,0 -16.66702,-7.46204 -16.66702,-16.66699 z"
            inkscape:connector-curvature="0"
-           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#204a87;stroke-width:5.39626;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#77767b;stroke-width:5.39626;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            sodipodi:nodetypes="ccssssssssc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:44.5692px;line-height:1.25;font-family:FlamaLight;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.966651;stroke-linecap:square;stroke-miterlimit:10"
+           x="726.02655"
+           y="-111.60333"
+           id="text1348-3"><tspan
+             sodipodi:role="line"
+             x="726.02655"
+             y="-111.60333"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Flama;-inkscape-font-specification:'Flama Bold';stroke-width:0.966651"
+             id="tspan1150-7">1. Social Situation Assessment</tspan></text>
       </g>
       <text
          xml:space="preserve"

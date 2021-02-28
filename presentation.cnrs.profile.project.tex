@@ -931,12 +931,20 @@ Impact:
 
 \begin{frame}{My research project}
     \centering
-    \LARGE
-    \vfill
+
+    \setbeamercolor{hriSec1Demo}{bg=hriSec1,fg=white}
+    \begin{beamercolorbox}[wd=\linewidth,ht=9.5ex,dp=0.7ex]{hriSec1Demo}
+        \Large \bf \centering
+        Socially-Driven Autonomous Robots \\
+        for \\
+        Real-world Human-Robot Interactions
+    \end{beamercolorbox}
+
+    \vspace{2em}
+    \large
     {\bf Understand the dynamics of long-term social human-robot interactions;
 
-    create and sustain responsible, real-world interactions with robots}
-    \vfill
+    create and sustain responsible, real-world autonomous interactions with robots}
 
     \pause
     How to balance long-term \emph{social autonomy} (goal-driven architecture)
@@ -944,7 +952,7 @@ Impact:
     
 \end{frame}
 
-\begin{frame}<1-2>[label=wps]{Research programme}
+\begin{frame}<1>[label=wps]{Research programme}
     \begin{center}
     \only<1>{
         \includegraphics[width=\linewidth]{architectures/wps}
@@ -964,13 +972,76 @@ Impact:
     \end{center}
 \end{frame}
 
-\imageframe[color=black]{social-interactions/social.jpg}
-\imageframe[scale=0.9]{architectures/strand1.pdf}
+\begin{frame}[plain]
+    \includegraphics[width=\columnwidth]{architectures/strand1.pdf}
 
-\againframe<3>{wps}
-\againframe<4>{wps}
+    \vspace{1em}
+    \begin{columns}
+        \begin{column}{0.4\linewidth}
+        \includegraphics[width=\columnwidth]{social-interactions/social.jpg}
 
-\begin{frame}{`human-in-the-loop' HRI}
+        \end{column}
+        \begin{column}{0.7\linewidth}
+            \scriptsize
+            \begin{itemize}
+                \item SotA machine learning: \textbf{attention nets};
+                    \textbf{deep graph nets}
+                \item \textbf{Social embeddings}: learn an encoding of social
+                    interactions
+                \item \textbf{hybrid pipeline}: eg \emph{conceptors} to build symbolic
+                    models from neural nets 
+                \item real-world \textbf{robustness}: algorithmic redundancy; soft. eng.
+                    expertise (going beyond throw-away research code)
+            \end{itemize}
+
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%\againframe<3>{wps}
+
+
+\begin{frame}[plain]
+
+    \centering
+    \begin{columns}
+        \begin{column}{0.6\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{generative-behaviours/immersive-teleoperation}
+        \end{column}
+        \begin{column}{0.4\linewidth}
+            \centering
+            \includegraphics[height=4.9cm]{generative-behaviours/husky}
+        \end{column}
+    \end{columns}
+
+    \vspace{1em}
+
+    \begin{columns}
+        \begin{column}{0.4\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{architectures/strand2}
+        \end{column}
+        \begin{column}{0.6\linewidth}
+
+            \scriptsize
+            \begin{itemize}
+                \item Cracking the `\textbf{non-repetitive, socially congruent}' behaviour
+                    generation problem
+                \item Extend \textbf{Generative Adversarial Networks} \emph{à la} AppGAN to complex
+                    behaviours (re-use \emph{social embeddings})
+                \item \textbf{Immersive technologies} to build datasets
+                \item \textbf{Transdiscplinary approach}, incl. arts: choreographer, sound
+                    expert
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+%\againframe<5>{wps}
+
+\begin{frame}<4>[plain]
     \begin{center}
     \begin{columns}
         
@@ -982,30 +1053,32 @@ Impact:
 
         \begin{column}{0.7\linewidth}
             \centering
+            \includegraphics[width=\columnwidth]{architectures/strand4}
+            \vspace{1em}
 
-            \only<1-3>{
+            \scriptsize
             \begin{enumerate}
-                \item<1-3> interactive reinforcement learning
+                \item<1-> interactive reinforcement learning
                     \begin{itemize}
-                        \item \emph{how to scale it to multiple tasks?}
-                        \item \emph{how to deal with non-trivial semantics?}
+                        \item \emph{\scriptsize how to scale it to multiple tasks?}
+                        \item \emph{\scriptsize how to deal with non-trivial semantics?}
                     \end{itemize}
-                \item<2-3> intrinsic social motivation
+                \item<2-> intrinsic social motivation
                     \begin{itemize}
-                        \item \emph{what meaningful \& useful social goals?}
+                        \item \scriptsize large-scale public engagement to
+                            \textbf{co-design interaction principles: meaningful \& useful social goals}
                     \end{itemize}
-                \item<3> responsible AI
+                \item<3-> responsible AI
                     \begin{itemize}
-                        \item \emph{crowd-sourcing social norms for human-robot
-                            interactions}
+                        \item \scriptsize\textbf{crowd-sourcing social norms} for human-robot
+                            interactions
                     \end{itemize}
 
             \end{enumerate}
-            }
+            \vspace{1em}
 
-            \only<4>{
-            \large Shift from human-robot interactions to \emph{
-            robot-supported human-human interactions}
+            \onslide<4>{
+            $\rightarrow$ shift from human-robot interactions to \textbf{robot-supported human-human interactions}
             }
 
 
@@ -1016,9 +1089,20 @@ Impact:
     \end{center}
 \end{frame}
 
-\imageframe[scale=0.9]{architectures/archi.pdf}
+%\againframe<4>{wps}
+\begin{frame}[plain]
+    \includegraphics[width=\linewidth]{architectures/archi.pdf}
 
-\againframe<5>{wps}
+    \scriptsize
+    \textbf{Main challenge}: \textbf{arbitration} between \textbf{intrinsic
+    social motivation}
+            (teleologic architecture), \textbf{bottom-up human policies}
+            (human-in-the-loop machine learning), and \textbf{top-down human-aware task
+            planning}.
+
+        New research question! one lead: \textbf{experience transfer}.
+\end{frame}
+
 \againframe<1>{wps}
 
 
@@ -1028,7 +1112,7 @@ Impact:
 
     \begin{itemize}
         \item<1-> TBD
-        \item<2-> TBD
+        \item<2-> Software engineering expertise almost unique in academia
         \item<3> TBD
     \end{itemize}
 \end{frame}
