@@ -367,7 +367,7 @@ Impact:
     \paper{Lemaignan et al. \textbf{Artificial Cognition for Social Human-Robot Interaction: An Implementation} Artificial
     Intelligence 2017}
 
-\begin{frame}<6>{Real-worl social autonomy: cognitive architectures}
+\begin{frame}<6>{Real-world social autonomy: cognitive architectures}
 
     \begin{center}
 
@@ -464,7 +464,7 @@ Impact:
 
             {\scriptsize
             \begin{itemize}
-                \item full socio-cognitive architecture for autonomy
+                \item full socio-cognitive architecture for robot autonomy
                 \item semantic-driven via semantic blackboard
                 \item full interaction loop: NLP, joint goals, joint actions,
                     real-time monitoring
@@ -663,14 +663,14 @@ Impact:
 
 {
     \paper{Mohamed, Lemaignan \textbf{ROS for Human-Robot Interaction} Arxiv
-    2021 (under review RSS)}
+    2021 (under review IROS)}
 
 \begin{frame}{Real-world social autonomy: social signal processing}
     \begin{center}
         \includegraphics[width=\columnwidth]{architectures/ros4hri-pipeline}
     \end{center}
     ROS4HRI: first integrated, multi-modal, ROS-based pipeline for social signal
-    processing
+    processing in robotics
 \end{frame}
 }
 
@@ -680,14 +680,14 @@ Impact:
         \item state-of-art \textbf{cognitive architecture for social interaction}
         \item framing \textbf{semantic-aware robotic architectures}
         \item large-scale, multi-modal, standard-compliant \textbf{social signal
-            processing}
+            processing} for robots
     \end{enumerate}
 
 Impact:
     \begin{itemize}
         \item major publications, incl. \emph{Artificial Intelligence},
             \emph{HRI}, \emph{IROS}; 800+ citations
-        \item 2nd most cited paper \emph{ever} from \emph{Artificial Intelligence}
+        \item 2nd most cited paper ever from \emph{Artificial Intelligence}
         \item major contribution to open-source robotics; 150+ GitHub repos
     \end{itemize}
 \end{frame}
@@ -722,7 +722,7 @@ Impact:
             \item PInSoRo dataset: 45h+ and 2M frames of annotated natural interactions
             \item new data analysis techniques to estimate internal state from body language
             \item first-in-kind dataset for data-driven study of social
-                interactions
+                interactions in robotics
         \end{itemize}
         }
     \end{column}
@@ -763,10 +763,11 @@ Impact:
     \begin{enumerate}
         \item leading role in \textbf{shaping the emergent field of data-driven
             HRI}
-        \item pioneering work on \textbf{data-driven behaviour analysis} for social
+        \item pioneering work on methodology: \textbf{large datasets} and \textbf{data-driven behaviour analysis} for social
             robotics, drawing from both psychology and AI.
         \item major advances towards \textbf{learning autonomous social
-            policies} for service robots
+            policies} for service robots with \textbf{real-world robot
+            deployments}
     \end{enumerate}
 
 Impact:
@@ -881,7 +882,7 @@ Impact:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\imageframe{my_background/00}
+\imageframe{my_background/00}
 
 
 \section{Research project}
@@ -892,77 +893,112 @@ Impact:
     \begin{columns}
         \begin{column}{0.7\linewidth}
 
-            \begin{itemize}
-                \item designing and implementing the companion and assistant
-                    robots of tomorrow
-                \item major societal challenge for the next 10 years; European priority
-            \end{itemize}
+            \only<1>{
+                Creating interactive robots that are \textbf{embedded and
+                understand their (human) social context}; \textbf{generate and adopt appropriate
+                social behaviours}; have a \textbf{positive impact on human
+                society}.
 
-    \setbeamercolor{hriSec1Demo}{bg=hriSec1,fg=white}
-    \begin{beamercolorbox}[wd=\linewidth,ht=9ex,dp=0.7ex]{hriSec1Demo}
-        \large \bf \centering
-        Socially-Driven Autonomous Robots \\
-        for \\
-        Real-world Human-Robot Interactions
-    \end{beamercolorbox}
+                \vspace{2em}
+                $\Rightarrow$ designing and implementing the \textbf{assistant and
+                companion robots} for  tomorrow.
 
-    \vspace{2em}
-    Understand the dynamics of long-term social human-robot interactions;
+                \vspace{2em}
+                $\Rightarrow$ direct impact on ageing society, education, customer service;
+                \textbf{major societal
+                challenge} \& \textbf{European priority}.
+            }
 
-    Create and sustain responsible, real-world autonomous interactions with robots
+            \only<2->{
+                \textbf{Major scientific challenges}:
 
+                \begin{itemize}
+                    \item Understand and sustain long-term autonomous social interactions;
+                    \item Real-world algorithmic robustness;
+                    \item Complex ethical landscape;
+                    \item $\Rightarrow$ cross-disciplinary \& holistic approach required
+                \end{itemize}
+
+
+                \uncover<3>{
+                \vspace{2em}
+
+                \textbf{My research proposal}:
+
+                \setbeamercolor{hriSec1Demo}{bg=hriSec3Dark,fg=white}
+                \begin{beamercolorbox}[wd=\linewidth,ht=8ex,dp=0.7ex]{hriSec1Demo}
+                    \large \bf \centering
+                    Socially-Driven Autonomous Robots \\
+                    for \\
+                    Real-world Human-Robot Interactions
+                \end{beamercolorbox}
+            }
+
+
+            }
         \end{column}
         \begin{column}{0.3\linewidth}
+            \begin{center}
+                \includegraphics[trim=15cm 0 11cm 0,clip,width=\linewidth]{ranger/ranger_funny_glasses}
+            \end{center}
         \end{column}
     \end{columns}
 
-%    \pause
-%    How to balance long-term \emph{social autonomy} (goal-driven architecture)
-%    with \emph{human oversight}?
-    
+    %    \pause
+    %    How to balance long-term \emph{social autonomy} (goal-driven architecture)
+    %    with \emph{human oversight}?
+
 \end{frame}
 
-\begin{frame}[label=researchquestion]{}
-
+\begin{frame}[plain]
     \begin{center}
-
-    \Large
-    \bf How to push the state-of-the-art in social robotics?
-
+        \includegraphics[width=\linewidth]{architectures/wps}
     \end{center}
-
-    \begin{itemize}
-        \item open, underspecified situations; rich semantics
-            \begin{itemize}
-                \item $\rightarrow$ better spatio-temporal semantic modeling
-            \end{itemize}
-        \item complex social dynamics
-            \begin{itemize}
-                \item $\rightarrow$ \textbf{social situation assessment} 
-            \end{itemize}
-        \item diversity of tasks; long term, sustained interactions
-            \begin{itemize}
-                \item $\rightarrow$ \textbf{goal-driven, non-repetitive
-                    behaviours}
-            \end{itemize}
-    \end{itemize}
-
-
-    \begin{itemize}
-        \item<2-> social acceptability
-        \item<2-> responsible AI
-            \begin{itemize}
-                \item<2-> $\rightarrow$ \textbf{public-in-the-loop} research
-                    
-            \end{itemize}
-    \end{itemize}
-
-
-
 \end{frame}
+
+
+%\begin{frame}[label=researchquestion]{}
+%
+%    \begin{center}
+%
+%    \Large
+%    \bf How to push the state-of-the-art in social robotics?
+%
+%    \end{center}
+%
+%    \begin{itemize}
+%        \item open, underspecified situations; rich semantics
+%            \begin{itemize}
+%                \item $\rightarrow$ better spatio-temporal semantic modeling
+%            \end{itemize}
+%        \item complex social dynamics
+%            \begin{itemize}
+%                \item $\rightarrow$ \textbf{social situation assessment} 
+%            \end{itemize}
+%        \item diversity of tasks; long term, sustained interactions
+%            \begin{itemize}
+%                \item $\rightarrow$ \textbf{goal-driven, non-repetitive
+%                    behaviours}
+%            \end{itemize}
+%    \end{itemize}
+%
+%
+%    \begin{itemize}
+%        \item<2-> social acceptability
+%        \item<2-> responsible AI
+%            \begin{itemize}
+%                \item<2-> $\rightarrow$ \textbf{public-in-the-loop} research
+%                    
+%            \end{itemize}
+%    \end{itemize}
+%
+%
+%
+%\end{frame}
 
 \imageframe[scale=0.9]{architectures/sense-plan-act}
 \imageframe[scale=0.9]{architectures/sense-plan-act-2}
+\imageframe[scale=0.9]{architectures/sense-plan-act-3}
 %
 %\begin{frame}[plain]
 %    \includegraphics[width=\columnwidth]{architectures/strand1.pdf}
@@ -1083,19 +1119,65 @@ Impact:
 %
 %\againframe<4>{wps}
 
-\begin{frame}[plain]
-    \includegraphics[width=\linewidth]{architectures/archi.pdf}
+\begin{frame}{Key scientific aims}
+    \begin{center}
+        %        \resizebox{\linewidth}{!}{
+        \includegraphics[width=0.7\linewidth]{architectures/archi.pdf}
+        %        \hspace{1em}
+        %    \includegraphics[trim=4cm 0 3cm 0,clip,width=0.25\linewidth]{couch25k/hri.jpg}
+        %}
+    \end{center}
 
-    \scriptsize
-    \textbf{Main challenge}: \textbf{arbitration} between \textbf{intrinsic
-    social motivation}
-            (teleologic architecture), \textbf{bottom-up human policies}
-            (human-in-the-loop machine learning), and \textbf{top-down human-aware task
-            planning}.
-
-        New research question! one lead: \textbf{experience transfer in RL}
+    \begin{enumerate}
+            \scriptsize
+        \item beyond state-of-art \textbf{robust real-world social modelling}; \textbf{social embeddings}
+        \item \textbf{public-in-the-loop} approach to design of \textbf{intrinsic social motivation}
+        \item \textbf{generative social behaviours} for robots
+        \item \textbf{cognitive architecture} for \textbf{long-term interaction}
+    \end{enumerate}
 \end{frame}
 
+\begin{frame}{Focus: social embeddings}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+    \begin{center}
+        \includegraphics[width=\linewidth]{social-interactions/social-embeddings}
+    \end{center}
+
+        {\scriptsize
+        \textbf{social embeddings}: learning a compact, sub-symbolic representation of social interactions
+        }
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{itemize}
+                \item real-world social interactions are highly dynamic, noisy,
+                    multi-modal
+                \item hard for the robot to model and reason about
+                \item $\rightarrow$ \textbf{learn an embedding}: Attention nets, Deep
+                    graph nets
+                \item can be used by the robot to \textbf{recognise social situation} and
+                    \textbf{generate congruent social behaviours}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Focus: human-in-the-loop action policies}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{architectures/arbitration}
+    \end{center}
+
+    \begin{itemize}
+            \scriptsize
+        \item \textbf{end-users and public to play a key role}:
+        \item \textbf{crowd-sourced pro-social goals} (eg `show attention', `appear
+            alive') drives long-term behaviours
+        \item \textbf{short-term/domain-specific policies learned} via
+            interactive reinforcement learning (IRL)
+        \item \textbf{cognitive arbitration} between the two, based on
+            \textbf{experience transfer}
+    \end{itemize}
+\end{frame}
 
 \begin{frame}<1>[label=wps]{A holistic approch to social robotics}
     \begin{center}
@@ -1116,7 +1198,6 @@ Impact:
     }
     \end{center}
 \end{frame}
-
 
 \begin{frame}{Integration LAAS}
 
@@ -1139,7 +1220,7 @@ Impact:
 
     \begin{itemize}
         \item Experimental know-how with extensive expertise in real-world deployments
-        \item Emerging theme: Data-driven social AI
+        \item Emerging theme: Data-driven HRI
         \item ANITI: transverse applications for AI and robotics
     \end{itemize}
 \end{frame}
