@@ -1,7 +1,6 @@
 
 LATEX=lualatex
 
-#TEXTARGETS=$(wildcard ./presentation.tex)
 TEXTARGETS=presentation.cnrs.profile.project.tex
 
 TARGET=$(TEXTARGETS:.tex=.pdf)

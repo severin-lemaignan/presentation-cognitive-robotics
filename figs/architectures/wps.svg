@@ -3447,16 +3447,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1052"
+     inkscape:window-height="1025"
      id="namedview343"
      showgrid="false"
-     inkscape:zoom="0.6356172"
-     inkscape:cx="879.94503"
-     inkscape:cy="886.74649"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
+     inkscape:zoom="0.3178086"
+     inkscape:cx="928.87592"
+     inkscape:cy="497.31208"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1235-4"
+     inkscape:current-layer="g1381"
      inkscape:snap-global="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -4023,22 +4023,6 @@
       <g
          id="g1482"
          transform="translate(-50.745691,-233.00732)">
-        <g
-           id="g1474"
-           transform="matrix(1,0,0,-1,22.025836,968.74279)">
-          <path
-             sodipodi:nodetypes="cssssc"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.677;stroke-miterlimit:10;stroke-dasharray:4.677, 9.354;stroke-dashoffset:0"
-             inkscape:connector-curvature="0"
-             id="path1469"
-             d="m 1261.7844,287.46189 v 385.45372 c 0,7.96916 -6.4602,14.42955 -14.4294,14.42955 H 47.826758 c -7.969158,0 -14.429447,-6.46039 -14.429447,-14.42955 V 287.46189" />
-          <path
-             d="m 1261.7844,467.46189 v 205.45372 c 0,7.96916 -6.4602,14.42955 -14.4294,14.42955 H 47.826758 c -7.969158,0 -14.429447,-6.46039 -14.429447,-14.42955 V 467.46189"
-             id="path1459"
-             inkscape:connector-curvature="0"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.67681;stroke-miterlimit:10;stroke-dasharray:none"
-             sodipodi:nodetypes="cssssc" />
-        </g>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:31.8548px;line-height:1.25;font-family:FlamaLight;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.796371"
@@ -4102,24 +4086,7 @@
        transform="translate(0.668151,18.879288)">
       <g
          transform="matrix(0.00769291,1.1549791,1.1549791,-0.00769291,-740.5468,388.16291)"
-         id="g1482-1">
-        <g
-           transform="matrix(1,0,0,-1,22.025836,968.74279)"
-           id="g1474-2">
-          <path
-             d="m 352.52215,287.00056 v 385.45372 c 0,7.96916 -6.46021,14.41688 -14.4294,14.42955 l -290.265992,0.46133 c -7.969148,0.0127 -14.429447,-6.46039 -14.429447,-14.42955 V 287.46189"
-             id="path1469-9"
-             inkscape:connector-curvature="0"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.677;stroke-miterlimit:10;stroke-dasharray:4.677, 9.354;stroke-dashoffset:0"
-             sodipodi:nodetypes="cssssc" />
-          <path
-             sodipodi:nodetypes="cssssc"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.67681;stroke-miterlimit:10;stroke-dasharray:none"
-             inkscape:connector-curvature="0"
-             id="path1459-1"
-             d="m 352.52215,467.00056 v 205.45372 c 0,7.96916 -6.46021,14.41688 -14.4294,14.42955 l -290.265992,0.46133 c -7.969148,0.0127 -14.429447,-6.46039 -14.429447,-14.42955 V 467.46189" />
-        </g>
-      </g>
+         id="g1482-1" />
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:31.8548px;line-height:1.25;font-family:FlamaLight;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.796371"
@@ -4644,22 +4611,6 @@
       <g
          transform="translate(64.615292,825.83575)"
          id="g1482-4">
-        <g
-           transform="translate(-84.956795,-204.06793)"
-           id="g1474-9">
-          <path
-             d="m 1261.7844,287.46189 v 385.45372 c 0,7.96916 -6.4602,14.42955 -14.4294,14.42955 H 47.826758 c -7.969158,0 -14.429447,-6.46039 -14.429447,-14.42955 V 287.46189"
-             id="path1469-2"
-             inkscape:connector-curvature="0"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.677;stroke-miterlimit:10;stroke-dasharray:4.677, 9.354;stroke-dashoffset:0"
-             sodipodi:nodetypes="cssssc" />
-          <path
-             sodipodi:nodetypes="cssssc"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.67681;stroke-miterlimit:10;stroke-dasharray:none"
-             inkscape:connector-curvature="0"
-             id="path1459-6"
-             d="m 1261.7844,467.46189 v 205.45372 c 0,7.96916 -6.4602,14.42955 -14.4294,14.42955 H 47.826758 c -7.969158,0 -14.429447,-6.46039 -14.429447,-14.42955 V 467.46189" />
-        </g>
         <text
            id="text1348-3-8"
            y="455.3204"
@@ -4805,24 +4756,7 @@
        transform="translate(-660,-60)">
       <g
          transform="matrix(-0.00769291,1.1549791,-1.1549791,-0.00769291,2661.9132,473.09387)"
-         id="g1381">
-        <g
-           transform="matrix(1,0,0,-1,22.025836,968.74279)"
-           id="g1379">
-          <path
-             d="m 387.15327,287.23123 v 385.45372 c 0,7.96916 -6.4602,14.42389 -14.4294,14.42955 l -324.897112,0.23066 c -7.969156,0.006 -14.429447,-6.46039 -14.429447,-14.42955 V 287.46189"
-             id="path1373"
-             inkscape:connector-curvature="0"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.677;stroke-miterlimit:10;stroke-dasharray:4.677, 9.354;stroke-dashoffset:0"
-             sodipodi:nodetypes="cssssc" />
-          <path
-             sodipodi:nodetypes="cssssc"
-             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.67681;stroke-miterlimit:10;stroke-dasharray:none"
-             inkscape:connector-curvature="0"
-             id="path1377"
-             d="m 387.15327,467.23123 v 205.45372 c 0,7.96916 -6.4602,14.42389 -14.4294,14.42955 l -324.897112,0.23066 c -7.969156,0.006 -14.429447,-6.46039 -14.429447,-14.42955 V 467.46189" />
-        </g>
-      </g>
+         id="g1381" />
       <text
          id="text1407"
          y="571.57709"
