@@ -2,6 +2,7 @@
 LATEX=lualatex
 
 TEXTARGETS=presentation.cnrs.profile.project.tex
+#TEXTARGETS=presentation.ramon-llull.03.2021.tex
 
 TARGET=$(TEXTARGETS:.tex=.pdf)
 
