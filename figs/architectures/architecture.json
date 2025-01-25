@@ -1,0 +1,2426 @@
+{
+   "architectures" : [
+      {
+         "description" : "application manager is...",
+         "name" : "application manager",
+         "uuid" : "1e30ad2d-a0e5-486e-b6b7-ac7b85bbb84c",
+         "version" : "0.0.1"
+      },
+      {
+         "description" : "controller for the Hey5 hand",
+         "name" : "plugin:and_controller",
+         "uuid" : "c97b4a6b-5a35-4f1b-8bbe-41982e6b494a",
+         "version" : "0.0.1"
+      },
+      {
+         "connections" : [
+            {
+               "from" : "ffe0bf56-c344-42b3-a37b-81c44282b0d5:node",
+               "name" : "anonymous",
+               "to" : "6f9c5834-72e6-4a06-aeed-3734d03b7823:input",
+               "uuid" : "05db2ae3-3776-4119-9329-830a33f14e8f"
+            },
+            {
+               "from" : "e7671f0a-ccc3-4a84-bbf3-ef7f0bc997ab:output",
+               "name" : "anonymous",
+               "to" : "a63e05e8-2803-42a9-a610-3c586b5e0f58:input",
+               "uuid" : "23a8b02f-24e7-4be0-932b-b7bb5acab659"
+            },
+            {
+               "from" : "9e137ff9-17c3-43e5-bcf3-8b91c3cb3930:output",
+               "name" : "anonymous",
+               "to" : "032d45eb-c22f-45ed-9ebf-cd6b036074bd:input",
+               "uuid" : "284e3ddc-773a-42c3-8914-6ad35c2f3cbb"
+            },
+            {
+               "from" : "fcd14e69-1c87-476b-b9b9-552e06414a13:output",
+               "name" : "/map",
+               "to" : "47c93c3e-89d7-47cd-ba59-da5cc839b959:input",
+               "uuid" : "77e92cd1-3b01-4e82-b19d-5b6f679e14e8"
+            },
+            {
+               "from" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:get_response",
+               "name" : "/intents",
+               "to" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:intents",
+               "uuid" : "5bb5821d-f901-4aa3-93a6-0613e83d69c1"
+            },
+            {
+               "from" : "bb30078a-5c45-42f4-865f-bf16f6145bc8:keepout",
+               "name" : "anonymous",
+               "to" : "602339d4-87ac-4607-9472-f5615338487f:keepout",
+               "uuid" : "096b8967-b4fe-446f-beca-9eca836fdb55"
+            },
+            {
+               "from" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:get_response",
+               "name" : "action: /tts_engine/tts",
+               "to" : "463cba12-d830-4a8c-a4e5-76dc674e7ffd:input",
+               "uuid" : "ef3a7eae-337a-42eb-beb7-f3d792213f04"
+            },
+            {
+               "from" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:semantic knowledge",
+               "name" : "service: /kb/query",
+               "to" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:spatial/semantic knowledge",
+               "uuid" : "d8877d1d-7fc7-406c-becf-a561fdf31cf5"
+            },
+            {
+               "from" : "7e54ce52-2233-455b-9e4e-79494753abc7:output",
+               "name" : "anonymous",
+               "to" : "2f968181-a60d-49a6-843b-86b9210b9af4:input",
+               "uuid" : "c72a8b5a-08bb-44aa-a5df-4fc017506150"
+            },
+            {
+               "from" : "14bcd89c-f99e-4a98-adb8-f816ecc824aa:output",
+               "name" : "/look_at",
+               "to" : "465e4246-fe27-47a7-b360-f5601a05edbc:/look_at",
+               "uuid" : "1ffc9af2-38ad-4201-a736-a28a38d43407"
+            },
+            {
+               "from" : "23190676-484f-4701-ac37-1779fd5d7088:model",
+               "name" : "anonymous",
+               "to" : "8488a6e9-e7c3-4943-a059-1d7adbe82677:model",
+               "uuid" : "5fb046e7-2bfa-4efe-91ee-7d3d6543fd50"
+            },
+            {
+               "from" : "9d65c33e-b3ce-4fef-a33d-28f0bf1db177:node",
+               "name" : "action: /communication/say",
+               "to" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:say",
+               "uuid" : "2a11e6ab-a5d4-4db3-a349-1968bcfe2bc4"
+            },
+            {
+               "from" : "7c925f8e-eaa9-4efb-a038-0b688db3658e:human URDF",
+               "name" : "URDF",
+               "to" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484:kinematic model",
+               "uuid" : "69d1128e-ceaa-4631-b72b-789accef5d3a"
+            },
+            {
+               "from" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:output",
+               "name" : "anonymous",
+               "to" : "9d65c33e-b3ce-4fef-a33d-28f0bf1db177:/speak",
+               "uuid" : "31814c52-3a09-4fc3-980d-09b97686c09f"
+            },
+            {
+               "from" : "855dfcaf-e142-4798-9aa7-f17cd937e5c2:images",
+               "name" : "anonymous",
+               "to" : "70d16212-cede-409b-9639-d59990b1cc9d:point cloud",
+               "uuid" : "d2549c78-6343-4fc2-af2c-250eebc2ecfb"
+            },
+            {
+               "from" : "714799e7-130e-4ff5-8b42-7eedf3c089aa:output",
+               "name" : "/scan_rear_raw",
+               "to" : "eacd927d-68f9-42a9-a442-29775986572e:input",
+               "uuid" : "ec2d6176-b0ba-4940-b7bd-40fdfb51710b"
+            },
+            {
+               "from" : "3054b62a-f018-4842-82a7-9d40297b7ddd:node",
+               "name" : "/robot_face/expression",
+               "to" : "2f1c36de-e4ef-4dfe-943b-8b4e1b78b9c1:expression",
+               "uuid" : "99aab665-caca-4527-9c42-e647d97f5ce6"
+            },
+            {
+               "from" : "bd095a6a-5238-4985-9988-430dd5eb2394:output",
+               "name" : "anonymous",
+               "to" : "ffe0bf56-c344-42b3-a37b-81c44282b0d5:/grasp",
+               "uuid" : "5b05af82-2c4d-4008-ac0a-7bcbedd18ecb"
+            },
+            {
+               "from" : "855dfcaf-e142-4798-9aa7-f17cd937e5c2:images",
+               "name" : "anonymous",
+               "to" : "2a955763-2eb9-4261-bd8d-875ba4007e69:RGB(D) input",
+               "uuid" : "fd67d3bc-2ca5-41a9-b15a-82343d45923f"
+            },
+            {
+               "from" : "2a955763-2eb9-4261-bd8d-875ba4007e69:faces",
+               "name" : "anonymous",
+               "to" : "8488a6e9-e7c3-4943-a059-1d7adbe82677:faces",
+               "uuid" : "8e56cab2-fcf7-4a83-b1ae-fa3205bd3aa9"
+            },
+            {
+               "from" : "221bc5cc-d299-4806-966d-a9a6457c8144:output",
+               "name" : "action:/chatbot_rasa/set_default_locale",
+               "to" : "6fd9b495-4c88-41ac-8224-950b74ca027f:set_default_locale",
+               "uuid" : "7d880d2b-5c9d-4a3e-a9b9-650626b72c5c"
+            },
+            {
+               "from" : "8488a6e9-e7c3-4943-a059-1d7adbe82677:face/person matches",
+               "name" : "/humans/candidate_matches",
+               "to" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:matches",
+               "uuid" : "c583e083-3a5d-41aa-ad53-04fccfa8011f"
+            },
+            {
+               "from" : "eacd927d-68f9-42a9-a442-29775986572e:output",
+               "name" : "/scan_raw",
+               "to" : "4638d224-fd2c-4fa7-b0a9-1272917b65e6:input",
+               "uuid" : "465487d8-df60-4d07-a54b-6d2521dd271a"
+            },
+            {
+               "from" : "7f727bef-dac6-4fac-a4a7-745b0f8e11c7:output",
+               "name" : "anonymous",
+               "to" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c:/key_vel",
+               "uuid" : "76a2be46-0895-4595-975c-a885abc11814"
+            },
+            {
+               "from" : "170462aa-5ac3-44cb-b384-98129ea2ad2c:virtual joystick",
+               "name" : "anonymous",
+               "to" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c:virtual joy",
+               "uuid" : "815ed170-87ec-48a3-bc84-9aecb034c4fe"
+            },
+            {
+               "from" : "009a5017-f4ca-496b-83a2-2ddb421c407e:output",
+               "name" : "anonymous",
+               "to" : "5569baf6-7b23-4b28-a693-9e130a6dc654:bt if",
+               "uuid" : "a167f292-52ba-451f-b1c9-4c967ca42eae"
+            },
+            {
+               "from" : "bb30078a-5c45-42f4-865f-bf16f6145bc8:speed area",
+               "name" : "anonymous",
+               "to" : "5569baf6-7b23-4b28-a693-9e130a6dc654:speed area",
+               "uuid" : "1fc5f928-bc3b-4036-ba9f-8fd45f7ff4d7"
+            },
+            {
+               "from" : "d8ca9893-b333-4039-a0dd-63ed8b69f7b1:output",
+               "name" : "anonymous",
+               "to" : "009a5017-f4ca-496b-83a2-2ddb421c407e:/go_to",
+               "uuid" : "456134d4-5c27-4b03-bf56-1d631d25eb24"
+            },
+            {
+               "from" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:get_response",
+               "name" : "service: /chatbot_rasa/get_response",
+               "to" : "6fd9b495-4c88-41ac-8224-950b74ca027f:input",
+               "uuid" : "33784486-cbdc-4089-b836-4f61ac1dc0d9"
+            },
+            {
+               "from" : "52cf4299-1578-4cc8-8f99-6d009f7a86e7:output",
+               "name" : "anonymous",
+               "to" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:input",
+               "uuid" : "ef09bf80-3f70-46c4-a30c-69b95934e6ea"
+            },
+            {
+               "from" : "ca01f78b-505b-4d27-998d-5f3aa7d460dc:output",
+               "name" : "anonymous",
+               "to" : "ab63988d-47c0-400a-b59c-771551746118:input",
+               "uuid" : "1b901d6e-23ab-491c-8d56-3cfb83a6341b"
+            },
+            {
+               "from" : "465e4246-fe27-47a7-b360-f5601a05edbc:face",
+               "name" : "anonymous",
+               "to" : "2f1c36de-e4ef-4dfe-943b-8b4e1b78b9c1:look_at",
+               "uuid" : "6f62c544-3979-484f-ba30-10ebd0ae901e"
+            },
+            {
+               "from" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:output",
+               "name" : "anonymous",
+               "to" : "3f67e9a7-99f1-4ab4-bf4e-17fe1ad759e1:input",
+               "uuid" : "7aa25f73-980f-4b23-98fd-8b4d3cd96804"
+            },
+            {
+               "from" : "2a955763-2eb9-4261-bd8d-875ba4007e69:faces",
+               "name" : "/humans/faces/*",
+               "to" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:faces",
+               "uuid" : "802acc34-39c6-4fe6-9edd-173cb9a1893b"
+            },
+            {
+               "from" : "221bc5cc-d299-4806-966d-a9a6457c8144:output",
+               "name" : "action:/tts_engine/set_default_locale",
+               "to" : "463cba12-d830-4a8c-a4e5-76dc674e7ffd:set_default_locale",
+               "uuid" : "05aae6fa-3fd7-453e-ab3f-497319a1d1e4"
+            },
+            {
+               "from" : "bd095a6a-5238-4985-9988-430dd5eb2394:output",
+               "name" : "anonymous",
+               "to" : "a41273cb-4a5a-4dd6-9e38-91bdcf9a30a1:/go_to",
+               "uuid" : "2c3f2c3b-e88f-46d3-8b26-3338004b39f8"
+            },
+            {
+               "from" : "b18d734b-356e-4ef1-a4fa-ee4bd75f3a7c:node",
+               "name" : "anonymous",
+               "to" : "ca01f78b-505b-4d27-998d-5f3aa7d460dc:input",
+               "uuid" : "70bfdd24-f768-44f9-bdf0-b5450e0c7595"
+            },
+            {
+               "from" : "90ee2cde-e5cd-47ef-b635-3c80720b9670:output",
+               "name" : "anonymous",
+               "to" : "a63e05e8-2803-42a9-a610-3c586b5e0f58:input",
+               "uuid" : "eff0b4d2-ec63-47e4-8e87-397ae10b404c"
+            },
+            {
+               "from" : "3f98d5e6-c56a-46d2-8e49-9b7b7776979a:spatial knowledge",
+               "name" : "anonymous",
+               "to" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:spatial knowledge",
+               "uuid" : "204df9cb-ddad-4082-95d2-84e8e26785bc"
+            },
+            {
+               "from" : "1cc7fbcd-b8b9-4b8a-86b1-a5552fd5b216:output",
+               "name" : "/scan_front_raw",
+               "to" : "eacd927d-68f9-42a9-a442-29775986572e:input",
+               "uuid" : "776e240c-b2fa-49e2-85c1-8a09d0264021"
+            },
+            {
+               "from" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c:output",
+               "name" : "/mobile_base_controller/cmd_vel",
+               "to" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:input",
+               "uuid" : "a201a979-c5d3-4d4d-a322-884739db0af9"
+            },
+            {
+               "from" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:/mobile_base_controller/odom",
+               "name" : "/mobile_base_controller/odom",
+               "to" : "602339d4-87ac-4607-9472-f5615338487f:input",
+               "uuid" : "caa3a432-12e9-4c17-9f80-9d179a1551cf"
+            },
+            {
+               "from" : "6b24e3b9-3741-423a-be0c-2877dc50c852:images",
+               "name" : "/rgbd_camera/color/image_raw",
+               "to" : "23176a67-6621-456f-9038-5b1665afd700:input",
+               "uuid" : "875e43d0-bf22-4865-a358-3722d644de59"
+            },
+            {
+               "from" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:joints",
+               "name" : "anonymous",
+               "to" : "e7671f0a-ccc3-4a84-bbf3-ef7f0bc997ab:input",
+               "uuid" : "87dfe03d-82ee-4639-ab77-dca3784fa0da"
+            },
+            {
+               "from" : "4638d224-fd2c-4fa7-b0a9-1272917b65e6:output",
+               "name" : "/scan",
+               "to" : "602339d4-87ac-4607-9472-f5615338487f:scan",
+               "uuid" : "eb566c07-cee8-4598-81a9-7f1eb34d4fa6"
+            },
+            {
+               "from" : "7b872b55-a31a-47a5-bdda-d80cc419cb2a:output",
+               "name" : "anonymous",
+               "to" : "009a5017-f4ca-496b-83a2-2ddb421c407e:/go_to",
+               "uuid" : "69c64e1e-fd60-4bfa-b768-ab595005dcc3"
+            },
+            {
+               "from" : "3765f6d2-a2d8-41a4-b4b1-90ca8239f964:go_to",
+               "name" : "anonymous",
+               "to" : "009a5017-f4ca-496b-83a2-2ddb421c407e:/go_to",
+               "uuid" : "c29f2d69-5ac3-4d58-ac20-beb974a15909"
+            },
+            {
+               "from" : "009a5017-f4ca-496b-83a2-2ddb421c407e:output",
+               "name" : "anonymous",
+               "to" : "e1ef8bf5-293c-4c88-be0f-4998011aeeb9:bt if",
+               "uuid" : "d58385af-7e33-4767-95d1-aa6ede05c636"
+            },
+            {
+               "from" : "2f1c36de-e4ef-4dfe-943b-8b4e1b78b9c1:procedural face",
+               "name" : "anonymous",
+               "to" : "07b5ca7b-0dcf-4bdc-8279-9bc29ef0c6fd:input",
+               "uuid" : "e071ae0a-a6a6-488b-a998-02135effb92e"
+            },
+            {
+               "from" : "c4c0bb8d-04be-4463-a95b-0995f7a83c86:output",
+               "name" : "anonymous",
+               "to" : "7f727bef-dac6-4fac-a4a7-745b0f8e11c7:input",
+               "uuid" : "aa418ae7-4f3a-42b6-89ad-f9fca099a44f"
+            },
+            {
+               "from" : "d2e3c9eb-0dba-4b90-a34f-36badeb48973:output",
+               "name" : "/input_joy/cmd_vel",
+               "to" : "9476cbd3-7ade-49cd-a3ca-75ccce7f12f5:input",
+               "uuid" : "e2a681f7-f666-4997-8ce4-357a9914a0ac"
+            },
+            {
+               "from" : "602339d4-87ac-4607-9472-f5615338487f:output",
+               "name" : "/local_costmap",
+               "to" : "e1ef8bf5-293c-4c88-be0f-4998011aeeb9:input",
+               "uuid" : "afb896ef-1678-4561-b61e-95c37ba5a7b2"
+            },
+            {
+               "from" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484:bodies",
+               "name" : "anonymous",
+               "to" : "834652e2-cb93-4627-9887-ae9bf87a279b:bodies",
+               "uuid" : "931e2c98-7399-4638-a587-27aed45bc486"
+            },
+            {
+               "from" : "482438e6-fe33-4528-a5a9-876a51a50b8a:model",
+               "name" : "",
+               "to" : "2a955763-2eb9-4261-bd8d-875ba4007e69:ML model",
+               "uuid" : "6791274e-610e-4824-b75f-3088e85ea0d6"
+            },
+            {
+               "from" : "59dc0763-1007-4dbc-863c-e17d6d6b9c71:output",
+               "name" : "action:/set_default_locale",
+               "to" : "221bc5cc-d299-4806-966d-a9a6457c8144:action:/set_default_locale",
+               "uuid" : "00f422f0-1194-4c9c-9a0f-f7c76119ed59"
+            },
+            {
+               "from" : "536dec4d-887a-4cdb-b32b-cd220e5d9bec:output",
+               "name" : "anonymous",
+               "to" : "a63e05e8-2803-42a9-a610-3c586b5e0f58:input",
+               "uuid" : "685bf9d6-6e11-4258-96fd-5659e2f0cb32"
+            },
+            {
+               "from" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:reset",
+               "name" : "service: /chatbot_rasa/reset",
+               "to" : "6fd9b495-4c88-41ac-8224-950b74ca027f:reset",
+               "uuid" : "9c38c0bd-2bb5-4690-b048-1c065a998ee5"
+            },
+            {
+               "from" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:/mobile_base_controller/odom",
+               "name" : "/mobile_base_controller/odom",
+               "to" : "243fb1fe-b354-4a77-a94a-f89e55425f61:input",
+               "uuid" : "88503774-833f-48aa-8bfc-6c7efffb9503"
+            },
+            {
+               "from" : "90ee2cde-e5cd-47ef-b635-3c80720b9670:output",
+               "name" : "anonymous",
+               "to" : "3f67e9a7-99f1-4ab4-bf4e-17fe1ad759e1:input",
+               "uuid" : "a27010a8-d8f1-461c-acb7-f06b59fea6b7"
+            },
+            {
+               "from" : "910971b2-8ceb-4971-9b5a-fcd642d2bd29:output",
+               "name" : "anonymous",
+               "to" : "a63e05e8-2803-42a9-a610-3c586b5e0f58:input",
+               "uuid" : "a35004dc-5455-4cd4-8b93-5169dd70b751"
+            },
+            {
+               "from" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:output",
+               "name" : "anonymous",
+               "to" : "a41273cb-4a5a-4dd6-9e38-91bdcf9a30a1:/go_to",
+               "uuid" : "d0335817-f23c-4da7-8c8f-1ea09d5ce779"
+            },
+            {
+               "from" : "aa9d70b6-4a3d-4873-a2f3-28d087d42193:node",
+               "name" : "/look_at",
+               "to" : "465e4246-fe27-47a7-b360-f5601a05edbc:/look_at",
+               "uuid" : "f2714968-88ec-4708-b7bd-95e4fd0d566f"
+            },
+            {
+               "from" : "ff7241fa-f381-4704-87eb-e6511e5ffc30:output",
+               "name" : "/humans/voices/*/speech",
+               "to" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2:raw ASR",
+               "uuid" : "04367a9c-009a-41d5-851f-1065408c68ad"
+            },
+            {
+               "from" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484:bodies",
+               "name" : "/humans/bodies/*",
+               "to" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:bodies",
+               "uuid" : "648585a8-b136-4187-8ab1-89ce6126f950"
+            },
+            {
+               "from" : "c2416f7a-dc65-43db-871c-681399504ecd:output",
+               "name" : "anonymous",
+               "to" : "ac9eeaf0-74f1-4abc-9b28-632fdfd53d69:input",
+               "uuid" : "72294af2-3970-4e22-a04e-82681a9833ed"
+            },
+            {
+               "from" : "cba0a3af-2653-4b90-af25-5b7c8ce53fed:output",
+               "name" : "/map",
+               "to" : "9e137ff9-17c3-43e5-bcf3-8b91c3cb3930:input",
+               "uuid" : "5343e312-c6c9-490a-b7d5-d53a4cccfe1f"
+            },
+            {
+               "from" : "59dc0763-1007-4dbc-863c-e17d6d6b9c71:head UI",
+               "name" : "anonymous",
+               "to" : "07b5ca7b-0dcf-4bdc-8279-9bc29ef0c6fd:input",
+               "uuid" : "e92ac922-a64a-4634-8c7d-137208397c4f"
+            },
+            {
+               "from" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:semantic knowledge",
+               "name" : "anonymous",
+               "to" : "70d16212-cede-409b-9639-d59990b1cc9d:kb",
+               "uuid" : "ac97c122-0c5f-4764-8465-7332faeeed60"
+            },
+            {
+               "from" : "2a955763-2eb9-4261-bd8d-875ba4007e69:faces",
+               "name" : "anonymous",
+               "to" : "834652e2-cb93-4627-9887-ae9bf87a279b:faces",
+               "uuid" : "ccd6e3f9-5362-4e94-969b-d64e8450b466"
+            },
+            {
+               "from" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:persons",
+               "name" : "anonymous",
+               "to" : "bdaad8ab-e8a2-4a19-946a-04ead8c72278:gazes",
+               "uuid" : "223280f1-b48e-4ff1-a811-7d3ffc01e5ef"
+            },
+            {
+               "from" : "ac9eeaf0-74f1-4abc-9b28-632fdfd53d69:output",
+               "name" : "anonymous",
+               "to" : "bb30078a-5c45-42f4-865f-bf16f6145bc8:input",
+               "uuid" : "b237510c-9ddf-489e-b5d5-90394639f694"
+            },
+            {
+               "from" : "fcd14e69-1c87-476b-b9b9-552e06414a13:output",
+               "name" : "/map",
+               "to" : "5569baf6-7b23-4b28-a693-9e130a6dc654:keepout",
+               "uuid" : "fa9b5556-0cd4-45f2-9a32-a8f7e9cf99e1"
+            },
+            {
+               "from" : "abb138a7-f2c4-41fb-a342-fa32adc35680:output",
+               "name" : "anonymous",
+               "to" : "7e54ce52-2233-455b-9e4e-79494753abc7:input",
+               "uuid" : "b9838f5f-0dc8-404a-9a62-166f745b53cc"
+            },
+            {
+               "from" : "c913ad58-96fc-41ea-ba71-13c368f47cd3:output",
+               "name" : "service:/kb/revise",
+               "to" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:queries",
+               "uuid" : "d631542a-8166-4045-83c5-2c3db1ce7835"
+            },
+            {
+               "from" : "18f35d94-8121-440e-b5a8-2ef27aabcc29:output",
+               "name" : "anonymous",
+               "to" : "ffe0bf56-c344-42b3-a37b-81c44282b0d5:/grasp",
+               "uuid" : "2f5021f6-c53f-4596-8e43-bf741e7d6770"
+            },
+            {
+               "from" : "18f35d94-8121-440e-b5a8-2ef27aabcc29:output",
+               "name" : "anonymous",
+               "to" : "3054b62a-f018-4842-82a7-9d40297b7ddd:/robot_face/expression",
+               "uuid" : "67973e9e-cbcf-4117-a18e-bed38b7ac52a"
+            },
+            {
+               "from" : "243fb1fe-b354-4a77-a94a-f89e55425f61:output",
+               "name" : "/tf",
+               "to" : "47c93c3e-89d7-47cd-ba59-da5cc839b959:input",
+               "uuid" : "44d762a9-6dd8-46ba-a275-7b6d50ef29d5"
+            },
+            {
+               "from" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25:/mobile_base_controller/odom",
+               "name" : "/mobile_base_controller/odom",
+               "to" : "009a5017-f4ca-496b-83a2-2ddb421c407e:input",
+               "uuid" : "dcb6d8f4-49ea-4530-ac6c-ad6c7054ebaa"
+            },
+            {
+               "from" : "465e4246-fe27-47a7-b360-f5601a05edbc:neck",
+               "name" : "anonymous",
+               "to" : "e7671f0a-ccc3-4a84-bbf3-ef7f0bc997ab:input",
+               "uuid" : "f52ad97d-2099-4861-8a18-33ed163a7c4f"
+            },
+            {
+               "from" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:persons",
+               "name" : "anonymous",
+               "to" : "923f7585-55c1-4ed1-bb9b-1705f1962795:persons",
+               "uuid" : "aba25b11-292e-46df-a8e3-b2e7273c3cbb"
+            },
+            {
+               "from" : "957fd462-06ff-4c7f-a452-7b830d57f4ad:raw audio",
+               "name" : "/audio/channel0",
+               "to" : "ff7241fa-f381-4704-87eb-e6511e5ffc30:audio",
+               "uuid" : "023e09b3-896f-4a08-a635-6f9a18088735"
+            },
+            {
+               "from" : "4638d224-fd2c-4fa7-b0a9-1272917b65e6:output",
+               "name" : "/scan",
+               "to" : "6f1ab8a1-6830-4371-ad73-52c2eeed28e2:input",
+               "uuid" : "e8232cb1-3b62-42e1-a4d4-0e27928ae87d"
+            },
+            {
+               "from" : "bb30078a-5c45-42f4-865f-bf16f6145bc8:keepout",
+               "name" : "anonymous",
+               "to" : "5569baf6-7b23-4b28-a693-9e130a6dc654:keepout",
+               "uuid" : "98ff1831-b283-4f0d-913b-8a569d0e7d9f"
+            },
+            {
+               "from" : "61de43ea-adfb-4f7d-9f49-a35ef7b77b3b:output",
+               "name" : "/joy",
+               "to" : "d2e3c9eb-0dba-4b90-a34f-36badeb48973:input",
+               "uuid" : "1df5286f-7f9e-4e75-ad0f-150e27ae6f4a"
+            },
+            {
+               "from" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:output",
+               "name" : "anonymous",
+               "to" : "bd095a6a-5238-4985-9988-430dd5eb2394:input",
+               "uuid" : "38facd3c-a4de-4b39-8785-4e04def21e21"
+            },
+            {
+               "from" : "855dfcaf-e142-4798-9aa7-f17cd937e5c2:images",
+               "name" : "anonymous",
+               "to" : "c0bc2f25-8dbf-4bc0-80ae-123d5080837c:RGB(D)",
+               "uuid" : "20e4c8a5-563c-4868-a07b-5d724258902d"
+            },
+            {
+               "from" : "7e54ce52-2233-455b-9e4e-79494753abc7:output",
+               "name" : "anonymous",
+               "to" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:input",
+               "uuid" : "8abf42a5-16c5-49f1-b804-fdff6d364b46"
+            },
+            {
+               "from" : "9d302ec1-e6e1-4895-bcaa-72f93627ab1b:output",
+               "name" : "anonymous",
+               "to" : "dca4d05c-3cf8-44a3-b7a3-e07261af6756:input",
+               "uuid" : "c4e83a0c-7d05-45e2-9810-6da3135ac974"
+            },
+            {
+               "from" : "ad041e54-a13b-4770-995b-9d50a195b199:output",
+               "name" : "/intents",
+               "to" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:active",
+               "uuid" : "613da92d-6bb3-49fe-b374-39e09ad0bf37"
+            },
+            {
+               "from" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:joints",
+               "name" : "anonymous",
+               "to" : "536dec4d-887a-4cdb-b32b-cd220e5d9bec:input",
+               "uuid" : "44013f4f-bcfb-4002-ac9a-6ba95e7230de"
+            },
+            {
+               "from" : "221bc5cc-d299-4806-966d-a9a6457c8144:output",
+               "name" : "action:/asr_vosk/set_default_locale",
+               "to" : "ff7241fa-f381-4704-87eb-e6511e5ffc30:set_locale",
+               "uuid" : "71e644aa-e380-4436-903d-857d7b20cca6"
+            },
+            {
+               "from" : "834652e2-cb93-4627-9887-ae9bf87a279b:face/body matches",
+               "name" : "/humans/candidate_matches",
+               "to" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:matches",
+               "uuid" : "1fa1c22c-afdb-40f7-9e0d-9811baec2ede"
+            },
+            {
+               "from" : "ff7241fa-f381-4704-87eb-e6511e5ffc30:output",
+               "name" : "/humans/voices/*/speech",
+               "to" : "ad041e54-a13b-4770-995b-9d50a195b199:input",
+               "uuid" : "7cb5fc03-0723-4320-8870-c40bdbc6139a"
+            },
+            {
+               "from" : "91805316-ea24-49e7-a5b4-7349c03f6e25:model",
+               "name" : "anonymous",
+               "to" : "c0bc2f25-8dbf-4bc0-80ae-123d5080837c:Yolo",
+               "uuid" : "8394c50e-10d5-461b-88f7-f5ff5453af74"
+            },
+            {
+               "from" : "9476cbd3-7ade-49cd-a3ca-75ccce7f12f5:output",
+               "name" : "anonymous",
+               "to" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c:/joy_vel",
+               "uuid" : "54e07a92-560c-484b-9078-bd163be89606"
+            },
+            {
+               "from" : "ae088830-2642-44cd-b925-12ea05fe2570:output",
+               "name" : "anonymous",
+               "to" : "a63e05e8-2803-42a9-a610-3c586b5e0f58:input",
+               "uuid" : "9d7b1abf-fbf4-4853-ac30-2029de934c2d"
+            },
+            {
+               "from" : "032d45eb-c22f-45ed-9ebf-cd6b036074bd:output",
+               "name" : "anonymous",
+               "to" : "fcd14e69-1c87-476b-b9b9-552e06414a13:input",
+               "uuid" : "dc68c2ff-60fe-46e4-ae76-86093b410370"
+            },
+            {
+               "from" : "6f9c5834-72e6-4a06-aeed-3734d03b7823:output",
+               "name" : "anonymous",
+               "to" : "536dec4d-887a-4cdb-b32b-cd220e5d9bec:input",
+               "uuid" : "bba820b8-c3b3-4475-a94b-aa4417376b83"
+            },
+            {
+               "from" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:joints",
+               "name" : "anonymous",
+               "to" : "910971b2-8ceb-4971-9b5a-fcd642d2bd29:input",
+               "uuid" : "cd657048-cd5b-4fb5-b376-63990ca806ad"
+            },
+            {
+               "from" : "207e8477-3be4-416f-bd32-0062f6ba25e4:ontology",
+               "name" : "OWL/RDF",
+               "to" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:ontology",
+               "uuid" : "78c6edda-2066-44fe-889c-c0704207c1fa"
+            },
+            {
+               "from" : "957fd462-06ff-4c7f-a452-7b830d57f4ad:VAD",
+               "name" : "/audio/voice_detected",
+               "to" : "ff7241fa-f381-4704-87eb-e6511e5ffc30:vad",
+               "uuid" : "e92464c3-aeb1-47a0-a532-5c8b3e4b4773"
+            },
+            {
+               "from" : "7684a5fb-c598-4d61-9b1f-87c3bb61a6c1:engagement status",
+               "name" : "service:/kb/revise",
+               "to" : "93f97dca-65e6-4eea-b550-7fa6f8b60940:queries",
+               "uuid" : "3d2e54d0-a1c8-4f01-bf00-0266cae51c34"
+            },
+            {
+               "from" : "7e54ce52-2233-455b-9e4e-79494753abc7:output",
+               "name" : "anonymous",
+               "to" : "6f9c5834-72e6-4a06-aeed-3734d03b7823:input",
+               "uuid" : "ee5f9e27-2125-4a1c-9edb-71ce71bd0e13"
+            },
+            {
+               "from" : "009a5017-f4ca-496b-83a2-2ddb421c407e:output",
+               "name" : "anonymous",
+               "to" : "602339d4-87ac-4607-9472-f5615338487f:bt if",
+               "uuid" : "2a8382f9-55eb-4f9a-8ade-828ac748ace5"
+            },
+            {
+               "from" : "463cba12-d830-4a8c-a4e5-76dc674e7ffd:output",
+               "name" : "",
+               "to" : "c5233c67-348a-4fe3-9dd6-2f413901be94:input",
+               "uuid" : "6a915b49-b8d1-472d-af03-2ab5147268fb"
+            },
+            {
+               "from" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:persons",
+               "name" : "/humans/persons/*",
+               "to" : "7684a5fb-c598-4d61-9b1f-87c3bb61a6c1:input",
+               "uuid" : "235daea3-30c1-4372-a757-aa8b5ff7198f"
+            },
+            {
+               "from" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88:persons",
+               "name" : "/humans/persons/*",
+               "to" : "c913ad58-96fc-41ea-ba71-13c368f47cd3:input",
+               "uuid" : "2a20c004-6e88-404f-b140-65b516dfbaf5"
+            },
+            {
+               "from" : "31364d44-4f09-4ce7-bff6-74652246d4fa:node",
+               "name" : "anonymous",
+               "to" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:/play_motion",
+               "uuid" : "681cd1ec-95b5-4e04-b528-ba84f4eaa5b9"
+            },
+            {
+               "from" : "5e26ac99-b921-4f84-b41c-c8f8c8212642:joints",
+               "name" : "anonymous",
+               "to" : "ae088830-2642-44cd-b925-12ea05fe2570:input",
+               "uuid" : "bd105de4-2b8e-4697-a73a-5d6f17793303"
+            },
+            {
+               "from" : "4638d224-fd2c-4fa7-b0a9-1272917b65e6:output",
+               "name" : "/scan",
+               "to" : "243fb1fe-b354-4a77-a94a-f89e55425f61:input",
+               "uuid" : "6188b1ee-d63c-44b1-950d-dc66e16a475c"
+            },
+            {
+               "from" : "3765f6d2-a2d8-41a4-b4b1-90ca8239f964:output",
+               "name" : "action:/detect_target",
+               "to" : "a86ff3f9-61a0-4aa9-b157-0ab475515329:input",
+               "uuid" : "290079e7-bc23-41de-a61d-28ab9355798e"
+            },
+            {
+               "from" : "602339d4-87ac-4607-9472-f5615338487f:output",
+               "name" : "/cmd_vel",
+               "to" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c:/cmd_vel",
+               "uuid" : "677d0552-139c-421c-a1c9-33d76ecc0af4"
+            },
+            {
+               "from" : "7684a5fb-c598-4d61-9b1f-87c3bb61a6c1:engagement intents",
+               "name" : "/intents",
+               "to" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff:intents",
+               "uuid" : "92253e3a-d194-4830-9d79-e164b03af147"
+            },
+            {
+               "from" : "855dfcaf-e142-4798-9aa7-f17cd937e5c2:images",
+               "name" : "anonymous",
+               "to" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484:RGB(D) input",
+               "uuid" : "d0d29100-7404-42cd-92e1-f210d4d60ef0"
+            },
+            {
+               "from" : "482438e6-fe33-4528-a5a9-876a51a50b8a:model",
+               "name" : "",
+               "to" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484:ML model",
+               "uuid" : "c651ba10-18fa-42b2-9ee0-d52a9f4704bb"
+            }
+         ],
+         "description" : "The NoName architecture is based on [this article](http://example.org) with the following modifications...",
+         "name" : "PAL Architecture",
+         "nodes" : [
+            {
+               "label" : "Hardware",
+               "name" : "joints",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 2280, 4960 ],
+               "size" : [ 360, 120 ],
+               "uuid" : "a63e05e8-2803-42a9-a610-3c586b5e0f58"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:communication_hub",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "reset"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "raw ASR"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "get_response"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "say"
+                  }
+               ],
+               "position" : [ 2440, 640 ],
+               "size" : [ 280, 460 ],
+               "uuid" : "78a49439-c27c-4a7d-b179-a3d68b81a2b2"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "plugin:mobile_base_controller",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "/mobile_base_controller/odom"
+                  }
+               ],
+               "position" : [ 2020, 4040 ],
+               "size" : [ 340, 260 ],
+               "uuid" : "9764a038-ba2c-47ee-8b37-bf2114ef1f25"
+            },
+            {
+               "label" : "UI",
+               "name" : "Web user interface",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "virtual joystick"
+                  }
+               ],
+               "position" : [ -760, 4700 ],
+               "size" : [ 380, 140 ],
+               "uuid" : "170462aa-5ac3-44cb-b384-98129ea2ad2c"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "RGB(D) cameras",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "images"
+                  }
+               ],
+               "position" : [ 0, 1180 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "855dfcaf-e142-4798-9aa7-f17cd937e5c2"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:navigate_through_waypoints [bt]",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -360, 3600 ],
+               "size" : [ 360, 120 ],
+               "uuid" : "d8ca9893-b333-4039-a0dd-63ed8b69f7b1"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "node:expressive_eyes (ari, tiago pro)",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "procedural face"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "look_at"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "expression"
+                  }
+               ],
+               "position" : [ 3200, 4100 ],
+               "size" : [ 300, 140 ],
+               "uuid" : "2f1c36de-e4ef-4dfe-943b-8b4e1b78b9c1"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "mediapipe",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "model"
+                  }
+               ],
+               "position" : [ 740, 140 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "482438e6-fe33-4528-a5a9-876a51a50b8a"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "joystick",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -860, 4540 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "61de43ea-adfb-4f7d-9f49-a35ef7b77b3b"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "skill:leds",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/pal_led_manager/do_effect"
+                  }
+               ],
+               "position" : [ 2060, 2940 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "b18d734b-356e-4ef1-a4fa-ee4bd75f3a7c"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_map_server",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 160, 2520 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "fcd14e69-1c87-476b-b9b9-552e06414a13"
+            },
+            {
+               "label" : "Knowledge and Reasoning",
+               "name" : "node:knowledge_core",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "spatial knowledge"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "ontology"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "queries"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "semantic knowledge"
+                  }
+               ],
+               "position" : [ 880, 1560 ],
+               "size" : [ 520, 240 ],
+               "uuid" : "93f97dca-65e6-4eea-b550-7fa6f8b60940"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:i18n_manager",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "action:/set_default_locale"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2620, 40 ],
+               "size" : [ 500, 120 ],
+               "uuid" : "221bc5cc-d299-4806-966d-a9a6457c8144"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "skill:motion",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/play_motion"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  }
+               ],
+               "position" : [ 2420, 2860 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "31364d44-4f09-4ce7-bff6-74652246d4fa"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_bt_navigator",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/go_to"
+                  }
+               ],
+               "position" : [ 280, 3740 ],
+               "size" : [ 360, 138 ],
+               "uuid" : "009a5017-f4ca-496b-83a2-2ddb421c407e"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "laser scanner (front)",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -920, 2900 ],
+               "size" : [ 180, 120 ],
+               "uuid" : "1cc7fbcd-b8b9-4b8a-86b1-a5552fd5b216"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_face_body_matcher",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "bodies"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "faces"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "face/body matches"
+                  }
+               ],
+               "position" : [ 620, 600 ],
+               "size" : [ 320, 140 ],
+               "uuid" : "834652e2-cb93-4627-9887-ae9bf87a279b"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "node:moveit",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 1040, 4420 ],
+               "size" : [ 260, 220 ],
+               "uuid" : "6f9c5834-72e6-4a06-aeed-3734d03b7823"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_person_manager",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "persons"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "faces"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "matches"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "bodies"
+                  }
+               ],
+               "position" : [ 380, 980 ],
+               "size" : [ 1220, 169 ],
+               "uuid" : "2ba7202a-f8c3-45f8-ace8-ec28c49b3b88"
+            },
+            {
+               "label" : "UI",
+               "name" : "node:robot_head_display (tiago pro)",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "head UI"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 3520, 4360 ],
+               "size" : [ 280, 140 ],
+               "uuid" : "59dc0763-1007-4dbc-863c-e17d6d6b9c71"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "laser scanner (rear)",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -920, 3060 ],
+               "size" : [ 180, 120 ],
+               "uuid" : "714799e7-130e-4ff5-8b42-7eedf3c089aa"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "RGB(D) cameras",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "images"
+                  }
+               ],
+               "position" : [ -920, 3940 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "6b24e3b9-3741-423a-be0c-2877dc50c852"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "skill:facial expressions",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/robot_face/expression"
+                  }
+               ],
+               "position" : [ 2060, 2620 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "3054b62a-f018-4842-82a7-9d40297b7ddd"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "mobile base",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1900, 4960 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "3f67e9a7-99f1-4ab4-bf4e-17fe1ad759e1"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "skill: attention",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/look_at"
+                  }
+               ],
+               "position" : [ 2420, 2680 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "aa9d70b6-4a3d-4873-a2f3-28d087d42193"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_behaviour_server",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "bt if"
+                  }
+               ],
+               "position" : [ 840, 3800 ],
+               "size" : [ 240, 138 ],
+               "uuid" : "e1ef8bf5-293c-4c88-be0f-4998011aeeb9"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "plugin:laser_target_detector",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 140, 4280 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "6f1ab8a1-6830-4371-ad73-52c2eeed28e2"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:pal_laser_filters",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -140, 2900 ],
+               "size" : [ 340, 120 ],
+               "uuid" : "4638d224-fd2c-4fa7-b0a9-1272917b65e6"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_face_detect",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "RGB(D) input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "ML model"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "faces"
+                  }
+               ],
+               "position" : [ 900, 440 ],
+               "size" : [ 260, 140 ],
+               "uuid" : "2a955763-2eb9-4261-bd8d-875ba4007e69"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "dlib",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "model"
+                  }
+               ],
+               "position" : [ 1340, 140 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "23190676-484f-4701-ac37-1779fd5d7088"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:laserscan_multi_merger",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -500, 2900 ],
+               "size" : [ 240, 280 ],
+               "uuid" : "eacd927d-68f9-42a9-a442-29775986572e"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "wheel encoders",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 1540, 3620 ],
+               "size" : [ 220, 120 ],
+               "uuid" : "52cf4299-1578-4cc8-8f99-6d009f7a86e7"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "node:play_motion2",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/play_motion"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "joints"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1040, 4820 ],
+               "size" : [ 280, 200 ],
+               "uuid" : "5e26ac99-b921-4f84-b41c-c8f8c8212642"
+            },
+            {
+               "label" : "Decision making",
+               "name" : "task 2",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1600, 2580 ],
+               "size" : [ 260, 140 ],
+               "uuid" : "18f35d94-8121-440e-b5a8-2ef27aabcc29"
+            },
+            {
+               "label" : "Other",
+               "name" : "application manager",
+               "position" : [ 1600, 2060 ],
+               "size" : [ 1060, 120 ],
+               "sub_architecture" : "1e30ad2d-a0e5-486e-b6b7-ac7b85bbb84c",
+               "uuid" : "98ab0fa1-858e-43de-81e4-3bccf2a70d8e"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "twist_mux",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/cmd_vel"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/key_vel"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "/joy_vel"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "virtual joy"
+                  }
+               ],
+               "position" : [ 1540, 3860 ],
+               "size" : [ 240, 440 ],
+               "uuid" : "8fd29e38-26e8-4b13-a487-ebd2a8221e2c"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "joint encoders",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -300, 4860 ],
+               "size" : [ 300, 120 ],
+               "uuid" : "abb138a7-f2c4-41fb-a342-fa32adc35680"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_waypoint_follower [bt]",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "action:/navigate_to_waypoint"
+                  }
+               ],
+               "position" : [ -360, 3440 ],
+               "size" : [ 360, 120 ],
+               "uuid" : "7b872b55-a31a-47a5-bdda-d80cc419cb2a"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:navigate_to_target [bt]",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "go_to"
+                  }
+               ],
+               "position" : [ -360, 3760 ],
+               "size" : [ 360, 138 ],
+               "uuid" : "3765f6d2-a2d8-41a4-b4b1-90ca8239f964"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "plugin:arm_*_controller",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2020, 3900 ],
+               "size" : [ 340, 120 ],
+               "uuid" : "536dec4d-887a-4cdb-b32b-cd220e5d9bec"
+            },
+            {
+               "label" : "Knowledge and Reasoning",
+               "name" : "node:people_facts",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 540, 1280 ],
+               "size" : [ 280, 160 ],
+               "uuid" : "c913ad58-96fc-41ea-ba71-13c368f47cd3"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "keyboard",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -860, 4340 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "c4c0bb8d-04be-4463-a95b-0995f7a83c86"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "node:controller_manager",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 2020, 3660 ],
+               "size" : [ 700, 180 ],
+               "uuid" : "2f968181-a60d-49a6-843b-86b9210b9af4"
+            },
+            {
+               "label" : "Decision making",
+               "name" : "task 1",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1600, 2420 ],
+               "size" : [ 260, 140 ],
+               "uuid" : "bd095a6a-5238-4985-9988-430dd5eb2394"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:map_mask_server",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "speed area"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "keepout"
+                  }
+               ],
+               "position" : [ 360, 3220 ],
+               "size" : [ 240, 140 ],
+               "uuid" : "bb30078a-5c45-42f4-865f-bf16f6145bc8"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "pal_store:nav database",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 40, 3220 ],
+               "size" : [ 240, 140 ],
+               "uuid" : "ac9eeaf0-74f1-4abc-9b28-632fdfd53d69"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:eulero_manager",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "service: add/manage floors/maps/obstacles"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -400, 3220 ],
+               "size" : [ 340, 140 ],
+               "uuid" : "c2416f7a-dc65-43db-871c-681399504ecd"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "map",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -120, 2520 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "032d45eb-c22f-45ed-9ebf-cd6b036074bd"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:target_detector_server",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -20, 4000 ],
+               "size" : [ 460, 120 ],
+               "uuid" : "a86ff3f9-61a0-4aa9-b157-0ab475515329"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "node:reMap",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "spatial knowledge"
+                  }
+               ],
+               "position" : [ 720, 1900 ],
+               "size" : [ 480, 120 ],
+               "uuid" : "3f98d5e6-c56a-46d2-8e49-9b7b7776979a"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "node:oro",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "ontology"
+                  }
+               ],
+               "position" : [ 160, 1580 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "207e8477-3be4-416f-bd32-0062f6ba25e4"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "node:gaze_manager",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/look_at"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "face"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "neck"
+                  }
+               ],
+               "position" : [ 3020, 3780 ],
+               "size" : [ 160, 240 ],
+               "uuid" : "465e4246-fe27-47a7-b360-f5601a05edbc"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:asr_vosk",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "vad"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "set_locale"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:default_locale"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "audio"
+                  }
+               ],
+               "position" : [ 2240, 300 ],
+               "size" : [ 180, 200 ],
+               "uuid" : "ff7241fa-f381-4704-87eb-e6511e5ffc30"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_map_saver",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -440, 2520 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "9e137ff9-17c3-43e5-bcf3-8b91c3cb3930"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:soft_wakeup_word",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 2080, 780 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "ad041e54-a13b-4770-995b-9d50a195b199"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:joy_teleop",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -540, 4540 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "d2e3c9eb-0dba-4b90-a34f-36badeb48973"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_engagement",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "engagement status"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "engagement intents"
+                  }
+               ],
+               "position" : [ 1260, 1280 ],
+               "size" : [ 360, 140 ],
+               "uuid" : "7684a5fb-c598-4d61-9b1f-87c3bb61a6c1"
+            },
+            {
+               "label" : "Manipulation",
+               "name" : "plugin:gripper_*_controller",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2440, 3900 ],
+               "size" : [ 280, 120 ],
+               "uuid" : "ae088830-2642-44cd-b925-12ea05fe2570"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "plugin:obstacles",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "kb"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "point cloud"
+                  }
+               ],
+               "position" : [ 900, 2460 ],
+               "size" : [ 300, 120 ],
+               "uuid" : "70d16212-cede-409b-9639-d59990b1cc9d"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "plugin:object maps",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "RGB(D)"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "Yolo"
+                  }
+               ],
+               "position" : [ 900, 2040 ],
+               "size" : [ 300, 120 ],
+               "uuid" : "c0bc2f25-8dbf-4bc0-80ae-123d5080837c"
+            },
+            {
+               "label" : "Manipulation",
+               "name" : "skill:grasping",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/grasp"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  }
+               ],
+               "position" : [ 2060, 2780 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "ffe0bf56-c344-42b3-a37b-81c44282b0d5"
+            },
+            {
+               "label" : "Decision making",
+               "name" : "mission implementation",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "active"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "spatial/semantic knowledge"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "intents"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 1600, 2200 ],
+               "size" : [ 1060, 169 ],
+               "uuid" : "047f0042-3377-464c-bb2b-0c8d9b42b9ff"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "plugin:people",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "persons"
+                  }
+               ],
+               "position" : [ 900, 2180 ],
+               "size" : [ 300, 120 ],
+               "uuid" : "923f7585-55c1-4ed1-bb9b-1705f1962795"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "skill: speech",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/speak"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  }
+               ],
+               "position" : [ 2420, 2520 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "9d65c33e-b3ce-4fef-a33d-28f0bf1db177"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:tts_engine",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "param:voice"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:default_locale"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "set_default_locale"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:non_verbal_mode"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:engine"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 3360, 1120 ],
+               "size" : [ 420, 231 ],
+               "uuid" : "463cba12-d830-4a8c-a4e5-76dc674e7ffd"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_fullbody",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "RGB(D) input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "ML model"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "bodies"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "kinematic model"
+                  }
+               ],
+               "position" : [ 380, 420 ],
+               "size" : [ 260, 169 ],
+               "uuid" : "ead800e2-2ff0-4f6c-a80d-9b0d3cbae484"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "leds",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 3020, 4960 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "ab63988d-47c0-400a-b59c-771551746118"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "YOLO",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "model"
+                  }
+               ],
+               "position" : [ 500, 2020 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "91805316-ea24-49e7-a5b4-7349c03f6e25"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:joystick_relay",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -200, 4560 ],
+               "size" : [ 160, 138 ],
+               "uuid" : "9476cbd3-7ade-49cd-a3ca-75ccce7f12f5"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "plugin:aruco_target_detector",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 140, 4140 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "23176a67-6621-456f-9038-5b1665afd700"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:volume_control_pulseaudio",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:/volume/playback"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "param:/volume/capture"
+                  }
+               ],
+               "position" : [ 3220, 40 ],
+               "size" : [ 420, 140 ],
+               "uuid" : "a1b69c50-f300-4eda-bffa-40a0c9b0d570"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_controller_server",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "keepout"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "bt if"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "scan"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 840, 3500 ],
+               "size" : [ 360, 280 ],
+               "uuid" : "602339d4-87ac-4607-9472-f5615338487f"
+            },
+            {
+               "label" : "Decision making",
+               "name" : "task n",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1600, 2900 ],
+               "size" : [ 260, 140 ],
+               "uuid" : "4ae5ff78-1c20-4f00-970a-23e257a9a13c"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:slam_toolbox",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ -720, 2520 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "cba0a3af-2653-4b90-af25-5b7c8ce53fed"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_amcl",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "/tf"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 660, 2820 ],
+               "size" : [ 160, 138 ],
+               "uuid" : "47c93c3e-89d7-47cd-ba59-da5cc839b959"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "reSpeaker OUT",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 3660, 4960 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "c5233c67-348a-4fe3-9dd6-2f413901be94"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "plugin:head_controller",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2440, 4320 ],
+               "size" : [ 280, 120 ],
+               "uuid" : "e7671f0a-ccc3-4a84-bbf3-ef7f0bc997ab"
+            },
+            {
+               "label" : "Social perception",
+               "name" : "node:hri_face_identification",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "faces"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "face/person matches"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "model"
+                  }
+               ],
+               "position" : [ 1280, 600 ],
+               "size" : [ 320, 140 ],
+               "uuid" : "8488a6e9-e7c3-4943-a059-1d7adbe82677"
+            },
+            {
+               "label" : "Model/data",
+               "name" : "node:human_description",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "human URDF"
+                  }
+               ],
+               "position" : [ 280, 140 ],
+               "size" : [ 260, 120 ],
+               "uuid" : "7c925f8e-eaa9-4efb-a038-0b688db3658e"
+            },
+            {
+               "label" : "Decision making",
+               "name" : "...",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 1600, 2740 ],
+               "size" : [ 260, 140 ],
+               "uuid" : "4011d752-62d7-43f8-89c7-707b06675217"
+            },
+            {
+               "label" : "Manipulation",
+               "name" : "plugin:hand_controller",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2440, 4180 ],
+               "size" : [ 280, 120 ],
+               "sub_architecture" : "c97b4a6b-5a35-4f1b-8bbe-41982e6b494a",
+               "uuid" : "9d302ec1-e6e1-4895-bcaa-72f93627ab1b"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "node:robot_state_publisher",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 80, 4860 ],
+               "size" : [ 560, 120 ],
+               "uuid" : "7e54ce52-2233-455b-9e4e-79494753abc7"
+            },
+            {
+               "label" : "Environment perception",
+               "name" : "plugin:fields of view",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "gazes"
+                  }
+               ],
+               "position" : [ 900, 2320 ],
+               "size" : [ 300, 120 ],
+               "uuid" : "bdaad8ab-e8a2-4a19-946a-04ead8c72278"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "skill:navigation",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "/go_to"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "node"
+                  }
+               ],
+               "position" : [ 2060, 2460 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "a41273cb-4a5a-4dd6-9e38-91bdcf9a30a1"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:nav2_planner_server",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "speed area"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "bt if"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "keepout"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 840, 3280 ],
+               "size" : [ 360, 200 ],
+               "uuid" : "5569baf6-7b23-4b28-a693-9e130a6dc654"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "reSpeaker IN",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "raw audio"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "VAD"
+                  }
+               ],
+               "position" : [ 2220, 20 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "957fd462-06ff-4c7f-a452-7b830d57f4ad"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "plugin:torso_controller",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 2440, 4040 ],
+               "size" : [ 280, 120 ],
+               "uuid" : "910971b2-8ceb-4971-9b5a-fcd642d2bd29"
+            },
+            {
+               "label" : "Gesture, motions",
+               "name" : "plugin:emergency_stop_controller",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 2020, 4320 ],
+               "size" : [ 340, 120 ],
+               "uuid" : "90ee2cde-e5cd-47ef-b635-3c80720b9670"
+            },
+            {
+               "label" : "Expressiveness",
+               "name" : "node:attention_manager",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 3240, 1920 ],
+               "size" : [ 260, 300 ],
+               "uuid" : "14bcd89c-f99e-4a98-adb8-f816ecc824aa"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "node:chatbot_rasa",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "reset"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "set_default_locale"
+                  }
+               ],
+               "position" : [ 3000, 640 ],
+               "size" : [ 200, 200 ],
+               "uuid" : "6fd9b495-4c88-41ac-8224-950b74ca027f"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "plugin: tts_plugin_non_verbal",
+               "position" : [ 3440, 1520 ],
+               "size" : [ 340, 120 ],
+               "uuid" : "8c513398-c872-4aa4-9477-57a1281729c7"
+            },
+            {
+               "label" : "UI",
+               "name" : "node:led_manager_node",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 3100, 4620 ],
+               "size" : [ 280, 140 ],
+               "uuid" : "ca01f78b-505b-4d27-998d-5f3aa7d460dc"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:key_teleop",
+               "ports" : [
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ -540, 4340 ],
+               "size" : [ 160, 120 ],
+               "uuid" : "7f727bef-dac6-4fac-a4a7-745b0f8e11c7"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "Hey5 hand",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 2720, 4960 ],
+               "size" : [ 200, 120 ],
+               "uuid" : "dca4d05c-3cf8-44a3-b7a3-e07261af6756"
+            },
+            {
+               "label" : "Speech and Language",
+               "name" : "plugin: tts_plugin_acapela",
+               "position" : [ 3440, 1380 ],
+               "size" : [ 340, 120 ],
+               "uuid" : "b0992766-6e13-45cc-bc89-5128c7a88b05"
+            },
+            {
+               "label" : "Hardware",
+               "name" : "face/eye screen (ari, tiago pro)",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  }
+               ],
+               "position" : [ 3300, 4960 ],
+               "size" : [ 240, 120 ],
+               "uuid" : "07b5ca7b-0dcf-4bdc-8279-9bc29ef0c6fd"
+            },
+            {
+               "label" : "Navigation",
+               "name" : "node:dlo_ros",
+               "ports" : [
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "in",
+                     "name" : "input"
+                  },
+                  {
+                     "direction" : "out",
+                     "name" : "output"
+                  }
+               ],
+               "position" : [ 320, 2900 ],
+               "size" : [ 160, 138 ],
+               "uuid" : "243fb1fe-b354-4a77-a94a-f89e55425f61"
+            }
+         ],
+         "uuid" : "821b38ae-8888-4283-911f-1af9531232b8",
+         "version" : "0.0.1"
+      }
+   ],
+   "root" : "821b38ae-8888-4283-911f-1af9531232b8"
+}

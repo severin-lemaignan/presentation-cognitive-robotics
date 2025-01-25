@@ -1,0 +1,708 @@
+% PAL Architecture
+% Version: 0.0.1
+% Description: The NoName architecture is based on [this article](http://example.org) with the following modifications...
+
+\documentclass[tikz,dvisvgm]{standalone}
+
+\usepackage[hypertex]{hyperref} % use this for links with dvisvgm
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage{fontspec}
+\newfontfamily\defaultfont[Scale=1.0]{Inter} % use that for custom font
+\newfontfamily\monospace[Scale=1.0]{Ubuntu Mono}
+
+\newcommand{\svgnode}[1]{\special{dvisvgm:raw <g class='node' id='#1'>}}
+\newcommand{\svgedge}[3]{\special{dvisvgm:raw <g class='edge' id='#1' data-from='#2' data-to='#3'>}}
+\newcommand{\svggend}{\special{dvisvgm:raw </g>}}
+
+\definecolor{socialperception}{HTML}{53399d}
+\definecolor{environmentperception}{HTML}{0476aa}
+\definecolor{speechandlanguage}{HTML}{9d398b}
+\definecolor{decisionmaking}{HTML}{e1d620}
+\definecolor{navigation}{HTML}{ffaa7f}
+\definecolor{knowledgeandreasoning}{HTML}{c28e25}
+\definecolor{manipulation}{HTML}{399d40}
+\definecolor{expressiveness}{HTML}{a11012}
+\definecolor{learning}{HTML}{2e13ff}
+\definecolor{gesturemotions}{HTML}{75bdff}
+\definecolor{model-data}{HTML}{cca141}
+\definecolor{ui}{HTML}{ddb241}
+\definecolor{hardware}{HTML}{1a1a1a}
+\definecolor{other}{HTML}{1a1a1a}
+
+\definecolor{ros-topic}{HTML}{859900}
+\definecolor{ros-action}{HTML}{cb4b16}
+\definecolor{ros-service}{HTML}{268bd2}
+\definecolor{ros-param}{HTML}{53497e}
+\definecolor{ros-node}{HTML}{7e2433}
+
+\begin{document}
+
+\begin{tikzpicture}[
+             font=\defaultfont,
+             >=latex,
+             every edge/.style={draw, -{latex}, line width=1.5pt,opacity=0.5},
+             hw_edge/.style={dashed}, 
+             topic_edge/.style={color=ros-topic,text=black}, 
+             service_edge/.style={color=ros-service,text=black}, 
+             action_edge/.style={color=ros-action,text=black}, 
+             node/.style={draw, align=center, inner sep=5pt},
+             unknown_node/.style={node},
+             hardware_node/.style={node,thick},
+             skill_node/.style={node, rounded corners},
+             plugin_node/.style={node,dashed,font=\monospace},
+             node_node/.style={node, font=\monospace},
+             model_node/.style={node, cylinder, shape border rotate=90, aspect=0.25},
+             label/.style={midway, align=center, fill=white,opacity=0.8},
+             topic/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8},
+             service/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8},
+             action/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8}]
+
+
+    \special{dvisvgm:raw
+    <script type="text/javascript" src="../_static/js/interactive_architecture.js">
+    </script>
+    }
+    \svgnode{anonymous}
+    \node at (208.0mm, -356.2mm) [unknown_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=18.2mm, fill=decisionmaking!50] (anonymous) {...};
+    \svggend
+    \svgnode{applicationmanager}
+    \node at (208.0mm, -267.8mm) [unknown_node, anchor=north west, minimum width=137.8mm, minimum height=15.600000000000001mm, fill=other!50] (applicationmanager) {application manager};
+    \svggend
+    \svgnode{arm_*_controller}
+    \node at (262.6mm, -507.0mm) [plugin_node, anchor=north west, minimum width=44.2mm, minimum height=15.600000000000001mm, fill=gesturemotions!50] (arm_*_controller) {arm\_*\_controller};
+    \svggend
+    \svgnode{aruco_target_detector}
+    \node at (18.2mm, -538.2mm) [plugin_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=navigation!50] (aruco_target_detector) {aruco\_target\_detector};
+    \svggend
+    \svgnode{asr_vosk}
+    \node at (291.2mm, -39.0mm) [node_node, anchor=north west, minimum width=23.400000000000002mm, minimum height=26.0mm, fill=speechandlanguage!50] (asr_vosk) {\href{../nodes.html#asr-vosk}{asr\_vosk}};
+    \svggend
+    \svgnode{attention}
+    \node at (314.6mm, -348.40000000000003mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=expressiveness!50] (attention) {attention};
+    \svggend
+    \svgnode{attention_manager}
+    \node at (421.2mm, -249.60000000000002mm) [node_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=39.0mm, fill=expressiveness!50] (attention_manager) {\href{../nodes.html#attention-manager}{attention\_manager}};
+    \svggend
+    \svgnode{chatbot_rasa}
+    \node at (390.0mm, -83.2mm) [node_node, anchor=north west, minimum width=26.0mm, minimum height=26.0mm, fill=speechandlanguage!50] (chatbot_rasa) {\href{../nodes.html#chatbot-rasa}{chatbot\_rasa}};
+    \svggend
+    \svgnode{communication_hub}
+    \node at (317.2mm, -83.2mm) [node_node, anchor=north west, minimum width=36.4mm, minimum height=59.800000000000004mm, fill=speechandlanguage!50] (communication_hub) {\href{../nodes.html#communication-hub}{communication\_hub}};
+    \svggend
+    \svgnode{controller_manager}
+    \node at (262.6mm, -475.8mm) [node_node, anchor=north west, minimum width=91.0mm, minimum height=23.400000000000002mm, fill=gesturemotions!50] (controller_manager) {\href{../nodes.html#controller-manager}{controller\_manager}};
+    \svggend
+    \svgnode{dlib}
+    \node at (174.20000000000002mm, -18.2mm) [model_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=model-data!50] (dlib) {dlib};
+    \svggend
+    \svgnode{dlo_ros}
+    \node at (41.6mm, -377.0mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=17.94mm, fill=navigation!50] (dlo_ros) {\href{../nodes.html#dlo-ros}{dlo\_ros}};
+    \svggend
+    \svgnode{emergency_stop_controller}
+    \node at (262.6mm, -561.6mm) [plugin_node, anchor=north west, minimum width=44.2mm, minimum height=15.600000000000001mm, fill=gesturemotions!50] (emergency_stop_controller) {emergency\_stop\_controller};
+    \svggend
+    \svgnode{eulero_manager}
+    \node at (-52.0mm, -418.6mm) [node_node, anchor=north west, minimum width=44.2mm, minimum height=18.2mm, fill=navigation!50] (eulero_manager) {\href{../nodes.html#eulero-manager}{eulero\_manager}};
+    \svggend
+    \svgnode{expressive_eyesaritiagopro}
+    \node at (416.0mm, -533.0mm) [node_node, anchor=north west, minimum width=39.0mm, minimum height=18.2mm, fill=expressiveness!50] (expressive_eyesaritiagopro) {\href{../nodes.html#expressive-eyes--ari--tiago-pro-}{expressive\_eyes (ari, tiago pro)}};
+    \svggend
+    \svgnode{face-eyescreenaritiagopro}
+    \node at (429.0mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=hardware!50] (face-eyescreenaritiagopro) {face/eye screen (ari, tiago pro)};
+    \svggend
+    \svgnode{facialexpressions}
+    \node at (267.8mm, -340.6mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=expressiveness!50] (facialexpressions) {facial expressions};
+    \svggend
+    \svgnode{fieldsofview}
+    \node at (117.0mm, -301.6mm) [plugin_node, anchor=north west, minimum width=39.0mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (fieldsofview) {fields of view};
+    \svggend
+    \svgnode{gaze_manager}
+    \node at (392.6mm, -491.40000000000003mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=31.200000000000003mm, fill=expressiveness!50] (gaze_manager) {\href{../nodes.html#gaze-manager}{gaze\_manager}};
+    \svggend
+    \svgnode{grasping}
+    \node at (267.8mm, -361.40000000000003mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=manipulation!50] (grasping) {grasping};
+    \svggend
+    \svgnode{gripper_*_controller}
+    \node at (317.2mm, -507.0mm) [plugin_node, anchor=north west, minimum width=36.4mm, minimum height=15.600000000000001mm, fill=manipulation!50] (gripper_*_controller) {gripper\_*\_controller};
+    \svggend
+    \svgnode{hand_controller}
+    \node at (317.2mm, -543.4mm) [plugin_node, anchor=north west, minimum width=36.4mm, minimum height=15.600000000000001mm, fill=manipulation!50] (hand_controller) {hand\_controller};
+    \svggend
+    \svgnode{head_controller}
+    \node at (317.2mm, -561.6mm) [plugin_node, anchor=north west, minimum width=36.4mm, minimum height=15.600000000000001mm, fill=gesturemotions!50] (head_controller) {head\_controller};
+    \svggend
+    \svgnode{hey5hand}
+    \node at (353.6mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=26.0mm, minimum height=15.600000000000001mm, fill=hardware!50] (hey5hand) {Hey5 hand};
+    \svggend
+    \svgnode{hri_engagement}
+    \node at (163.8mm, -166.4mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=18.2mm, fill=socialperception!50] (hri_engagement) {\href{../nodes.html#hri-engagement}{hri\_engagement}};
+    \svggend
+    \svgnode{hri_face_body_matcher}
+    \node at (80.60000000000001mm, -78.0mm) [node_node, anchor=north west, minimum width=41.6mm, minimum height=18.2mm, fill=socialperception!50] (hri_face_body_matcher) {\href{../nodes.html#hri-face-body-matcher}{hri\_face\_body\_matcher}};
+    \svggend
+    \svgnode{hri_face_detect}
+    \node at (117.0mm, -57.2mm) [node_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=18.2mm, fill=socialperception!50] (hri_face_detect) {\href{../nodes.html#hri-face-detect}{hri\_face\_detect}};
+    \svggend
+    \svgnode{hri_face_identification}
+    \node at (166.4mm, -78.0mm) [node_node, anchor=north west, minimum width=41.6mm, minimum height=18.2mm, fill=socialperception!50] (hri_face_identification) {\href{../nodes.html#hri-face-identification}{hri\_face\_identification}};
+    \svggend
+    \svgnode{hri_fullbody}
+    \node at (49.4mm, -54.6mm) [node_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=21.970000000000002mm, fill=socialperception!50] (hri_fullbody) {\href{../nodes.html#hri-fullbody}{hri\_fullbody}};
+    \svggend
+    \svgnode{hri_person_manager}
+    \node at (49.4mm, -127.4mm) [node_node, anchor=north west, minimum width=158.6mm, minimum height=21.970000000000002mm, fill=socialperception!50] (hri_person_manager) {\href{../nodes.html#hri-person-manager}{hri\_person\_manager}};
+    \svggend
+    \svgnode{human_description}
+    \node at (36.4mm, -18.2mm) [model_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=model-data!50] (human_description) {human\_description};
+    \svggend
+    \svgnode{i18n_manager}
+    \node at (340.6mm, -5.2mm) [node_node, anchor=north west, minimum width=65.0mm, minimum height=15.600000000000001mm, fill=speechandlanguage!50] (i18n_manager) {\href{../nodes.html#i18n-manager}{i18n\_manager}};
+    \svggend
+    \svgnode{jointencoders}
+    \node at (-39.0mm, -631.8000000000001mm) [hardware_node, anchor=north west, minimum width=39.0mm, minimum height=15.600000000000001mm, fill=hardware!50] (jointencoders) {joint encoders};
+    \svggend
+    \svgnode{joints}
+    \node at (296.40000000000003mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=15.600000000000001mm, fill=hardware!50] (joints) {joints};
+    \svggend
+    \svgnode{joy_teleop}
+    \node at (-70.2mm, -590.2mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=navigation!50] (joy_teleop) {\href{../nodes.html#joy-teleop}{joy\_teleop}};
+    \svggend
+    \svgnode{joystick}
+    \node at (-111.8mm, -590.2mm) [hardware_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=hardware!50] (joystick) {joystick};
+    \svggend
+    \svgnode{joystick_relay}
+    \node at (-26.0mm, -592.8000000000001mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=17.94mm, fill=navigation!50] (joystick_relay) {\href{../nodes.html#joystick-relay}{joystick\_relay}};
+    \svggend
+    \svgnode{key_teleop}
+    \node at (-70.2mm, -564.2mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=navigation!50] (key_teleop) {\href{../nodes.html#key-teleop}{key\_teleop}};
+    \svggend
+    \svgnode{keyboard}
+    \node at (-111.8mm, -564.2mm) [hardware_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=hardware!50] (keyboard) {keyboard};
+    \svggend
+    \svgnode{knowledge_core}
+    \node at (114.4mm, -202.8mm) [node_node, anchor=north west, minimum width=67.60000000000001mm, minimum height=31.200000000000003mm, fill=knowledgeandreasoning!50] (knowledge_core) {\href{../nodes.html#knowledge-core}{knowledge\_core}};
+    \svggend
+    \svgnode{laser_target_detector}
+    \node at (18.2mm, -556.4mm) [plugin_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=navigation!50] (laser_target_detector) {laser\_target\_detector};
+    \svggend
+    \svgnode{laserscan_multi_merger}
+    \node at (-65.0mm, -377.0mm) [node_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=36.4mm, fill=navigation!50] (laserscan_multi_merger) {\href{../nodes.html#laserscan-multi-merger}{laserscan\_multi\_merger}};
+    \svggend
+    \svgnode{laserscannerfront}
+    \node at (-119.60000000000001mm, -377.0mm) [hardware_node, anchor=north west, minimum width=23.400000000000002mm, minimum height=15.600000000000001mm, fill=hardware!50] (laserscannerfront) {laser scanner (front)};
+    \svggend
+    \svgnode{laserscannerrear}
+    \node at (-119.60000000000001mm, -397.8mm) [hardware_node, anchor=north west, minimum width=23.400000000000002mm, minimum height=15.600000000000001mm, fill=hardware!50] (laserscannerrear) {laser scanner (rear)};
+    \svggend
+    \svgnode{led_manager_node}
+    \node at (403.0mm, -600.6mm) [node_node, anchor=north west, minimum width=36.4mm, minimum height=18.2mm, fill=ui!50] (led_manager_node) {\href{../nodes.html#led-manager-node}{led\_manager\_node}};
+    \svggend
+    \svgnode{leds}
+    \node at (392.6mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=hardware!50] (leds) {leds};
+    \svggend
+    \svgnode{leds1}
+    \node at (267.8mm, -382.2mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=expressiveness!50] (leds1) {leds};
+    \svggend
+    \svgnode{map}
+    \node at (-15.600000000000001mm, -327.6mm) [model_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=model-data!50] (map) {map};
+    \svggend
+    \svgnode{map_mask_server}
+    \node at (46.800000000000004mm, -418.6mm) [node_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=18.2mm, fill=navigation!50] (map_mask_server) {\href{../nodes.html#map-mask-server}{map\_mask\_server}};
+    \svggend
+    \svgnode{mediapipe}
+    \node at (96.2mm, -18.2mm) [model_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=model-data!50] (mediapipe) {mediapipe};
+    \svggend
+    \svgnode{missionimplementation}
+    \node at (208.0mm, -286.0mm) [unknown_node, anchor=north west, minimum width=137.8mm, minimum height=21.970000000000002mm, fill=decisionmaking!50] (missionimplementation) {mission implementation};
+    \svggend
+    \svgnode{mobile_base_controller}
+    \node at (262.6mm, -525.2mm) [plugin_node, anchor=north west, minimum width=44.2mm, minimum height=33.800000000000004mm, fill=navigation!50] (mobile_base_controller) {mobile\_base\_controller};
+    \svggend
+    \svgnode{mobilebase}
+    \node at (247.0mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=hardware!50] (mobilebase) {mobile base};
+    \svggend
+    \svgnode{motion}
+    \node at (314.6mm, -371.8mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=gesturemotions!50] (motion) {motion};
+    \svggend
+    \svgnode{moveit}
+    \node at (135.20000000000002mm, -574.6mm) [node_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=28.6mm, fill=gesturemotions!50] (moveit) {\href{../nodes.html#moveit}{moveit}};
+    \svggend
+    \svgnode{nav2_amcl}
+    \node at (85.8mm, -366.6mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=17.94mm, fill=navigation!50] (nav2_amcl) {\href{../nodes.html#nav2-amcl}{nav2\_amcl}};
+    \svggend
+    \svgnode{nav2_behaviour_server}
+    \node at (109.2mm, -494.0mm) [node_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=17.94mm, fill=navigation!50] (nav2_behaviour_server) {\href{../nodes.html#nav2-behaviour-server}{nav2\_behaviour\_server}};
+    \svggend
+    \svgnode{nav2_bt_navigator}
+    \node at (36.4mm, -486.2mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=17.94mm, fill=navigation!50] (nav2_bt_navigator) {\href{../nodes.html#nav2-bt-navigator}{nav2\_bt\_navigator}};
+    \svggend
+    \svgnode{nav2_controller_server}
+    \node at (109.2mm, -455.0mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=36.4mm, fill=navigation!50] (nav2_controller_server) {\href{../nodes.html#nav2-controller-server}{nav2\_controller\_server}};
+    \svggend
+    \svgnode{nav2_map_saver}
+    \node at (-57.2mm, -327.6mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=navigation!50] (nav2_map_saver) {\href{../nodes.html#nav2-map-saver}{nav2\_map\_saver}};
+    \svggend
+    \svgnode{nav2_map_server}
+    \node at (20.8mm, -327.6mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=navigation!50] (nav2_map_server) {\href{../nodes.html#nav2-map-server}{nav2\_map\_server}};
+    \svggend
+    \svgnode{nav2_planner_server}
+    \node at (109.2mm, -426.40000000000003mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=26.0mm, fill=navigation!50] (nav2_planner_server) {\href{../nodes.html#nav2-planner-server}{nav2\_planner\_server}};
+    \svggend
+    \svgnode{nav2_waypoint_follower}
+    \node at (-46.800000000000004mm, -447.2mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=15.600000000000001mm, fill=navigation!50] (nav2_waypoint_follower) {\href{../nodes.html#nav2-waypoint-follower}{nav2\_waypoint\_follower}};
+    \svggend
+    \svgnode{navdatabase}
+    \node at (5.2mm, -418.6mm) [model_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=18.2mm, fill=model-data!50] (navdatabase) {nav database};
+    \svggend
+    \svgnode{navigate_through_waypoints}
+    \node at (-46.800000000000004mm, -468.0mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=15.600000000000001mm, fill=navigation!50] (navigate_through_waypoints) {\href{../nodes.html#navigate-through-waypoints}{navigate\_through\_waypoints}};
+    \svggend
+    \svgnode{navigate_to_target}
+    \node at (-46.800000000000004mm, -488.8mm) [node_node, anchor=north west, minimum width=46.800000000000004mm, minimum height=17.94mm, fill=navigation!50] (navigate_to_target) {\href{../nodes.html#navigate-to-target}{navigate\_to\_target}};
+    \svggend
+    \svgnode{navigation1}
+    \node at (267.8mm, -319.8mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=navigation!50] (navigation1) {navigation};
+    \svggend
+    \svgnode{objectmaps}
+    \node at (117.0mm, -265.2mm) [plugin_node, anchor=north west, minimum width=39.0mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (objectmaps) {object maps};
+    \svggend
+    \svgnode{obstacles}
+    \node at (117.0mm, -319.8mm) [plugin_node, anchor=north west, minimum width=39.0mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (obstacles) {obstacles};
+    \svggend
+    \svgnode{oro}
+    \node at (20.8mm, -205.4mm) [model_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=model-data!50] (oro) {oro};
+    \svggend
+    \svgnode{pal_laser_filters}
+    \node at (-18.2mm, -377.0mm) [node_node, anchor=north west, minimum width=44.2mm, minimum height=15.600000000000001mm, fill=navigation!50] (pal_laser_filters) {\href{../nodes.html#pal-laser-filters}{pal\_laser\_filters}};
+    \svggend
+    \svgnode{people}
+    \node at (117.0mm, -283.40000000000003mm) [plugin_node, anchor=north west, minimum width=39.0mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (people) {people};
+    \svggend
+    \svgnode{people_facts}
+    \node at (70.2mm, -166.4mm) [node_node, anchor=north west, minimum width=36.4mm, minimum height=20.8mm, fill=knowledgeandreasoning!50] (people_facts) {\href{../nodes.html#people-facts}{people\_facts}};
+    \svggend
+    \svgnode{play_motion2}
+    \node at (135.20000000000002mm, -626.6mm) [node_node, anchor=north west, minimum width=36.4mm, minimum height=26.0mm, fill=gesturemotions!50] (play_motion2) {\href{../nodes.html#play-motion2}{play\_motion2}};
+    \svggend
+    \svgnode{remap}
+    \node at (93.60000000000001mm, -247.0mm) [node_node, anchor=north west, minimum width=62.400000000000006mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (remap) {\href{../nodes.html#reMap}{reMap}};
+    \svggend
+    \svgnode{respeakerin}
+    \node at (288.6mm, -2.6mm) [hardware_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=hardware!50] (respeakerin) {reSpeaker IN};
+    \svggend
+    \svgnode{respeakerout}
+    \node at (475.8mm, -644.8000000000001mm) [hardware_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=hardware!50] (respeakerout) {reSpeaker OUT};
+    \svggend
+    \svgnode{rgbdcameras}
+    \node at (0.0mm, -153.4mm) [hardware_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=hardware!50] (rgbdcameras) {RGB(D) cameras};
+    \svggend
+    \svgnode{rgbdcameras1}
+    \node at (-119.60000000000001mm, -512.2mm) [hardware_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=hardware!50] (rgbdcameras1) {RGB(D) cameras};
+    \svggend
+    \svgnode{robot_head_displaytiagopro}
+    \node at (457.6mm, -566.8000000000001mm) [node_node, anchor=north west, minimum width=36.4mm, minimum height=18.2mm, fill=ui!50] (robot_head_displaytiagopro) {\href{../nodes.html#robot-head-display--tiago-pro-}{robot\_head\_display (tiago pro)}};
+    \svggend
+    \svgnode{robot_state_publisher}
+    \node at (10.4mm, -631.8000000000001mm) [node_node, anchor=north west, minimum width=72.8mm, minimum height=15.600000000000001mm, fill=environmentperception!50] (robot_state_publisher) {\href{../nodes.html#robot-state-publisher}{robot\_state\_publisher}};
+    \svggend
+    \svgnode{slam_toolbox}
+    \node at (-93.60000000000001mm, -327.6mm) [node_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=navigation!50] (slam_toolbox) {\href{../nodes.html#slam-toolbox}{slam\_toolbox}};
+    \svggend
+    \svgnode{soft_wakeup_word}
+    \node at (270.40000000000003mm, -101.4mm) [node_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=15.600000000000001mm, fill=speechandlanguage!50] (soft_wakeup_word) {\href{../nodes.html#soft-wakeup-word}{soft\_wakeup\_word}};
+    \svggend
+    \svgnode{speech}
+    \node at (314.6mm, -327.6mm) [skill_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=15.600000000000001mm, fill=speechandlanguage!50] (speech) {speech};
+    \svggend
+    \svgnode{target_detector_server}
+    \node at (-2.6mm, -520.0mm) [node_node, anchor=north west, minimum width=59.800000000000004mm, minimum height=15.600000000000001mm, fill=navigation!50] (target_detector_server) {\href{../nodes.html#target-detector-server}{target\_detector\_server}};
+    \svggend
+    \svgnode{task1}
+    \node at (208.0mm, -314.6mm) [unknown_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=18.2mm, fill=decisionmaking!50] (task1) {task 1};
+    \svggend
+    \svgnode{task2}
+    \node at (208.0mm, -335.40000000000003mm) [unknown_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=18.2mm, fill=decisionmaking!50] (task2) {task 2};
+    \svggend
+    \svgnode{taskn}
+    \node at (208.0mm, -377.0mm) [unknown_node, anchor=north west, minimum width=33.800000000000004mm, minimum height=18.2mm, fill=decisionmaking!50] (taskn) {task n};
+    \svggend
+    \svgnode{torso_controller}
+    \node at (317.2mm, -525.2mm) [plugin_node, anchor=north west, minimum width=36.4mm, minimum height=15.600000000000001mm, fill=gesturemotions!50] (torso_controller) {torso\_controller};
+    \svggend
+    \svgnode{tts_engine}
+    \node at (436.8mm, -145.6mm) [node_node, anchor=north west, minimum width=54.6mm, minimum height=30.03mm, fill=speechandlanguage!50] (tts_engine) {\href{../nodes.html#tts-engine}{tts\_engine}};
+    \svggend
+    \svgnode{tts_plugin_acapela}
+    \node at (447.2mm, -179.4mm) [plugin_node, anchor=north west, minimum width=44.2mm, minimum height=15.600000000000001mm, fill=speechandlanguage!50] (tts_plugin_acapela) {tts\_plugin\_acapela};
+    \svggend
+    \svgnode{tts_plugin_non_verbal}
+    \node at (447.2mm, -197.6mm) [plugin_node, anchor=north west, minimum width=44.2mm, minimum height=15.600000000000001mm, fill=speechandlanguage!50] (tts_plugin_non_verbal) {tts\_plugin\_non\_verbal};
+    \svggend
+    \svgnode{twist_mux}
+    \node at (200.20000000000002mm, -501.8mm) [unknown_node, anchor=north west, minimum width=31.200000000000003mm, minimum height=57.2mm, fill=navigation!50] (twist_mux) {twist\_mux};
+    \svggend
+    \svgnode{volume_control_pulseaudio}
+    \node at (418.6mm, -5.2mm) [node_node, anchor=north west, minimum width=54.6mm, minimum height=18.2mm, fill=speechandlanguage!50] (volume_control_pulseaudio) {\href{../nodes.html#volume-control-pulseaudio}{volume\_control\_pulseaudio}};
+    \svggend
+    \svgnode{webuserinterface}
+    \node at (-98.8mm, -611.0mm) [unknown_node, anchor=north west, minimum width=49.4mm, minimum height=18.2mm, fill=ui!50] (webuserinterface) {Web user interface};
+    \svggend
+    \svgnode{wheelencoders}
+    \node at (200.20000000000002mm, -470.6mm) [hardware_node, anchor=north west, minimum width=28.6mm, minimum height=15.600000000000001mm, fill=hardware!50] (wheelencoders) {wheel encoders};
+    \svggend
+    \svgnode{yolo1}
+    \node at (65.0mm, -262.6mm) [model_node, anchor=north west, minimum width=20.8mm, minimum height=15.600000000000001mm, fill=model-data!50] (yolo1) {YOLO};
+    \svggend
+
+    \svgedge{arm_*_controller_joints_anonymous33}{arm_*_controller}{joints}
+    \path (arm_*_controller) edge[->,in=105, out=-75, looseness=0.4] node{}(joints);
+     \svggend
+    \svgedge{asr_vosk_communication_hub_humans-voices-speech}{asr_vosk}{communication_hub}
+    \path (asr_vosk) edge[->,topic_edge,in=119, out=-61, looseness=0.4] node[topic]{\href{../topics/humans-voices-speech.html}{/humans/voices/*/speech}}(communication_hub);
+     \svggend
+    \svgedge{asr_vosk_soft_wakeup_word_humans-voices-speech1}{asr_vosk}{soft_wakeup_word}
+    \path (asr_vosk) edge[->,topic_edge,in=75, out=-105, looseness=0.4] node[topic]{\href{../topics/humans-voices-speech.html}{/humans/voices/*/speech}}(soft_wakeup_word);
+     \svggend
+    \svgedge{attention_gaze_manager_look_at4}{attention}{gaze_manager}
+    \path (attention) edge[->,topic_edge,in=116, out=-64, looseness=0.4] node[topic]{\href{../topics/look_at.html}{/look\_at}}(gaze_manager);
+     \svggend
+    \svgedge{attention_manager_gaze_manager_look_at3}{attention_manager}{gaze_manager}
+    \path (attention_manager) edge[->,topic_edge,in=82, out=-98, looseness=0.4] node[topic]{\href{../topics/look_at.html}{/look\_at}}(gaze_manager);
+     \svggend
+    \svgedge{communication_hub_chatbot_rasa_service-chatbot_rasa-get_response}{communication_hub}{chatbot_rasa}
+    \path (communication_hub) edge[->,service_edge,in=194, out=14, looseness=0.4] node[service]{\href{../services/service-chatbot_rasa-get_response.html}{service: /chatbot\_rasa/get\_response}}(chatbot_rasa);
+     \svggend
+    \svgedge{communication_hub_chatbot_rasa_service-chatbot_rasa-reset}{communication_hub}{chatbot_rasa}
+    \path (communication_hub) edge[->,service_edge,in=194, out=14, looseness=0.4] node[service]{\href{../services/service-chatbot_rasa-reset.html}{service: /chatbot\_rasa/reset}}(chatbot_rasa);
+     \svggend
+    \svgedge{communication_hub_missionimplementation_intents1}{communication_hub}{missionimplementation}
+    \path (communication_hub) edge[->,topic_edge,in=73, out=-107, looseness=0.4] node[topic]{\href{../topics/intents.html}{/intents}}(missionimplementation);
+     \svggend
+    \svgedge{communication_hub_tts_engine_action-tts_engine-tts}{communication_hub}{tts_engine}
+    \path (communication_hub) edge[->,action_edge,in=160, out=-20, looseness=0.4] node[action]{\href{../actions/action-tts_engine-tts.html}{action: /tts\_engine/tts}}(tts_engine);
+     \svggend
+    \svgedge{dlib_hri_face_identification_anonymous6}{dlib}{hri_face_identification}
+    \path (dlib) edge[->,in=87, out=-93, looseness=0.4] node{}(hri_face_identification);
+     \svggend
+    \svgedge{dlo_ros_nav2_amcl_tf1}{dlo_ros}{nav2_amcl}
+    \path (dlo_ros) edge[->,topic_edge,in=193, out=13, looseness=0.4] node[topic]{\href{../topics/tf.html}{/tf}}(nav2_amcl);
+     \svggend
+    \svgedge{emergency_stop_controller_joints_anonymous23}{emergency_stop_controller}{joints}
+    \path (emergency_stop_controller) edge[->,in=113, out=-67, looseness=0.4] node{}(joints);
+     \svggend
+    \svgedge{emergency_stop_controller_mobilebase_anonymous34}{emergency_stop_controller}{mobilebase}
+    \path (emergency_stop_controller) edge[->,in=76, out=-104, looseness=0.4] node{}(mobilebase);
+     \svggend
+    \svgedge{eulero_manager_navdatabase_anonymous37}{eulero_manager}{navdatabase}
+    \path (eulero_manager) edge[->,in=180, out=0, looseness=0.4] node{}(navdatabase);
+     \svggend
+    \svgedge{expressive_eyesaritiagopro_face-eyescreenaritiagopro_anonymous29}{expressive_eyesaritiagopro}{face-eyescreenaritiagopro}
+    \path (expressive_eyesaritiagopro) edge[->,in=95, out=-85, looseness=0.4] node{}(face-eyescreenaritiagopro);
+     \svggend
+    \svgedge{facialexpressions_expressive_eyesaritiagopro_robot_face-expression1}{facialexpressions}{expressive_eyesaritiagopro}
+    \path (facialexpressions) edge[->,topic_edge,in=129, out=-51, looseness=0.4] node[topic]{\href{../topics/robot_face-expression.html}{/robot\_face/expression}}(expressive_eyesaritiagopro);
+     \svggend
+    \svgedge{gaze_manager_expressive_eyesaritiagopro_anonymous19}{gaze_manager}{expressive_eyesaritiagopro}
+    \path (gaze_manager) edge[->,in=133, out=-47, looseness=0.4] node{}(expressive_eyesaritiagopro);
+     \svggend
+    \svgedge{gaze_manager_head_controller_anonymous46}{gaze_manager}{head_controller}
+    \path (gaze_manager) edge[->,in=43, out=-137, looseness=0.4] node{}(head_controller);
+     \svggend
+    \svgedge{grasping_moveit_anonymous2}{grasping}{moveit}
+    \path (grasping) edge[->,in=60, out=-120, looseness=0.4] node{}(moveit);
+     \svggend
+    \svgedge{gripper_*_controller_joints_anonymous56}{gripper_*_controller}{joints}
+    \path (gripper_*_controller) edge[->,in=84, out=-96, looseness=0.4] node{}(joints);
+     \svggend
+    \svgedge{hand_controller_hey5hand_anonymous52}{hand_controller}{hey5hand}
+    \path (hand_controller) edge[->,in=108, out=-72, looseness=0.4] node{}(hey5hand);
+     \svggend
+    \svgedge{head_controller_joints_anonymous3}{head_controller}{joints}
+    \path (head_controller) edge[->,in=80, out=-100, looseness=0.4] node{}(joints);
+     \svggend
+    \svgedge{hri_engagement_knowledge_core_service-kb-revise1}{hri_engagement}{knowledge_core}
+    \path (hri_engagement) edge[->,service_edge,in=48, out=-132, looseness=0.4] node[service]{\href{../services/service-kb-revise.html}{service:/kb/revise}}(knowledge_core);
+     \svggend
+    \svgedge{hri_engagement_missionimplementation_intents3}{hri_engagement}{missionimplementation}
+    \path (hri_engagement) edge[->,topic_edge,in=127, out=-53, looseness=0.4] node[topic]{\href{../topics/intents.html}{/intents}}(missionimplementation);
+     \svggend
+    \svgedge{hri_face_body_matcher_hri_person_manager_humans-candidate_matches1}{hri_face_body_matcher}{hri_person_manager}
+    \path (hri_face_body_matcher) edge[->,topic_edge,in=119, out=-61, looseness=0.4] node[topic]{\href{../topics/humans-candidate_matches.html}{/humans/candidate\_matches}}(hri_person_manager);
+     \svggend
+    \svgedge{hri_face_detect_hri_face_body_matcher_anonymous40}{hri_face_detect}{hri_face_body_matcher}
+    \path (hri_face_detect) edge[->,in=33, out=-147, looseness=0.4] node{}(hri_face_body_matcher);
+     \svggend
+    \svgedge{hri_face_detect_hri_face_identification_anonymous11}{hri_face_detect}{hri_face_identification}
+    \path (hri_face_detect) edge[->,in=159, out=-21, looseness=0.4] node{}(hri_face_identification);
+     \svggend
+    \svgedge{hri_face_detect_hri_person_manager_humans-faces}{hri_face_detect}{hri_person_manager}
+    \path (hri_face_detect) edge[->,topic_edge,in=86, out=-94, looseness=0.4] node[topic]{\href{../topics/humans-faces.html}{/humans/faces/*}}(hri_person_manager);
+     \svggend
+    \svgedge{hri_face_identification_hri_person_manager_humans-candidate_matches}{hri_face_identification}{hri_person_manager}
+    \path (hri_face_identification) edge[->,topic_edge,in=42, out=-138, looseness=0.4] node[topic]{\href{../topics/humans-candidate_matches.html}{/humans/candidate\_matches}}(hri_person_manager);
+     \svggend
+    \svgedge{hri_fullbody_hri_face_body_matcher_anonymous31}{hri_fullbody}{hri_face_body_matcher}
+    \path (hri_fullbody) edge[->,in=149, out=-31, looseness=0.4] node{}(hri_face_body_matcher);
+     \svggend
+    \svgedge{hri_fullbody_hri_person_manager_humans-bodies}{hri_fullbody}{hri_person_manager}
+    \path (hri_fullbody) edge[->,topic_edge,in=131, out=-49, looseness=0.4] node[topic]{\href{../topics/humans-bodies.html}{/humans/bodies/*}}(hri_person_manager);
+     \svggend
+    \svgedge{hri_person_manager_fieldsofview_anonymous41}{hri_person_manager}{fieldsofview}
+    \path (hri_person_manager) edge[->,in=93, out=-87, looseness=0.4] node{}(fieldsofview);
+     \svggend
+    \svgedge{hri_person_manager_hri_engagement_humans-persons}{hri_person_manager}{hri_engagement}
+    \path (hri_person_manager) edge[->,topic_edge,in=148, out=-32, looseness=0.4] node[topic]{\href{../topics/humans-persons.html}{/humans/persons/*}}(hri_engagement);
+     \svggend
+    \svgedge{hri_person_manager_people_anonymous47}{hri_person_manager}{people}
+    \path (hri_person_manager) edge[->,in=93, out=-87, looseness=0.4] node{}(people);
+     \svggend
+    \svgedge{hri_person_manager_people_facts_humans-persons1}{hri_person_manager}{people_facts}
+    \path (hri_person_manager) edge[->,topic_edge,in=44, out=-136, looseness=0.4] node[topic]{\href{../topics/humans-persons.html}{/humans/persons/*}}(people_facts);
+     \svggend
+    \svgedge{human_description_hri_fullbody_urdf}{human_description}{hri_fullbody}
+    \path (human_description) edge[->,in=109, out=-71, looseness=0.4] node{URDF}(hri_fullbody);
+     \svggend
+    \svgedge{i18n_manager_asr_vosk_action-asr_vosk-set_default_locale}{i18n_manager}{asr_vosk}
+    \path (i18n_manager) edge[->,action_edge,in=30, out=-150, looseness=0.4] node[action]{\href{../actions/action-asr_vosk-set_default_locale.html}{action:/asr\_vosk/set\_default\_locale}}(asr_vosk);
+     \svggend
+    \svgedge{i18n_manager_chatbot_rasa_action-chatbot_rasa-set_default_locale}{i18n_manager}{chatbot_rasa}
+    \path (i18n_manager) edge[->,action_edge,in=110, out=-70, looseness=0.4] node[action]{\href{../actions/action-chatbot_rasa-set_default_locale.html}{action:/chatbot\_rasa/set\_default\_locale}}(chatbot_rasa);
+     \svggend
+    \svgedge{i18n_manager_tts_engine_action-tts_engine-set_default_locale}{i18n_manager}{tts_engine}
+    \path (i18n_manager) edge[->,action_edge,in=122, out=-58, looseness=0.4] node[action]{\href{../actions/action-tts_engine-set_default_locale.html}{action:/tts\_engine/set\_default\_locale}}(tts_engine);
+     \svggend
+    \svgedge{jointencoders_robot_state_publisher_anonymous43}{jointencoders}{robot_state_publisher}
+    \path (jointencoders) edge[->,in=180, out=0, looseness=0.4] node{}(robot_state_publisher);
+     \svggend
+    \svgedge{joy_teleop_joystick_relay_input_joy-cmd_vel}{joy_teleop}{joystick_relay}
+    \path (joy_teleop) edge[->,topic_edge,in=176, out=-4, looseness=0.4] node[topic]{\href{../topics/input_joy-cmd_vel.html}{/input\_joy/cmd\_vel}}(joystick_relay);
+     \svggend
+    \svgedge{joystick_joy_teleop_joy}{joystick}{joy_teleop}
+    \path (joystick) edge[->,topic_edge,in=180, out=0, looseness=0.4] node[topic]{\href{../topics/joy.html}{/joy}}(joy_teleop);
+     \svggend
+    \svgedge{joystick_relay_twist_mux_anonymous55}{joystick_relay}{twist_mux}
+    \path (joystick_relay) edge[->,in=197, out=17, looseness=0.4] node{}(twist_mux);
+     \svggend
+    \svgedge{key_teleop_twist_mux_anonymous12}{key_teleop}{twist_mux}
+    \path (key_teleop) edge[->,in=188, out=8, looseness=0.4] node{}(twist_mux);
+     \svggend
+    \svgedge{keyboard_key_teleop_anonymous30}{keyboard}{key_teleop}
+    \path (keyboard) edge[->,in=180, out=0, looseness=0.4] node{}(key_teleop);
+     \svggend
+    \svgedge{knowledge_core_missionimplementation_service-kb-query}{knowledge_core}{missionimplementation}
+    \path (knowledge_core) edge[->,service_edge,in=149, out=-31, looseness=0.4] node[service]{\href{../services/service-kb-query.html}{service: /kb/query}}(missionimplementation);
+     \svggend
+    \svgedge{knowledge_core_obstacles_anonymous39}{knowledge_core}{obstacles}
+    \path (knowledge_core) edge[->,in=84, out=-96, looseness=0.4] node{}(obstacles);
+     \svggend
+    \svgedge{laserscan_multi_merger_pal_laser_filters_scan_raw}{laserscan_multi_merger}{pal_laser_filters}
+    \path (laserscan_multi_merger) edge[->,topic_edge,in=191, out=11, looseness=0.4] node[topic]{\href{../topics/scan_raw.html}{/scan\_raw}}(pal_laser_filters);
+     \svggend
+    \svgedge{laserscannerfront_laserscan_multi_merger_scan_front_raw}{laserscannerfront}{laserscan_multi_merger}
+    \path (laserscannerfront) edge[->,topic_edge,in=170, out=-10, looseness=0.4] node[topic]{\href{../topics/scan_front_raw.html}{/scan\_front\_raw}}(laserscan_multi_merger);
+     \svggend
+    \svgedge{laserscannerrear_laserscan_multi_merger_scan_rear_raw}{laserscannerrear}{laserscan_multi_merger}
+    \path (laserscannerrear) edge[->,topic_edge,in=190, out=10, looseness=0.4] node[topic]{\href{../topics/scan_rear_raw.html}{/scan\_rear\_raw}}(laserscan_multi_merger);
+     \svggend
+    \svgedge{led_manager_node_leds_anonymous18}{led_manager_node}{leds}
+    \path (led_manager_node) edge[->,in=68, out=-112, looseness=0.4] node{}(leds);
+     \svggend
+    \svgedge{leds1_led_manager_node_anonymous22}{leds1}{led_manager_node}
+    \path (leds1) edge[->,in=123, out=-57, looseness=0.4] node{}(led_manager_node);
+     \svggend
+    \svgedge{map_mask_server_nav2_controller_server_anonymous4}{map_mask_server}{nav2_controller_server}
+    \path (map_mask_server) edge[->,in=148, out=-32, looseness=0.4] node{}(nav2_controller_server);
+     \svggend
+    \svgedge{map_mask_server_nav2_planner_server_anonymous15}{map_mask_server}{nav2_planner_server}
+    \path (map_mask_server) edge[->,in=171, out=-9, looseness=0.4] node{}(nav2_planner_server);
+     \svggend
+    \svgedge{map_mask_server_nav2_planner_server_anonymous48}{map_mask_server}{nav2_planner_server}
+    \path (map_mask_server) edge[->,in=171, out=-9, looseness=0.4] node{}(nav2_planner_server);
+     \svggend
+    \svgedge{map_nav2_map_server_anonymous57}{map}{nav2_map_server}
+    \path (map) edge[->,in=180, out=0, looseness=0.4] node{}(nav2_map_server);
+     \svggend
+    \svgedge{mediapipe_hri_face_detect_anonymous32}{mediapipe}{hri_face_detect}
+    \path (mediapipe) edge[->,in=118, out=-62, looseness=0.4] node{}(hri_face_detect);
+     \svggend
+    \svgedge{mediapipe_hri_fullbody_anonymous66}{mediapipe}{hri_fullbody}
+    \path (mediapipe) edge[->,in=41, out=-139, looseness=0.4] node{}(hri_fullbody);
+     \svggend
+    \svgedge{missionimplementation_navigation1_anonymous36}{missionimplementation}{navigation1}
+    \path (missionimplementation) edge[->,in=102, out=-78, looseness=0.4] node{}(navigation1);
+     \svggend
+    \svgedge{missionimplementation_speech_anonymous7}{missionimplementation}{speech}
+    \path (missionimplementation) edge[->,in=145, out=-35, looseness=0.4] node{}(speech);
+     \svggend
+    \svgedge{missionimplementation_task1_anonymous49}{missionimplementation}{task1}
+    \path (missionimplementation) edge[->,in=28, out=-152, looseness=0.4] node{}(task1);
+     \svggend
+    \svgedge{mobile_base_controller_dlo_ros_mobile_base_controller-odom2}{mobile_base_controller}{dlo_ros}
+    \path (mobile_base_controller) edge[->,topic_edge,in=326, out=146, looseness=0.4] node[topic]{\href{../topics/mobile_base_controller-odom.html}{/mobile\_base\_controller/odom}}(dlo_ros);
+     \svggend
+    \svgedge{mobile_base_controller_mobilebase_anonymous20}{mobile_base_controller}{mobilebase}
+    \path (mobile_base_controller) edge[->,in=80, out=-100, looseness=0.4] node{}(mobilebase);
+     \svggend
+    \svgedge{mobile_base_controller_nav2_bt_navigator_mobile_base_controller-odom3}{mobile_base_controller}{nav2_bt_navigator}
+    \path (mobile_base_controller) edge[->,topic_edge,in=348, out=168, looseness=0.4] node[topic]{\href{../topics/mobile_base_controller-odom.html}{/mobile\_base\_controller/odom}}(nav2_bt_navigator);
+     \svggend
+    \svgedge{mobile_base_controller_nav2_controller_server_mobile_base_controller-odom1}{mobile_base_controller}{nav2_controller_server}
+    \path (mobile_base_controller) edge[->,topic_edge,in=335, out=155, looseness=0.4] node[topic]{\href{../topics/mobile_base_controller-odom.html}{/mobile\_base\_controller/odom}}(nav2_controller_server);
+     \svggend
+    \svgedge{motion_play_motion2_anonymous63}{motion}{play_motion2}
+    \path (motion) edge[->,in=56, out=-124, looseness=0.4] node{}(play_motion2);
+     \svggend
+    \svgedge{moveit_arm_*_controller_anonymous58}{moveit}{arm_*_controller}
+    \path (moveit) edge[->,in=209, out=29, looseness=0.4] node{}(arm_*_controller);
+     \svggend
+    \svgedge{nav2_bt_navigator_nav2_behaviour_server_anonymous28}{nav2_bt_navigator}{nav2_behaviour_server}
+    \path (nav2_bt_navigator) edge[->,in=174, out=-6, looseness=0.4] node{}(nav2_behaviour_server);
+     \svggend
+    \svgedge{nav2_bt_navigator_nav2_controller_server_anonymous61}{nav2_bt_navigator}{nav2_controller_server}
+    \path (nav2_bt_navigator) edge[->,in=196, out=16, looseness=0.4] node{}(nav2_controller_server);
+     \svggend
+    \svgedge{nav2_bt_navigator_nav2_planner_server_anonymous14}{nav2_bt_navigator}{nav2_planner_server}
+    \path (nav2_bt_navigator) edge[->,in=217, out=37, looseness=0.4] node{}(nav2_planner_server);
+     \svggend
+    \svgedge{nav2_controller_server_nav2_behaviour_server_local_costmap}{nav2_controller_server}{nav2_behaviour_server}
+    \path (nav2_controller_server) edge[->,topic_edge,in=76, out=-104, looseness=0.4] node[topic]{\href{../topics/local_costmap.html}{/local\_costmap}}(nav2_behaviour_server);
+     \svggend
+    \svgedge{nav2_controller_server_twist_mux_cmd_vel1}{nav2_controller_server}{twist_mux}
+    \path (nav2_controller_server) edge[->,topic_edge,in=146, out=-34, looseness=0.4] node[topic]{\href{../topics/cmd_vel.html}{/cmd\_vel}}(twist_mux);
+     \svggend
+    \svgedge{nav2_map_saver_map_anonymous1}{nav2_map_saver}{map}
+    \path (nav2_map_saver) edge[->,in=180, out=0, looseness=0.4] node{}(map);
+     \svggend
+    \svgedge{nav2_map_server_nav2_amcl_map1}{nav2_map_server}{nav2_amcl}
+    \path (nav2_map_server) edge[->,topic_edge,in=149, out=-31, looseness=0.4] node[topic]{\href{../topics/map.html}{/map}}(nav2_amcl);
+     \svggend
+    \svgedge{nav2_map_server_nav2_planner_server_map3}{nav2_map_server}{nav2_planner_server}
+    \path (nav2_map_server) edge[->,topic_edge,in=135, out=-45, looseness=0.4] node[topic]{\href{../topics/map.html}{/map}}(nav2_planner_server);
+     \svggend
+    \svgedge{nav2_waypoint_follower_nav2_bt_navigator_anonymous26}{nav2_waypoint_follower}{nav2_bt_navigator}
+    \path (nav2_waypoint_follower) edge[->,in=155, out=-25, looseness=0.4] node{}(nav2_bt_navigator);
+     \svggend
+    \svgedge{navdatabase_map_mask_server_anonymous42}{navdatabase}{map_mask_server}
+    \path (navdatabase) edge[->,in=180, out=0, looseness=0.4] node{}(map_mask_server);
+     \svggend
+    \svgedge{navigate_through_waypoints_nav2_bt_navigator_anonymous16}{navigate_through_waypoints}{nav2_bt_navigator}
+    \path (navigate_through_waypoints) edge[->,in=167, out=-13, looseness=0.4] node{}(nav2_bt_navigator);
+     \svggend
+    \svgedge{navigate_to_target_nav2_bt_navigator_anonymous27}{navigate_to_target}{nav2_bt_navigator}
+    \path (navigate_to_target) edge[->,in=181, out=1, looseness=0.4] node{}(nav2_bt_navigator);
+     \svggend
+    \svgedge{navigate_to_target_target_detector_server_action-detect_target}{navigate_to_target}{target_detector_server}
+    \path (navigate_to_target) edge[->,action_edge,in=150, out=-30, looseness=0.4] node[action]{\href{../actions/action-detect_target.html}{action:/detect\_target}}(target_detector_server);
+     \svggend
+    \svgedge{oro_knowledge_core_owl-rdf}{oro}{knowledge_core}
+    \path (oro) edge[->,in=178, out=-2, looseness=0.4] node{OWL/RDF}(knowledge_core);
+     \svggend
+    \svgedge{pal_laser_filters_dlo_ros_scan3}{pal_laser_filters}{dlo_ros}
+    \path (pal_laser_filters) edge[->,topic_edge,in=179, out=-1, looseness=0.4] node[topic]{\href{../topics/scan.html}{/scan}}(dlo_ros);
+     \svggend
+    \svgedge{pal_laser_filters_laser_target_detector_scan2}{pal_laser_filters}{laser_target_detector}
+    \path (pal_laser_filters) edge[->,topic_edge,in=100, out=-80, looseness=0.4] node[topic]{\href{../topics/scan.html}{/scan}}(laser_target_detector);
+     \svggend
+    \svgedge{pal_laser_filters_nav2_controller_server_scan1}{pal_laser_filters}{nav2_controller_server}
+    \path (pal_laser_filters) edge[->,topic_edge,in=146, out=-34, looseness=0.4] node[topic]{\href{../topics/scan.html}{/scan}}(nav2_controller_server);
+     \svggend
+    \svgedge{people_facts_knowledge_core_service-kb-revise}{people_facts}{knowledge_core}
+    \path (people_facts) edge[->,service_edge,in=146, out=-34, looseness=0.4] node[service]{\href{../services/service-kb-revise.html}{service:/kb/revise}}(knowledge_core);
+     \svggend
+    \svgedge{play_motion2_arm_*_controller_anonymous53}{play_motion2}{arm_*_controller}
+    \path (play_motion2) edge[->,in=223, out=43, looseness=0.4] node{}(arm_*_controller);
+     \svggend
+    \svgedge{play_motion2_gripper_*_controller_anonymous64}{play_motion2}{gripper_*_controller}
+    \path (play_motion2) edge[->,in=214, out=34, looseness=0.4] node{}(gripper_*_controller);
+     \svggend
+    \svgedge{play_motion2_head_controller_anonymous25}{play_motion2}{head_controller}
+    \path (play_motion2) edge[->,in=201, out=21, looseness=0.4] node{}(head_controller);
+     \svggend
+    \svgedge{play_motion2_torso_controller_anonymous59}{play_motion2}{torso_controller}
+    \path (play_motion2) edge[->,in=210, out=30, looseness=0.4] node{}(torso_controller);
+     \svggend
+    \svgedge{remap_knowledge_core_anonymous24}{remap}{knowledge_core}
+    \path (remap) edge[->,in=237, out=57, looseness=0.4] node{}(knowledge_core);
+     \svggend
+    \svgedge{respeakerin_asr_vosk_audio-channel0}{respeakerin}{asr_vosk}
+    \path (respeakerin) edge[->,topic_edge,in=89, out=-91, looseness=0.4] node[topic]{\href{../topics/audio-channel0.html}{/audio/channel0}}(asr_vosk);
+     \svggend
+    \svgedge{respeakerin_asr_vosk_audio-voice_detected}{respeakerin}{asr_vosk}
+    \path (respeakerin) edge[->,topic_edge,in=89, out=-91, looseness=0.4] node[topic]{\href{../topics/audio-voice_detected.html}{/audio/voice\_detected}}(asr_vosk);
+     \svggend
+    \svgedge{rgbdcameras1_aruco_target_detector_rgbd_camera-color-image_raw}{rgbdcameras1}{aruco_target_detector}
+    \path (rgbdcameras1) edge[->,topic_edge,in=170, out=-10, looseness=0.4] node[topic]{\href{../topics/rgbd_camera-color-image_raw.html}{/rgbd\_camera/color/image\_raw}}(aruco_target_detector);
+     \svggend
+    \svgedge{rgbdcameras_hri_face_detect_anonymous10}{rgbdcameras}{hri_face_detect}
+    \path (rgbdcameras) edge[->,in=219, out=39, looseness=0.4] node{}(hri_face_detect);
+     \svggend
+    \svgedge{rgbdcameras_hri_fullbody_anonymous65}{rgbdcameras}{hri_fullbody}
+    \path (rgbdcameras) edge[->,in=242, out=62, looseness=0.4] node{}(hri_fullbody);
+     \svggend
+    \svgedge{rgbdcameras_objectmaps_anonymous50}{rgbdcameras}{objectmaps}
+    \path (rgbdcameras) edge[->,in=137, out=-43, looseness=0.4] node{}(objectmaps);
+     \svggend
+    \svgedge{rgbdcameras_obstacles_anonymous8}{rgbdcameras}{obstacles}
+    \path (rgbdcameras) edge[->,in=126, out=-54, looseness=0.4] node{}(obstacles);
+     \svggend
+    \svgedge{robot_head_displaytiagopro_face-eyescreenaritiagopro_anonymous38}{robot_head_displaytiagopro}{face-eyescreenaritiagopro}
+    \path (robot_head_displaytiagopro) edge[->,in=68, out=-112, looseness=0.4] node{}(face-eyescreenaritiagopro);
+     \svggend
+    \svgedge{robot_head_displaytiagopro_i18n_manager_action-set_default_locale1}{robot_head_displaytiagopro}{i18n_manager}
+    \path (robot_head_displaytiagopro) edge[->,action_edge,in=280, out=100, looseness=0.4] node[action]{\href{../actions/action-set_default_locale.html}{action:/set\_default\_locale}}(i18n_manager);
+     \svggend
+    \svgedge{robot_state_publisher_controller_manager_anonymous5}{robot_state_publisher}{controller_manager}
+    \path (robot_state_publisher) edge[->,in=210, out=30, looseness=0.4] node{}(controller_manager);
+     \svggend
+    \svgedge{robot_state_publisher_moveit_anonymous60}{robot_state_publisher}{moveit}
+    \path (robot_state_publisher) edge[->,in=205, out=25, looseness=0.4] node{}(moveit);
+     \svggend
+    \svgedge{robot_state_publisher_play_motion2_anonymous51}{robot_state_publisher}{play_motion2}
+    \path (robot_state_publisher) edge[->,in=180, out=0, looseness=0.4] node{}(play_motion2);
+     \svggend
+    \svgedge{slam_toolbox_nav2_map_saver_map2}{slam_toolbox}{nav2_map_saver}
+    \path (slam_toolbox) edge[->,topic_edge,in=180, out=0, looseness=0.4] node[topic]{\href{../topics/map.html}{/map}}(nav2_map_saver);
+     \svggend
+    \svgedge{soft_wakeup_word_missionimplementation_intents2}{soft_wakeup_word}{missionimplementation}
+    \path (soft_wakeup_word) edge[->,topic_edge,in=87, out=-93, looseness=0.4] node[topic]{\href{../topics/intents.html}{/intents}}(missionimplementation);
+     \svggend
+    \svgedge{speech_communication_hub_action-communication-say}{speech}{communication_hub}
+    \path (speech) edge[->,action_edge,in=268, out=88, looseness=0.4] node[action]{\href{../actions/action-communication-say.html}{action: /communication/say}}(communication_hub);
+     \svggend
+    \svgedge{task1_grasping_anonymous9}{task1}{grasping}
+    \path (task1) edge[->,in=143, out=-37, looseness=0.4] node{}(grasping);
+     \svggend
+    \svgedge{task1_navigation1_anonymous21}{task1}{navigation1}
+    \path (task1) edge[->,in=177, out=-3, looseness=0.4] node{}(navigation1);
+     \svggend
+    \svgedge{task2_facialexpressions_anonymous45}{task2}{facialexpressions}
+    \path (task2) edge[->,in=177, out=-3, looseness=0.4] node{}(facialexpressions);
+     \svggend
+    \svgedge{task2_grasping_anonymous44}{task2}{grasping}
+    \path (task2) edge[->,in=158, out=-22, looseness=0.4] node{}(grasping);
+     \svggend
+    \svgedge{torso_controller_joints_anonymous35}{torso_controller}{joints}
+    \path (torso_controller) edge[->,in=83, out=-97, looseness=0.4] node{}(joints);
+     \svggend
+    \svgedge{tts_engine_respeakerout_anonymous62}{tts_engine}{respeakerout}
+    \path (tts_engine) edge[->,in=94, out=-86, looseness=0.4] node{}(respeakerout);
+     \svggend
+    \svgedge{twist_mux_mobile_base_controller_mobile_base_controller-cmd_vel}{twist_mux}{mobile_base_controller}
+    \path (twist_mux) edge[->,topic_edge,in=171, out=-9, looseness=0.4] node[topic]{\href{../topics/mobile_base_controller-cmd_vel.html}{/mobile\_base\_controller/cmd\_vel}}(mobile_base_controller);
+     \svggend
+    \svgedge{webuserinterface_twist_mux_anonymous13}{webuserinterface}{twist_mux}
+    \path (webuserinterface) edge[->,in=197, out=17, looseness=0.4] node{}(twist_mux);
+     \svggend
+    \svgedge{wheelencoders_mobile_base_controller_anonymous17}{wheelencoders}{mobile_base_controller}
+    \path (wheelencoders) edge[->,in=138, out=-42, looseness=0.4] node{}(mobile_base_controller);
+     \svggend
+    \svgedge{yolo1_objectmaps_anonymous54}{yolo1}{objectmaps}
+    \path (yolo1) edge[->,in=178, out=-2, looseness=0.4] node{}(objectmaps);
+     \svggend
+
+
+\end{tikzpicture}
+\end{document}
+

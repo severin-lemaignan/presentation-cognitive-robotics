@@ -1,0 +1,70 @@
+% << name >>
+% Version: << version >>
+% Description: << description >>
+
+\documentclass[tikz,dvisvgm]{standalone}
+
+\usepackage[hypertex]{hyperref} % use this for links with dvisvgm
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage{fontspec}
+\newfontfamily\defaultfont[Scale=1.0]{Inter} % use that for custom font
+\newfontfamily\monospace[Scale=1.0]{Ubuntu Mono}
+
+\newcommand{\svgnode}[1]{\special{dvisvgm:raw <g class='node' id='#1'>}}
+\newcommand{\svgedge}[3]{\special{dvisvgm:raw <g class='edge' id='#1' data-from='#2' data-to='#3'>}}
+\newcommand{\svggend}{\special{dvisvgm:raw </g>}}
+
+{% for label in labels %}
+\definecolor{<<label.id>>}{HTML}{<<substr(label.color,1,-1)>>}
+{% endfor %}
+
+\definecolor{ros-topic}{HTML}{859900}
+\definecolor{ros-action}{HTML}{cb4b16}
+\definecolor{ros-service}{HTML}{268bd2}
+\definecolor{ros-param}{HTML}{53497e}
+\definecolor{ros-node}{HTML}{7e2433}
+
+\begin{document}
+
+\begin{tikzpicture}[
+             font=\defaultfont,
+             >=latex,
+             every edge/.style={draw, -{latex}, line width=1.5pt,opacity=0.5},
+             hw_edge/.style={dashed}, 
+             topic_edge/.style={color=ros-topic,text=black}, 
+             service_edge/.style={color=ros-service,text=black}, 
+             action_edge/.style={color=ros-action,text=black}, 
+             node/.style={draw, align=center, inner sep=5pt},
+             unknown_node/.style={node},
+             hardware_node/.style={node,thick},
+             skill_node/.style={node, rounded corners},
+             plugin_node/.style={node,dashed,font=\monospace},
+             node_node/.style={node, font=\monospace},
+             model_node/.style={node, cylinder, shape border rotate=90, aspect=0.25},
+             label/.style={midway, align=center, fill=white,opacity=0.8},
+             topic/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8},
+             service/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8},
+             action/.style={midway, align=center, font=\monospace, fill=white,opacity=0.8}]
+
+
+    \special{dvisvgm:raw
+    <script type="text/javascript" src="../_static/js/interactive_architecture.js">
+    </script>
+    }
+{% for node in nodes %}
+    \svgnode{<< node.id >>}
+    \node at (<< to_mm(node.x) >>mm, -<< to_mm(node.y) >>mm) [<< node.type >>_node, anchor=north west, minimum width=<< to_mm(node.width) >>mm, minimum height=<< to_mm(node.height) >>mm, fill=<< node.label >>!50] (<< node.id >>) {{% if node.type=="node" %}\href{../nodes.html#<< make_anchor(node.name) >>}{<< tex_escape(node.name) >>}{% else %}<< tex_escape(node.name) >>{% endif %}};
+    \svggend
+{% endfor %}
+
+{% for edge in edges %}
+    \svgedge{<< edge.id >>}{<< edge.from >>}{<< edge.to >>}
+    \path (<<edge.from>>) edge[->,{% if edge.type != "unknown" %}<< edge.type >>_edge,{%endif%} in=<<edge.in_angle>>, out=<<edge.out_angle>>, looseness=0.4] {% if edge.name %}node{% if edge.type != "unknown" %}[<<edge.type>>]{\href{../<<edge.type>>s/<<edge.safe_name>>.html}{<<tex_escape(edge.name)>>}}{% else %}{<<tex_escape(edge.name)>>}{%endif%} {%endif%}(<<edge.to>>);
+     \svggend
+{% endfor %}
+
+
+\end{tikzpicture}
+\end{document}
