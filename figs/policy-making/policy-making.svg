@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.30170354"
-     inkscape:cx="198.87072"
-     inkscape:cy="689.4185"
+     inkscape:zoom="0.36561879"
+     inkscape:cx="227.0124"
+     inkscape:cy="448.55462"
      inkscape:window-width="1280"
      inkscape:window-height="660"
      inkscape:window-x="0"
@@ -104,7 +104,7 @@
        x="38.684288"
        y="4.1459355"
        style="filter:url(#filter213)"
-       transform="matrix(0.51665547,0.03715403,-0.03715403,0.51665547,31.902505,-0.2467284)" /><image
+       transform="matrix(0.51665547,0.03715403,-0.03715403,0.51665547,67.098905,4.7680024)" /><image
        width="242.00555"
        height="343.25275"
        preserveAspectRatio="none"
@@ -113,4 +113,11 @@
        x="-107.15955"
        y="-97.376373"
        style="filter:url(#filter147)"
-       transform="matrix(0.43378707,-0.04196524,0.04196524,0.43378707,71.453287,125.84185)" /></g></svg>
+       transform="matrix(0.43378707,-0.04196524,0.04196524,0.43378707,62.551716,94.431051)" /><image
+       width="115.6905"
+       height="86.767868"
+       preserveAspectRatio="none"
+       xlink:href="dagstuhl-seminar-responsible-robotics/group-photo.jpg-lowres.jpg"
+       id="image26864"
+       x="80.291641"
+       y="148.86061" /></g></svg>
